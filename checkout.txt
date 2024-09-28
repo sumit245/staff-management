@@ -1,0 +1,70 @@
+import React, { useState } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+
+const CheckInCheckOut = () => {
+  const [status, setStatus] = useState('Not Checked In');
+  const [checkedIn, setCheckedIn] = useState(false);
+  const [time, setTime] = useState(null);
+
+  const handleCheckIn = () => {
+    const currentTime = new Date().toLocaleTimeString();
+    setStatus('Checked In');
+    setCheckedIn(true);
+    setTime(currentTime);
+  };
+
+  const handleCheckOut = () => {
+    const currentTime = new Date().toLocaleTimeString();
+    setStatus('Checked Out');
+    setCheckedIn(false);
+    setTime(currentTime);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.statusText}>{status}</Text>
+      <Text style={styles.timeText}>
+        {time ? `Time: ${time}` : 'No time recorded yet'}
+      </Text>
+
+      {checkedIn ? (
+        <Button title="Check Out" onPress={handleCheckOut} color="#FF5722" />
+      ) : (
+        <Button title="Check In" onPress={handleCheckIn} color="#4CAF50" />
+      )}
+    </View>
+  );
+};
+
+const App = () => {
+  return (
+    <View style={styles.appContainer}>
+      <CheckInCheckOut />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 20,
+  },
+  statusText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  timeText: {
+    fontSize: 16,
+    color: '#888',
+    marginBottom: 20,
+  },
+  appContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+  },
+});
+
+export default App;

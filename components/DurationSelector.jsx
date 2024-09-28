@@ -15,7 +15,7 @@ export default function DurationSelector({ duration, setDuration }) {
             id={option.id}
             title={option.type}
             key={index}
-            onPressed={(indexs) => console.log(`${index} is pressed`)}
+            onPressed={(index) => console.log(`${index} is pressed`)}
           />
         ))}
       </View>

@@ -76,32 +76,59 @@ export const leaveReasons = [
     id: 1,
     label: "Select leave type",
     value: "",
-    enabled: false
+    enabled: false,
   },
   {
     id: 2,
     label: "Sick Leave",
     value: "sl",
-    enabled: true
+    enabled: true,
   },
   {
     id: 3,
     label: "Annual Leave",
     value: "al",
-    enabled: true
-  }
-]
+    enabled: true,
+  },
+];
 
-export const leaveTypes = [{
-  id: 1,
-  type: "Single Day",
-  icon: "clock"
-}, {
-  id: 2,
-  type: "Multiple Days",
-  icon: "clock"
-}, {
-  id: 3,
-  type: "Hourly",
-  icon: "clock"
-}]
+export const leaveTypes = [
+  {
+    id: 1,
+    type: "Single Day",
+    icon: "clock",
+  },
+  {
+    id: 2,
+    type: "Multiple Days",
+    icon: "clock",
+  },
+  {
+    id: 3,
+    type: "Hourly",
+    icon: "clock",
+  },
+];
+// src/data/dummyData.js
+export const dummyMessages = [
+  {
+    id: "1",
+    message: "Look at how chocho sleep in my arms!",
+    isSent: false,
+    time: "16.46",
+  },
+  { id: "2", message: "Can I come over?", isSent: true, time: "16.46" },
+  {
+    id: "3",
+    message: "Of course, let me know if you’re on your way",
+    isSent: false,
+    time: "16.50",
+  },
+  { id: "4", message: "K, I’m on my way", isSent: true, time: "16.50" },
+  {
+    id: "5",
+    message: "Good morning, did you sleep well?",
+    isSent: false,
+    time: "09.13",
+  },
+];
