@@ -12,7 +12,7 @@ import {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: LIGHT, 
+    backgroundColor: LIGHT,
     alignItems: "center",
     marginHorizontal: 8,
   },
@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
     marginHorizontal: 15,
     elevation: 3,
-    backgroundColor: "#fff", 
+    backgroundColor: "#fff",
   },
   cardHeader: {
     flexDirection: "row",
@@ -44,10 +44,10 @@ export const styles = StyleSheet.create({
     marginRight: 5,
   },
   highPriority: {
-    backgroundColor: "#f87171", 
+    backgroundColor: "#f87171",
   },
   onTrack: {
-    backgroundColor: "#c084fc", 
+    backgroundColor: "#c084fc",
   },
   labelText: {
     color: "#fff",
@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
   },
   footerText: {
     marginLeft: 5,
-    color: "#6b7280", 
+    color: "#6b7280",
     fontSize: 14,
   },
   dangerHeading: {
@@ -151,5 +151,96 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
+  },
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    paddingHorizontal: 17,
+    paddingTop: 10,
+  },
+
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  headerTitle: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#333",
+  },
+
+  searchBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
+    borderRadius: 10,
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    marginBottom: 20,
+  },
+  searchInput: {
+    marginLeft: 10,
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#333",
+    flex: 1,
+  },
+
+  contactCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "#eee",
+  },
+
+  avatarContainer: {
+    position: "relative",
+    marginRight: 15,
+  },
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+  },
+  placeholderAvatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: "#007AFF",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  placeholderText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+
+  onlineDot: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: "#00FF00",
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    borderWidth: 2,
+    borderColor: "#fff",
+  },
+
+  contactInfo: {
+    flex: 1,
+  },
+  contactName: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  contactStatus: {
+    fontSize: 14,
+    color: "#666",
   },
 });

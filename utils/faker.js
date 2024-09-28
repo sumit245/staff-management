@@ -93,3 +93,66 @@ export const cardData = [
     ],
   },
 ];
+
+export const data = [
+  { id: "1", title: "Attendance ", icon: "time-outline" },
+  { id: "2", title: "Salary ", icon: "document-text-outline" },
+  { id: "3", title: "Leave records", icon: "calendar-outline" },
+  { id: "4", title: "Settings", icon: "settings-outline" },
+  { id: "5", title: "Reports", icon: "bar-chart-outline" },
+  { id: "6", title: "Bag", icon: "bag-outline" },
+];
+
+export const contactsData = [
+  {
+    id: "1",
+    name: "Dhruv",
+    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+    status: "Online",
+    online: true,
+  },
+  {
+    id: "2",
+    name: "Shrishti ",
+    avatar: "https://randomuser.me/api/portraits/women/8.jpg",
+    status: "Online",
+    online: true,
+  },
+  {
+    id: "3",
+    name: "Anants",
+    avatar: "https://randomuser.me/api/portraits/men/7.jpg",
+    status: "Last seen 1 hours ago",
+    online: false,
+  },
+  {
+    id: "4",
+    name: "Naisha Singh",
+    avatar: "",
+    status: "Online",
+    online: true,
+  },
+  {
+    id: "5",
+    name: "Raki Devon",
+    avatar: "",
+    status: "Online",
+    online: true,
+  },
+  {
+    id: "6",
+    name: "Shanaya Akira",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    status: "Last seen 3 minutes ago",
+    online: false,
+  },
+];
+export const menuItems = [
+  { label: "Account", icon: "person-outline" },
+  { label: "Chats", icon: "chatbubble-outline" },
+  { label: "Appearance", icon: "sunny-outline" },
+  { label: "Notification", icon: "notifications-outline" },
+  { label: "Privacy", icon: "shield-checkmark-outline" },
+  { label: "Data Usage", icon: "folder-outline" },
+  { label: "Help", icon: "help-circle-outline" },
+];
