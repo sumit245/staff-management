@@ -9,13 +9,16 @@ export default function DurationSelector({ duration, setDuration }) {
     <View style={{ marginVertical: 4 }}>
       <H5>Duration</H5>
       <View style={styles.row}>
-        {
-          leaveTypes.map((option, index) => <MyChipSelector icon={option.icon} id={option.id} title={option.type} key={index} onPressed={(indexs) => console.log(`${index} is pressed`)} />)
-        }
+        {leaveTypes.map((option, index) => (
+          <MyChipSelector
+            icon={option.icon}
+            id={option.id}
+            title={option.type}
+            key={index}
+            onPressed={(indexs) => console.log(`${index} is pressed`)}
+          />
+        ))}
       </View>
     </View>
   );
-};
-
-
-
+}
