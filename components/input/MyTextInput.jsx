@@ -14,6 +14,7 @@ export default function MyTextInput({ title, onChangeText, type, ...props }) {
                 keyboardType={type}
                 style={styles.textInputField}
                 cursorColor={PRIMARY_COLOR}
+
                 {...props}
             />
         </View>

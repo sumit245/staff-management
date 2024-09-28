@@ -70,3 +70,38 @@ export const tasks = [
 
   // =============
 ];
+
+export const leaveReasons = [
+  {
+    id: 1,
+    label: "Select leave type",
+    value: "",
+    enabled: false
+  },
+  {
+    id: 2,
+    label: "Sick Leave",
+    value: "sl",
+    enabled: true
+  },
+  {
+    id: 3,
+    label: "Annual Leave",
+    value: "al",
+    enabled: true
+  }
+]
+
+export const leaveTypes = [{
+  id: 1,
+  type: "Single Day",
+  icon: "clock"
+}, {
+  id: 2,
+  type: "Multiple Days",
+  icon: "clock"
+}, {
+  id: 3,
+  type: "Hourly",
+  icon: "clock"
+}]

@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, StatusBar } from "react-native";
-import { DANGER_COLOR, DARK, LIGHT, PRIMARY_COLOR, PRIMARY_COLOR_TRANSPARENT, SCREEN_HEIGHT, SCREEN_WIDTH } from "./constant";
+import { DANGER_COLOR, DARK, LIGHT, PRIMARY_COLOR, PRIMARY_COLOR_TRANSPARENT, SCREEN_HEIGHT, SCREEN_WIDTH, SECONDARY_COLOR } from "./constant";
 
 export const styles = StyleSheet.create({
     container: {
@@ -91,5 +91,19 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start'
+    },
+    picker: {
+        borderWidth: 1,
+        borderColor: SECONDARY_COLOR,
+        borderRadius: 5,
+    },
+    chipButton: {
+        borderWidth: 1,
+        borderColor: SECONDARY_COLOR,
+        borderRadius: 5,
+        padding: 4,
+        marginRight: 4,
+        backgroundColor: LIGHT,
+        width: SCREEN_WIDTH / 3.5
     }
 })

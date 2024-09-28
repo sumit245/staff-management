@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   View,
   TouchableOpacity,
-  Text,
-  StyleSheet,
   Platform,
 } from "react-native";
 import DateTimePicker from "@react-native-community/datetimepicker";
+import { H5, H6 } from "../text";
+import { styles } from "../../styles/components.styles";
 
-const DatePickerInput = ({ date, setDate }) => {
+const DatePickerInput = ({ title, mode, date, setDate }) => {
   const [showDatePicker, setShowDatePicker] = useState(false);
 
   const onChangeDate = (event, selectedDate) => {
@@ -18,19 +18,19 @@ const DatePickerInput = ({ date, setDate }) => {
   };
 
   return (
-    <View>
-      <Text style={styles.label}>Date</Text>
+    <View style={{ marginVertical: 4 }}>
+      <H5>{title}</H5>
       <TouchableOpacity
         onPress={() => setShowDatePicker(true)}
-        style={styles.input}
+        style={[styles.textInputField, { justifyContent: 'center' }]}
       >
-        <Text>{date.toDateString()}</Text>
+        <H6>{date.toDateString()}</H6>
       </TouchableOpacity>
 
       {showDatePicker && (
         <DateTimePicker
           value={date}
-          mode="date"
+          mode={mode}
           display="default"
           onChange={onChangeDate}
         />
@@ -39,19 +39,5 @@ const DatePickerInput = ({ date, setDate }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  label: {
-    fontSize: 16,
-    marginBottom: 5,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: "#ccc",
-    padding: 10,
-    marginBottom: 15,
-    borderRadius: 5,
-    justifyContent: "center",
-  },
-});
 
 export default DatePickerInput;
