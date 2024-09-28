@@ -1,14 +1,15 @@
-import React from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import { Card, Avatar, IconButton } from "react-native-paper";
 import Icon from "react-native-vector-icons/Ionicons";
-import { cardData } from "../utils/cardData";
+import { cardData } from "../utils/faker";
+import { styles } from "../styles/components.styles";
+import ContainerComponent from "./ContainerComponent";
 
-const CardTask = ({ task }) => {
-  return (
+const CardTask = ({ task }) => (
+  <ContainerComponent>
     <Card style={styles.card}>
       <View style={styles.cardHeader}>
-        <Text style={styles.taskTitle}>{task.title}</Text>
+        <Text>{task.title}</Text>
         <IconButton icon="dots-horizontal" size={24} onPress={() => {}} />
       </View>
 
@@ -45,72 +46,15 @@ const CardTask = ({ task }) => {
         </View>
       </View>
     </Card>
-  );
-};
+  </ContainerComponent>
+);
 
-const TaskList = () => {
-  return (
-    <FlatList
-      data={cardData}
-      renderItem={({ item }) => <CardTask task={item} />}
-      keyExtractor={(item) => item.id.toString()}
-    />
-  );
-};
-
-const styles = StyleSheet.create({
-  card: {
-    borderRadius: 10,
-    padding: 15,
-    marginVertical: 10,
-    marginHorizontal: 15,
-    elevation: 3,
-    backgroundColor: "#fff",
-  },
-  cardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  taskTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  labelsContainer: {
-    flexDirection: "row",
-    marginVertical: 10,
-  },
-  label: {
-    borderRadius: 15,
-    paddingVertical: 3,
-    paddingHorizontal: 10,
-    marginRight: 5,
-  },
-  highPriority: {
-    backgroundColor: "#f87171",
-  },
-  onTrack: {
-    backgroundColor: "#c084fc",
-  },
-  labelText: {
-    color: "#fff",
-    fontSize: 12,
-  },
-  cardFooter: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: 10,
-  },
-  footerItem: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  footerText: {
-    marginLeft: 5,
-    color: "#6b7280",
-    fontSize: 14,
-  },
-});
+const TaskList = () => (
+  <FlatList
+    data={cardData}
+    renderItem={({ item }) => <CardTask task={item} />}
+    keyExtractor={(item) => item.id.toString()}
+  />
+);
 
 export default TaskList;
