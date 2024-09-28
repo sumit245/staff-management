@@ -4,6 +4,7 @@ import MyHeader from '../components/header/MyHeader'
 import StatCard from '../components/card/Statcard'
 import { tasks } from '../utils/faker'
 
+
 export default function DashboardScreen() {
     return (
         <ContainerComponent>
@@ -17,9 +18,13 @@ export default function DashboardScreen() {
                             status={task.status}
                         />)
                 }
+
                 <Text style={{ fontSize: 80 }}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aliquam id neque, nemo inventore tenetur excepturi! Modi facere nobis molestiae aliquam, distinctio dolorem itaque aperiam ab cupiditate maxime delectus ipsa?
                 </Text>
+
+             
+                
             </ScrollView>
         </ContainerComponent>
     )
