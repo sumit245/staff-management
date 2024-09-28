@@ -104,4 +104,41 @@ export const leaveTypes = [{
   id: 3,
   type: "Hourly",
   icon: "clock"
-}]
+  } ]
+
+  export const cardData = [
+    {
+      id: 1,
+      backgroundColor: "#e0f7fa",
+      tasks: "Leave Balance",
+      status: "32 days",
+    },
+    {
+      id: 2,
+      backgroundColor: "#e1bee7",
+      tasks: "Previous Course",
+      status: "30 Dec, 2023",
+    },
+    {
+      id: 3,
+      backgroundColor: "#fff9c4",
+      tasks: "Next Leave On",
+      status: "25 Sep, 2023",
+    },
+    {
+      id: 4,
+      backgroundColor: "#ffe0b2",
+      tasks: "Next Salary On",
+      status: "28 Aug, 2023",
+    }
+]
+  export const menuItems = [
+    { label: "Account", icon: "person-outline" },
+    { label: "Chats", icon: "chatbubble-outline" },
+    { label: "Appearance", icon: "sunny-outline" },
+    { label: "Notification", icon: "notifications-outline" },
+    { label: "Privacy", icon: "shield-checkmark-outline" },
+    { label: "Data Usage", icon: "folder-outline" },
+    { label: "Help", icon: "help-circle-outline" },
+  ];
+
