@@ -10,6 +10,7 @@ import {
   SECONDARY_COLOR,
 } from "./constant";
 import FilledButton from "../components/buttons/FilledButton";
+import Dropdown from "../components/Dropdown";
 
 export const styles = StyleSheet.create({
   container: {
@@ -121,6 +122,35 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     marginVertical: 20,
   },
+  //progressbar
+  pcontainer: {
+    marginVertical: 10,
+    alignItems: "center",
+    width: "100%",
+  },
+  label: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  progressBarContainer: {
+    width: "100%",
+    borderRadius: 10,
+    overflow: "hidden",
+  },
+  progressBar: {
+    height: "100%",
+    borderRadius: 10,
+  },
+  progressText: {
+    marginTop: 5,
+    fontSize: 14,
+    color: "#888",
+  },
+  appContainer: {
+    flex: 1,
+    padding: 20,
+    justifyContent: "center",
+  },
   // ============
   container: {
     flex: 1,
@@ -194,5 +224,111 @@ export const styles = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: 6,
     alignItems: "center",
+  },
+  //Dropdown
+  container: {
+    marginVertical: 200,
+    borderWidth: 1,
+    borderColor: SECONDARY_COLOR,
+    borderRadius: 2,
+    paddingHorizontal: 10,
+  },
+  selectedText: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  //list
+  screenContainer: {
+    padding: 16,
+  },
+  itemContainer: {
+    padding: 16,
+    marginVertical: 8,
+    backgroundColor: SECONDARY_COLOR,
+    borderRadius: 8,
+  },
+  itemText: {
+    fontSize: 16,
+    color: "LIGHT",
+  },
+  //CustomSwitch
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 200,
+    justifyContent: "center",
+  },
+  //Animatedfeb
+  container: {
+    position: "absolute",
+    bottom: 30,
+    right: 30,
+    alignItems: "flex-end",
+  },
+  fab: {
+    backgroundColor: PRIMARY_COLOR,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    justifyContent: "center",
+    alignItems: "center",
+    elevation: 5,
+  },
+  fabText: {
+    color: "#fff",
+    fontSize: 24,
+    fontWeight: "bold",
+  },
+  actionButton: {
+    backgroundColor: "#54B4D3",
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 10,
+  },
+  actionText: {
+    color: "#fff",
+    fontWeight: "bold",
+  },
+  //menuitem
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: "#ccc",
+  },
+  icon: {
+    marginRight: 15,
+  },
+  title: {
+    fontSize: 16,
+    color: "#333",
+  },
+  //datatablepagination
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 10,
+    backgroundColor: "#fff",
+    borderTopWidth: 1,
+    borderColor: "#ccc",
+  },
+  button: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    backgroundColor: PRIMARY_COLOR,
+    borderRadius: 4,
+  },
+  disabledButton: {
+    backgroundColor: "#aaa",
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
+  },
+  pageInfo: {
+    marginHorizontal: 20,
+    fontSize: 16,
   },
 });

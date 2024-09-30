@@ -4,11 +4,25 @@ import ApplyLeaveForm from "./screens/ApplyLeaveForm";
 import ProgressBar from "./components/ProgressBar";
 import CheckInCheckOut from "./components/CheckInCheckOut";
 import ChatScreen from "./screens/ChartScreen";
-import FilledButton from "./components/buttons/FilledButton";
+
+import ContainerList from "./components/ContainerList";
+import MyPickerInput from "./components/input/MyPickerInput";
+import CustomSwitch from "./components/CustomSwitch";
+import Snackbar from "./components/Snackbar";
+
+import AnimatedFAB from "./components/AnimatedFAB";
+import MenuItem from "./components/MenuItem";
+
 
 const App = () => (
-  // <FilledButton />
-  <ChatScreen />
+  // <MenuItem />
+ 
+  // <AnimatedFAB />
+
+  // <CustomSwitch />
+  // <Snackbar />
+  // <ContainerList />
+  // <ChatScreen />
   // <CheckInCheckOut />
   // <ProgressBar />
   //   <ApplyLeaveForm />
