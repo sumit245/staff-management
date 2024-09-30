@@ -304,31 +304,4 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: "#333",
   },
-  //datatablepagination
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 10,
-    backgroundColor: "#fff",
-    borderTopWidth: 1,
-    borderColor: "#ccc",
-  },
-  button: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    backgroundColor: PRIMARY_COLOR,
-    borderRadius: 4,
-  },
-  disabledButton: {
-    backgroundColor: "#aaa",
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-  },
-  pageInfo: {
-    marginHorizontal: 20,
-    fontSize: 16,
-  },
 });
