@@ -18,7 +18,7 @@ export default function ProjectCard({ title, icon, status }) {
 
           <View style={styles.buttonContainer}>
             <PrimaryButton
-              title="Progression 100%"
+              title="Progression"
               buttonStyle={{ backgroundColor: "#FF5733" }}
               textStyle={{ fontSize: 12 }}
               onPress={() => alert("Button pressed!")}

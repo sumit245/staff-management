@@ -174,7 +174,7 @@ export const styles = StyleSheet.create({
   searchBar: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#2b87b022",
     borderRadius: 10,
     paddingHorizontal: 15,
     paddingVertical: 10,
@@ -242,5 +242,67 @@ export const styles = StyleSheet.create({
   contactStatus: {
     fontSize: 14,
     color: "#666",
+  },
+  button: {
+    margin: 10,
+    width: 200,
+    backgroundColor: "#2b87b0",
+  },
+  roundButton: {
+    backgroundColor: "#2b87b0",
+    borderRadius: 30,
+    width: 60,
+    height: 60,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  iconStyle: {
+    fontSize: 22,
+  },
+  label: {
+    marginLeft: 8,
+    fontSize: 16,
+    color: "#333",
+  },
+  disabled: {
+    color: "#ccc",
+  },
+
+  avatarItem: {
+    alignItems: "center",
+  },
+  avatarText: {
+    marginTop: 5,
+    fontSize: 14,
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  headerText: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  dropdown: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+  },
+  dropdownText: {
+    marginRight: 5,
+    fontSize: 16,
+  },
+  gridContainer: {
+    justifyContent: "space-between",
+  },
+  row: {
+    justifyContent: "space-between",
+    marginBottom: 20,
   },
 });
