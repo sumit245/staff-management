@@ -57,22 +57,21 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
     alignItems: "center",
   },
- 
+
   btnText: {
     textTransform: "uppercase",
     color: LIGHT,
     fontWeight: "bold",
   },
   outlinedButton: {
-   margin : 50,
-    borderColor: PRIMARY_COLOR, 
-    borderWidth: 2, 
-    backgroundColor: 'transparent', 
+    margin: 50,
+    borderColor: PRIMARY_COLOR,
+    borderWidth: 2,
+    backgroundColor: "transparent",
     paddingVertical: 8,
     borderRadius: 6,
     alignItems: "center",
-},
- 
+  },
 
   rightLink: {
     color: PRIMARY_COLOR,
@@ -143,4 +142,65 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "#eee", // Separate items with a soft border
   },
+
+  radioContainer: {
+    marginVertical: 8,
+  },
+
+  radioButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 4,
+  },
+
+  radioInner: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: PRIMARY_COLOR,
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 10,
+  },
+
+  radioDot: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: PRIMARY_COLOR,
+  },
+
+  radioText: {
+    fontWeight: "bold",
+  },
+
+  listItem: {
+    padding: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: PRIMARY_COLOR,
+  },
+  emptyText: {
+    color: DARK,
+    textAlign: "center",
+    paddingVertical: 20,
+  },
+  snackbar: {
+    position: "absolute",
+    bottom: 50,
+    left: 20,
+    right: 20,
+    backgroundColor: PRIMARY_COLOR, // You can customize this
+    borderRadius: 6,
+    padding: 16,
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 5, // For Android shadow
+    zIndex: 1000, // Ensure it's on top
+  },
+  snackbarText: {
+    color: LIGHT, // Or any contrasting color
+    fontWeight: "bold",
+    textAlign: "center",
+  },            
 });

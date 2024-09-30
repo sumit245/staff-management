@@ -140,5 +140,33 @@ export const leaveTypes = [{
     { label: "Privacy", icon: "shield-checkmark-outline" },
     { label: "Data Usage", icon: "folder-outline" },
     { label: "Help", icon: "help-circle-outline" },
-  ];
+];
+  
+export const fakeTasks = [
+  {
+    backgroundColor: "#ff9999", // Light red
+    count: 5,
+    status: "Pending",
+  },
+  {
+    backgroundColor: "#99ff99", // Light green
+    count: 2,
+    status: "Completed",
+  },
+  {
+    backgroundColor: "#9999ff", // Light blue
+    count: 3,
+    status: "In Progress",
+  },
+  {
+    backgroundColor: "#ffff99", // Light yellow
+    count: 4,
+    status: "Pending",
+  },
+  {
+    backgroundColor: "#ffcc99", // Light orange
+    count: 1,
+    status: "Completed",
+  },
+]
 
