@@ -9,6 +9,7 @@ import {
   SCREEN_WIDTH,
   SECONDARY_COLOR,
 } from "./constant";
+import FilledButton from "../components/buttons/FilledButton";
 
 export const styles = StyleSheet.create({
   container: {
@@ -183,5 +184,15 @@ export const styles = StyleSheet.create({
   audioText: {
     marginLeft: 10,
     fontSize: 16,
+  },
+  //FilledButton
+  filledButton: {
+    margin: 50,
+    borderColor: PRIMARY_COLOR,
+    borderWidth: 2,
+    backgroundColor: PRIMARY_COLOR,
+    paddingVertical: 8,
+    borderRadius: 6,
+    alignItems: "center",
   },
 });

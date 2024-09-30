@@ -18,18 +18,4 @@ const Audio = () => {
   );
 };
 
-// const styles = StyleSheet.create({
-//   audioContainer: {
-//     flexDirection: "row",
-//     alignItems: "center",
-//     padding: 10,
-//     borderTopWidth: 1,
-//     borderColor: "#ddd",
-//   },
-//   audioText: {
-//     marginLeft: 10,
-//     fontSize: 16,
-//   },
-// });
-
 export default Audio;
