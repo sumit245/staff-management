@@ -57,11 +57,23 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
     alignItems: "center",
   },
+ 
   btnText: {
     textTransform: "uppercase",
     color: LIGHT,
     fontWeight: "bold",
   },
+  outlinedButton: {
+   margin : 50,
+    borderColor: PRIMARY_COLOR, 
+    borderWidth: 2, 
+    backgroundColor: 'transparent', 
+    paddingVertical: 8,
+    borderRadius: 6,
+    alignItems: "center",
+},
+ 
+
   rightLink: {
     color: PRIMARY_COLOR,
     textAlign: "right",
@@ -131,5 +143,4 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "#eee", // Separate items with a soft border
   },
-  
 });
