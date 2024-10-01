@@ -3,9 +3,6 @@ import LoginScreen from "./screens/LoginScreen";
 import CardTask from "./components/CardTask";
 import CardGrid from "./components/CardGrid";
 import ContactList from "./components/ContactList";
-
-import ButtonWithIcon from "./components/buttons/ButtonWithIcon";
-import IconButton from "./components/buttons/IconButton";
 import CustomCheckbox from "./components/input/CustomCheckbox";
 import TextInputIcon from "./components/TextInputIcon";
 import Model from "./components/Modal";
@@ -19,8 +16,6 @@ const App = () => (
   //<CardTask />
   //<CardGrid />
   <ContactList />
-  // <ButtonWithIcon />
-  // <IconButton />
   //<CustomCheckbox />
   //<TextInputIcon />
   //<Model />
