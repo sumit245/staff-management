@@ -250,4 +250,80 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginRight: 10,
   },
+  profileCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: 'red',
+    marginBottom: 20,
+  },
+  profileImage: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    marginRight: 15,
+    padding: 4,
+    borderColor: SECONDARY_COLOR,
+    borderWidth: 1
+  },
+  profileInfo: {
+    flex: 1,
+  },
+  rowItem: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: SCREEN_WIDTH - 16,
+    alignItems: "center",
+    paddingVertical: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: "#eee",
+  },
+  rowBullet: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  ph1: {
+    paddingHorizontal: 4
+  },
+  ph2: {
+    paddingHorizontal: 8
+  },
+  ph3: {
+    paddingHorizontal: 12
+  },
+  ph4: {
+    paddingHorizontal: 16
+  },
+  ph5: {
+    paddingHorizontal: 20
+  },
+  pv1: {
+    paddingVertical: 4
+  },
+  pv2: {
+    paddingVertical: 8
+  },
+  pv3: {
+    paddingVertical: 12
+  },
+  pv4: {
+    paddingVertical: 16
+  },
+  pv5: {
+    paddingVertical: 20
+  },
+  p1: {
+    padding: 4
+  },
+  p2: {
+    padding: 8
+  },
+  mh1: {
+    marginHorizontal: 4
+  },
+  mh2: {
+    marginHorizontal: 8
+  }
+
+
 })

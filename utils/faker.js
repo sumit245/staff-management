@@ -6,12 +6,13 @@ import {
 } from "../styles/constant";
 
 export const tasks = [
-  // ======
   {
+    id: 5,
     backgroundColor: "#FFCCCB",
     title: "Dashboard design for admin",
     description: "Create the admin dashboard for the app",
     status: "High",
+    count: 12,
     date: "14 Oct 2022",
     commentsCount: 5,
     attachmentsCount: 2,
@@ -21,10 +22,12 @@ export const tasks = [
     ],
   },
   {
+    id: 6,
     backgroundColor: "#D1E7DD",
     title: "Konom web application",
     description: "Develop the Konom web application",
     status: "Low",
+    count: 1,
     date: "14 Nov 2022",
     commentsCount: 2,
     attachmentsCount: 1,
@@ -33,8 +36,6 @@ export const tasks = [
       { image: "https://randomuser.me/api/portraits/women/2.jpg" },
     ],
   },
-  // ======
-
   {
     id: 1,
     title: "Task 1",
@@ -66,9 +67,7 @@ export const tasks = [
     count: 5,
     status: "Cancelled",
     backgroundColor: DANGER_COLOR,
-  },
-
-  // =============
+  }
 ];
 
 export const leaveReasons = [
@@ -147,26 +146,12 @@ export const dummyData = [
   { id: "5", title: "Item 5" },
 ];
 
-//Menuitem
 export const menuItems = [
-  {
-    id: 1,
-    iconName: "home",
-    title: "Home",
-  },
-  {
-    id: 2,
-    iconName: "settings",
-    title: "Settings",
-  },
-  {
-    id: 3,
-    iconName: "information-circle",
-    title: "About",
-  },
-  {
-    id: 4,
-    iconName: "log-out",
-    title: "Logout",
-  },
+  { label: "Account", icon: "person-outline" },
+  { label: "Chats", icon: "chatbubble-outline" },
+  { label: "Appearance", icon: "sunny-outline" },
+  { label: "Notification", icon: "notifications-outline" },
+  { label: "Privacy", icon: "shield-checkmark-outline" },
+  { label: "Data Usage", icon: "folder-outline" },
+  { label: "Help", icon: "help-circle-outline" },
 ];
