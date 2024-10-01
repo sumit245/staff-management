@@ -1,9 +1,9 @@
 import { Keyboard, KeyboardAvoidingView, View, Platform, ScrollView } from "react-native"
 import MyImageBackground from "../components/MyImageBackground"
-import { H1, H5, Span } from "../components/text"
+import { H1, H5, H3, Span, H2 } from "../components/text"
 import { styles } from "../styles/components.styles"
 import MyTextInput from "../components/input/MyTextInput"
-import PrimaryButton from "../components/buttons/PrimaryButton"
+import Button from "../components/buttons/Button"
 
 export default function LoginScreen() {
     return (
@@ -31,7 +31,9 @@ export default function LoginScreen() {
                     />
 
                     <Span style={styles.rightLink}>Forgot Password?</Span>
-                    <PrimaryButton title="Login" />
+                    <Button style={[styles.btn, styles.bgPrimary, { justifyContent: 'center' }]}>
+                        <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>Login</H2>
+                    </Button>
                 </KeyboardAvoidingView>
             </ScrollView>
         </MyImageBackground>

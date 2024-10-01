@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { View } from "react-native";
-import { H5 } from "../components/text";
+import { View, } from "react-native";
+import { H2, H5 } from "../components/text";
 import DatePickerInput from "../components/input/DatePickerInput";
-import PrimaryButton from "../components/buttons/PrimaryButton";
 import MyPickerInput from "../components/input/MyPickerInput";
 import { leaveReasons, leaveTypes } from "../utils/faker";
 import ContainerComponent from "../components/ContainerComponent";
@@ -10,6 +9,7 @@ import MyHeader from "../components/header/MyHeader";
 import MyTextInput from "../components/input/MyTextInput";
 import MyChipSelector from "../components/input/MyChipSelector";
 import { styles } from "../styles/components.styles";
+import Button from "../components/buttons/Button";
 
 
 export default function ApplyLeaveForm() {
@@ -50,7 +50,9 @@ export default function ApplyLeaveForm() {
           numberOfLines={5}
           placeholder="Enter reason of leave briefly"
           style={{ ...styles.textInputField, height: 126 }} />
-        <PrimaryButton onPress={handleSubmit} title="Apply Now" />
+        <Button style={[styles.btn, styles.bgPrimary, { justifyContent: 'center' }]} onPress={handleSubmit}>
+          <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>Apply Now</H2>
+        </Button>
       </View>
     </ContainerComponent>
   );
