@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { View } from "react-native";
-import DurationSelector from "../components/DurationSelector";
+import { H5 } from "../components/text";
 import DatePickerInput from "../components/input/DatePickerInput";
 import PrimaryButton from "../components/buttons/PrimaryButton";
 import MyPickerInput from "../components/input/MyPickerInput";
-import { leaveReasons } from "../utils/faker";
+import { leaveReasons, leaveTypes } from "../utils/faker";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import MyTextInput from "../components/input/MyTextInput";
+import MyChipSelector from "../components/input/MyChipSelector";
 import { styles } from "../styles/components.styles";
+
 
 export default function ApplyLeaveForm() {
   const [leaveType, setLeaveType] = useState("");
@@ -30,7 +32,14 @@ export default function ApplyLeaveForm() {
       <MyHeader title="Apply Leave" />
       <View style={styles.formContainer}>
         <MyPickerInput title="Leave Type" value={leaveType} onChange={setLeaveType} options={leaveReasons} />
-        <DurationSelector duration={duration} setDuration={setDuration} />
+        <View style={{ marginVertical: 4 }}>
+          <H5>Duration</H5>
+          <View style={styles.row}>
+            {
+              leaveTypes.map((option, index) => <MyChipSelector icon={option.icon} id={option.id} title={option.type} key={index} onPressed={(indexs) => console.log(`${index} is pressed`)} />)
+            }
+          </View>
+        </View>
         <DatePickerInput title="Select Date" mode="date" date={date} setDate={setDate} />
         <MyTextInput
           title="Reason"
