@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, StatusBar } from "react-native";
-import { DANGER_COLOR, DARK, LIGHT, PRIMARY_COLOR, PRIMARY_COLOR_TRANSPARENT, SCREEN_HEIGHT, SCREEN_WIDTH, SECONDARY_COLOR } from "./constant";
+import { DANGER_COLOR, DARK, INFO_COLOR, LIGHT, PRIMARY_COLOR, PRIMARY_COLOR_TRANSPARENT, SCREEN_HEIGHT, SCREEN_WIDTH, SECONDARY_COLOR, SUCCESS_COLOR, WARNING_COLOR } from "./constant";
 
 export const styles = StyleSheet.create({
     container: {
@@ -57,7 +57,6 @@ export const styles = StyleSheet.create({
     },
     btnText: {
         textTransform: "uppercase",
-        color: LIGHT,
         fontWeight: 'bold'
     },
     rightLink: {
@@ -105,5 +104,43 @@ export const styles = StyleSheet.create({
         marginRight: 4,
         backgroundColor: LIGHT,
         width: SCREEN_WIDTH / 3.5
+    },
+    btn: {
+        marginVertical: 8,
+        padding: 8,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderRadius: 6,
+        flexDirection: 'row',
+    },
+    bgInfo: {
+        backgroundColor: INFO_COLOR
+    },
+    bgDanger: {
+        backgroundColor: DANGER_COLOR
+    },
+    bgWarning: {
+        backgroundColor: WARNING_COLOR
+    },
+    bgSuccess: {
+        backgroundColor: SUCCESS_COLOR
+    },
+    bgPrimary: {
+        backgroundColor: PRIMARY_COLOR
+    },
+    bgSecondary: {
+        backgroundColor: SECONDARY_COLOR
+    },
+    round: {
+        height: 64,
+        width: 64,
+        borderRadius: 32,
+        justifyContent: 'center'
+    },
+    textLight: {
+        color: LIGHT
+    },
+    border: {
+        borderWidth: 1
     }
 })
