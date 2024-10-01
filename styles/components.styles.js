@@ -71,7 +71,14 @@ export const styles = StyleSheet.create({
   },
   titleText: {
     fontWeight: '700',
-    color: DARK
+    color: DARK,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  titleText: {
+    fontWeight: "700",
+    color: DARK,
   },
   statCard: {
     width: SCREEN_WIDTH / 2.5,
@@ -105,6 +112,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderRadius: 6,
     flexDirection: 'row',
+  },
+  bgDark: {
+    backgroundColor: DARK
   },
   bgInfo: {
     backgroundColor: INFO_COLOR
@@ -199,5 +209,45 @@ export const styles = StyleSheet.create({
     backgroundColor: SECONDARY_COLOR,
     borderRadius: 8,
   },
-})
+  snackbar: {
+    position: "absolute",
+    bottom: 10,
+    left: 8,
+    right: 8,
+    borderRadius: 8,
+    padding: 8,
+    flexDirection: 'row',
+    minHeight: 48,
+    alignItems: "center",
+    justifyContent: "space-between",
+    elevation: 2, // For Android shadow
+    zIndex: 1000, // Ensure it's on top
+  },
+  snackMessage: {
+    maxWidth: SCREEN_WIDTH / 1.6,
+    fontSize: 16,
+    color: LIGHT
+  },
 
+  radioDot: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: PRIMARY_COLOR,
+  },
+  radioButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 4,
+  },
+  radioInner: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: PRIMARY_COLOR,
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 10,
+  },
+})

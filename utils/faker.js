@@ -109,7 +109,7 @@ export const leaveTypes = [
     icon: "clock",
   },
 ];
-// src/data/dummyData.js
+
 export const dummyMessages = [
   {
     id: "1",
@@ -132,11 +132,13 @@ export const dummyMessages = [
     time: "09.13",
   },
 ];
+
 export const items = [
   { label: "JavaScript", value: "javascript" },
   { label: "Python", value: "python" },
   { label: "Java", value: "java" },
 ];
+
 export const dummyData = [
   { id: "1", title: "Item 1" },
   { id: "2", title: "Item 2" },
@@ -144,6 +146,7 @@ export const dummyData = [
   { id: "4", title: "Item 4" },
   { id: "5", title: "Item 5" },
 ];
+
 //Menuitem
 export const menuItems = [
   {
