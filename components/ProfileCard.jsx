@@ -4,11 +4,12 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { styles } from "../styles/components.styles";
 import { SCREEN_WIDTH } from "../styles/constant";
 import { P, Span } from "./text";
+import Avatar from "./Avatar";
 
 export default function ProfileCard({ imageUri, name, phoneNumber }) {
   return (
     <View style={[styles.rowItem, styles.ph5, styles.pv5, { height: 120, width: SCREEN_WIDTH }]}>
-      <Image style={styles.profileImage} source={{ uri: imageUri }} height={28} width={28} resizeMode="contain" />
+      <Avatar avatar={imageUri} name={name} />
       <View style={styles.profileInfo}>
         <P style={{ fontWeight: 'bold' }}>{name}</P>
         <Span>{phoneNumber}</Span>

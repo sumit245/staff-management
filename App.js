@@ -1,27 +1,28 @@
 // import DashboardScreen from "./screens/DashboardScreen";
 // import LoginScreen from "./screens/LoginScreen";
-// import CardTask from "./components/CardTask";
-// import CardGrid from "./components/CardGrid";
+// import CardTask from "./components/card/CardTask";
+import CardGrid from "./components/CardGrid";
 import ContactList from "./components/ContactList";
-// import CustomCheckbox from "./components/input/CustomCheckbox";
+import SettingsScreen from "./screens/SettingScreen";
+import CustomCheckbox from "./components/input/CustomCheckbox";
+import ContainerComponent from "./components/ContainerComponent";
 // import TextInputIcon from "./components/TextInputIcon";
-// import Model from "./components/Modal";
+import { PaperProvider } from "react-native-paper";
+import { styles } from "./styles/components.styles";
+import { H2 } from "./components/text";
+import DataTableTitle from "./components/table/DataTableTitle";
 // import AvatarIcon from "./components/AvatarIcon";
 // import DataTableCell from "./components/Table/DataTableCell";
+// import LoginScreen from "./screens/LoginScreen"
 
 // import DataTableTitle from "./components/Table/DataTableTitle";
 
 const App = () => (
-    //<DashboardScreen />
-    //<CardTask />
-    //<CardGrid />
-    <ContactList />
-    //<CustomCheckbox />
-    //<TextInputIcon />
-    //<Model />
-    //<AvatarIcon/>
-    //<DataTableCell />
-    //<DataTableTitle />
+    <ContainerComponent>
+        <PaperProvider>
+            <DataTableTitle />
+        </PaperProvider>
+    </ContainerComponent>
 );
 
 export default App;

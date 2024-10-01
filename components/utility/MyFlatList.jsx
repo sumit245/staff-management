@@ -15,6 +15,7 @@ export default function MyFlatList({ data, renderItem, keyExtractor, loading, Li
           renderItem={renderItem}
           keyExtractor={keyExtractor}
           ListEmptyComponent={ListEmptyComponent}
+          showsVerticalScrollIndicator={false}
           {...props}
         />
       )}

@@ -1,11 +1,21 @@
 import { Keyboard, KeyboardAvoidingView, View, Platform, ScrollView } from "react-native"
 import MyImageBackground from "../components/MyImageBackground"
-import { H1, H5, H3, Span, H2 } from "../components/text"
+import { H1, H5, H3, Span, H2, P } from "../components/text"
 import { styles } from "../styles/components.styles"
 import MyTextInput from "../components/input/MyTextInput"
 import Button from "../components/buttons/Button"
+import { useState, useEffect } from "react"
+import ModalPopup from '../components/Modal'
+import Avatar from "../components/Avatar"
 
 export default function LoginScreen() {
+    const [popupVisible, setPopupVisible] = useState(false)
+    const onSubmit = () => {
+        console.log("I chanf")
+        setPopupVisible(true)
+        console.log(popupVisible)
+    }
+
     return (
         <MyImageBackground>
             <ScrollView style={{ flex: 1 }}>
@@ -31,11 +41,20 @@ export default function LoginScreen() {
                     />
 
                     <Span style={styles.rightLink}>Forgot Password?</Span>
-                    <Button style={[styles.btn, styles.bgPrimary, { justifyContent: 'center' }]}>
+                    <Button style={[styles.btn, styles.bgPrimary, { justifyContent: 'center' }]} onPress={onSubmit}>
                         <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>Login</H2>
                     </Button>
                 </KeyboardAvoidingView>
             </ScrollView>
+            {
+                popupVisible &&
+                <ModalPopup visible={popupVisible} close={() => setPopupVisible(popupVisible => !popupVisible)} negativeButton="Cancel" positiveButton="login" >
+                    <Avatar name="Rohit" avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70" />
+
+                    <P>Are you sure you want to create attendance?</P>
+                </ModalPopup>
+
+            }
         </MyImageBackground>
     )
 }

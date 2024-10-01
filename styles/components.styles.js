@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: LIGHT,
     alignItems: 'center',
-    marginHorizontal: 8
+    marginHorizontal: 8,
   },
   textLarge: {
     fontSize: 20,
@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     marginTop: 20
   },
   inputContainer: {
-    width: SCREEN_WIDTH - 16,
+    width: SCREEN_WIDTH - 20,
   },
   textInput: {
     marginVertical: 8
@@ -94,12 +94,12 @@ export const styles = StyleSheet.create({
   picker: {
     borderWidth: 1,
     borderColor: SECONDARY_COLOR,
-    borderRadius: 5,
+    borderRadius: 6,
   },
   chipButton: {
     borderWidth: 1,
     borderColor: SECONDARY_COLOR,
-    borderRadius: 5,
+    borderRadius: 6,
     padding: 4,
     marginRight: 4,
     backgroundColor: LIGHT,
@@ -149,6 +149,9 @@ export const styles = StyleSheet.create({
   textDark: {
     color: DARK
   },
+  textDanger: {
+    color: DANGER_COLOR
+  },
   textSecondary: {
     color: SECONDARY_COLOR
   },
@@ -196,18 +199,12 @@ export const styles = StyleSheet.create({
   },
   progressBarContainer: {
     width: "90%",
-    borderRadius: 10,
+    borderRadius: 6,
     overflow: "hidden",
   },
   progressBar: {
     height: "100%",
-    borderRadius: 10,
-  },
-  itemContainer: {
-    padding: 16,
-    marginVertical: 8,
-    backgroundColor: SECONDARY_COLOR,
-    borderRadius: 8,
+    borderRadius: 6,
   },
   snackbar: {
     position: "absolute",
@@ -323,7 +320,83 @@ export const styles = StyleSheet.create({
   },
   mh2: {
     marginHorizontal: 8
-  }
-
-
+  },
+  mv1: {
+    marginVertical: 4
+  },
+  mv2: {
+    marginVertical: 8
+  },
+  mv3: {
+    marginVertical: 12
+  },
+  avatarContainer: {
+    position: "relative",
+    marginRight: 15,
+  },
+  onlineDot: {
+    position: "absolute",
+    bottom: 14,
+    right: 14,
+    borderWidth: 1,
+    borderColor: LIGHT,
+  },
+  card: {
+    borderRadius: 16,
+    padding: 16,
+    width: SCREEN_WIDTH - 40, //Apply this style to login screen textinput and button
+    margin: 4,
+    marginVertical: 8,
+    elevation: 2,
+    backgroundColor: LIGHT,
+  },
+  taskLabel: {
+    borderRadius: 15,
+    paddingVertical: 3,
+    paddingHorizontal: 10,
+    marginRight: 5,
+    backgroundColor: "#f87171",
+  },
+  taskFooterItem: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  footerText: {
+    marginHorizontal: 4,
+    color: DARK,
+    fontSize: 14,
+  },
+  dropdown: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+  },
+  dropdownText: {
+    marginRight: 5,
+    fontSize: 16,
+  },
+  iconCard: {
+    backgroundColor: "#f9f9f9",
+    borderRadius: 16,
+    padding: 16,
+    margin: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 2,
+    height: 100,
+    minWidth: 120,
+  },
+  iconCardIcon: {
+    marginBottom: 10,
+  },
+  iconCardText: {
+    fontSize: 14,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: DARK,
+  },
 })

@@ -253,6 +253,27 @@ export const contactsData = [
     status: "Last seen 3 minutes ago",
     online: false,
   },
+  {
+    id: "8",
+    name: "Naisha Singh",
+    avatar: "",
+    status: "Online",
+    online: true,
+  },
+  {
+    id: "9",
+    name: "Raki Devon",
+    avatar: "",
+    status: "Online",
+    online: true,
+  },
+  {
+    id: "7",
+    name: "Shanaya Akira",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    status: "Last seen 3 minutes ago",
+    online: false,
+  },
 ];
 
 export const menuItems = [
