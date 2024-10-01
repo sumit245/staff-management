@@ -9,7 +9,7 @@ import { tasks } from "../utils/faker";
 export default function DashboardScreen() {
   return (
     <ContainerComponent>
-      <MyHeader title="Dashboard" hasIcon={true} icon="notifications-outline" badgeCount={1} />
+      <MyHeader title="Dashboard" hasIcon={true} icon="notifications-outline" hasBadge={true} badgeCount={1} />
       <ScrollView>
         {
           tasks.map((task, index) =>
