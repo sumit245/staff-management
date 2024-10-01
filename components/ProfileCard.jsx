@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
 export default function ProfileCard({ imageUri, name, phoneNumber }) {

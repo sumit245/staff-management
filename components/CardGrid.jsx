@@ -1,4 +1,3 @@
-import React from "react";
 import { View } from "react-native";
 import StatCard from "./card/Statcard";
 import { cardData } from "../utils/faker";

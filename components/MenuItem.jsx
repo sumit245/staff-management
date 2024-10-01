@@ -14,7 +14,6 @@ export default function MenuItem({ label, icon, onPress }) {
   );
 }
 
-// Styles for MenuItem
 const styles = StyleSheet.create({
   menuItem: {
     flexDirection: "row",

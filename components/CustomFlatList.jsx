@@ -1,4 +1,3 @@
-import React from "react";
 import { FlatList, View, ActivityIndicator } from "react-native";
 import { styles } from "../styles/components.styles";
 
