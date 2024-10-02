@@ -7,14 +7,15 @@ import Button from "../components/buttons/Button"
 import { useState, useEffect } from "react"
 import ModalPopup from '../components/Modal'
 import Avatar from "../components/Avatar"
+import { useNavigation } from "@react-navigation/native"
 
 export default function LoginScreen() {
     const [popupVisible, setPopupVisible] = useState(false)
     const onSubmit = () => {
-        console.log("I chanf")
         setPopupVisible(true)
-        console.log(popupVisible)
     }
+
+    const navigation = useNavigation()
 
     return (
         <MyImageBackground>
@@ -48,7 +49,13 @@ export default function LoginScreen() {
             </ScrollView>
             {
                 popupVisible &&
-                <ModalPopup visible={popupVisible} close={() => setPopupVisible(popupVisible => !popupVisible)} negativeButton="Cancel" positiveButton="login" >
+                <ModalPopup
+                    visible={popupVisible}
+                    close={() => setPopupVisible(popupVisible => !popupVisible)}
+                    negativeButton="Cancel"
+                    positiveButton="login"
+                    action={() => { navigation.navigate('homeScreen'), setPopupVisible(false) }}
+                >
                     <Avatar name="Rohit" avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70" />
 
                     <P>Are you sure you want to create attendance?</P>
@@ -57,4 +64,9 @@ export default function LoginScreen() {
             }
         </MyImageBackground>
     )
+
 }
+
+// navigate is like href from any page to any page
+// goBack only push to previous page in stack
+// cangoBack allows or disallows back propagation
