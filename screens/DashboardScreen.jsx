@@ -5,7 +5,6 @@ import MyHeader from "../components/header/MyHeader";
 import StatCard from "../components/card/Statcard";
 import MyRadioButton from "../components/input/MyRadioButton";
 import CustomFlatList from "../components/CustomFlatList";
-import DataTableHeader from "../components/DataTable/DataTableHeader"; // Adjust the path as necessary
 
 export default function DashboardScreen() {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -15,39 +14,6 @@ export default function DashboardScreen() {
     { label: "Option 2", value: "option2" },
     { label: "Option 3", value: "option3" },
   ];
-
-  // Sample data for the DataTable
-  const data = [
-    { dessert: "Ice Cream", calories: 200, fat: 10 },
-    { dessert: "Cake", calories: 300, fat: 15 },
-    { dessert: "Pie", calories: 250, fat: 12 },
-  ];
-
-  const headers = [
-    {
-      label: "Dessert",
-      numeric: false,
-      sortKey: "dessert",
-      sortDirection: "descending",
-    },
-    {
-      label: "Calories",
-      numeric: true,
-      sortKey: "calories",
-      sortDirection: "descending",
-    },
-    {
-      label: "Fat (g)",
-      numeric: true,
-      sortKey: "fat",
-      sortDirection: "descending",
-    },
-  ];
-
-  const handleSort = (key) => {
-    // Implement sorting logic if needed
-    console.log(`Sort by ${key}`);
-  };
 
   return (
     <ContainerComponent>
@@ -65,12 +31,7 @@ export default function DashboardScreen() {
             tasks={task.count}
             status={task.status}
           />
-        ))}
-
-        {/* DataTable Header */}
-        <DataTableHeader headers={headers} onSort={handleSort} />
-
-        {/* Custom FlatList for displaying data */}
+        ))}       
         <CustomFlatList
           data={data}
           renderItem={({ item }) => (
