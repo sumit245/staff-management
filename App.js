@@ -11,17 +11,19 @@ import DataTableCell from "./components/Table/DataTableCell";
 
 import DataTableTitle from "./components/Table/DataTableTitle";
 
+
 const App = () => (
   //<DashboardScreen />
   //<CardTask />
-  //<CardGrid />
-  <ContactList />
+  <CardGrid />
+ // <ContactList />
   //<CustomCheckbox />
   //<TextInputIcon />
   //<Model />
   //<AvatarIcon/>
   //<DataTableCell />
   //<DataTableTitle />
+  
 );
 
 export default App;
