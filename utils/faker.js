@@ -67,7 +67,7 @@ export const tasks = [
     count: 5,
     status: "Cancelled",
     backgroundColor: DANGER_COLOR,
-  }
+  },
 ];
 
 export const leaveReasons = [
