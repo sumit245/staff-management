@@ -1,5 +1,17 @@
 import { StyleSheet, Platform, StatusBar } from "react-native";
-import { DANGER_COLOR, DARK, INFO_COLOR, LIGHT, PRIMARY_COLOR, PRIMARY_COLOR_TRANSPARENT, SCREEN_HEIGHT, SCREEN_WIDTH, SECONDARY_COLOR, SUCCESS_COLOR, WARNING_COLOR } from "./constant";
+import {
+  DANGER_COLOR,
+  DARK,
+  INFO_COLOR,
+  LIGHT,
+  PRIMARY_COLOR,
+  PRIMARY_COLOR_TRANSPARENT,
+  SCREEN_HEIGHT,
+  SCREEN_WIDTH,
+  SECONDARY_COLOR,
+  SUCCESS_COLOR,
+  WARNING_COLOR,
+} from "./constant";
 
 export const styles = StyleSheet.create({
   container: {
@@ -214,7 +226,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     elevation: 2,
-    zIndex: 1000, 
+    zIndex: 1000,
   },
   snackMessage: {
     maxWidth: SCREEN_WIDTH / 1.6,
@@ -394,5 +406,62 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: DARK,
+  },
+  leaveCard: {
+    position: "relative",
+    padding: 16,
+    borderRadius: 8,
+    backgroundColor: LIGHT,
+    marginBottom: 16,
+    elevation: 2,
+  },
+  approvedStatusContainer: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    backgroundColor: SUCCESS_COLOR, // Color of the Approved badge
+    borderRadius: 4,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+  },
+  status: {
+    color: LIGHT,
+    fontWeight: "bold",
+  },
+
+  scrollContainer: {
+    flex: 1, // Ensures ScrollView fills the available space
+    backgroundColor: LIGHT, // Apply your background color
+  },
+  scrollViewContent: {
+    paddingVertical: 20, // Add padding for the content
+    paddingHorizontal: 16, // Adjust horizontal padding
+    alignItems: "center", // Ensures content is centered
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-around", // Distribute tab buttons evenly
+    alignItems: "center",
+    width: "100%", // Ensure the row takes up full width
+    marginBottom: 16, // Add spacing below the tabs
+  },
+  tabContainer: {
+    marginTop: 16,
+    marginBottom: 20,
+  },
+  inputContainer: {
+    width: "100%", // Take full width of the screen
+    paddingHorizontal: 16, // Padding for content inside
+  },
+  tabButtonActive: {
+    fontWeight: "bold",
+    borderBottomWidth: 2,
+    borderBottomColor: PRIMARY_COLOR,
+    paddingVertical: 8, // Ensure there's some padding around the text
+  },
+  tabButton: {
+    color: "#888",
+    paddingVertical: 8, // Same padding as active tab
+    paddingHorizontal: 16,
   },
 });
