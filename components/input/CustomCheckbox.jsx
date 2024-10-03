@@ -1,37 +1,27 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, } from "react-native";
 import { Checkbox as PaperCheckbox } from "react-native-paper";
 import { styles } from "../../styles/components.styles";
-import ContainerComponent from "../ContainerComponent";
+import { H5 } from "../text";
+import { PRIMARY_COLOR, SECONDARY_COLOR } from "../../styles/constant";
 
-export default function CustomCheckbox({ label }) {
+
+export default function CustomCheckbox({ label, onChange, ...textStyle }) {
   const [isChecked, setChecked] = useState(false);
-  const [enabled, setEnabled] = useState(true);
-
-  const handlePress = () => {
-    if (enabled) {
-      setChecked(!isChecked);
-    }
-    setEnabled(!enabled);
-  };
 
   return (
-    <ContainerComponent>
-      <View>
-        <TouchableOpacity onPress={handlePress}>
-          <View>
-            <PaperCheckbox
-              status={isChecked ? "checked" : "unchecked"}
-              disabled={!enabled}
-            />
-            {label && (
-              <Text style={[styles.label, !enabled && styles.disabled]}>
-                {label}
-              </Text>
-            )}
-          </View>
-        </TouchableOpacity>
-      </View>
-    </ContainerComponent>
+    <View style={{ alignItems: 'center', flexDirection: 'row', justifyContent: 'flex-start' }}>
+      <PaperCheckbox
+        status={isChecked ? "checked" : "unchecked"}
+        color={isChecked ? PRIMARY_COLOR : SECONDARY_COLOR}
+        onPress={() => setChecked((isChecked) => !isChecked)}
+        rippleColor={PRIMARY_COLOR}
+      />
+      {label && (
+        <H5 style={{ fontWeight: 'bold', ...textStyle }} >
+          {label}
+        </H5>
+      )}
+    </View>
   );
 }

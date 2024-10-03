@@ -1,29 +1,19 @@
-import DashboardScreen from "./screens/DashboardScreen";
-import LoginScreen from "./screens/LoginScreen";
-import CardTask from "./components/CardTask";
-import CardGrid from "./components/CardGrid";
-import ContactList from "./components/ContactList";
-import CustomCheckbox from "./components/input/CustomCheckbox";
-import TextInputIcon from "./components/TextInputIcon";
-import Model from "./components/Modal";
-import AvatarIcon from "./components/AvatarIcon";
-import DataTableCell from "./components/Table/DataTableCell";
+import "react-native-gesture-handler"; //Don't ever remove this line
+import { PaperProvider } from "react-native-paper";
+import MyNavigationContainer from "./navigation/MyNavigationContainer";
+import NotificationScreen from "./screens/NotificationScreen";
+import HolidayListScreen from "./screens/HolidayListScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
-import DataTableTitle from "./components/Table/DataTableTitle";
+export default function App() {
+  return (
+    <PaperProvider>
+      {/* <MyNavigationContainer /> */ }
+      {/* <NotificationScreen/> */ }
+      {/* <HolidayListScreen/> */ }
+      <ProfileScreen/>
+    </PaperProvider>
+  );
+}
 
-
-const App = () => (
-  //<DashboardScreen />
-  //<CardTask />
-  <CardGrid />
- // <ContactList />
-  //<CustomCheckbox />
-  //<TextInputIcon />
-  //<Model />
-  //<AvatarIcon/>
-  //<DataTableCell />
-  //<DataTableTitle />
-  
-);
-
-export default App;
+// Wrap

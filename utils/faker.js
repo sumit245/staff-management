@@ -7,6 +7,36 @@ import {
 
 export const tasks = [
   {
+    id: 5,
+    backgroundColor: "#FFCCCB",
+    title: "Dashboard design for admin",
+    description: "Create the admin dashboard for the app",
+    status: "High",
+    count: 12,
+    date: "14 Oct 2022",
+    commentsCount: 5,
+    attachmentsCount: 2,
+    teamMembers: [
+      { image: "https://randomuser.me/api/portraits/men/1.jpg" },
+      { image: "https://randomuser.me/api/portraits/women/1.jpg" },
+    ],
+  },
+  {
+    id: 6,
+    backgroundColor: "#D1E7DD",
+    title: "Konom web application",
+    description: "Develop the Konom web application",
+    status: "Low",
+    count: 1,
+    date: "14 Nov 2022",
+    commentsCount: 2,
+    attachmentsCount: 1,
+    teamMembers: [
+      { image: "https://randomuser.me/api/portraits/men/2.jpg" },
+      { image: "https://randomuser.me/api/portraits/women/2.jpg" },
+    ],
+  },
+  {
     id: 1,
     title: "Task 1",
     description: "This is task 1",
@@ -39,6 +69,83 @@ export const tasks = [
     backgroundColor: DANGER_COLOR,
   },
 ];
+
+export const leaveReasons = [
+  {
+    id: 1,
+    label: "Select leave type",
+    value: "",
+    enabled: false,
+  },
+  {
+    id: 2,
+    label: "Sick Leave",
+    value: "sl",
+    enabled: true,
+  },
+  {
+    id: 3,
+    label: "Annual Leave",
+    value: "al",
+    enabled: true,
+  },
+];
+
+export const leaveTypes = [
+  {
+    id: 1,
+    type: "Single Day",
+    icon: "clock",
+  },
+  {
+    id: 2,
+    type: "Multiple Days",
+    icon: "clock",
+  },
+  {
+    id: 3,
+    type: "Hourly",
+    icon: "clock",
+  },
+];
+
+export const dummyMessages = [
+  {
+    id: "1",
+    message: "Look at how chocho sleep in my arms!",
+    isSent: false,
+    time: "16.46",
+  },
+  { id: "2", message: "Can I come over?", isSent: true, time: "16.46" },
+  {
+    id: "3",
+    message: "Of course, let me know if you’re on your way",
+    isSent: false,
+    time: "16.50",
+  },
+  { id: "4", message: "K, I’m on my way", isSent: true, time: "16.50" },
+  {
+    id: "5",
+    message: "Good morning, did you sleep well?",
+    isSent: false,
+    time: "09.13",
+  },
+];
+
+export const items = [
+  { label: "JavaScript", value: "javascript" },
+  { label: "Python", value: "python" },
+  { label: "Java", value: "java" },
+];
+
+export const dummyData = [
+  { id: "1", title: "Item 1" },
+  { id: "2", title: "Item 2" },
+  { id: "3", title: "Item 3" },
+  { id: "4", title: "Item 4" },
+  { id: "5", title: "Item 5" },
+];
+
 export const cardData = [
   {
     id: 1,
@@ -146,7 +253,29 @@ export const contactsData = [
     status: "Last seen 3 minutes ago",
     online: false,
   },
+  {
+    id: "8",
+    name: "Naisha Singh",
+    avatar: "",
+    status: "Online",
+    online: true,
+  },
+  {
+    id: "9",
+    name: "Raki Devon",
+    avatar: "",
+    status: "Online",
+    online: true,
+  },
+  {
+    id: "7",
+    name: "Shanaya Akira",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    status: "Last seen 3 minutes ago",
+    online: false,
+  },
 ];
+
 export const menuItems = [
   { label: "Account", icon: "person-outline" },
   { label: "Chats", icon: "chatbubble-outline" },
@@ -155,4 +284,101 @@ export const menuItems = [
   { label: "Privacy", icon: "shield-checkmark-outline" },
   { label: "Data Usage", icon: "folder-outline" },
   { label: "Help", icon: "help-circle-outline" },
+];
+export const notifications = [
+  {
+    id: "1",
+    title: "You updated your profile picture",
+    description: "You just updated your profile picture.",
+    icon: "account",
+    time: "Just Now",
+  },
+  {
+    id: "2",
+    title: "Password Changed",
+    description: "You’ve completed changing the password.",
+    icon: "lock-reset",
+    time: "2 oct,22:22 Pm",
+  },
+  {
+    id: "3",
+    title: "Subham Applied for Leave",
+    description: "Please accept my leave request.",
+    icon: "account-circle",
+    time: "23 sept",
+  },
+  {
+    id: "4",
+    title: "System Update",
+    description: "Please update to the newest app for a better experience.",
+    icon: "cellphone-information",
+    time: "25 sept,21:22 Pm",
+  },
+];
+export const holidays = [
+  {
+    id: "1",
+    title: "Republic Day",
+    date: "January 26, 2024",
+    day: "Thursday",
+    icon: "calendar",
+  },
+  {
+    id: "2",
+    title: "Holi",
+    date: "March 26, 2024",
+    day: "Friday",
+    icon: "calendar",
+  },
+  {
+    id: "3",
+    title: "Independence Day",
+    date: "August 15, 2024",
+    day: "Tuesday",
+    icon: "calendar",
+  },
+  {
+    id: "4",
+    title: "Raksha Bandhan",
+    date: "August 20, 2024",
+    day: "Wednesday",
+    icon: "calendar",
+  },
+  {
+    id: "5",
+    title: "Janmashtami",
+    date: "September 26, 2024",
+    day: "Thursday",
+    icon: "calendar",
+  },
+  {
+    id: "6",
+    title: "Diwali",
+    date: "November 12, 2024",
+    day: "Sunday",
+    icon: "calendar",
+  },
+];
+export const personalData = {
+  fullName: "Bittu Kumar",
+  email: "bittu230@gmail.com",
+  phone: "+91 7945671265",
+  address: "Delhi India",
+};
+export const professionalData = {
+  employeeId: "7879987",
+  designation: " UI/UX Designer",
+  companyEmail: "bittu89@example.com",
+  employeeType: "Permanent",
+  department: "Design",
+  reportingManager: "Ashish Kumar",
+  companyExperience: "2 Year 5 Months",
+  officeTime: "10:00 am to 07:00 pm",
+};
+export const documentData = [
+  { id: "1", name: "Offer Letter", icon: "file-document-outline" },
+  { id: "2", name: "Appointment Letter", icon: "file-document-outline" },
+  { id: "3", name: "Bond Agreement", icon: "file-document-outline" },
+  { id: "4", name: "Appraisal Letter", icon: "file-document-outline" },
+  { id: "5", name: "Salary Slip", icon: "file-document-outline" },
 ];

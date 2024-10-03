@@ -1,9 +1,9 @@
-import { Text, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import StatCard from "../components/card/Statcard";
 import { tasks } from "../utils/faker";
-
+import MyFlatList from "../components/utility/MyFlatList";
 
 export default function DashboardScreen() {
   return (
@@ -12,25 +12,22 @@ export default function DashboardScreen() {
         title="Dashboard"
         hasIcon={true}
         icon="notifications-outline"
+        hasBadge={true}
         badgeCount={1}
       />
-      <ScrollView>
-        {tasks.map((task, index) => (
+      <MyFlatList
+        data={tasks}
+        renderItem={({ item }) =>
           <StatCard
-            key={index}
-            backgroundColor={task.backgroundColor}
-            tasks={task.count}
-            status={task.status}
-          />
-        ))}
-        <Text style={{ fontSize: 80 }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aliquam
-          id neque, nemo inventore tenetur excepturi! Modi facere nobis
-          molestiae aliquam, distinctio dolorem itaque aperiam ab cupiditate
-          maxime delectus ipsa?
-        </Text>
-        
-      </ScrollView>
+            key={item.id}
+            backgroundColor={item.backgroundColor}
+            tasks={item.count}
+            status={item.status} />}
+        keyExtractor={(item, index) => index}
+        numColumns={2}
+
+
+      />
     </ContainerComponent>
   );
 }

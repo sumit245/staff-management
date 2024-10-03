@@ -2,11 +2,15 @@ import { StyleSheet, Platform, StatusBar } from "react-native";
 import {
   DANGER_COLOR,
   DARK,
+  INFO_COLOR,
   LIGHT,
   PRIMARY_COLOR,
   PRIMARY_COLOR_TRANSPARENT,
   SCREEN_HEIGHT,
   SCREEN_WIDTH,
+  SECONDARY_COLOR,
+  SUCCESS_COLOR,
+  WARNING_COLOR,
 } from "./constant";
 
 export const styles = StyleSheet.create({
@@ -15,65 +19,6 @@ export const styles = StyleSheet.create({
     backgroundColor: LIGHT,
     alignItems: "center",
     marginHorizontal: 8,
-  },
-  card: {
-    borderRadius: 10,
-    padding: 15,
-    marginVertical: 10,
-    marginHorizontal: 15,
-    elevation: 3,
-    backgroundColor: "#fff",
-  },
-  cardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  taskTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  labelsContainer: {
-    flexDirection: "row",
-    marginVertical: 10,
-  },
-  label: {
-    borderRadius: 15,
-    paddingVertical: 3,
-    paddingHorizontal: 10,
-    marginRight: 5,
-  },
-  highPriority: {
-    backgroundColor: "#f87171",
-  },
-  onTrack: {
-    backgroundColor: "#c084fc",
-  },
-  labelText: {
-    color: "#fff",
-    fontSize: 12,
-  },
-  cardFooter: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: 10,
-  },
-  footerItem: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  footerText: {
-    marginLeft: 5,
-    color: "#6b7280",
-    fontSize: 14,
-  },
-  dangerHeading: {
-    color: DANGER_COLOR,
-    fontSize: 20,
-    fontWeight: "bold",
-    marginLeft: 20,
-    padding: 20,
   },
   textLarge: {
     fontSize: 20,
@@ -93,7 +38,7 @@ export const styles = StyleSheet.create({
     marginTop: 20,
   },
   inputContainer: {
-    width: SCREEN_WIDTH - 16,
+    width: SCREEN_WIDTH - 20,
   },
   textInput: {
     marginVertical: 8,
@@ -117,7 +62,6 @@ export const styles = StyleSheet.create({
   },
   btnText: {
     textTransform: "uppercase",
-    color: LIGHT,
     fontWeight: "bold",
   },
   rightLink: {
@@ -140,7 +84,11 @@ export const styles = StyleSheet.create({
   titleText: {
     fontWeight: "700",
     color: DARK,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
+
   statCard: {
     width: SCREEN_WIDTH / 2.5,
     height: SCREEN_WIDTH / 3,
@@ -152,138 +100,280 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "flex-start",
   },
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    paddingHorizontal: 17,
-    paddingTop: 10,
+  picker: {
+    borderWidth: 1,
+    borderColor: SECONDARY_COLOR,
+    borderRadius: 6,
   },
-
-  header: {
-    flexDirection: "row",
+  chipButton: {
+    borderWidth: 1,
+    borderColor: SECONDARY_COLOR,
+    borderRadius: 6,
+    padding: 4,
+    marginRight: 4,
+    backgroundColor: LIGHT,
+    width: SCREEN_WIDTH / 3.5,
+  },
+  btn: {
+    marginVertical: 8,
+    padding: 8,
+    alignItems: "center",
     justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 10,
+    borderRadius: 6,
+    flexDirection: "row",
   },
-  headerTitle: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "#333",
+  bgDark: {
+    backgroundColor: DARK,
+  },
+  bgInfo: {
+    backgroundColor: INFO_COLOR,
+  },
+  bgDanger: {
+    backgroundColor: DANGER_COLOR,
+  },
+  bgWarning: {
+    backgroundColor: WARNING_COLOR,
+  },
+  bgSuccess: {
+    backgroundColor: SUCCESS_COLOR,
+  },
+  bgPrimary: {
+    backgroundColor: PRIMARY_COLOR,
+  },
+  bgPrimaryTransParent: {
+    backgroundColor: PRIMARY_COLOR_TRANSPARENT,
+  },
+  bgSecondary: {
+    backgroundColor: SECONDARY_COLOR,
+  },
+  round: {
+    height: 64,
+    width: 64,
+    borderRadius: 32,
+    justifyContent: "center",
+  },
+  textLight: {
+    color: LIGHT,
+  },
+  textDark: {
+    color: DARK,
+  },
+  textDanger: {
+    color: DANGER_COLOR,
+  },
+  textSecondary: {
+    color: SECONDARY_COLOR,
+  },
+  border: {
+    borderWidth: 1,
+  },
+  fab: {
+    elevation: 2,
+    position: "absolute",
+    bottom: 8,
+    right: 8,
+  },
+  bottom: {
+    position: "absolute",
+    bottom: 2,
+  },
+  fullWidth: {
+    width: SCREEN_WIDTH,
   },
 
-  searchBar: {
+  messageContainer: {
+    padding: 12,
+    borderRadius: 16,
+    marginVertical: 8,
+  },
+  sentMessage: {
+    backgroundColor: PRIMARY_COLOR,
+    alignSelf: "flex-end",
+  },
+  receivedMessage: {
+    backgroundColor: SECONDARY_COLOR,
+    alignSelf: "flex-start",
+  },
+  messageText: {
+    color: LIGHT,
+    fontSize: 16,
+  },
+  sentMessageText: {
+    color: LIGHT,
+  },
+  messageTime: {
+    color: LIGHT,
+    fontSize: 12,
+    marginTop: 4,
+  },
+  progressBarContainer: {
+    width: "90%",
+    borderRadius: 6,
+    overflow: "hidden",
+  },
+  progressBar: {
+    height: "100%",
+    borderRadius: 6,
+  },
+  snackbar: {
+    position: "absolute",
+    bottom: 10,
+    left: 8,
+    right: 8,
+    borderRadius: 8,
+    padding: 8,
+    flexDirection: "row",
+    minHeight: 48,
+    alignItems: "center",
+    justifyContent: "space-between",
+    elevation: 2, // For Android shadow
+    zIndex: 1000, // Ensure it's on top
+  },
+  snackMessage: {
+    maxWidth: SCREEN_WIDTH / 1.6,
+    fontSize: 16,
+    color: LIGHT,
+  },
+
+  radioDot: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: PRIMARY_COLOR,
+  },
+  radioButton: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#2b87b022",
-    borderRadius: 10,
-    paddingHorizontal: 15,
-    paddingVertical: 10,
+    marginVertical: 4,
+  },
+  radioInner: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: PRIMARY_COLOR,
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 10,
+  },
+  profileCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: "red",
     marginBottom: 20,
   },
-  searchInput: {
-    marginLeft: 10,
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
+  profileImage: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    marginRight: 15,
+    padding: 4,
+    borderColor: SECONDARY_COLOR,
+    borderWidth: 1,
+  },
+  profileInfo: {
     flex: 1,
   },
-
-  contactCard: {
+  rowItem: {
     flexDirection: "row",
+    justifyContent: "space-between",
+    width: SCREEN_WIDTH - 16,
     alignItems: "center",
-    paddingVertical: 10,
+    paddingVertical: 16,
     borderBottomWidth: 1,
     borderBottomColor: "#eee",
   },
-
+  rowBullet: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  ph1: {
+    paddingHorizontal: 4,
+  },
+  ph2: {
+    paddingHorizontal: 8,
+  },
+  ph3: {
+    paddingHorizontal: 12,
+  },
+  ph4: {
+    paddingHorizontal: 16,
+  },
+  ph5: {
+    paddingHorizontal: 20,
+  },
+  pv1: {
+    paddingVertical: 4,
+  },
+  pv2: {
+    paddingVertical: 8,
+  },
+  pv3: {
+    paddingVertical: 12,
+  },
+  pv4: {
+    paddingVertical: 16,
+  },
+  pv5: {
+    paddingVertical: 20,
+  },
+  p1: {
+    padding: 4,
+  },
+  p2: {
+    padding: 8,
+  },
+  mh1: {
+    marginHorizontal: 4,
+  },
+  mh2: {
+    marginHorizontal: 8,
+  },
+  mv1: {
+    marginVertical: 4,
+  },
+  mv2: {
+    marginVertical: 8,
+  },
+  mv3: {
+    marginVertical: 12,
+  },
   avatarContainer: {
     position: "relative",
     marginRight: 15,
   },
-  avatar: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-  },
-  placeholderAvatar: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    backgroundColor: "#007AFF",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  placeholderText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-
   onlineDot: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    backgroundColor: "#00FF00",
     position: "absolute",
-    bottom: 0,
-    right: 0,
-    borderWidth: 2,
-    borderColor: "#fff",
+    bottom: 14,
+    right: 14,
+    borderWidth: 1,
+    borderColor: LIGHT,
   },
-
-  contactInfo: {
-    flex: 1,
+  card: {
+    borderRadius: 16,
+    padding: 16,
+    width: SCREEN_WIDTH - 40, //Apply this style to login screen textinput and button
+    margin: 4,
+    marginVertical: 8,
+    elevation: 2,
+    backgroundColor: LIGHT,
   },
-  contactName: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
+  taskLabel: {
+    borderRadius: 15,
+    paddingVertical: 3,
+    paddingHorizontal: 10,
+    marginRight: 5,
+    backgroundColor: "#f87171",
   },
-  contactStatus: {
-    fontSize: 14,
-    color: "#666",
-  },
-  button: {
-    margin: 10,
-    width: 200,
-    backgroundColor: "#2b87b0",
-  },
-  roundButton: {
-    backgroundColor: "#2b87b0",
-    borderRadius: 30,
-    width: 60,
-    height: 60,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  iconStyle: {
-    fontSize: 22,
-  },
-  label: {
-    marginLeft: 8,
-    fontSize: 16,
-    color: "#333",
-  },
-  disabled: {
-    color: "#ccc",
-  },
-
-  avatarItem: {
-    alignItems: "center",
-  },
-  avatarText: {
-    marginTop: 5,
-    fontSize: 14,
-  },
-  header: {
+  taskFooterItem: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 20,
   },
-  headerText: {
-    fontSize: 18,
-    fontWeight: "bold",
+  footerText: {
+    marginHorizontal: 4,
+    color: DARK,
+    fontSize: 14,
   },
   dropdown: {
     flexDirection: "row",
@@ -298,11 +388,120 @@ export const styles = StyleSheet.create({
     marginRight: 5,
     fontSize: 16,
   },
-  gridContainer: {
-    justifyContent: "space-between",
+  iconCard: {
+    backgroundColor: "#f9f9f9",
+    borderRadius: 16,
+    padding: 16,
+    margin: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 2,
+    height: 100,
+    minWidth: 120,
   },
-  row: {
-    justifyContent: "space-between",
+  iconCardIcon: {
+    marginBottom: 10,
+  },
+  iconCardText: {
+    fontSize: 14,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: DARK,
+  },
+  // NotificationScreen,
+  time: {
+    fontSize: 12,
+    color: "#020409",
+    alignSelf: "center",
+  },
+
+  description: {
+    fontSize: 14,
+    color: "#666",
+    fontWeight: "normal",
+  },
+  // HolidayListScreen
+  container: {
+    paddingHorizontal: 8,
+    paddingTop: 10,
+  },
+  leftSection: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  iconWrapper: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "#2b87b0",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 12,
+  },
+  dateText: {
+    fontSize: 14,
+    color: "#333",
+  },
+  rightSection: {
+    alignItems: "flex-end",
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#000",
+  },
+  day: {
+    fontSize: 14,
+    color: "#999",
+  },
+  // Profile
+  tabsContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
     marginBottom: 20,
+  },
+  tabButton: {
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderBottomWidth: 2,
+    borderBottomColor: "transparent",
+  },
+  activeTabButton: {
+    borderBottomColor: "#2b87b0",
+  },
+  tabText: {
+    fontSize: 16,
+  },
+  activeTabText: {
+    color: "#2b87b0",
+    fontWeight: "bold",
+  },
+  content: {
+    marginTop: 20,
+  },
+  label: {
+    fontSize: 14,
+    color: "#888",
+    marginBottom: 5,
+  },
+  value: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 15,
+    color: "#333",
+  },
+  documentRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: "#eee",
+  },
+  documentName: {
+    fontSize: 16,
+    flex: 1,
+    marginLeft: 10,
+    color: "#020409",
   },
 });

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-import ContactItem from "./ContactItem";
+import { View, TouchableOpacity } from "react-native";
 import { contactsData } from "../utils/faker";
 import { styles } from "../styles/components.styles";
 import ContainerComponent from "./ContainerComponent";
-import SearchBar from "./SearchBar";
+import SearchBar from "./input/SearchBar";
+import Avatar from "./Avatar";
+import { H4, Span } from "./text";
+import MyFlatList from '../components/utility/MyFlatList'
+import MyHeader from '../components/header/MyHeader'
+import AnimatedFAB from "../components/buttons/AnimatedFAB";
 
 export default function ContactList() {
   const [searchText, setSearchText] = useState("");
@@ -16,28 +19,30 @@ export default function ContactList() {
 
   return (
     <ContainerComponent>
-      <View style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.headerTitle}>Contacts</Text>
-          <TouchableOpacity>
-            <Ionicons name="add" size={24} color="#333" />
-          </TouchableOpacity>
-        </View>
 
-        <SearchBar
-          placeholder="Search"
-          value={searchText}
-          onChangeText={handleSearch}
-        />
+      <MyHeader isBack={true} title="Contacts" hasIcon={true} icon="add-outline" />
+      <SearchBar
+        placeholder="Search"
+        value={searchText}
+        onChangeText={handleSearch}
+      />
 
-        <FlatList
-          data={contactsData.filter((item) =>
-            item.name.toLowerCase().includes(searchText.toLowerCase())
-          )}
-          renderItem={({ item }) => <ContactItem item={item} />}
-          keyExtractor={(item) => item.id}
-        />
-      </View>
+      <MyFlatList
+        data={contactsData.filter((item) =>
+          item.name.toLowerCase().includes(searchText.toLowerCase())
+        )}
+        renderItem={({ item }) => (
+          <TouchableOpacity style={styles.rowItem}>
+            <Avatar avatar={item.avatar} name={item.name} online={item.online} />
+            <View style={styles.profileInfo}>
+              <H4 style={[styles.textDark, { fontWeight: 'bold', fontSize: 18 }]}>{item.name}</H4>
+              <Span>{item.status}</Span>
+            </View>
+          </TouchableOpacity>)}
+        keyExtractor={(item) => item.id}
+      />
+      <AnimatedFAB icon='add-outline' />
+
     </ContainerComponent>
   );
 }

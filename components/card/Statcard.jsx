@@ -6,8 +6,10 @@ import { Span } from '../text'
 import { TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { styles } from '../../styles/components.styles'
+import { useEffect } from 'react'
 
 export default function StatCard({ backgroundColor, tasks, status }) {
+
     return (
         <TouchableOpacity>
             <Card style={{ ...styles.statCard, backgroundColor }}>
