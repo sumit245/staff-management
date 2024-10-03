@@ -1,16 +1,10 @@
-import { View, TouchableOpacity, Text } from "react-native"
+import { View, TouchableOpacity } from "react-native"
 import { styles } from "../../styles/components.styles"
-import { PRIMARY_COLOR } from "../../styles/constant"
-import { H5 } from "../text"; 
+import { H5 } from "../text";
 
-export default function MyRadioButton({
-  options,
-  selectedValue,
-  onValueChange,
-  title,
-}) {
+export default function MyRadioButton({ options, selectedValue, onValueChange, title }) {
   return (
-    <View style={styles.radioContainer}>
+    <View style={{ marginVertical: 8 }}>
       <H5>{title}</H5>
       {options.map((option) => (
         <TouchableOpacity
@@ -21,7 +15,7 @@ export default function MyRadioButton({
           <View style={styles.radioInner}>
             {selectedValue === option.value && <View style={styles.radioDot} />}
           </View>
-          <Text style={styles.radioText}>{option.label}</Text>
+          <H5 style={{ fontWeight: 'bold' }}>{option.label}</H5>
         </TouchableOpacity>
       ))}
     </View>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Button } from "react-native";
-import Snackbar from "../components/Snackbar";
+import Snackbar from "../../components/utility/Snackbar";
+
 
 const App = () => {
   const [snackbarVisible, setSnackbarVisible] = useState(false);
@@ -15,11 +16,12 @@ const App = () => {
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Button
         title="Show Snackbar"
-        onPress={() => showSnackbar("This is a Snackbar message!")}
+        onPress={() => showSnackbar("This is a snackbar")}
       />
       <Snackbar
         message={snackbarMessage}
         visible={snackbarVisible}
+        variant={4}
         onDismiss={() => setSnackbarVisible(false)}
       />
     </View>
@@ -27,3 +29,6 @@ const App = () => {
 };
 
 export default App;
+
+
+

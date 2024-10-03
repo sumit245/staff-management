@@ -9,7 +9,6 @@ export default function MyTextInput({ title, onChangeText, type, ...props }) {
         <View style={styles.textInput}>
             <H5>{title}</H5>
             <TextInput
-                // mode="outlined"
                 onChangeText={onChangeText}
                 keyboardType={type}
                 style={styles.textInputField}

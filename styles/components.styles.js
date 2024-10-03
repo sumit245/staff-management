@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, StatusBar } from "react-native";
-import { DANGER_COLOR, DARK, LIGHT, PRIMARY_COLOR, PRIMARY_COLOR_TRANSPARENT, SCREEN_HEIGHT, SCREEN_WIDTH, SECONDARY_COLOR } from "./constant";
+import { DANGER_COLOR, DARK, INFO_COLOR, LIGHT, PRIMARY_COLOR, PRIMARY_COLOR_TRANSPARENT, SCREEN_HEIGHT, SCREEN_WIDTH, SECONDARY_COLOR, SUCCESS_COLOR, WARNING_COLOR } from "./constant";
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,13 +7,6 @@ export const styles = StyleSheet.create({
     backgroundColor: LIGHT,
     alignItems: "center",
     marginHorizontal: 8,
-  },
-  dangerHeading: {
-    color: DANGER_COLOR,
-    fontSize: 20,
-    fontWeight: "bold",
-    marginLeft: 20,
-    padding: 20,
   },
   textLarge: {
     fontSize: 20,
@@ -33,9 +26,7 @@ export const styles = StyleSheet.create({
     marginTop: 20,
   },
   inputContainer: {
-    width: "90%", // Reduce width to create space on sides
-    paddingHorizontal: 16,
-    marginVertical: 12, // Adjust margin between input fields
+    width: SCREEN_WIDTH - 20,
   },
   textInput: {
     marginVertical: 8,
@@ -57,22 +48,10 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
     alignItems: "center",
   },
-
   btnText: {
     textTransform: "uppercase",
-    color: LIGHT,
     fontWeight: "bold",
   },
-  outlinedButton: {
-    margin: 50,
-    borderColor: PRIMARY_COLOR,
-    borderWidth: 2,
-    backgroundColor: "transparent",
-    paddingVertical: 8,
-    borderRadius: 6,
-    alignItems: "center",
-  },
-
   rightLink: {
     color: PRIMARY_COLOR,
     textAlign: "right",
@@ -93,6 +72,9 @@ export const styles = StyleSheet.create({
   titleText: {
     fontWeight: "700",
     color: DARK,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   statCard: {
     width: SCREEN_WIDTH / 2.5,
@@ -104,55 +86,153 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "#e0e0e0",
   },
   picker: {
     borderWidth: 1,
     borderColor: SECONDARY_COLOR,
-    borderRadius: 5,
+    borderRadius: 6,
   },
   chipButton: {
     borderWidth: 1,
     borderColor: SECONDARY_COLOR,
-    borderRadius: 5,
+    borderRadius: 6,
     padding: 4,
     marginRight: 4,
     backgroundColor: LIGHT,
     width: SCREEN_WIDTH / 3.5,
   },
-  icon: {
-    marginRight: 15,
+  btn: {
+    marginVertical: 8,
+    padding: 8,
+    alignItems: "center",
+    justifyContent: "space-between",
+    borderRadius: 6,
+    flexDirection: "row",
+  },
+  bgDark: {
+    backgroundColor: DARK,
+  },
+  bgInfo: {
+    backgroundColor: INFO_COLOR,
+  },
+  bgDanger: {
+    backgroundColor: DANGER_COLOR,
+  },
+  bgWarning: {
+    backgroundColor: WARNING_COLOR,
+  },
+  bgSuccess: {
+    backgroundColor: SUCCESS_COLOR,
+  },
+  bgPrimary: {
+    backgroundColor: PRIMARY_COLOR,
+  },
+  bgPrimaryTransParent: {
+    backgroundColor: PRIMARY_COLOR_TRANSPARENT,
+  },
+  bgSecondary: {
+    backgroundColor: SECONDARY_COLOR,
+  },
+  round: {
+    height: 64,
+    width: 64,
+    borderRadius: 32,
+    justifyContent: "center",
+  },
+  textLight: {
+    color: LIGHT,
+  },
+  textDark: {
     color: DARK,
   },
-  scrollViewContent: {
-    flexGrow: 1,
-    alignItems: "center",
-    paddingVertical: 20, // Add vertical padding to create space
+  textDanger: {
+    color: DANGER_COLOR,
   },
-  optionsContainer: {
-    width: "90%", // Match the width of other components
-    paddingHorizontal: 16, // Padding for consistent spacing
-    marginTop: 20, // Create space between inputs and options
+  textSecondary: {
+    color: SECONDARY_COLOR,
   },
-  optionItem: {
-    paddingVertical: 16, // Add vertical padding for touch targets
-    borderBottomWidth: 1,
-    borderBottomColor: "#eee", // Separate items with a soft border
+  border: {
+    borderWidth: 1,
+  },
+  fab: {
+    elevation: 2,
+    position: "absolute",
+    bottom: 8,
+    right: 8,
+  },
+  bottom: {
+    position: "absolute",
+    bottom: 2,
+  },
+  fullWidth: {
+    width: SCREEN_WIDTH,
   },
 
-  radioContainer: {
+  messageContainer: {
+    padding: 12,
+    borderRadius: 16,
     marginVertical: 8,
   },
+  sentMessage: {
+    backgroundColor: PRIMARY_COLOR,
+    alignSelf: "flex-end",
+  },
+  receivedMessage: {
+    backgroundColor: SECONDARY_COLOR,
+    alignSelf: "flex-start",
+  },
+  messageText: {
+    color: LIGHT,
+    fontSize: 16,
+  },
+  sentMessageText: {
+    color: LIGHT,
+  },
+  messageTime: {
+    color: LIGHT,
+    fontSize: 12,
+    marginTop: 4,
+  },
+  progressBarContainer: {
+    width: "90%",
+    borderRadius: 6,
+    overflow: "hidden",
+  },
+  progressBar: {
+    height: "100%",
+    borderRadius: 6,
+  },
+  snackbar: {
+    position: "absolute",
+    bottom: 10,
+    left: 8,
+    right: 8,
+    borderRadius: 8,
+    padding: 8,
+    flexDirection: "row",
+    minHeight: 48,
+    alignItems: "center",
+    justifyContent: "space-between",
+    elevation: 2,
+    zIndex: 1000, 
+  },
+  snackMessage: {
+    maxWidth: SCREEN_WIDTH / 1.6,
+    fontSize: 16,
+    color: LIGHT,
+  },
 
+  radioDot: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: PRIMARY_COLOR,
+  },
   radioButton: {
     flexDirection: "row",
     alignItems: "center",
     marginVertical: 4,
   },
-
   radioInner: {
     width: 24,
     height: 24,
@@ -163,44 +243,156 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginRight: 10,
   },
-
-  radioDot: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    backgroundColor: PRIMARY_COLOR,
+  profileCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: "red",
+    marginBottom: 20,
   },
-
-  radioText: {
-    fontWeight: "bold",
+  profileImage: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    marginRight: 15,
+    padding: 4,
+    borderColor: SECONDARY_COLOR,
+    borderWidth: 1,
   },
-
-  listItem: {
-    padding: 16,
+  profileInfo: {
+    flex: 1,
+  },
+  rowItem: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: SCREEN_WIDTH - 16,
+    alignItems: "center",
+    paddingVertical: 16,
     borderBottomWidth: 1,
-    borderBottomColor: PRIMARY_COLOR,
+    borderBottomColor: "#eee",
   },
-  emptyText: {
-    color: DARK,
-    textAlign: "center",
+  rowBullet: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  ph1: {
+    paddingHorizontal: 4,
+  },
+  ph2: {
+    paddingHorizontal: 8,
+  },
+  ph3: {
+    paddingHorizontal: 12,
+  },
+  ph4: {
+    paddingHorizontal: 16,
+  },
+  ph5: {
+    paddingHorizontal: 20,
+  },
+  pv1: {
+    paddingVertical: 4,
+  },
+  pv2: {
+    paddingVertical: 8,
+  },
+  pv3: {
+    paddingVertical: 12,
+  },
+  pv4: {
+    paddingVertical: 16,
+  },
+  pv5: {
     paddingVertical: 20,
   },
-  snackbar: {
+  p1: {
+    padding: 4,
+  },
+  p2: {
+    padding: 8,
+  },
+  mh1: {
+    marginHorizontal: 4,
+  },
+  mh2: {
+    marginHorizontal: 8,
+  },
+  mv1: {
+    marginVertical: 4,
+  },
+  mv2: {
+    marginVertical: 8,
+  },
+  mv3: {
+    marginVertical: 12,
+  },
+  avatarContainer: {
+    position: "relative",
+    marginRight: 15,
+  },
+  onlineDot: {
     position: "absolute",
-    bottom: 50,
-    left: 20,
-    right: 20,
-    backgroundColor: PRIMARY_COLOR, // You can customize this
-    borderRadius: 6,
+    bottom: 14,
+    right: 14,
+    borderWidth: 1,
+    borderColor: LIGHT,
+  },
+  card: {
+    borderRadius: 16,
     padding: 16,
+    width: SCREEN_WIDTH - 40, //Apply this style to login screen textinput and button
+    margin: 4,
+    marginVertical: 8,
+    elevation: 2,
+    backgroundColor: LIGHT,
+  },
+  taskLabel: {
+    borderRadius: 15,
+    paddingVertical: 3,
+    paddingHorizontal: 10,
+    marginRight: 5,
+    backgroundColor: "#f87171",
+  },
+  taskFooterItem: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  footerText: {
+    marginHorizontal: 4,
+    color: DARK,
+    fontSize: 14,
+  },
+  dropdown: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+  },
+  dropdownText: {
+    marginRight: 5,
+    fontSize: 16,
+  },
+  iconCard: {
+    backgroundColor: "#f9f9f9",
+    borderRadius: 16,
+    padding: 16,
+    margin: 8,
     alignItems: "center",
     justifyContent: "center",
-    elevation: 5, // For Android shadow
-    zIndex: 1000, // Ensure it's on top
+    elevation: 2,
+    height: 100,
+    minWidth: 120,
   },
-  snackbarText: {
-    color: LIGHT, // Or any contrasting color
+  iconCardIcon: {
+    marginBottom: 10,
+  },
+  iconCardText: {
+    fontSize: 14,
     fontWeight: "bold",
     textAlign: "center",
-  },            
+    color: DARK,
+  },
 });
