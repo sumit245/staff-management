@@ -464,4 +464,102 @@ export const styles = StyleSheet.create({
     paddingVertical: 8, // Same padding as active tab
     paddingHorizontal: 16,
   },
+
+  checkoutButton: {
+    backgroundColor: "#2b87b0",
+    borderRadius: 100,
+    width: 150,
+    height: 150,
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
+    marginBottom: 20,
+    elevation: 5,
+  },
+  checkoutText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
+    marginTop: 10,
+  },
+  timerCard: {
+    backgroundColor: "#1B2940",
+    borderRadius: 15,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    marginBottom: 20,
+  },
+  timerContent: {
+    alignItems: "center",
+  },
+  locationRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+  locationText: {
+    color: "#fff",
+    fontSize: 14,
+  },
+  timeText: {
+    fontSize: 36,
+    color: "#50e3c2",
+    marginVertical: 10,
+  },
+  workHoursText: {
+    color: "#fff",
+    fontSize: 12,
+  },
+  workHoursTimeText: {
+    fontSize: 16,
+    color: "#50e3c2",
+    marginTop: 5,
+  },
+  activityCard: {
+    backgroundColor: "#fff",
+    borderRadius: 15,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    marginBottom: 20,
+    elevation: 3,
+  },
+  activityHeader: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 15,
+  },
+  activityRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 10,
+  },
+  activityTitle: {
+    fontSize: 16,
+  },
+  activityTime: {
+    fontSize: 14,
+    color: "#020409",
+  },
+  footer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  footerText: {
+    fontSize: 14,
+    color: "#020409",
+    marginLeft: 5,
+  },
+  mapContainer: {
+    alignItems: "center",
+    marginTop: 16,
+    overflow: "hidden",
+    borderRadius: 30,
+
+  },
+  map: {
+    width: "98%",
+    height: 200, 
+    borderRadius: 20, 
+  },
 });

@@ -285,3 +285,8 @@ export const menuItems = [
   { label: "Data Usage", icon: "folder-outline" },
   { label: "Help", icon: "help-circle-outline" },
 ];
+
+export const activities = [
+  { id: "1", title: "Capital Icon", time: "9:15 AM - 11:00 AM" },
+  { id: "2", title: "Baroda Bank", time: "11:00 AM - 11:30 AM" },
+];

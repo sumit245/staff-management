@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { View, TouchableOpacity, ScrollView } from "react-native";
-import { H2, H5, H6 } from "../components/text"; 
+import { View, ScrollView } from "react-native";
+import { H2, H5, H6 } from "../components/text";
 import { styles } from "../styles/components.styles";
-import ContainerComponent from "../components/ContainerComponent"; 
+import ContainerComponent from "../components/ContainerComponent";
+import TabNavigation from "../components/TabNavigation";
 
 const Card = ({ children, style }) => {
   return <View style={[styles.card, style]}>{children}</View>;
@@ -30,38 +31,17 @@ const LeaveSummary = () => {
     </View>
   );
 };
-const TabNavigation = ({ currentTab, setCurrentTab }) => {
-  return (
-    <View style={[styles.row, { marginVertical: 8 }]}>
-      {["Upcoming", "Past"].map((tab) => (
-        <TouchableOpacity
-          key={tab}
-          style={[styles.chipButton, currentTab === tab && styles.bgPrimary]}
-          onPress={() => setCurrentTab(tab)}
-        >
-          <H5 style={[currentTab === tab ? styles.textLight : styles.textDark]}>
-            {tab}
-          </H5>
-        </TouchableOpacity>
-      ))}
-    </View>
-  );
-};
 
 const LeaveCard = ({ dateRange, applyDays, leaveBalance, approvedBy }) => {
   return (
     <Card style={styles.leaveCard}>
-      {/* Status in top-right corner */}
       <View style={styles.approvedStatusContainer}>
         <H5 style={styles.status}>Approved</H5>
       </View>
-
-      {/* Date section */}
       <View>
         <H5>Date:</H5>
         <H6>{dateRange}</H6>
       </View>
-
       <View
         style={[styles.row, { justifyContent: "space-between", marginTop: 8 }]}
       >
@@ -69,12 +49,10 @@ const LeaveCard = ({ dateRange, applyDays, leaveBalance, approvedBy }) => {
           <H6>Apply Days</H6>
           <H5>{applyDays} Days</H5>
         </View>
-
         <View style={{ flex: 1, alignItems: "center" }}>
           <H6>Leave Balance</H6>
           <H5>{leaveBalance}</H5>
         </View>
-
         <View style={{ flex: 1, alignItems: "center" }}>
           <H6>Approved By</H6>
           <H5>{approvedBy}</H5>
@@ -106,9 +84,11 @@ const LeaveScreen = () => {
     <ContainerComponent>
       <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
         <LeaveSummary />
-
-        <TabNavigation currentTab={currentTab} setCurrentTab={setCurrentTab} />
-
+        <TabNavigation
+          tabs={["Upcoming", "Past"]}
+          currentTab={currentTab}
+          setCurrentTab={setCurrentTab}
+        />
         {currentTab === "Upcoming" &&
           leaves.map((leave, index) => (
             <LeaveCard
