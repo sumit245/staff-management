@@ -1,11 +1,11 @@
 import React from "react";
-import { View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, FlatList } from "react-native";
 import { Text, Divider } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { holidays } from "../utils/faker";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
-import MyFlatList from "../components/utility/MyFlatList";
+//import MyFlatList from "../components/utility/MyFlatList";
 import { styles } from "../styles/components.styles";
 import { H5, P } from "../components/text";
 
@@ -32,7 +32,7 @@ export default function HolidayListScreen() {
     <ContainerComponent>
       <MyHeader title="Holidays" isBack={true} hasIcon={true} />
       <View>
-        <MyFlatList
+        <FlatList
           data={holidays}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}

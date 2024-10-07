@@ -226,8 +226,8 @@ export const styles = StyleSheet.create({
     minHeight: 48,
     alignItems: "center",
     justifyContent: "space-between",
-    elevation: 2, // For Android shadow
-    zIndex: 1000, // Ensure it's on top
+    elevation: 2,
+    zIndex: 1000,
   },
   snackMessage: {
     maxWidth: SCREEN_WIDTH / 1.6,
@@ -421,10 +421,10 @@ export const styles = StyleSheet.create({
     fontWeight: "normal",
   },
   // HolidayListScreen
-  container: {
-    paddingHorizontal: 8,
-    paddingTop: 10,
-  },
+  // container: {
+  //   paddingHorizontal: 8,
+  //   paddingTop: 10,
+  // },
   leftSection: {
     flexDirection: "row",
     alignItems: "center",
@@ -503,5 +503,223 @@ export const styles = StyleSheet.create({
     flex: 1,
     marginLeft: 10,
     color: "#020409",
+  },
+  // LandingPage
+  card: {
+    padding: 16,
+    borderRadius: 10,
+    marginBottom: 16,
+    backgroundColor: "#ffffff",
+  },
+  progressContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+
+  progressText: {
+    fontSize: 28,
+    fontWeight: "bold",
+  },
+  subText: {
+    fontSize: 14,
+    color: "#666",
+  },
+  profileContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  profileImage: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    marginRight: 2,
+  },
+  addIcon: {
+    marginLeft: 8,
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 16,
+  },
+  miniCard: {
+    width: "32%",
+    padding: 16,
+    alignItems: "center",
+    borderRadius: 10,
+  },
+  cardText: {
+    marginTop: 8,
+    fontSize: 14,
+    textAlign: "center",
+  },
+  taskCard: {
+    width: "48%",
+    padding: 16,
+    borderRadius: 10,
+  },
+  taskContent: {
+    justifyContent: "space-between",
+  },
+  taskText: {
+    color: "#fff",
+    fontWeight: "bold",
+    marginBottom: 8,
+  },
+  progressBar: {
+    height: 6,
+    borderRadius: 3,
+    marginBottom: 8,
+  },
+  // DateSelector
+  dateSelector: {
+    marginVertical: 20,
+    paddingHorizontal: 10,
+  },
+  dateItem: {
+    marginHorizontal: 10,
+    alignItems: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 15,
+  },
+  activeDate: {
+    backgroundColor: "#54B4D3",
+  },
+  dateNumber: {
+    fontSize: 18,
+    color: "#020409",
+  },
+  dateText: {
+    fontSize: 14,
+    color: "#020409",
+  },
+  //ProjectTimeline
+  taskList: {
+    paddingHorizontal: 20,
+  },
+  taskCard: {
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 20,
+    elevation: 2,
+  },
+  taskHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  //   taskTitle: {
+  //     fontSize: 18,
+  //     color: "#2c3e50",
+  //     fontWeight: "bold",
+  //   },
+
+  progressContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  progressLabel: {
+    fontSize: 14,
+    color: "#7f8c8d",
+    marginRight: 10,
+  },
+  progressPercent: {
+    marginLeft: 10,
+    fontSize: 12,
+    color: "#7f8c8d",
+  },
+  participantsContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  avatar: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    marginRight: 5,
+  },
+  participantText: {
+    marginLeft: 10,
+    fontSize: 14,
+    color: "#3498db",
+  },
+  // Attendancescreen
+  profileContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  profileImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 12,
+    marginTop: 10,
+  },
+  profileName: {
+    fontSize: 18,
+  },
+  notificationIcon: {
+    marginLeft: "auto",
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginVertical: 16,
+  },
+  attendanceContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+  },
+  attendanceCard: {
+    width: "48%",
+    padding: 16,
+    borderRadius: 8,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    marginVertical: 8,
+  },
+  attendanceText: {
+    fontSize: 14,
+    marginTop: 8,
+    fontWeight: "bold",
+  },
+  attendanceTime: {
+    fontSize: 16,
+    marginTop: 4,
+    fontWeight: "bold",
+  },
+  attendanceStatus: {
+    fontSize: 12,
+    color: "#6e6e6e",
+  },
+  activityItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#fff",
+    borderRadius: 8,
+    marginVertical: 8,
+  },
+  activityInfo: {
+    marginLeft: 12,
+  },
+  activityText: {
+    fontSize: 14,
+    fontWeight: "bold",
+  },
+  activityTime: {
+    fontSize: 12,
+    color: "#6e6e6e",
+  },
+  activityStatus: {
+    marginLeft: "auto",
+    fontSize: 12,
+    color: "#6e6e6e",
   },
 });

@@ -382,3 +382,117 @@ export const documentData = [
   { id: "4", name: "Appraisal Letter", icon: "file-document-outline" },
   { id: "5", name: "Salary Slip", icon: "file-document-outline" },
 ];
+export const activities = [
+  { id: "1", title: "Capital Icon", time: "9:15 AM - 11:00 AM" },
+  { id: "2", title: "Baroda Bank", time: "11:00 AM - 11:30 AM" },
+];
+export const profileImages = [
+  "https://randomuser.me/api/portraits/men/1.jpg",
+  "https://randomuser.me/api/portraits/women/1.jpg",
+];
+export const miniCards = [
+  { id: 1, icon: "time-outline", text: "Est: 20h" },
+  { id: 2, icon: "calendar-outline", text: "Due: 25 Apr" },
+  { id: 3, icon: "checkmark-circle-outline", text: "Tasks: 1/3" },
+];
+export const taskCards = [
+  { id: 1, text: "Design Concept", progress: 0.7, bgColor: "#54B4D3" },
+  { id: 2, text: "Development Phase", progress: 0.4, bgColor: "#2b87b0" },
+];
+export const cardtasks = [
+  {
+    id: 1,
+    title: "Design system",
+    time: "09:00 - 10:00",
+    progress: 0.6,
+    participants: 2,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/32.jpg",
+      "https://randomuser.me/api/portraits/women/44.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "Create prototype",
+    time: "10:00 - 11:00",
+    progress: 0.3,
+    participants: 4,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/36.jpg",
+      "https://randomuser.me/api/portraits/women/40.jpg",
+      "https://randomuser.me/api/portraits/men/37.jpg",
+      "https://randomuser.me/api/portraits/women/50.jpg",
+    ],
+  },
+  {
+    id: 3,
+    title: "Dashboard design",
+    time: "11:00 - 12:00",
+    progress: 0.5,
+    participants: 4,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/38.jpg",
+      "https://randomuser.me/api/portraits/women/51.jpg",
+      "https://randomuser.me/api/portraits/men/39.jpg",
+      "https://randomuser.me/api/portraits/women/53.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Offspace project",
+    time: "12:00 - 01:00",
+    progress: 0.7,
+    participants: 3,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/40.jpg",
+      "https://randomuser.me/api/portraits/women/55.jpg",
+      "https://randomuser.me/api/portraits/men/41.jpg",
+    ],
+  },
+];
+export const attendanceData = [
+  {
+    icon: "login",
+    title: "Check In",
+    time: "10:20 am",
+    status: "On Time",
+  },
+  {
+    icon: "logout",
+    title: "Check Out",
+    time: "07:00 pm",
+    status: "Go Home",
+  },
+  {
+    icon: "clock-outline",
+    title: "Break Time",
+    time: "00:30 min",
+    status: "Avg Time 30 min",
+  },
+  {
+    icon: "calendar-check-outline",
+    title: "Total Days",
+    time: "28",
+    status: "Working Days",
+  },
+];
+export const activityData = [
+  {
+    title: "Check In",
+    time: "10:00 am",
+    status: "On Time",
+    icon: "login",
+  },
+  {
+    title: "Break In",
+    time: "12:30 pm",
+    status: "On Time",
+    icon: "pause-circle-outline",
+  },
+  {
+    title: "Check Out",
+    time: "07:00 pm",
+    status: "On Time",
+    icon: "logout",
+  },
+];
