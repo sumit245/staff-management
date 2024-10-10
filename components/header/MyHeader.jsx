@@ -24,7 +24,7 @@ export default function MyHeader({
           />
         </View>
       )}
-      <H3 style={styles.titleText}>{title}</H3>
+      <H4 style={styles.titleText}>{title}</H4>
       {hasIcon && (
         <View style={{ height: 54, width: 54 }}>
           <Icon

@@ -496,3 +496,73 @@ export const activityData = [
     icon: "logout",
   },
 ];
+export const lineItems = [
+  {
+    id: "AS1001",
+    description: "HP Deskjet 1010 Color Inkjet Printer",
+    location: "MT-seattle Manufacturing",
+    subInventory: "Seattle Manufacturing",
+  },
+  {
+    id: "AS1002",
+    description: "Logitech B100 Optical Wired USB Mouse",
+    location: "MT-seattle Manufacturing",
+    subInventory: "Seattle Manufacturing",
+  },
+];
+// requisitionsData.js
+
+export const requisitions = [
+  {
+    id: "PR - 10050019",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2020",
+    amount: "₹ 24.40 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050018",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2020",
+    amount: "₹ 254.40 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050017",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2020",
+    amount: "₹ 100.00 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050016",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2020",
+    amount: "₹ 100.00 ",
+    checked: false,
+  },
+];
+// PurchaseOrderScreen
+export const itemsData = [
+  {
+    id: "AS1001",
+    name: "HP Deskjet 1010 Color Inkjet Printer",
+    price: 15.0,
+    quantity: 2,
+    total: 30.0,
+  },
+  {
+    id: "AS1002",
+    name: "Logitech B100 Optical Wired USB Mouse",
+    price: 8.0,
+    quantity: 6,
+    total: 48.0,
+  },
+];
+export const amountDetailsData = [
+  { label: "Amount", value: 78.0 },
+  { label: "Tax", value: 2.0 },
+  { label: "Freight", value: 2.0 },
+  { label: "Currency", value: "IND" },
+  { label: "Grand Total", value: 82.0 },
+];

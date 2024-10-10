@@ -722,4 +722,151 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     color: "#6e6e6e",
   },
+  //FormScreen
+  label: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  input: {
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    paddingLeft: 10,
+    borderRadius: 5,
+    marginBottom: 15,
+    backgroundColor: "#ffffff",
+  },
+  btn: {
+    marginTop: 20,
+    padding: 10,
+    borderRadius: 5,
+  },
+  bgPrimary: {
+    backgroundColor: "#2b87b0",
+  },
+  btnText: {
+    textAlign: "center",
+  },
+  textLarge: {
+    fontSize: 18,
+  },
+  textLight: {
+    color: "#ffffff",
+  },
+  // LineItemscreen
+  scrollView: {
+    padding: 16,
+  },
+  sectionTitle: {
+    fontWeight: "bold",
+    marginBottom: 10,
+  },
+  card: {
+    padding: 15,
+    marginBottom: 10,
+    backgroundColor: "#ffffff",
+  },
+  cardContent: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 15,
+  },
+  itemDetails: {
+    marginLeft: 10,
+  },
+  quantityRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  // input: {
+  //   borderColor: "#ccc",
+  //   borderWidth: 1,
+  //   padding: 8,
+  //   borderRadius: 5,
+  //   width: 80,
+  // },
+  unit: {
+    marginLeft: 5,
+  },
+  saveButton: {
+    backgroundColor: "#ccc",
+    padding: 10,
+    alignItems: "center",
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  //Requisitionscreen
+  listItemContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: "#e0e0e0",
+  },
+  leftContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  textContainer: {
+    marginLeft: 10,
+  },
+
+  rightContainer: {
+    alignItems: "flex-end",
+  },
+
+  actionButton: {
+    marginTop: 10,
+    padding: 6,
+    backgroundColor: "#2b87b022",
+    borderRadius: 5,
+  },
+  actionButtonText: {
+    color: "#2b87b0",
+  },
+  //PurchaseOrderScreen
+  addIconContainer: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: "#ffffff",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  card: {
+    padding: 10,
+    marginBottom: 12,
+    backgroundColor: "#fff",
+    marginLeft: 2,
+  },
+
+  cardRow: {
+    flexDirection: "row",
+    padding: 8,
+  },
+
+  itemInfo: {
+    flex: 2,
+    marginLeft: 2,
+  },
+
+  itemDetails: {
+    alignItems: "flex-end",
+    flex: 1,
+  },
+
+  amountCard: {
+    padding: 10,
+    marginTop: 20,
+    marginBottom: 20,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+  },
+  amountDetails: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 10,
+    marginRight: 10,
+  },
 });
