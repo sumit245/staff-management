@@ -1,6 +1,5 @@
-import { View } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { H2, H3, H4, H6 } from "../text";
-
 import Icon from "react-native-vector-icons/Ionicons";
 import { Badge } from "react-native-paper";
 import { styles } from "../../styles/components.styles";
@@ -12,6 +11,7 @@ export default function MyHeader({
   icon,
   hasBadge,
   badgeCount,
+  onIconPress,
 }) {
   return (
     <View style={styles.headerStyle}>
@@ -26,7 +26,10 @@ export default function MyHeader({
       )}
       <H4 style={styles.titleText}>{title}</H4>
       {hasIcon && (
-        <View style={{ height: 54, width: 54 }}>
+        <TouchableOpacity
+          onPress={onIconPress}
+          style={{ height: 54, width: 54 }}
+        >
           <Icon
             name={icon}
             size={30}
@@ -37,7 +40,7 @@ export default function MyHeader({
               {badgeCount}
             </Badge>
           )}
-        </View>
+        </TouchableOpacity>
       )}
     </View>
   );
