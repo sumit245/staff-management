@@ -847,26 +847,59 @@ export const styles = StyleSheet.create({
   },
 
   itemInfo: {
-    flex: 2,
-    marginLeft: 2,
+    flex: 3,
+    marginLeft: 6,
   },
 
   itemDetails: {
-    alignItems: "flex-end",
+    alignItems: "Center",
     flex: 1,
   },
 
   amountCard: {
     padding: 10,
-    marginTop: 20,
-    marginBottom: 20,
+    // marginTop: 20,
+    // marginBottom: 20,
     backgroundColor: "#fff",
-    borderRadius: 10,
+    borderRadius: 6,
   },
   amountDetails: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 10,
-    marginRight: 10,
+
+    marginBottom: 2,
+    marginLeft: 10,
+  },
+
+  //SearchableDropdown
+  dropdownContainer: {
+    padding: 5,
+  },
+  itemStyle: {
+    padding: 10,
+    marginTop: 2,
+    backgroundColor: "#2b87b022",
+    borderColor: "#bbb",
+    borderWidth: 1,
+    borderRadius: 5,
+  },
+  itemTextStyle: {
+    color: "#020409",
+  },
+  itemsContainerStyle: {
+    maxHeight: 170,
+  },
+  textInput: {
+    padding: 6,
+    borderWidth: 1,
+    borderColor: "gray",
+    borderRadius: 5,
+    width: 340,
+    marginRight: 18,
+    marginBottom: 4,
+    paddingLeft: 10,
+    marginLeft: -18,
+    backgroundColor: "#2b87b022",
+    color: "#020409",
   },
 });

@@ -12,6 +12,8 @@ import FormScreen from "./screens/FormScreen";
 import LineItemScreen from "./screens/LineItemScreen";
 import RequisitionScreen from "./screens/RequisitionScreen";
 import PurchaseOrderScreen from "./screens/PurchaseOrderScreen";
+import SearchBar from "./components/input/SearchBar";
+import SearchableDropDown from "./components/SearchableDropdown";
 
 export default function App() {
   return (
@@ -28,6 +30,7 @@ export default function App() {
       {/* <LineItemScreen /> */}
       {/* <RequisitionScreen /> */}
       <PurchaseOrderScreen />
+      {/* <SearchableDropDown /> */}
     </PaperProvider>
   );
 }

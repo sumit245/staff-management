@@ -543,26 +543,69 @@ export const requisitions = [
   },
 ];
 // PurchaseOrderScreen
-export const itemsData = [
-  {
-    id: "AS1001",
-    name: "HP Deskjet 1010 Color Inkjet Printer",
-    price: 15.0,
-    quantity: 2,
-    total: 30.0,
-  },
-  {
-    id: "AS1002",
-    name: "Logitech B100 Optical Wired USB Mouse",
-    price: 8.0,
-    quantity: 6,
-    total: 48.0,
-  },
+// export const itemsData = [
+//   {
+//     id: "AS1001",
+//     name: "HP Deskjet 1010 Color Inkjet Printer",
+//     price: 15.0,
+//     quantity: 2,
+//     total: 30.0,
+//   },
+//   {
+//     id: "AS1002",
+//     name: "Logitech B100 Optical Wired USB Mouse",
+//     price: 8.0,
+//     quantity: 6,
+//     total: 48.0,
+//   },
+// ];
+// export const amountDetailsData = [
+//   { label: "Amount", value: 78.0 },
+//   { label: "Tax", value: 2.0 },
+//   { label: "Freight", value: 2.0 },
+//   { label: "Currency", value: "IND" },
+//   { label: "Grand Total", value: 82.0 },
+// ];
+export const originalItems = [
+  { id: 1, name: "JavaScript" },
+  { id: 2, name: "Java" },
+  { id: 3, name: "Ruby" },
+  { id: 4, name: "React Native" },
+  { id: 5, name: "PHP" },
+  { id: 6, name: "Python" },
+  { id: 7, name: "Go" },
+  { id: 8, name: "Swift" },
 ];
+
+// export const itemsData = [
+//   {
+//     id: 1,
+//     productCode: "ABC123",
+//     name: "Product A",
+//     price: 100,
+//     quantity: 2,
+//     total: 200,
+//   },
+//   {
+//     id: 2,
+//     productCode: "XYZ789",
+//     name: "Product B",
+//     price: 150,
+//     quantity: 1,
+//     total: 150,
+//   },
+// ];
+
+export const itemsData = [
+  { id: "P001", name: "Product A", price: 120.5, quantity: 2, total: 241.0 },
+  { id: "P002", name: "Product B", price: 80.25, quantity: 3, total: 240.75 },
+  { id: "P003", name: "Product C", price: 50.0, quantity: 1, total: 50.0 },
+  { id: "P004", name: "Product D", price: 150.75, quantity: 5, total: 753.75 },
+  { id: "P005", name: "Product E", price: 99.99, quantity: 4, total: 399.96 },
+];
+
 export const amountDetailsData = [
-  { label: "Amount", value: 78.0 },
-  { label: "Tax", value: 2.0 },
-  { label: "Freight", value: 2.0 },
-  { label: "Currency", value: "IND" },
-  { label: "Grand Total", value: 82.0 },
+  { label: "Subtotal", value: 1000 },
+  { label: "Tax", value: 100 },
+  { label: "Total", value: 1100 },
 ];
