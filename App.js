@@ -3,17 +3,17 @@ import { PaperProvider } from "react-native-paper";
 import MyNavigationContainer from "./navigation/MyNavigationContainer";
 import PrivacyPolicy from "./screens/PrivacyPolicy";
 import TermsAndConditions from "./screens/TermsAndConditions";
+import RequisitionScreen from "./screens/RequisitionScreen";
 
 export default function App() {
-  return (
-    //   <PaperProvider>
-    //     <MyNavigationContainer />
-    //   </PaperProvider>
-    // );
-
-    <PrivacyPolicy />
-    // <TermsAndConditions />
-  );
+  // return (
+  //   <PaperProvider>
+  //     <MyNavigationContainer />
+  //   </PaperProvider>
+  // );
+  <RequisitionScreen />;
+  // <PrivacyPolicy />ss
+  // <TermsAndConditions />
 }
 
 // Wrap

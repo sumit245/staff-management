@@ -12,7 +12,6 @@ import {
   SUCCESS_COLOR,
   WARNING_COLOR,
 } from "./constant";
-import PrivacyPolicy from "../screens/PrivacyPolicy";
 
 export const styles = StyleSheet.create({
   container: {
@@ -412,4 +411,5 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     color: DARK,
   },
+  // ==============
 });
