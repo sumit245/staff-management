@@ -23,7 +23,7 @@ import CheckOut from "./screens/CheckOut";
 export default function App() {
   return (
     <PaperProvider>
-      {/* <MyNavigationContainer /> */}
+      <MyNavigationContainer />
       {/* <NotificationScreen /> */}
       {/* <HolidayListScreen/> */}
       {/* <ProfileScreen /> */}
@@ -40,7 +40,7 @@ export default function App() {
       {/* <TermsAndConditions /> */}
       {/* <ApplyLeaveForm /> */}
       {/* {<AllLeaves/>} */}
-      {<CheckOut />}
+      {/* {<CheckOut />} */}
     </PaperProvider>
   );
 }

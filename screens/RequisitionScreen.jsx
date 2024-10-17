@@ -30,9 +30,10 @@ const RequisitionScreen = () => {
           isBack={true}
           title="Requisitions For Release"
           hasIcon={true}
-          icon="notifications"
-          hasBadge={true}
-          badgeCount={3}
+          // icon="notifications"
+          icon="mouse-pointer-outline"
+          // hasBadge={true}
+          // badgeCount={3}
         />
 
         <SearchBar

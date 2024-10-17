@@ -394,7 +394,7 @@ const PurchaseOrderScreen = () => {
     <ContainerComponent>
       <ScrollView>
         <MyHeader
-          title="Select Product Code"
+          title="Select Project Code"
           hasIcon={true}
           icon={"trash-outline"}
         />
@@ -402,7 +402,7 @@ const PurchaseOrderScreen = () => {
         <View style={{ marginVertical: 10, paddingHorizontal: 10 }}>
           <TextInput
             style={styles.searchInput}
-            placeholder="Search by Product Code or Name"
+            placeholder="Search by Project Code or Name"
             value={searchQuery}
             onChangeText={handleSearch}
           />
