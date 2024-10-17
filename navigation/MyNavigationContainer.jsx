@@ -5,6 +5,7 @@ export default function MyNavigationContainer() {
     return (
         <NavigationContainer>
             <MyStackNavigator />
+            
         </NavigationContainer>
     )
 }

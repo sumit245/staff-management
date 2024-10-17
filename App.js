@@ -16,9 +16,9 @@ import SearchBar from "./components/input/SearchBar";
 import SearchableDropDown from "./components/SearchableDropdown";
 import PrivacyPolicy from "./screens/PrivacyPolicy";
 import TermsAndConditions from "./screens/TermsAndConditions";
-//import RequisitionScreen from "./screens/RequisitionScreen";
-//import PrivacyPolicy from "./screens/PrivacyPolicy";
-//import TermsAndConditions from "./screens/TermsAndConditions";
+import ApplyLeaveForm from "./screens/ApplyLeaveForm";
+import AllLeaves from "./screens/AllLeaves";
+import CheckOut from "./screens/CheckOut";
 
 export default function App() {
   return (
@@ -33,11 +33,14 @@ export default function App() {
       {/* <SuccessModal /> */}
       {/* <FormScreen /> */}
       {/* <LineItemScreen /> */}
-      <RequisitionScreen />
+      {/* <RequisitionScreen /> */}
       {/* <PurchaseOrderScreen /> */}
       {/* <SearchableDropDown /> */}
       {/* <PrivacyPolicy /> */}
       {/* <TermsAndConditions /> */}
+      {/* <ApplyLeaveForm /> */}
+      {/* {<AllLeaves/>} */}
+      {<CheckOut />}
     </PaperProvider>
   );
 }

@@ -969,4 +969,159 @@ export const styles = StyleSheet.create({
     backgroundColor: "#2b87b022",
     color: "#020409",
   },
+  //leavecard
+  leaveCard: {
+    position: "relative",
+    padding: 16,
+    borderRadius: 8,
+    backgroundColor: LIGHT,
+    marginBottom: 16,
+    elevation: 2,
+  },
+  approvedStatusContainer: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    backgroundColor: SUCCESS_COLOR, // Color of the Approved badge
+    borderRadius: 4,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+  },
+  status: {
+    color: LIGHT,
+    fontWeight: "bold",
+  },
+
+  scrollContainer: {
+    flex: 1, // Ensures ScrollView fills the available space
+    backgroundColor: LIGHT, // Apply your background color
+  },
+  scrollViewContent: {
+    paddingVertical: 20, // Add padding for the content
+    paddingHorizontal: 16, // Adjust horizontal padding
+    alignItems: "center", // Ensures content is centered
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-around", // Distribute tab buttons evenly
+    alignItems: "center",
+    width: "100%", // Ensure the row takes up full width
+    marginBottom: 16, // Add spacing below the tabs
+  },
+  tabContainer: {
+    marginTop: 16,
+    marginBottom: 20,
+  },
+  inputContainer: {
+    width: "100%", // Take full width of the screen
+    paddingHorizontal: 16, // Padding for content inside
+  },
+  tabButtonActive: {
+    fontWeight: "bold",
+    borderBottomWidth: 2,
+    borderBottomColor: PRIMARY_COLOR,
+    paddingVertical: 8, // Ensure there's some padding around the text
+  },
+  tabButton: {
+    color: "#888",
+    paddingVertical: 8, // Same padding as active tab
+    paddingHorizontal: 16,
+  },
+
+  checkoutButton: {
+    backgroundColor: "#2b87b0",
+    borderRadius: 100,
+    width: 150,
+    height: 150,
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
+    marginBottom: 20,
+    elevation: 5,
+  },
+  checkoutText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
+    marginTop: 10,
+  },
+  timerCard: {
+    backgroundColor: "#1B2940",
+    borderRadius: 15,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    marginBottom: 20,
+  },
+  timerContent: {
+    alignItems: "center",
+  },
+  locationRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+  locationText: {
+    color: "#fff",
+    fontSize: 14,
+  },
+  timeText: {
+    fontSize: 36,
+    color: "#50e3c2",
+    marginVertical: 10,
+  },
+  workHoursText: {
+    color: "#fff",
+    fontSize: 12,
+  },
+  workHoursTimeText: {
+    fontSize: 16,
+    color: "#50e3c2",
+    marginTop: 5,
+  },
+  activityCard: {
+    backgroundColor: "#fff",
+    borderRadius: 15,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    marginBottom: 20,
+    elevation: 3,
+  },
+  activityHeader: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 15,
+  },
+  activityRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 10,
+  },
+  activityTitle: {
+    fontSize: 16,
+  },
+  activityTime: {
+    fontSize: 14,
+    color: "#020409",
+  },
+  footer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  footerText: {
+    fontSize: 14,
+    color: "#020409",
+    marginLeft: 5,
+  },
+  mapContainer: {
+    alignItems: "center",
+    marginTop: 16,
+    overflow: "hidden",
+    borderRadius: 30,
+  },
+  map: {
+    width: "98%",
+    height: 200,
+    borderRadius: 20,
+  },
 });

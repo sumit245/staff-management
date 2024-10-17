@@ -382,6 +382,7 @@ export const documentData = [
   { id: "4", name: "Appraisal Letter", icon: "file-document-outline" },
   { id: "5", name: "Salary Slip", icon: "file-document-outline" },
 ];
+
 export const activities = [
   { id: "1", title: "Capital Icon", time: "9:15 AM - 11:00 AM" },
   { id: "2", title: "Baroda Bank", time: "11:00 AM - 11:30 AM" },
