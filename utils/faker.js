@@ -67,7 +67,7 @@ export const tasks = [
     count: 5,
     status: "Cancelled",
     backgroundColor: DANGER_COLOR,
-  }
+  },
 ];
 
 export const leaveReasons = [
@@ -278,15 +278,335 @@ export const contactsData = [
 
 export const menuItems = [
   { label: "Account", icon: "person-outline" },
-  { label: "Chats", icon: "chatbubble-outline" },
+  { label: "My Purchase", icon: "cart-outline" },
   { label: "Appearance", icon: "sunny-outline" },
   { label: "Notification", icon: "notifications-outline" },
   { label: "Privacy", icon: "shield-checkmark-outline" },
   { label: "Data Usage", icon: "folder-outline" },
   { label: "Help", icon: "help-circle-outline" },
 ];
+export const notifications = [
+  {
+    id: "1",
+    title: "You updated your profile picture",
+    description: "You just updated your profile picture.",
+    icon: "account",
+    time: "Just Now",
+  },
+  {
+    id: "2",
+    title: "Password Changed",
+    description: "You’ve completed changing the password.",
+    icon: "lock-reset",
+    time: "2 oct,22:22 Pm",
+  },
+  {
+    id: "3",
+    title: "Subham Applied for Leave",
+    description: "Please accept my leave request.",
+    icon: "account-circle",
+    time: "23 sept",
+  },
+  {
+    id: "4",
+    title: "System Update",
+    description: "Please update to the newest app for a better experience.",
+    icon: "cellphone-information",
+    time: "25 sept,21:22 Pm",
+  },
+];
+export const holidays = [
+  {
+    id: "1",
+    title: "Republic Day",
+    date: "January 26, 2024",
+    day: "Thursday",
+    icon: "calendar",
+  },
+  {
+    id: "2",
+    title: "Holi",
+    date: "March 26, 2024",
+    day: "Friday",
+    icon: "calendar",
+  },
+  {
+    id: "3",
+    title: "Independence Day",
+    date: "August 15, 2024",
+    day: "Tuesday",
+    icon: "calendar",
+  },
+  {
+    id: "4",
+    title: "Raksha Bandhan",
+    date: "August 20, 2024",
+    day: "Wednesday",
+    icon: "calendar",
+  },
+  {
+    id: "5",
+    title: "Janmashtami",
+    date: "September 26, 2024",
+    day: "Thursday",
+    icon: "calendar",
+  },
+  {
+    id: "6",
+    title: "Diwali",
+    date: "November 12, 2024",
+    day: "Sunday",
+    icon: "calendar",
+  },
+];
+export const personalData = {
+  fullName: "Bittu Kumar",
+  email: "bittu230@gmail.com",
+  phone: "+91 7945671265",
+  address: "Delhi India",
+};
+export const professionalData = {
+  employeeId: "7879987",
+  designation: " UI/UX Designer",
+  companyEmail: "bittu89@example.com",
+  employeeType: "Permanent",
+  department: "Design",
+  reportingManager: "Ashish Kumar",
+  companyExperience: "2 Year 5 Months",
+  officeTime: "10:00 am to 07:00 pm",
+};
+export const documentData = [
+  { id: "1", name: "Offer Letter", icon: "file-document-outline" },
+  { id: "2", name: "Appointment Letter", icon: "file-document-outline" },
+  { id: "3", name: "Bond Agreement", icon: "file-document-outline" },
+  { id: "4", name: "Appraisal Letter", icon: "file-document-outline" },
+  { id: "5", name: "Salary Slip", icon: "file-document-outline" },
+];
 
 export const activities = [
   { id: "1", title: "Capital Icon", time: "9:15 AM - 11:00 AM" },
   { id: "2", title: "Baroda Bank", time: "11:00 AM - 11:30 AM" },
+];
+export const profileImages = [
+  "https://randomuser.me/api/portraits/men/1.jpg",
+  "https://randomuser.me/api/portraits/women/1.jpg",
+];
+export const miniCards = [
+  { id: 1, icon: "time-outline", text: "Est: 20h" },
+  { id: 2, icon: "calendar-outline", text: "Due: 25 Apr" },
+  { id: 3, icon: "checkmark-circle-outline", text: "Tasks: 1/3" },
+];
+export const taskCards = [
+  { id: 1, text: "Design Concept", progress: 0.7, bgColor: "#54B4D3" },
+  { id: 2, text: "Development Phase", progress: 0.4, bgColor: "#2b87b0" },
+];
+export const cardtasks = [
+  {
+    id: 1,
+    title: "Design system",
+    time: "09:00 - 10:00",
+    progress: 0.6,
+    participants: 2,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/32.jpg",
+      "https://randomuser.me/api/portraits/women/44.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "Create prototype",
+    time: "10:00 - 11:00",
+    progress: 0.3,
+    participants: 4,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/36.jpg",
+      "https://randomuser.me/api/portraits/women/40.jpg",
+      "https://randomuser.me/api/portraits/men/37.jpg",
+      "https://randomuser.me/api/portraits/women/50.jpg",
+    ],
+  },
+  {
+    id: 3,
+    title: "Dashboard design",
+    time: "11:00 - 12:00",
+    progress: 0.5,
+    participants: 4,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/38.jpg",
+      "https://randomuser.me/api/portraits/women/51.jpg",
+      "https://randomuser.me/api/portraits/men/39.jpg",
+      "https://randomuser.me/api/portraits/women/53.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Offspace project",
+    time: "12:00 - 01:00",
+    progress: 0.7,
+    participants: 3,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/40.jpg",
+      "https://randomuser.me/api/portraits/women/55.jpg",
+      "https://randomuser.me/api/portraits/men/41.jpg",
+    ],
+  },
+];
+export const attendanceData = [
+  {
+    icon: "login",
+    title: "Check In",
+    time: "10:20 am",
+    status: "On Time",
+  },
+  {
+    icon: "logout",
+    title: "Check Out",
+    time: "07:00 pm",
+    status: "Go Home",
+  },
+  {
+    icon: "clock-outline",
+    title: "Break Time",
+    time: "00:30 min",
+    status: "Avg Time 30 min",
+  },
+  {
+    icon: "calendar-check-outline",
+    title: "Total Days",
+    time: "28",
+    status: "Working Days",
+  },
+];
+export const activityData = [
+  {
+    title: "Check In",
+    time: "10:00 am",
+    status: "On Time",
+    icon: "login",
+  },
+  {
+    title: "Break In",
+    time: "12:30 pm",
+    status: "On Time",
+    icon: "pause-circle-outline",
+  },
+  {
+    title: "Check Out",
+    time: "07:00 pm",
+    status: "On Time",
+    icon: "logout",
+  },
+];
+export const lineItems = [
+  {
+    id: "AS1001",
+    description: "HP Deskjet 1010 Color Inkjet Printer",
+    location: "MT-seattle Manufacturing",
+    subInventory: "Seattle Manufacturing",
+  },
+  {
+    id: "AS1002",
+    description: "Logitech B100 Optical Wired USB Mouse",
+    location: "MT-seattle Manufacturing",
+    subInventory: "Seattle Manufacturing",
+  },
+];
+// requisitionsData.js
+
+export const requisitions = [
+  {
+    id: "PR - 10050019",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2020",
+    amount: "₹ 24.40 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050018",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2020",
+    amount: "₹ 254.40 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050017",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2020",
+    amount: "₹ 100.00 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050016",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2020",
+    amount: "₹ 100.00 ",
+    checked: false,
+  },
+];
+// PurchaseOrderScreen
+// export const itemsData = [
+//   {
+//     id: "AS1001",
+//     name: "HP Deskjet 1010 Color Inkjet Printer",
+//     price: 15.0,
+//     quantity: 2,
+//     total: 30.0,
+//   },
+//   {
+//     id: "AS1002",
+//     name: "Logitech B100 Optical Wired USB Mouse",
+//     price: 8.0,
+//     quantity: 6,
+//     total: 48.0,
+//   },
+// ];
+// export const amountDetailsData = [
+//   { label: "Amount", value: 78.0 },
+//   { label: "Tax", value: 2.0 },
+//   { label: "Freight", value: 2.0 },
+//   { label: "Currency", value: "IND" },
+//   { label: "Grand Total", value: 82.0 },
+// ];
+export const originalItems = [
+  { id: 1, name: "JavaScript" },
+  { id: 2, name: "Java" },
+  { id: 3, name: "Ruby" },
+  { id: 4, name: "React Native" },
+  { id: 5, name: "PHP" },
+  { id: 6, name: "Python" },
+  { id: 7, name: "Go" },
+  { id: 8, name: "Swift" },
+];
+
+// export const itemsData = [
+//   {
+//     id: 1,
+//     productCode: "ABC123",
+//     name: "Product A",
+//     price: 100,
+//     quantity: 2,
+//     total: 200,
+//   },
+//   {
+//     id: 2,
+//     productCode: "XYZ789",
+//     name: "Product B",
+//     price: 150,
+//     quantity: 1,
+//     total: 150,
+//   },
+// ];
+
+export const itemsData = [
+  { id: "P001", name: "Product A", price: 120.5, quantity: 2, total: 241.0 },
+  { id: "P002", name: "Product B", price: 80.25, quantity: 3, total: 240.75 },
+  { id: "P003", name: "Product C", price: 50.0, quantity: 1, total: 50.0 },
+  { id: "P004", name: "Product D", price: 150.75, quantity: 5, total: 753.75 },
+  { id: "P005", name: "Product E", price: 99.99, quantity: 4, total: 399.96 },
+];
+
+export const amountDetailsData = [
+  { label: "Subtotal", value: 1000 },
+  { label: "Tax", value: 100 },
+  { label: "Total", value: 1100 },
 ];
