@@ -4,6 +4,8 @@ import SettingScreen from "../screens/SettingScreen";
 import RequisitionScreen from "../screens/RequisitionScreen";
 import PurchaseOrderScreen from "../screens/PurchaseOrderScreen";
 import FormScreen from "../screens/FormScreen";
+import NotificationScreen from "../screens/NotificationScreen";
+import PrivacyPolicy from "../screens/PrivacyPolicy";
 import MyMaterialBottomNavigator from "./MyMaterialBottomNavigator";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -27,6 +29,8 @@ export default function MyStackNavigator() {
         component={PurchaseOrderScreen}
       />
       <Stack.Screen name="FormScreen" component={FormScreen} />
+      <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
+      <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
     </Stack.Navigator>
   );
 }

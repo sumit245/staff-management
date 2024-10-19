@@ -488,38 +488,39 @@ export const styles = StyleSheet.create({
     fontWeight: "normal",
   },
   // HolidayListScreen
-  // container: {
-  //   paddingHorizontal: 8,
-  //   paddingTop: 10,
-  // },
+  Section: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 12,
+  },
   leftSection: {
     flexDirection: "row",
     alignItems: "center",
   },
+  rightSection: {
+    flexDirection: "column",
+    alignItems: "flex-start",
+    marginLeft: 20,
+  },
   iconWrapper: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
     backgroundColor: "#2b87b0",
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: 12,
+    padding: 8,
+    borderRadius: 5,
+    marginRight: 20,
   },
   dateText: {
     fontSize: 14,
-    color: "#333",
-  },
-  rightSection: {
-    alignItems: "flex-end",
+    color: "#020409",
   },
   title: {
     fontSize: 16,
-    fontWeight: "bold",
-    color: "#000",
+    // fontWeight: "bold",
+    color: "#020409",
   },
   day: {
     fontSize: 14,
-    color: "#999",
+    color: "#020409",
   },
   // Profile
   tabsContainer: {
@@ -958,15 +959,15 @@ export const styles = StyleSheet.create({
   },
   textInput: {
     padding: 6,
-    borderWidth: 1,
+    //borderWidth: 1,
     borderColor: "gray",
     borderRadius: 5,
     width: 340,
     marginRight: 18,
     marginBottom: 4,
-    paddingLeft: 10,
-    marginLeft: -18,
-    backgroundColor: "#2b87b022",
+    paddingLeft: 6,
+    marginLeft: -16,
+    // backgroundColor: "#2b87b022",
     color: "#020409",
   },
   //leavecard

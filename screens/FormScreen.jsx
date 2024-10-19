@@ -114,7 +114,12 @@ const FormScreen = () => {
   return (
     <ContainerComponent>
       <ScrollView>
-        <MyHeader title="Add Item Details" />
+        <MyHeader
+          title="Add Item Details"
+          isBack={true}
+          hasIcon={true}
+          icon={""}
+        />
 
         <H2 style={styles.label}>Search Item</H2>
         <View>

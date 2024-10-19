@@ -24,7 +24,12 @@ const PrivacyPolicy = () => {
   return (
     <ContainerComponent>
       <View style={styles.container}>
-        <MyHeader title="Privacy Policy" />
+        <MyHeader
+          title="Privacy Policy"
+          isBack={true}
+          hasIcon={true}
+          icon={""}
+        />
         <ScrollView contentContainerStyle={styles.scrollView}>
           <H6>
             At Dashandots Technology, we deeply value your privacy and are
@@ -42,12 +47,8 @@ const PrivacyPolicy = () => {
             have implemented robust security measures designed to protect
             against unauthorized access, misuse, or disclosure. These measures
             are continually updated to adapt to evolving security threats and
-            industry standards. For any questions, concerns, or requests
-            regarding your privacy, you can reach out to us at any time via
-            email at info@dashandots.tech. We are committed to promptly
-            addressing any concerns you may have.
+            industry standards.
           </H6>
-          {/* </Text> */}
 
           <View style={styles.checkboxContainer}>
             <CustomCheckbox

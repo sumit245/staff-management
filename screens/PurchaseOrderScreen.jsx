@@ -492,7 +492,7 @@ import { useNavigation } from "@react-navigation/native";
 const PurchaseOrderScreen = () => {
   const [checkedItems, setCheckedItems] = useState({});
   const [items, setItems] = useState(itemsData);
-  const [filteredItems, setFilteredItems] = useState(itemsData); // filtered items for display
+  const [filteredItems, setFilteredItems] = useState(itemsData); 
   const [searchQuery, setSearchQuery] = useState("");
   const navigation = useNavigation(); 
 
@@ -520,7 +520,7 @@ const PurchaseOrderScreen = () => {
     }
   };
 
-  // Navigate to FormScreen when the add new item button is clicked
+  
   const navigateToFormScreen = () => {
     navigation.navigate("FormScreen"); // Navigate to the FormScreen
   };
@@ -530,6 +530,7 @@ const PurchaseOrderScreen = () => {
       <ScrollView>
         <MyHeader
           title="Select Project Code"
+          isBack={true}
           hasIcon={true}
           icon={"trash-outline"}
         />
