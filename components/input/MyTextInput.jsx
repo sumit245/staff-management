@@ -12,7 +12,10 @@ export default function MyTextInput({ title, onChangeText, type, ...props }) {
                 onChangeText={onChangeText}
                 keyboardType={type}
                 style={styles.textInputField}
-                cursorColor={PRIMARY_COLOR}
+                cursorColor={ PRIMARY_COLOR }
+                title
+                value
+                icon
 
                 {...props}
             />
