@@ -141,6 +141,7 @@ export const styles = StyleSheet.create({
   btn: {
     marginVertical: 8,
     padding: 8,
+
     alignItems: "center",
     justifyContent: "space-between",
     alignItems: "center",
@@ -926,8 +927,7 @@ export const styles = StyleSheet.create({
 
   amountCard: {
     padding: 10,
-    // marginTop: 20,
-    // marginBottom: 20,
+  paddingRight: 20,
     backgroundColor: "#fff",
     borderRadius: 6,
   },
