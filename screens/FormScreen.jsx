@@ -5,6 +5,7 @@ import { H2, H4, H5, H6 } from "../components/text";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import SearchableDropdown from "../components/SearchableDropdown";
+import SearchBar from "../components/input/SearchBar";
 import { styles } from "../styles/components.styles";
 
 const FormScreen = () => {

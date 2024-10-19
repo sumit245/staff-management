@@ -3,17 +3,20 @@ import { View, ScrollView } from "react-native";
 import MyHeader from "../components/header/MyHeader";
 import CustomCheckbox from "../components/input/CustomCheckbox";
 import Button from "../components/buttons/Button";
-import { H6, H2, H5, P } from "../components/text";
+import { H6, H2, P } from "../components/text";
 import { styles } from "../styles/components.styles";
 import ContainerComponent from "../components/ContainerComponent";
+
 const PrivacyPolicy = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
+    setIsChecked((prev) => !prev);
+    console.log("Checkbox state changed:", !isChecked);
   };
 
   const onSubmit = () => {
+    console.log("Submit clicked, checkbox is checked:", isChecked);
     if (isChecked) {
       alert("You have accepted the privacy policy.");
     } else {
@@ -31,7 +34,7 @@ const PrivacyPolicy = () => {
           icon={""}
         />
         <ScrollView contentContainerStyle={styles.scrollView}>
-          <H6>
+          <P style={{ marginHorizontal: 2, textAlign: "justify" }}>
             At Dashandots Technology, we deeply value your privacy and are
             committed to safeguarding the personal information you share with
             us. We collect essential personal information, including but not
@@ -48,7 +51,7 @@ const PrivacyPolicy = () => {
             against unauthorized access, misuse, or disclosure. These measures
             are continually updated to adapt to evolving security threats and
             industry standards.
-          </H6>
+          </P>
 
           <View style={styles.checkboxContainer}>
             <CustomCheckbox

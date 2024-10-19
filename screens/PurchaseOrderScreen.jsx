@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { View, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { CheckBox } from "react-native-elements";
 import { Card } from "react-native-paper";
 import { Icon } from "react-native-elements";
@@ -8,7 +14,8 @@ import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import { styles } from "../styles/components.styles";
 import { itemsData, amountDetailsData } from "../utils/faker";
-import { H1, H2, H3, H5, H6, P } from "../components/text";
+import { H2, H3, H5, H6, P } from "../components/text";
+
 import { useNavigation } from "@react-navigation/native";
 import SearchBar from "../components/input/SearchBar";
 
@@ -63,15 +70,25 @@ const PurchaseOrderScreen = () => {
           onChangeText={handleSearch}
         />
 
-        <Button
-          onPress={navigateToFormScreen}
-          style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-        >
-          <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
-            Add New Line Item
-          </H2>
-          <View style={[styles.addIconContainer, { marginLeft: 10 }]}>
-            <Icon name="add" size={20} color="#020409" />
+        {/* Button to Add New Line Item */}
+        <Button style={[styles.btn, styles.bgPrimary]}>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              flex: 1,
+              justifyContent: "center",
+            }}
+          >
+            <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
+              Add New Line Item
+            </H2>
+            <TouchableOpacity
+              onPress={navigateToFormScreen}
+              style={[styles.addIconContainer, { marginLeft: 15 }]}
+            >
+              <Icon name="add" size={20} color="#020409" />
+            </TouchableOpacity>
           </View>
         </Button>
 
@@ -102,7 +119,10 @@ const PurchaseOrderScreen = () => {
 
         <Card style={styles.amountCard}>
           {amountDetailsData.map((detail, index) => (
-            <View key={index} style={styles.amountDetails}>
+            <View
+              key={index}
+              style={[styles.amountDetails, { paddingRight: 10 }]}
+            >
               <H6 style={styles.label}>{detail.label}</H6>
               <P>
                 {typeof detail.value === "number"
