@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   textLarge: {
-    fontSize: 20,
+    fontSize: 18,
   },
   imageContainer: {
     flex: 1,
@@ -804,23 +804,23 @@ export const styles = StyleSheet.create({
     marginBottom: 15,
     backgroundColor: "#ffffff",
   },
-  btn: {
-    marginTop: 20,
-    padding: 10,
-    borderRadius: 5,
-  },
-  bgPrimary: {
-    backgroundColor: "#2b87b0",
-  },
-  btnText: {
-    textAlign: "center",
-  },
-  textLarge: {
-    fontSize: 18,
-  },
-  textLight: {
-    color: "#ffffff",
-  },
+  // btn: {
+  //   marginTop: 20,
+  //   padding: 10,
+  //   borderRadius: 5,
+  // },
+  // bgPrimary: {
+  //   backgroundColor: "#2b87b0",
+  // },
+  // btnText: {
+  //   textAlign: "center",
+  // },
+  // textLarge: {
+  //   fontSize: 18,
+  // },
+  // textLight: {
+  //   color: "#ffffff",
+  // },
   // LineItemscreen
   scrollView: {
     padding: 16,
