@@ -3,7 +3,7 @@ import { View, ScrollView } from "react-native";
 import MyHeader from "../components/header/MyHeader";
 import CustomCheckbox from "../components/input/CustomCheckbox";
 import Button from "../components/buttons/Button";
-import { H6, H2 } from "../components/text";
+import { H6, H2, H5, P } from "../components/text";
 import { styles } from "../styles/components.styles";
 import ContainerComponent from "../components/ContainerComponent";
 const PrivacyPolicy = () => {

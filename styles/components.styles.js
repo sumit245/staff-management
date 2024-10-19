@@ -573,12 +573,12 @@ export const styles = StyleSheet.create({
     color: "#020409",
   },
   // LandingPage
-  card: {
-    padding: 16,
-    borderRadius: 10,
-    marginBottom: 16,
-    backgroundColor: "#ffffff",
-  },
+  // card: {
+  //   padding: 16,
+  //   borderRadius: 10,
+  //   marginBottom: 16,
+  //   backgroundColor: "#ffffff",
+  // },
   progressContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -792,8 +792,8 @@ export const styles = StyleSheet.create({
   },
   //FormScreen
   label: {
-    fontSize: 16,
-    marginBottom: 5,
+    //fontSize: 16,
+    marginBottom: 10,
   },
   input: {
     height: 40,
@@ -823,7 +823,7 @@ export const styles = StyleSheet.create({
   // },
   // LineItemscreen
   scrollView: {
-    padding: 16,
+    padding: 4,
   },
   sectionTitle: {
     fontWeight: "bold",
@@ -895,28 +895,33 @@ export const styles = StyleSheet.create({
   },
   //PurchaseOrderScreen
   addIconContainer: {
-    width: 30,
-    height: 30,
+    // width: 30,
+    //height: 30,
     borderRadius: 15,
     backgroundColor: "#ffffff",
-    justifyContent: "center",
-    alignItems: "center",
+    //justifyContent: "center",
+    //alignItems: "center",
   },
-  card: {
-    padding: 10,
-    marginBottom: 12,
-    backgroundColor: "#fff",
-    marginLeft: 2,
-  },
+
+  // card: {
+  //   padding: 4,
+  //   marginBottom: 8,
+  //   backgroundColor: "#ffffff",
+  //   width: "93%",
+  //   alignSelf: "center",
+  //   borderRadius: 8,
+  //   elevation: 5,
+  //   marginRight: 16,
+  // },
 
   cardRow: {
     flexDirection: "row",
-    padding: 8,
+    padding: 4,
   },
 
   itemInfo: {
     flex: 3,
-    marginLeft: 6,
+    // marginLeft: 6,
   },
 
   itemDetails: {
@@ -941,34 +946,33 @@ export const styles = StyleSheet.create({
 
   //SearchableDropdown
   dropdownContainer: {
-    padding: 5,
+    padding: 8,
   },
   itemStyle: {
-    padding: 10,
-    marginTop: 2,
-    backgroundColor: "#2b87b022",
-    borderColor: "#bbb",
-    borderWidth: 1,
-    borderRadius: 5,
+    padding: 4,
+    marginTop: 4,
+    // backgroundColor: "#2b87b022",
+    //borderColor: "#020409",
+    // borderWidth: 1,
+    //borderRadius: 5,
   },
   itemTextStyle: {
-    color: "#020409",
+    //color: "#020409",
   },
   itemsContainerStyle: {
-    maxHeight: 170,
+    maxHeight: 100,
   },
   textInput: {
-    padding: 6,
-    //borderWidth: 1,
-    borderColor: "gray",
-    borderRadius: 5,
-    width: 340,
-    marginRight: 18,
-    marginBottom: 4,
-    paddingLeft: 6,
-    marginLeft: -16,
     // backgroundColor: "#2b87b022",
+    // padding: 4,
+    // borderColor: "gray",
+    //borderRadius: 5,
+    width: 310,
     color: "#020409",
+    //marginRight: 18,
+    // marginBottom: 4,
+    //paddingLeft: 6,
+    //marginLeft: -16,
   },
   //leavecard
   leaveCard: {

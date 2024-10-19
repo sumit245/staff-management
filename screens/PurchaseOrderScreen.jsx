@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, TextInput } from "react-native";
+import { View, ScrollView } from "react-native";
 import { CheckBox } from "react-native-elements";
 import { Card } from "react-native-paper";
 import { Icon } from "react-native-elements";
@@ -8,8 +8,9 @@ import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import { styles } from "../styles/components.styles";
 import { itemsData, amountDetailsData } from "../utils/faker";
-import { H2, H5, H6, P } from "../components/text";
+import { H1, H2, H3, H5, H6, P } from "../components/text";
 import { useNavigation } from "@react-navigation/native";
+import SearchBar from "../components/input/SearchBar";
 
 const PurchaseOrderScreen = () => {
   const [checkedItems, setCheckedItems] = useState({});
@@ -31,7 +32,7 @@ const PurchaseOrderScreen = () => {
     setSearchQuery(text);
 
     if (text === "") {
-      setFilteredItems(itemsData); // Reset to all items if search query is cleared
+      setFilteredItems(itemsData);
     } else {
       const filtered = itemsData.filter(
         (item) =>
@@ -56,33 +57,21 @@ const PurchaseOrderScreen = () => {
           icon={"trash-outline"}
         />
 
-        <View style={{ marginVertical: 10, paddingHorizontal: 10 }}>
-          <TextInput
-            style={styles.searchInput}
-            placeholder="Search by Project Code or Name"
-            value={searchQuery}
-            onChangeText={handleSearch}
-          />
-        </View>
+        <SearchBar
+          placeholder="Search  Project Code or Name"
+          value={searchQuery}
+          onChangeText={handleSearch}
+        />
 
-        {/* Button to Add New Line Item */}
         <Button
-          style={[styles.btn, styles.bgPrimary]}
           onPress={navigateToFormScreen}
+          style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
         >
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              flex: 1,
-            }}
-          >
-            <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
-              Add New Line Item
-            </H2>
-            <View style={[styles.addIconContainer, { marginLeft: 15 }]}>
-              <Icon name="add" size={20} color="#020409" />
-            </View>
+          <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
+            Add New Line Item
+          </H2>
+          <View style={[styles.addIconContainer, { marginLeft: 10 }]}>
+            <Icon name="add" size={20} color="#020409" />
           </View>
         </Button>
 
@@ -94,7 +83,6 @@ const PurchaseOrderScreen = () => {
                 <CheckBox
                   checked={checkedItems[item.id] || false}
                   onPress={() => toggleCheck(item.id)}
-                  style={{ marginLeft: -15 }}
                 />
                 <View style={styles.itemInfo}>
                   <H5>{item.id}</H5>
@@ -109,7 +97,7 @@ const PurchaseOrderScreen = () => {
             </Card>
           ))
         ) : (
-          <Text>No products found</Text>
+          <H3>No products found</H3>
         )}
 
         <Card style={styles.amountCard}>
@@ -127,7 +115,6 @@ const PurchaseOrderScreen = () => {
 
         <Button
           style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-          // onPress={onSubmit}
         >
           <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
             Create Purchase Order

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ScrollView, View, TextInput } from "react-native";
 import Button from "../components/buttons/Button";
-import { H2 } from "../components/text";
+import { H2, H4, H5, H6 } from "../components/text";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import SearchableDropdown from "../components/SearchableDropdown";
@@ -35,12 +35,20 @@ const FormScreen = () => {
           icon={""}
         />
 
-        <H2 style={styles.label}>Search Item</H2>
-        <View>
+        <H5 style={styles.label}>Search Item</H5>
+        <View
+          style={{
+            borderWidth: 1,
+            borderColor: "#020409",
+            backgroundColor: "#f9f9f9",
+            paddingHorizontal: 2,
+            borderRadius: 5,
+          }}
+        >
           <SearchableDropdown onItemSelect={(item) => setSelectedItem(item)} />
         </View>
 
-        <H2 style={styles.label}>Make/Specifications</H2>
+        <H5 style={styles.label}>Make/Specifications</H5>
         <TextInput
           style={styles.input}
           placeholder="Make Specifications"
@@ -48,7 +56,7 @@ const FormScreen = () => {
           onChangeText={setModel}
         />
 
-        <H2 style={styles.label}>Model</H2>
+        <H5 style={styles.label}>Model</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Model"
@@ -56,7 +64,8 @@ const FormScreen = () => {
           onChangeText={setModel}
         />
 
-        <H2 style={styles.label}>Quantity</H2>
+        {/* <H2 style={styles.label}>Quantity</H2> */}
+        <H5 style={styles.label}>Quantity</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Quantity"
@@ -65,7 +74,7 @@ const FormScreen = () => {
           onChangeText={setQuantity}
         />
 
-        <H2 style={styles.label}>Tentative Price</H2>
+        <H5 style={styles.label}>Tentative Price</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Tentative Price"
@@ -74,7 +83,7 @@ const FormScreen = () => {
           onChangeText={setPrice}
         />
 
-        <H2 style={styles.label}>Remarks</H2>
+        <H5 style={styles.label}>Remarks</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Remarks"

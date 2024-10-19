@@ -279,7 +279,7 @@ export const contactsData = [
 export const menuItems = [
   { label: "Account", icon: "person-outline" },
   { label: "My Purchase", icon: "cart-outline" },
-  { label: "Appearance", icon: "sunny-outline" },
+  // { label: "Appearance", icon: "sunny-outline" },
   { label: "Notification", icon: "notifications-outline" },
   { label: "Privacy", icon: "shield-checkmark-outline" },
   { label: "Data Usage", icon: "folder-outline" },
