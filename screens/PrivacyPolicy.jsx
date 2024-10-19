@@ -14,12 +14,14 @@ const PrivacyPolicy = () => {
   };
 
   const onSubmit = () => {
-    if (isChecked) {
-      alert("You have accepted the privacy policy.");
-    } else {
-      alert("Please accept the privacy policy to proceed.");
-    }
-  };
+  console.log("Submit clicked, checkbox is checked:", isChecked);
+  if (isChecked) {
+    alert("You have accepted the privacy policy.");
+  } else {
+    alert("Please accept the privacy policy to proceed.");
+  }
+};
+
 
   return (
     <ContainerComponent>

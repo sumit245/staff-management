@@ -112,23 +112,39 @@ export const leaveTypes = [
 export const dummyMessages = [
   {
     id: "1",
-    message: "Look at how chocho sleep in my arms!",
+    message: "Hey, have you finished the report for the meeting?",
     isSent: false,
-    time: "16.46",
+    time: "09:15",
   },
-  { id: "2", message: "Can I come over?", isSent: true, time: "16.46" },
+  {
+    id: "2",
+    message: "Not yet, I'm still working on the final sections.",
+    isSent: true,
+    time: "09:16",
+  },
   {
     id: "3",
-    message: "Of course, let me know if you’re on your way",
+    message: "No worries! Just wanted to check in. Do you need any help?",
     isSent: false,
-    time: "16.50",
+    time: "09:18",
   },
-  { id: "4", message: "K, I’m on my way", isSent: true, time: "16.50" },
+  {
+    id: "4",
+    message: "Actually, yes! I could use a hand with the data analysis.",
+    isSent: true,
+    time: "09:19",
+  },
   {
     id: "5",
-    message: "Good morning, did you sleep well?",
+    message: "Sure thing! Let’s meet in the conference room in 10 minutes?",
     isSent: false,
-    time: "09.13",
+    time: "09:20",
+  },
+  {
+    id: "6",
+    message: "Sounds good! I'll bring my laptop.",
+    isSent: true,
+    time: "09:21",
   },
 ];
 
