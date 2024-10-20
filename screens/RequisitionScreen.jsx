@@ -65,7 +65,7 @@ const RequisitionScreen = ({ navigation }) => {
           // onPress={onSubmit}
         >
           <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
-            Create Purchase Order
+            Create Receipt
           </H2>
         </Button>
       </View>

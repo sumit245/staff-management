@@ -533,28 +533,28 @@ export const requisitions = [
   {
     id: "PR - 10050019",
     location: "PL01 - Texas Houston Plant",
-    date: "08/19/2020",
+    date: "08/19/2024",
     amount: "₹ 24.40 ",
     checked: false,
   },
   {
     id: "PR - 10050018",
     location: "PL01 - Texas Houston Plant",
-    date: "08/19/2020",
+    date: "08/23/2024",
     amount: "₹ 254.40 ",
     checked: false,
   },
   {
     id: "PR - 10050017",
     location: "PL01 - Texas Houston Plant",
-    date: "08/19/2020",
+    date: "09/11/2024",
     amount: "₹ 100.00 ",
     checked: false,
   },
   {
     id: "PR - 10050016",
     location: "PL01 - Texas Houston Plant",
-    date: "08/19/2020",
+    date: "10/19/2024",
     amount: "₹ 100.00 ",
     checked: false,
   },
@@ -584,14 +584,14 @@ export const requisitions = [
 //   { label: "Grand Total", value: 82.0 },
 // ];
 export const originalItems = [
-  { id: 1, name: "JavaScript" },
-  { id: 2, name: "Java" },
-  { id: 3, name: "Ruby" },
-  { id: 4, name: "React Native" },
-  { id: 5, name: "PHP" },
-  { id: 6, name: "Python" },
-  { id: 7, name: "Go" },
-  { id: 8, name: "Swift" },
+  { id: 1, name: "Robotics with Arduino" },
+  { id: 2, name: "Motor Control in Robotics" },
+  { id: 3, name: "Radio-Controlled Robots" },
+  { id: 4, name: "Robotics Programming Basics" },
+  { id: 5, name: "Autonomous Robot Design" },
+  { id: 6, name: "Obstacle Avoidance Robotics" },
+  { id: 7, name: "Sumo Robotics Challenge" },
+  { id: 8, name: "Robot Navigation with Sensors" },
 ];
 
 // export const itemsData = [
