@@ -94,14 +94,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   titleText: {
-    fontWeight: "700",
-    color: DARK,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  titleText: {
-    fontWeight: "700",
+    fontWeight: "800",
     color: DARK,
     flexDirection: "row",
     alignItems: "center",

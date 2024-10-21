@@ -82,8 +82,8 @@ export default function LoginScreen() {
         >
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("homeScreen"); // Navigate to home screen
-              setPopupVisible(false); // Close the modal after navigation
+              navigation.navigate("homeScreen");
+              setPopupVisible(false);
             }}
             activeOpacity={0.9}
             style={{ alignItems: "center", marginBottom: 4 }}
@@ -106,5 +106,3 @@ export default function LoginScreen() {
 // navigate is like href from any page to any page
 // goBack only push to previous page in stack
 // cangoBack allows or disallows back propagation
-
-
