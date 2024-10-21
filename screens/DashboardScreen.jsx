@@ -1,4 +1,3 @@
-import { ScrollView } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import StatCard from "../components/card/Statcard";
@@ -10,7 +9,11 @@ export default function DashboardScreen() {
   const navigation = useNavigation();
 
   const navigateToNotification = () => {
-    navigation.navigate("NotificationScreen");  
+    navigation.navigate("NotificationScreen");
+  };
+
+  const navigateToTaskList = () => {
+    navigation.navigate("TaskList");
   };
 
   return (
@@ -31,9 +34,12 @@ export default function DashboardScreen() {
             backgroundColor={item.backgroundColor}
             tasks={item.count}
             status={item.status}
+            onPress={
+              item.status === "Total Project" ? navigateToTaskList : null
+            }
           />
         )}
-        keyExtractor={(item, index) => index}
+        keyExtractor={(item) => item.id.toString()} // Use item.id instead of index for key
         numColumns={2}
       />
     </ContainerComponent>
