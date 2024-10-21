@@ -20,10 +20,12 @@ import ApplyLeaveForm from "./screens/ApplyLeaveForm";
 import AllLeaves from "./screens/AllLeaves";
 import CheckOut from "./screens/CheckOut";
 
+
 export default function App() {
   return (
     <PaperProvider>
       <MyNavigationContainer />
+
       {/* <NotificationScreen /> */}
       {/* <HolidayListScreen/> */}
       {/* <ProfileScreen /> */}

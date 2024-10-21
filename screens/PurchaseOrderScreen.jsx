@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
+import { View, ScrollView, TouchableOpacity } from "react-native";
 import { CheckBox } from "react-native-elements";
 import { Card } from "react-native-paper";
 import { Icon } from "react-native-elements";
@@ -15,7 +9,6 @@ import MyHeader from "../components/header/MyHeader";
 import { styles } from "../styles/components.styles";
 import { itemsData, amountDetailsData } from "../utils/faker";
 import { H2, H3, H5, H6, P } from "../components/text";
-
 import { useNavigation } from "@react-navigation/native";
 import SearchBar from "../components/input/SearchBar";
 
@@ -24,7 +17,7 @@ const PurchaseOrderScreen = () => {
   const [items, setItems] = useState(itemsData);
   const [filteredItems, setFilteredItems] = useState(itemsData);
   const [searchQuery, setSearchQuery] = useState("");
-  const navigation = useNavigation();
+  const navigation = useNavigation(); // Hook to navigate
 
   // Function to toggle checkbox
   const toggleCheck = (itemId) => {
@@ -34,10 +27,9 @@ const PurchaseOrderScreen = () => {
     });
   };
 
-  // Function to handle search query and filter items based on product code
+  // Function to handle search query and filter items
   const handleSearch = (text) => {
     setSearchQuery(text);
-
     if (text === "") {
       setFilteredItems(itemsData);
     } else {
@@ -48,10 +40,6 @@ const PurchaseOrderScreen = () => {
       );
       setFilteredItems(filtered);
     }
-  };
-
-  const navigateToFormScreen = () => {
-    navigation.navigate("FormScreen"); // Navigate to the FormScreen
   };
 
   return (
@@ -65,12 +53,11 @@ const PurchaseOrderScreen = () => {
         />
 
         <SearchBar
-          placeholder="Search  Project Code or Name"
+          placeholder="Search Project Code or Name"
           value={searchQuery}
           onChangeText={handleSearch}
         />
 
-        {/* Button to Add New Line Item */}
         <Button style={[styles.btn, styles.bgPrimary]}>
           <View
             style={{
@@ -84,7 +71,7 @@ const PurchaseOrderScreen = () => {
               Add New Line Item
             </H2>
             <TouchableOpacity
-              onPress={navigateToFormScreen}
+              onPress={() => navigation.navigate("TaskList")} // Navigate to TaskList
               style={[styles.addIconContainer, { marginLeft: 15 }]}
             >
               <Icon name="add" size={20} color="#020409" />
@@ -92,26 +79,30 @@ const PurchaseOrderScreen = () => {
           </View>
         </Button>
 
-        {/* Display filtered items based on search */}
         {filteredItems.length > 0 ? (
           filteredItems.map((item) => (
-            <Card key={item.id} style={styles.card}>
-              <View style={styles.cardRow}>
-                <CheckBox
-                  checked={checkedItems[item.id] || false}
-                  onPress={() => toggleCheck(item.id)}
-                />
-                <View style={styles.itemInfo}>
-                  <H5>{item.id}</H5>
-                  <P>{item.name}</P>
+            <TouchableOpacity
+              key={item.id}
+              onPress={() => navigation.navigate("TaskList")} // Navigate to TaskList on card click
+            >
+              <Card style={styles.card}>
+                <View style={styles.cardRow}>
+                  <CheckBox
+                    checked={checkedItems[item.id] || false}
+                    onPress={() => toggleCheck(item.id)}
+                  />
+                  <View style={styles.itemInfo}>
+                    <H5>{item.id}</H5>
+                    <P>{item.name}</P>
+                  </View>
+                  <View style={styles.itemDetails}>
+                    <H6>₹{item.price.toFixed(2)}</H6>
+                    <P>{item.quantity} Ea</P>
+                    <H5>₹{item.total.toFixed(2)}</H5>
+                  </View>
                 </View>
-                <View style={styles.itemDetails}>
-                  <H6>₹{item.price.toFixed(2)}</H6>
-                  <P>{item.quantity} Ea</P>
-                  <H5>₹{item.total.toFixed(2)}</H5>
-                </View>
-              </View>
-            </Card>
+              </Card>
+            </TouchableOpacity>
           ))
         ) : (
           <H3>No products found</H3>
