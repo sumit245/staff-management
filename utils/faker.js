@@ -12,7 +12,7 @@ export const tasks = [
     title: "Dashboard design for admin",
     description: "Create the admin dashboard for the app",
     status: "High",
-    count: 12,
+    count: 15,
     date: "14 Oct 2022",
     commentsCount: 5,
     attachmentsCount: 2,
@@ -27,7 +27,7 @@ export const tasks = [
     title: "Konom web application",
     description: "Develop the Konom web application",
     status: "Low",
-    count: 1,
+    count: 2,
     date: "14 Nov 2022",
     commentsCount: 2,
     attachmentsCount: 1,
@@ -40,7 +40,7 @@ export const tasks = [
     id: 1,
     title: "Task 1",
     description: "This is task 1",
-    count: 24,
+    count: 28,
     status: "In Progress",
     backgroundColor: INFO_COLOR,
   },
@@ -48,7 +48,7 @@ export const tasks = [
     id: 2,
     title: "Task 2",
     description: "This is task 2",
-    count: 25,
+    count: 31,
     status: "Done",
     backgroundColor: SUCCESS_COLOR,
   },
@@ -56,7 +56,7 @@ export const tasks = [
     id: 3,
     title: "Task 3",
     description: "This is task 3",
-    count: 20,
+    count: 24,
     status: "In Review",
     backgroundColor: WARNING_COLOR,
   },
@@ -64,10 +64,18 @@ export const tasks = [
     id: 4,
     title: "Task 4",
     description: "This is task 4",
-    count: 5,
+    count: 7,
     status: "Cancelled",
     backgroundColor: DANGER_COLOR,
-  }
+  },
+  {
+    id: 5,
+    title: "Task 5",
+    description: "This is task 5",
+    count: 12,
+    status: "Total Project",
+    backgroundColor: INFO_COLOR,
+  },
 ];
 
 export const leaveReasons = [
@@ -112,24 +120,40 @@ export const leaveTypes = [
 export const dummyMessages = [
   {
     id: "1",
-    message: "Look at how chocho sleep in my arms!",
+    message: "Hey, have you finished the report for the meeting?",
     isSent: false,
-    time: "16.46",
+    time: "09:15",
   },
-  { id: "2", message: "Can I come over?", isSent: true, time: "16.46" },
+  {
+    id: "2",
+    message: "Not yet, I'm still working on the final sections.",
+    isSent: true,
+    time: "09:16",
+  },
   {
     id: "3",
-    message: "Of course, let me know if you’re on your way",
+    message: "No worries! Just wanted to check in. Do you need any help?",
     isSent: false,
-    time: "16.50",
+    time: "09:18",
   },
-  { id: "4", message: "K, I’m on my way", isSent: true, time: "16.50" },
+  {
+    id: "4",
+    message: "Actually, yes! I could use a hand with the data analysis.",
+    isSent: true,
+    time: "09:19",
+  },
   {
     id: "5",
-    message: "Good morning, did you sleep well?",
+    message: "Sure thing! Let’s meet in the conference room in 10 minutes?",
     isSent: false,
-    time: "09.13",
+    time: "09:20",
   },
+  // {
+  //   id: "6",
+  //   message: "Sounds good! I'll bring my laptop.",
+  //   isSent: true,
+  //   time: "09:21",
+  // },
 ];
 
 export const items = [
@@ -278,10 +302,374 @@ export const contactsData = [
 
 export const menuItems = [
   { label: "Account", icon: "person-outline" },
-  { label: "Chats", icon: "chatbubble-outline" },
-  { label: "Appearance", icon: "sunny-outline" },
+  { label: "My Purchase", icon: "cart-outline" },
+  // { label: "Appearance", icon: "sunny-outline" },
   { label: "Notification", icon: "notifications-outline" },
   { label: "Privacy", icon: "shield-checkmark-outline" },
   { label: "Data Usage", icon: "folder-outline" },
   { label: "Help", icon: "help-circle-outline" },
 ];
+export const notifications = [
+  {
+    id: "1",
+    title: "You updated your profile picture",
+    description: "You just updated your profile picture.",
+    icon: "account",
+    time: "Just Now",
+  },
+  {
+    id: "2",
+    title: "Password Changed",
+    description: "You’ve completed changing the password.",
+    icon: "lock-reset",
+    time: "2 oct,22:22 Pm",
+  },
+  {
+    id: "3",
+    title: "Subham Applied for Leave",
+    description: "Please accept my leave request.",
+    icon: "account-circle",
+    time: "23 sept",
+  },
+  {
+    id: "4",
+    title: "System Update",
+    description: "Please update to the newest app for a better experience.",
+    icon: "cellphone-information",
+    time: "25 sept,21:22 Pm",
+  },
+];
+export const holidays = [
+  {
+    id: "1",
+    title: "Republic Day",
+    date: "January 26, 2024",
+    day: "Thursday",
+    icon: "calendar",
+  },
+  {
+    id: "2",
+    title: "Holi",
+    date: "March 26, 2024",
+    day: "Friday",
+    icon: "calendar",
+  },
+  {
+    id: "3",
+    title: "Independence Day",
+    date: "August 15, 2024",
+    day: "Tuesday",
+    icon: "calendar",
+  },
+  {
+    id: "4",
+    title: "Raksha Bandhan",
+    date: "August 20, 2024",
+    day: "Wednesday",
+    icon: "calendar",
+  },
+  {
+    id: "5",
+    title: "Janmashtami",
+    date: "September 26, 2024",
+    day: "Thursday",
+    icon: "calendar",
+  },
+  {
+    id: "6",
+    title: "Diwali",
+    date: "November 12, 2024",
+    day: "Sunday",
+    icon: "calendar",
+  },
+];
+export const personalData = {
+  fullName: "Bittu Kumar",
+  email: "bittu230@gmail.com",
+  phone: "+91 7945671265",
+  address: "Delhi India",
+};
+export const professionalData = {
+  employeeId: "7879987",
+  designation: " UI/UX Designer",
+  companyEmail: "bittu89@example.com",
+  employeeType: "Permanent",
+  department: "Design",
+  reportingManager: "Ashish Kumar",
+  companyExperience: "2 Year 5 Months",
+  officeTime: "10:00 am to 07:00 pm",
+};
+export const documentData = [
+  { id: "1", name: "Offer Letter", icon: "file-document-outline" },
+  { id: "2", name: "Appointment Letter", icon: "file-document-outline" },
+  { id: "3", name: "Bond Agreement", icon: "file-document-outline" },
+  { id: "4", name: "Appraisal Letter", icon: "file-document-outline" },
+  { id: "5", name: "Salary Slip", icon: "file-document-outline" },
+];
+
+export const activities = [
+  { id: "1", title: "Capital Icon", time: "9:15 AM - 11:00 AM" },
+  { id: "2", title: "Baroda Bank", time: "11:00 AM - 11:30 AM" },
+];
+export const profileImages = [
+  "https://randomuser.me/api/portraits/men/1.jpg",
+  "https://randomuser.me/api/portraits/women/1.jpg",
+];
+export const miniCards = [
+  { id: 1, icon: "time-outline", text: "Est: 20h" },
+  { id: 2, icon: "calendar-outline", text: "Due: 25 Apr" },
+  { id: 3, icon: "checkmark-circle-outline", text: "Tasks: 1/3" },
+];
+export const taskCards = [
+  { id: 1, text: "Design Concept", progress: 0.7, bgColor: "#54B4D3" },
+  { id: 2, text: "Development Phase", progress: 0.4, bgColor: "#2b87b0" },
+];
+export const cardtasks = [
+  {
+    id: 1,
+    title: "Design system",
+    time: "09:00 - 10:00",
+    progress: 0.6,
+    participants: 2,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/32.jpg",
+      "https://randomuser.me/api/portraits/women/44.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "Create prototype",
+    time: "10:00 - 11:00",
+    progress: 0.3,
+    participants: 4,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/36.jpg",
+      "https://randomuser.me/api/portraits/women/40.jpg",
+      "https://randomuser.me/api/portraits/men/37.jpg",
+      "https://randomuser.me/api/portraits/women/50.jpg",
+    ],
+  },
+  {
+    id: 3,
+    title: "Dashboard design",
+    time: "11:00 - 12:00",
+    progress: 0.5,
+    participants: 4,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/38.jpg",
+      "https://randomuser.me/api/portraits/women/51.jpg",
+      "https://randomuser.me/api/portraits/men/39.jpg",
+      "https://randomuser.me/api/portraits/women/53.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Offspace project",
+    time: "12:00 - 01:00",
+    progress: 0.7,
+    participants: 3,
+    avatars: [
+      "https://randomuser.me/api/portraits/men/40.jpg",
+      "https://randomuser.me/api/portraits/women/55.jpg",
+      "https://randomuser.me/api/portraits/men/41.jpg",
+    ],
+  },
+];
+export const attendanceData = [
+  {
+    icon: "login",
+    title: "Check In",
+    time: "10:20 am",
+    status: "On Time",
+  },
+  {
+    icon: "logout",
+    title: "Check Out",
+    time: "07:00 pm",
+    status: "Go Home",
+  },
+  {
+    icon: "clock-outline",
+    title: "Break Time",
+    time: "00:30 min",
+    status: "Avg Time 30 min",
+  },
+  {
+    icon: "calendar-check-outline",
+    title: "Total Days",
+    time: "28",
+    status: "Working Days",
+  },
+];
+export const activityData = [
+  {
+    title: "Check In",
+    time: "10:00 am",
+    status: "On Time",
+    icon: "login",
+  },
+  {
+    title: "Break In",
+    time: "12:30 pm",
+    status: "On Time",
+    icon: "pause-circle-outline",
+  },
+  {
+    title: "Check Out",
+    time: "07:00 pm",
+    status: "On Time",
+    icon: "logout",
+  },
+];
+export const lineItems = [
+  {
+    id: "AS1001",
+    description: "HP Deskjet 1010 Color Inkjet Printer",
+    location: "MT-seattle Manufacturing",
+    subInventory: "Seattle Manufacturing",
+  },
+  {
+    id: "AS1002",
+    description: "Logitech B100 Optical Wired USB Mouse",
+    location: "MT-seattle Manufacturing",
+    subInventory: "Seattle Manufacturing",
+  },
+];
+// requisitionsData.js
+
+export const requisitions = [
+  {
+    id: "PR - 10050019",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/19/2024",
+    amount: "₹ 24.40 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050018",
+    location: "PL01 - Texas Houston Plant",
+    date: "08/23/2024",
+    amount: "₹ 254.40 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050017",
+    location: "PL01 - Texas Houston Plant",
+    date: "09/11/2024",
+    amount: "₹ 100.00 ",
+    checked: false,
+  },
+  {
+    id: "PR - 10050016",
+    location: "PL01 - Texas Houston Plant",
+    date: "10/19/2024",
+    amount: "₹ 100.00 ",
+    checked: false,
+  },
+];
+// PurchaseOrderScreen
+// export const itemsData = [
+//   {
+//     id: "AS1001",
+//     name: "HP Deskjet 1010 Color Inkjet Printer",
+//     price: 15.0,
+//     quantity: 2,
+//     total: 30.0,
+//   },
+//   {
+//     id: "AS1002",
+//     name: "Logitech B100 Optical Wired USB Mouse",
+//     price: 8.0,
+//     quantity: 6,
+//     total: 48.0,
+//   },
+// ];
+// export const amountDetailsData = [
+//   { label: "Amount", value: 78.0 },
+//   { label: "Tax", value: 2.0 },
+//   { label: "Freight", value: 2.0 },
+//   { label: "Currency", value: "IND" },
+//   { label: "Grand Total", value: 82.0 },
+// ];
+export const originalItems = [
+  { id: 1, name: "Robotics with Arduino" },
+  { id: 2, name: "Motor Control in Robotics" },
+  { id: 3, name: "Radio-Controlled Robots" },
+  { id: 4, name: "Robotics Programming Basics" },
+  { id: 5, name: "Autonomous Robot Design" },
+  { id: 6, name: "Obstacle Avoidance Robotics" },
+  { id: 7, name: "Sumo Robotics Challenge" },
+  { id: 8, name: "Robot Navigation with Sensors" },
+];
+
+// export const itemsData = [
+//   {
+//     id: 1,
+//     productCode: "ABC123",
+//     name: "Product A",
+//     price: 100,
+//     quantity: 2,
+//     total: 200,
+//   },
+//   {
+//     id: 2,
+//     productCode: "XYZ789",
+//     name: "Product B",
+//     price: 150,
+//     quantity: 1,
+//     total: 150,
+//   },
+// ];
+
+export const itemsData = [
+  { id: "P001", name: "Product A", price: 120.5, quantity: 2, total: 241.0 },
+  { id: "P002", name: "Product B", price: 80.25, quantity: 3, total: 240.75 },
+  { id: "P003", name: "Product C", price: 50.0, quantity: 1, total: 50.0 },
+  { id: "P004", name: "Product D", price: 150.75, quantity: 5, total: 753.75 },
+  { id: "P005", name: "Product E", price: 99.99, quantity: 4, total: 399.96 },
+];
+
+export const amountDetailsData = [
+  { label: "Subtotal", value: 1000 },
+  { label: "Tax", value: 100 },
+  { label: "Total", value: 1100 },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Robatic cell",
+    status: "toDo",
+    progress: 0.5,
+    due: "25 Apr",
+    est: "20 h",
+  },
+  {
+    id: 2,
+    title: "Coffee Vending Machine",
+    status: "toDo",
+    progress: 0.7,
+    due: "28 Apr",
+    est: "15 h",
+  },
+  {
+    id: 3,
+    title: "Automatic soap Dispensor machine jig",
+    status: "toDo",
+    progress: 0.7,
+    due: "28 Apr",
+    est: "15 h",
+  },
+];
+export const handleTaskProgress = (
+  tasks,
+  projectId,
+  setTasks,
+  setActiveStatus
+) => {
+  const updatedTasks = tasks.map((task) =>
+    task.id === projectId ? { ...task, status: "inProgress" } : task
+  );
+  setTasks(updatedTasks);
+  setActiveStatus("inProgress");
+};

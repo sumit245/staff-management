@@ -1,15 +1,37 @@
+import React, { useState } from "react";
 import ProfileCard from "../components/ProfileCard";
 import MenuItem from "../components/MenuItem";
 import { menuItems } from "../utils/faker";
 import ContainerComponent from "../components/ContainerComponent";
-import { View } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { H5 } from "../components/text";
 import { DANGER_COLOR } from "../styles/constant";
-import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from "react-native-vector-icons/Ionicons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function SettingsScreen() {
+  const navigation = useNavigation();
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMenuItemPress = (label) => {
+    if (label === "My Purchase") {
+      navigation.navigate("Requisitions");
+    } else if (label === "Notification") {
+      navigation.navigate("NotificationScreen");
+    } else if (label === "Privacy") {
+      navigation.navigate("PrivacyPolicy");
+    } else {
+      console.log(label);
+    }
+  };
+
+  const handleLogoutPress = () => {
+    console.log("Logout pressed"); // Replace with your logout functionality
+    navigation.navigate("loginScreen"); // Navigate to LoginScreen
+  };
+
   return (
-    <ContainerComponent justifyContent='space-between'>
+    <ContainerComponent justifyContent="space-between">
       <ProfileCard
         imageUri="https://randomuser.me/api/portraits/men/7.jpg"
         name="Mihir Mishra"
@@ -21,17 +43,24 @@ export default function SettingsScreen() {
             key={index}
             label={item.label}
             icon={item.icon}
-            onPress={() => console.log(item.label)}
+            onPress={() => handleMenuItemPress(item.label)}
           />
         ))}
       </View>
 
-      <View style={{ marginBottom: 8, justifyContent: 'center', alignItems: 'center' }} >
+      <TouchableOpacity
+        style={{
+          marginBottom: 8,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        onPress={handleLogoutPress}
+        onPressIn={() => setIsHovered(true)}
+        onPressOut={() => setIsHovered(false)}
+      >
         <Icon name="power-outline" size={24} color={DANGER_COLOR} />
-        <H5 style={{ color: DANGER_COLOR }}>Logout</H5>
-      </View>
-
+        <H5 style={{ color: isHovered ? "darkred" : DANGER_COLOR }}>Logout</H5>
+      </TouchableOpacity>
     </ContainerComponent>
   );
 }
-

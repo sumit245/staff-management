@@ -1,12 +1,14 @@
+import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation'
+import Icon from 'react-native-vector-icons/Ionicons'
+
 import DashboardScreen from '../screens/DashboardScreen'
 import ChatScreen from '../screens/ChatScreen'
 import SettingsScreen from '../screens/SettingScreen'
-import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation'
-import { INFO_COLOR, LIGHT, PRIMARY_COLOR } from '../styles/constant'
-import Icon from 'react-native-vector-icons/Ionicons'
 import ProjectScreen from '../screens/ProjectScreen'
 
-const BottomTab = createMaterialBottomTabNavigator()
+import { INFO_COLOR, LIGHT, PRIMARY_COLOR } from '../styles/constant'
+
+const BottomTab = createMaterialBottomTabNavigator();
 
 export default function MyMaterialBottomNavigator() {
     return (
