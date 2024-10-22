@@ -19,13 +19,15 @@ import TermsAndConditions from "./screens/TermsAndConditions";
 import ApplyLeaveForm from "./screens/ApplyLeaveForm";
 import AllLeaves from "./screens/AllLeaves";
 import CheckOut from "./screens/CheckOut";
-//import TaskList from "./screens/TaskList";
+import Attendance from "./components/Attendance";
+import AttendancePunch from "./components/AttendancePunch";
 
 export default function App() {
   return (
     <PaperProvider>
-      <MyNavigationContainer />
-      {/* <TaskList /> */}
+      {/* <MyNavigationContainer /> */}
+      {/* <Attendance /> */}
+      <AttendancePunch />
       {/* <NotificationScreen /> */}
       {/* <HolidayListScreen/> */}
       {/* <ProfileScreen /> */}

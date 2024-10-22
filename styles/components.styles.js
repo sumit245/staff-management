@@ -18,7 +18,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: LIGHT,
     alignItems: "center",
-
     marginHorizontal: 8,
   },
   textLarge: {
@@ -234,7 +233,6 @@ export const styles = StyleSheet.create({
   snackMessage: {
     maxWidth: SCREEN_WIDTH / 1.6,
     fontSize: 16,
-
     color: LIGHT,
   },
 
@@ -356,7 +354,7 @@ export const styles = StyleSheet.create({
   card: {
     borderRadius: 16,
     padding: 16,
-    width: SCREEN_WIDTH - 40, //Apply this style to login screen textinput and button
+    width: SCREEN_WIDTH - 40,
     margin: 4,
     marginVertical: 8,
     elevation: 2,
