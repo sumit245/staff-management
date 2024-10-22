@@ -10,56 +10,38 @@ import {
 } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import ContainerComponent from "./ContainerComponent";
-import Geolocation from "react-native-geolocation-service";
+import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
-import { PermissionsAndroid, Platform } from "react-native";
 
 export default function AttendancePunch() {
   const [permission, requestPermission] = useCameraPermissions();
   const [location, setLocation] = useState(null);
+  const [markerLocation, setMarkerLocation] = useState(null); // State for marker location
   const [photoUri, setPhotoUri] = useState(null);
   const cameraRef = useRef(null);
 
-  // Request location permission
+  // Request location permission and fetch location
   const requestLocationPermission = async () => {
-    try {
-      if (Platform.OS === "android") {
-        const granted = await PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-          {
-            title: "Location Permission",
-            message: "This app needs access to your location for attendance.",
-            buttonNeutral: "Ask Me Later",
-            buttonNegative: "Cancel",
-            buttonPositive: "OK",
-          }
-        );
-        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-          getLocation();
-        } else {
-          Alert.alert("Permission Denied", "Location permission is required.");
-        }
-      } else {
-        getLocation();
-      }
-    } catch (err) {
-      console.warn(err);
+    const { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== "granted") {
+      Alert.alert("Permission Denied", "Location permission is required.");
+      return;
     }
+
+    // Get the current location
+    const currentLocation = await Location.getCurrentPositionAsync({});
+    setLocation({
+      latitude: currentLocation.coords.latitude,
+      longitude: currentLocation.coords.longitude,
+    });
   };
 
-  // Get current location
-  const getLocation = () => {
-    Geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        setLocation({ latitude, longitude });
-      },
-      (error) => {
-        Alert.alert("Error", "Unable to fetch location.");
-      },
-      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-    );
-  };
+  // Update marker location whenever the location changes
+  useEffect(() => {
+    if (location) {
+      setMarkerLocation(location); // Update marker location state
+    }
+  }, [location]);
 
   // Handle punch-in action
   const handlePunchIn = () => {
@@ -107,7 +89,6 @@ export default function AttendancePunch() {
 
   return (
     <ContainerComponent>
-      {/* Show the camera at the top */}
       <View style={styles.header}>
         <Text style={styles.title}>Attendance Punch</Text>
         <TouchableOpacity>
@@ -120,15 +101,10 @@ export default function AttendancePunch() {
             <Image source={{ uri: photoUri }} style={styles.capturedImage} />
           </View>
         ) : (
-          <CameraView
-            style={styles.camera}
-            ref={cameraRef} // Store reference to the camera
-            facing="front"
-          />
+          <CameraView style={styles.camera} ref={cameraRef} facing="front" />
         )}
       </View>
 
-      {/* Capture Photo button */}
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <TouchableOpacity
           onPress={takePicture}
@@ -141,38 +117,30 @@ export default function AttendancePunch() {
             alignItems: "center",
           }}
         >
-          <Text
-            style={{
-              color: "#fff",
-              fontSize: 16,
-              fontWeight: "bold",
-            }}
-          >
+          <Text style={{ color: "#fff", fontSize: 16, fontWeight: "bold" }}>
             Capture Photo
           </Text>
         </TouchableOpacity>
       </View>
 
-      {/* Display map for location in the middle */}
       <View style={styles.mapContainer}>
-        {location ? (
+        {markerLocation ? ( // Use markerLocation instead of location
           <MapView
             style={styles.map}
             initialRegion={{
-              latitude: location.latitude,
-              longitude: location.longitude,
+              latitude: markerLocation.latitude,
+              longitude: markerLocation.longitude,
               latitudeDelta: 0.01,
               longitudeDelta: 0.01,
             }}
           >
-            <Marker coordinate={location} title="Your Location" />
+            <Marker coordinate={markerLocation} title="Your Location" />
           </MapView>
         ) : (
           <Text style={styles.loadingText}>Fetching location...</Text>
         )}
       </View>
 
-      {/* Punch In and Punch Out Buttons at the bottom */}
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.punchInButton} onPress={handlePunchIn}>
           <Text style={styles.buttonText}>PUNCH IN</Text>
@@ -214,14 +182,14 @@ const styles = StyleSheet.create({
     height: 240,
     width: 240,
     borderRadius: 120,
-    overflow: "hidden", // Ensures the image is clipped to a circle
+    overflow: "hidden",
     justifyContent: "center",
     alignItems: "center",
   },
   capturedImage: {
     height: "100%",
     width: "100%",
-    borderRadius: 120, // Make the image circular
+    borderRadius: 120,
     position: "absolute",
   },
   header: {
