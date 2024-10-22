@@ -932,7 +932,7 @@ export const styles = StyleSheet.create({
 
   amountCard: {
     padding: 10,
-  paddingRight: 20,
+    paddingRight: 20,
     backgroundColor: "#fff",
     borderRadius: 6,
   },
@@ -1129,5 +1129,9 @@ export const styles = StyleSheet.create({
     height: 200,
     borderRadius: 20,
   },
-  
+  message: {
+    marginTop: 4,
+    fontSize: 14,
+    textAlign: "center",
+  },
 });

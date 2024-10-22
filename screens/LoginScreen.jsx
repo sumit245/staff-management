@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import ModalPopup from "../components/Modal";
 import Avatar from "../components/Avatar";
 import { useNavigation } from "@react-navigation/native";
-import { TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 
 export default function LoginScreen() {
   const [popupVisible, setPopupVisible] = useState(false);
@@ -53,24 +53,6 @@ export default function LoginScreen() {
           </Button>
         </KeyboardAvoidingView>
       </ScrollView>
-      {/* {popupVisible && (
-        <ModalPopup
-          visible={popupVisible}
-          close={() => setPopupVisible((popupVisible) => !popupVisible)}
-          negativeButton="Cancel"
-          positiveButton="login"
-          action={() => {
-            navigation.navigate("homeScreen"), setPopupVisible(false);
-          }}
-        >
-          <Avatar
-            name="Rohit"
-            avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70"
-          />
-
-          <P>Are you sure you want to create attendance?</P>
-        </ModalPopup>
-      )} */}
 
       {popupVisible && (
         <ModalPopup
@@ -82,21 +64,22 @@ export default function LoginScreen() {
         >
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("homeScreen"); // Navigate to home screen
-              setPopupVisible(false); // Close the modal after navigation
+              navigation.navigate("homeScreen");
+              setPopupVisible(false);
             }}
             activeOpacity={0.9}
-            style={{ alignItems: "center", marginBottom: 10 }}
+            style={{ alignItems: "center", marginBottom: 4 }}
           >
             <Avatar
               name="Rohit"
               avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70"
+              style={{ width: 120, height: 120 }}
             />
           </TouchableOpacity>
 
-          <P style={styles.message}>
-            Are you sure you want to create attendance?
-          </P>
+          <Text style={styles.message} numberOfLines={1}>
+            Put your finger on above sensor to create attendance!!
+          </Text>
         </ModalPopup>
       )}
     </MyImageBackground>
@@ -106,3 +89,5 @@ export default function LoginScreen() {
 // navigate is like href from any page to any page
 // goBack only push to previous page in stack
 // cangoBack allows or disallows back propagation
+
+

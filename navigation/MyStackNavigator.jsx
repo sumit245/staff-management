@@ -7,6 +7,7 @@ import FormScreen from "../screens/FormScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import PrivacyPolicy from "../screens/PrivacyPolicy";
 import TaskList from "../screens/TaskList";
+import DashboardScreen from "../screens/DashboardScreen";
 import MyMaterialBottomNavigator from "./MyMaterialBottomNavigator";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -32,6 +33,7 @@ export default function MyStackNavigator() {
       <Stack.Screen name="FormScreen" component={FormScreen} />
       <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
       <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+      <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
       <Stack.Screen name="TaskList" component={TaskList} />
     </Stack.Navigator>
   );
