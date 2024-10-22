@@ -89,6 +89,7 @@ export default function LoginScreen() {
             style={{ alignItems: "center", marginBottom: 4 }}
           >
             <Avatar
+             // style={{ height: "40px" }}
               name="Rohit"
               avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70"
             />

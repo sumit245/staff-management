@@ -634,3 +634,42 @@ export const amountDetailsData = [
   { label: "Tax", value: 100 },
   { label: "Total", value: 1100 },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Robatic cell",
+    status: "toDo",
+    progress: 0.5,
+    due: "25 Apr",
+    est: "20 h",
+  },
+  {
+    id: 2,
+    title: "Coffee Vending Machine",
+    status: "toDo",
+    progress: 0.7,
+    due: "28 Apr",
+    est: "15 h",
+  },
+  {
+    id: 3,
+    title: "Automatic soap Dispensor machine jig",
+    status: "toDo",
+    progress: 0.7,
+    due: "28 Apr",
+    est: "15 h",
+  },
+];
+export const handleTaskProgress = (
+  tasks,
+  projectId,
+  setTasks,
+  setActiveStatus
+) => {
+  const updatedTasks = tasks.map((task) =>
+    task.id === projectId ? { ...task, status: "inProgress" } : task
+  );
+  setTasks(updatedTasks);
+  setActiveStatus("inProgress");
+};
