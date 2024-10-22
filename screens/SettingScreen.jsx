@@ -27,6 +27,7 @@ export default function SettingsScreen() {
 
   const handleLogoutPress = () => {
     console.log("Logout pressed"); // Replace with your logout functionality
+    navigation.navigate("loginScreen"); // Navigate to LoginScreen
   };
 
   return (
@@ -54,8 +55,8 @@ export default function SettingsScreen() {
           alignItems: "center",
         }}
         onPress={handleLogoutPress}
-        onPressIn={() => setIsHovered(true)} 
-        onPressOut={() => setIsHovered(false)} 
+        onPressIn={() => setIsHovered(true)}
+        onPressOut={() => setIsHovered(false)}
       >
         <Icon name="power-outline" size={24} color={DANGER_COLOR} />
         <H5 style={{ color: isHovered ? "darkred" : DANGER_COLOR }}>Logout</H5>

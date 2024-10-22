@@ -53,24 +53,6 @@ export default function LoginScreen() {
           </Button>
         </KeyboardAvoidingView>
       </ScrollView>
-      {/* {popupVisible && (
-        <ModalPopup
-          visible={popupVisible}
-          close={() => setPopupVisible((popupVisible) => !popupVisible)}
-          negativeButton="Cancel"
-          positiveButton="login"
-          action={() => {
-            navigation.navigate("homeScreen"), setPopupVisible(false);
-          }}
-        >
-          <Avatar
-            name="Rohit"
-            avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70"
-          />
-
-          <P>Are you sure you want to create attendance?</P>
-        </ModalPopup>
-      )} */}
 
       {popupVisible && (
         <ModalPopup
@@ -89,14 +71,15 @@ export default function LoginScreen() {
             style={{ alignItems: "center", marginBottom: 4 }}
           >
             <Avatar
-             // style={{ height: "40px" }}
+              // style={{ height: "40px" }}
               name="Rohit"
               avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70"
+              style={{ width: 120, height: 120 }}
             />
           </TouchableOpacity>
 
           <Text style={styles.message} numberOfLines={1}>
-            Put your finger on sensor to create attendance?
+            Put your finger on above sensor to create attendance!!
           </Text>
         </ModalPopup>
       )}
