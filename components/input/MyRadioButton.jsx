@@ -4,7 +4,7 @@ import { H5 } from "../text";
 
 export default function MyRadioButton({ options, selectedValue, onValueChange, title }) {
   return (
-    <View style={{ marginVertical: 8 }}>
+    <View style={styles.mv2}>
       <H5>{title}</H5>
       {options.map((option) => (
         <TouchableOpacity

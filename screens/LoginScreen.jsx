@@ -1,20 +1,21 @@
+import { useState } from "react";
 import {
-  Keyboard,
   KeyboardAvoidingView,
   View,
   Platform,
   ScrollView,
+  Text, TouchableOpacity
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import MyImageBackground from "../components/MyImageBackground";
-import { H1, H5, H3, Span, H2, P } from "../components/text";
-import { styles } from "../styles/components.styles";
+import { H1, H5, Span, H2 } from "../components/text";
 import MyTextInput from "../components/input/MyTextInput";
 import Button from "../components/buttons/Button";
-import { useState, useEffect } from "react";
 import ModalPopup from "../components/Modal";
 import Avatar from "../components/Avatar";
-import { useNavigation } from "@react-navigation/native";
-import { Text, TouchableOpacity } from "react-native";
+
+import { styles } from "../styles/components.styles";
 
 export default function LoginScreen() {
   const [popupVisible, setPopupVisible] = useState(false);
@@ -60,7 +61,7 @@ export default function LoginScreen() {
           close={() => setPopupVisible((prev) => !prev)}
           negativeButton="Cancel"
           positiveButton="Login"
-          action={() => {}}
+          action={() => { }}
         >
           <TouchableOpacity
             onPress={() => {
@@ -71,6 +72,7 @@ export default function LoginScreen() {
             style={{ alignItems: "center", marginBottom: 4 }}
           >
             <Avatar
+              // style={{ height: "40px" }}
               name="Rohit"
               avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70"
               style={{ width: 120, height: 120 }}
@@ -89,5 +91,3 @@ export default function LoginScreen() {
 // navigate is like href from any page to any page
 // goBack only push to previous page in stack
 // cangoBack allows or disallows back propagation
-
-

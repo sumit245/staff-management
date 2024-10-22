@@ -18,7 +18,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: LIGHT,
     alignItems: "center",
-    alignItems: "center",
     marginHorizontal: 8,
   },
   textLarge: {
@@ -30,23 +29,18 @@ export const styles = StyleSheet.create({
   titleContainer: {
     alignItems: "center",
     justifyContent: "space-between",
-    alignItems: "center",
-    justifyContent: "space-between",
     height: 0.1 * SCREEN_HEIGHT,
-    marginVertical: 0.02 * SCREEN_HEIGHT,
     marginVertical: 0.02 * SCREEN_HEIGHT,
   },
   imageContainerImg: {
     width: 0.6 * SCREEN_WIDTH,
     height: 0.6 * SCREEN_WIDTH,
     marginTop: 20,
-    marginTop: 20,
   },
   inputContainer: {
     width: SCREEN_WIDTH - 20,
   },
   textInput: {
-    marginVertical: 8,
     marginVertical: 8,
   },
   textInputField: {
@@ -58,7 +52,6 @@ export const styles = StyleSheet.create({
     paddingLeft: 14,
     borderColor: PRIMARY_COLOR,
     borderWidth: 1,
-    borderWidth: 1,
   },
   primaryButton: {
     marginVertical: 8,
@@ -66,11 +59,9 @@ export const styles = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: 6,
     alignItems: "center",
-    alignItems: "center",
   },
   btnText: {
     textTransform: "uppercase",
-    fontWeight: "bold",
     fontWeight: "bold",
   },
   rightLink: {
@@ -78,12 +69,9 @@ export const styles = StyleSheet.create({
     textAlign: "right",
     textDecorationLine: "underline",
     marginVertical: 12,
-    textDecorationLine: "underline",
-    marginVertical: 12,
   },
   headerStyle: {
     width: SCREEN_WIDTH,
-    borderBottomColor: "#6c6c6c",
     borderBottomColor: "#6c6c6c",
     borderBottomWidth: 0.5,
     height: 54,
@@ -94,14 +82,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   titleText: {
-    fontWeight: "700",
-    color: DARK,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  titleText: {
-    fontWeight: "700",
+    fontWeight: "800",
     color: DARK,
     flexDirection: "row",
     alignItems: "center",
@@ -119,9 +100,6 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
   },
   picker: {
     borderWidth: 1,
@@ -136,50 +114,37 @@ export const styles = StyleSheet.create({
     marginRight: 4,
     backgroundColor: LIGHT,
     width: SCREEN_WIDTH / 3.5,
-    width: SCREEN_WIDTH / 3.5,
   },
   btn: {
     marginVertical: 8,
     padding: 8,
-
-    alignItems: "center",
-    justifyContent: "space-between",
     alignItems: "center",
     justifyContent: "space-between",
     borderRadius: 6,
     flexDirection: "row",
-    flexDirection: "row",
   },
   bgDark: {
-    backgroundColor: DARK,
     backgroundColor: DARK,
   },
   bgInfo: {
     backgroundColor: INFO_COLOR,
-    backgroundColor: INFO_COLOR,
   },
   bgDanger: {
-    backgroundColor: DANGER_COLOR,
     backgroundColor: DANGER_COLOR,
   },
   bgWarning: {
     backgroundColor: WARNING_COLOR,
-    backgroundColor: WARNING_COLOR,
   },
   bgSuccess: {
-    backgroundColor: SUCCESS_COLOR,
     backgroundColor: SUCCESS_COLOR,
   },
   bgPrimary: {
     backgroundColor: PRIMARY_COLOR,
-    backgroundColor: PRIMARY_COLOR,
   },
   bgPrimaryTransParent: {
     backgroundColor: PRIMARY_COLOR_TRANSPARENT,
-    backgroundColor: PRIMARY_COLOR_TRANSPARENT,
   },
   bgSecondary: {
-    backgroundColor: SECONDARY_COLOR,
     backgroundColor: SECONDARY_COLOR,
   },
   round: {
@@ -187,39 +152,29 @@ export const styles = StyleSheet.create({
     width: 64,
     borderRadius: 32,
     justifyContent: "center",
-    justifyContent: "center",
   },
   textLight: {
-    color: LIGHT,
     color: LIGHT,
   },
   textDark: {
     color: DARK,
-    color: DARK,
   },
   textDanger: {
-    color: DANGER_COLOR,
     color: DANGER_COLOR,
   },
   textSecondary: {
     color: SECONDARY_COLOR,
-    color: SECONDARY_COLOR,
   },
   border: {
-    borderWidth: 1,
     borderWidth: 1,
   },
   fab: {
     elevation: 2,
     position: "absolute",
-    position: "absolute",
     bottom: 8,
-    right: 8,
     right: 8,
   },
   bottom: {
-    position: "absolute",
-    bottom: 2,
     position: "absolute",
     bottom: 2,
   },
@@ -238,7 +193,6 @@ export const styles = StyleSheet.create({
   },
   receivedMessage: {
     backgroundColor: SECONDARY_COLOR,
-    alignSelf: "flex-start",
     alignSelf: "flex-start",
   },
   messageText: {
@@ -270,7 +224,6 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 8,
     flexDirection: "row",
-    flexDirection: "row",
     minHeight: 48,
     alignItems: "center",
     justifyContent: "space-between",
@@ -280,7 +233,6 @@ export const styles = StyleSheet.create({
   snackMessage: {
     maxWidth: SCREEN_WIDTH / 1.6,
     fontSize: 16,
-    color: LIGHT,
     color: LIGHT,
   },
 
@@ -310,7 +262,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
     backgroundColor: "red",
-    backgroundColor: "red",
     marginBottom: 20,
   },
   profileImage: {
@@ -320,7 +271,6 @@ export const styles = StyleSheet.create({
     marginRight: 15,
     padding: 4,
     borderColor: SECONDARY_COLOR,
-    borderWidth: 1,
     borderWidth: 1,
   },
   profileInfo: {
@@ -339,74 +289,84 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
+
+  // Styles for horizontal padding
   ph1: {
-    paddingHorizontal: 4,
     paddingHorizontal: 4,
   },
   ph2: {
     paddingHorizontal: 8,
-    paddingHorizontal: 8,
   },
   ph3: {
-    paddingHorizontal: 12,
     paddingHorizontal: 12,
   },
   ph4: {
     paddingHorizontal: 16,
-    paddingHorizontal: 16,
   },
   ph5: {
     paddingHorizontal: 20,
-    paddingHorizontal: 20,
   },
+
+  // Styles for padding vertical
   pv1: {
-    paddingVertical: 4,
     paddingVertical: 4,
   },
   pv2: {
     paddingVertical: 8,
-    paddingVertical: 8,
   },
   pv3: {
-    paddingVertical: 12,
     paddingVertical: 12,
   },
   pv4: {
     paddingVertical: 16,
-    paddingVertical: 16,
   },
   pv5: {
     paddingVertical: 20,
-    paddingVertical: 20,
   },
+
+  // 
   p1: {
-    padding: 4,
     padding: 4,
   },
   p2: {
     padding: 8,
-    padding: 8,
   },
+
+  // Styles for horizontal margin
   mh1: {
-    marginHorizontal: 4,
     marginHorizontal: 4,
   },
   mh2: {
     marginHorizontal: 8,
-    marginHorizontal: 8,
   },
+  mh3: {
+    marginHorizontal: 12,
+  },
+  mh4: {
+    marginHorizontal: 16,
+  },
+  mh5: {
+    marginHorizontal: 20
+  },
+
+  // Styles for vertical margin
   mv1: {
-    marginVertical: 4,
     marginVertical: 4,
   },
   mv2: {
     marginVertical: 8,
-    marginVertical: 8,
   },
   mv3: {
     marginVertical: 12,
-    marginVertical: 12,
   },
+  mv4: {
+    marginVertical: 16,
+  },
+  mv5: {
+    marginVertical: 20,
+  },
+
+
   avatarContainer: {
     position: "relative",
     marginRight: 15,
@@ -421,7 +381,7 @@ export const styles = StyleSheet.create({
   card: {
     borderRadius: 16,
     padding: 16,
-    width: SCREEN_WIDTH - 40, //Apply this style to login screen textinput and button
+    width: SCREEN_WIDTH - 40,
     margin: 4,
     marginVertical: 8,
     elevation: 2,
@@ -1133,5 +1093,80 @@ export const styles = StyleSheet.create({
     marginTop: 4,
     fontSize: 14,
     textAlign: "center",
+  },
+  //Todo
+  projectList: {
+    marginTop: 20,
+  },
+
+  radioItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  //TaskList
+  card: {
+    backgroundColor: "#ffffff",
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  greeting: {
+    fontWeight: "bold",
+  },
+  statusContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 10,
+  },
+  statusButton: {
+    padding: 10,
+    backgroundColor: "#2b87b022",
+    borderRadius: 20,
+  },
+  activeButton: {
+    backgroundColor: "#2b87b0",
+  },
+  activeText: {
+    color: "#fff",
+  },
+  taskCard: {
+    backgroundColor: "#54B4D3",
+    padding: 15,
+    borderRadius: 15,
+    marginTop: 20,
+  },
+  taskTitle: {
+    fontSize: 18,
+    color: "#fff",
+    fontWeight: "bold",
+  },
+  taskInfo: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  infoText: {
+    color: "#fff",
+    marginLeft: 5,
+    marginRight: 15,
+  },
+  progressBar: {
+    height: 10,
+    borderRadius: 5,
+    marginVertical: 10,
+  },
+  progressText: {
+    fontWeight: "bold",
+    marginTop: 6,
+    color: "#fff",
+  },
+  completedText: {
+    textAlign: "center",
+    fontSize: 18,
+    color: "#2b87b0",
+    marginTop: 20,
   },
 });
