@@ -20,11 +20,13 @@ import ApplyLeaveForm from "./screens/ApplyLeaveForm";
 import AllLeaves from "./screens/AllLeaves";
 import CheckOut from "./screens/CheckOut";
 //import TaskList from "./screens/TaskList";
+import AttendancePunch from "./screens/AttendancePunch";
 
 export default function App() {
   return (
     <PaperProvider>
-      <MyNavigationContainer />
+      {/* <MyNavigationContainer /> */}
+      <AttendancePunch/>
       {/* <TaskList /> */}
       {/* <NotificationScreen /> */}
       {/* <HolidayListScreen/> */}
