@@ -214,7 +214,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     elevation: 2,
-    zIndex: 1000, 
+    zIndex: 1000,
   },
   snackMessage: {
     maxWidth: SCREEN_WIDTH / 1.6,
@@ -275,6 +275,8 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
+
+  // Styles for horizontal padding
   ph1: {
     paddingHorizontal: 4,
   },
@@ -290,6 +292,8 @@ export const styles = StyleSheet.create({
   ph5: {
     paddingHorizontal: 20,
   },
+
+  // Styles for padding vertical
   pv1: {
     paddingVertical: 4,
   },
@@ -305,18 +309,33 @@ export const styles = StyleSheet.create({
   pv5: {
     paddingVertical: 20,
   },
+
+  // 
   p1: {
     padding: 4,
   },
   p2: {
     padding: 8,
   },
+
+  // Styles for horizontal margin
   mh1: {
     marginHorizontal: 4,
   },
   mh2: {
     marginHorizontal: 8,
   },
+  mh3: {
+    marginHorizontal: 12,
+  },
+  mh4: {
+    marginHorizontal: 16,
+  },
+  mh5: {
+    marginHorizontal: 20
+  },
+
+  // Styles for vertical margin
   mv1: {
     marginVertical: 4,
   },
@@ -326,6 +345,14 @@ export const styles = StyleSheet.create({
   mv3: {
     marginVertical: 12,
   },
+  mv4: {
+    marginVertical: 16,
+  },
+  mv5: {
+    marginVertical: 20,
+  },
+
+
   avatarContainer: {
     position: "relative",
     marginRight: 15,

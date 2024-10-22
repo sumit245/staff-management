@@ -11,6 +11,7 @@ import { useNavigation } from "@react-navigation/native"
 
 export default function LoginScreen() {
     const [popupVisible, setPopupVisible] = useState(false)
+    const [time, setTime] = useState(new Date())
     const onSubmit = () => {
         setPopupVisible(true)
     }
@@ -56,9 +57,11 @@ export default function LoginScreen() {
                     positiveButton="login"
                     action={() => { navigation.navigate('homeScreen'), setPopupVisible(false) }}
                 >
+                    <H2>Welcome, Mihir</H2>
+                    <H3>{time.getHours()}:{time.getMinutes().toString().padStart(2, '0')} </H3>
                     <Avatar name="Rohit" avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70" />
-
                     <P>Are you sure you want to create attendance?</P>
+
                 </ModalPopup>
 
             }

@@ -4,6 +4,7 @@ import SettingsScreen from '../screens/SettingScreen'
 import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation'
 import { INFO_COLOR, LIGHT, PRIMARY_COLOR } from '../styles/constant'
 import Icon from 'react-native-vector-icons/Ionicons'
+import ProjectScreen from '../screens/ProjectScreen'
 
 const BottomTab = createMaterialBottomTabNavigator()
 
@@ -28,6 +29,15 @@ export default function MyMaterialBottomNavigator() {
                 component={DashboardScreen}
                 options={{
                     tabBarLabel: 'Home',
+                    tabBarIcon: ({ color }) =>
+                        <Icon name="desktop-outline" size={26} color={color} />
+                }}
+            />
+            <BottomTab.Screen
+                name='projectScreen'
+                component={ProjectScreen}
+                options={{
+                    tabBarLabel: 'Projects',
                     tabBarIcon: ({ color }) =>
                         <Icon name="grid-outline" size={26} color={color} />
                 }}
