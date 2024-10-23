@@ -19,6 +19,7 @@ import TermsAndConditions from "./screens/TermsAndConditions";
 import ApplyLeaveForm from "./screens/ApplyLeaveForm";
 import AllLeaves from "./screens/AllLeaves";
 import CheckOut from "./screens/CheckOut";
+import AttendancePunch from "./components/AttendancePunch";
 
 export default function App() {
   return (
@@ -40,7 +41,8 @@ export default function App() {
       {/* <TermsAndConditions /> */}
       {/* <ApplyLeaveForm /> */}
       {/* {<AllLeaves/>} */}
-      {<CheckOut />}
+      {/* { <CheckOut /> } */}
+      <AttendancePunch />
     </PaperProvider>
   );
 }
