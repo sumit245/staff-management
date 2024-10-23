@@ -1,9 +1,9 @@
-import { View } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { H2, H3, H4, H6 } from "../text";
-
 import Icon from "react-native-vector-icons/Ionicons";
 import { Badge } from "react-native-paper";
 import { styles } from "../../styles/components.styles";
+import { useNavigation } from "@react-navigation/native";
 
 export default function MyHeader({
   isBack,
@@ -12,10 +12,12 @@ export default function MyHeader({
   icon,
   hasBadge,
   badgeCount,
+  onIconPress,
 }) {
+  const navigation = useNavigation();
   return (
     <View style={styles.headerStyle}>
-      {isBack && (
+      {/* {isBack && (
         <View style={{ height: 54, width: 54 }}>
           <Icon
             name="arrow-back"
@@ -23,10 +25,21 @@ export default function MyHeader({
             style={{ position: "absolute", top: 10, left: 4 }}
           />
         </View>
+      )} */}
+      {isBack && (
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={{ marginRight: 10 }}
+        >
+          <Icon name="arrow-back" size={24} color="#000" />
+        </TouchableOpacity>
       )}
       <H4 style={styles.titleText}>{title}</H4>
       {hasIcon && (
-        <View style={{ height: 54, width: 54 }}>
+        <TouchableOpacity
+          onPress={onIconPress}
+          style={{ height: 54, width: 54 }}
+        >
           <Icon
             name={icon}
             size={30}
@@ -37,7 +50,7 @@ export default function MyHeader({
               {badgeCount}
             </Badge>
           )}
-        </View>
+        </TouchableOpacity>
       )}
     </View>
   );

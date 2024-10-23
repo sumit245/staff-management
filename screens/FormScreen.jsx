@@ -1,96 +1,11 @@
-// import React, { useState } from "react";
-// import { TextInput, ScrollView } from "react-native";
-// import Button from "../components/buttons/Button";
-// import { H2 } from "../components/text";
-// import ContainerComponent from "../components/ContainerComponent";
-// import MyHeader from "../components/header/MyHeader";
-// import { styles } from "../styles/components.styles";
-
-// const FormScreen = () => {
-//   const [itemName, setItemName] = useState("");
-//   const [model, setModel] = useState("");
-//   const [quantity, setQuantity] = useState("");
-//   const [price, setPrice] = useState("");
-//   const [remarks, setRemarks] = useState("");
-
-//   const handleSubmit = () => {
-//     console.log("Form Submitted:");
-//     console.log({ itemName, model, quantity, price, remarks });
-//   };
-
-//   return (
-//     <ContainerComponent>
-//       <ScrollView>
-//         <MyHeader title="Add Item Details" />
-
-//         <H2 style={styles.label}>Item Name</H2>
-//         <TextInput
-//           style={styles.input}
-//           placeholder="Enter Item Name or Specifications"
-//           value={itemName}
-//           onChangeText={setItemName}
-//         />
-//         <H2 style={styles.label}>Make/Specifications</H2>
-//         <TextInput
-//           style={styles.input}
-//           placeholder="Make Specifications"
-//           value={itemName}
-//           onChangeText={setItemName}
-//         />
-
-//         <H2 style={styles.label}>Model</H2>
-//         <TextInput
-//           style={styles.input}
-//           placeholder="Enter Model"
-//           value={model}
-//           onChangeText={setModel}
-//         />
-
-//         <H2 style={styles.label}>Quantity</H2>
-//         <TextInput
-//           style={styles.input}
-//           placeholder="Enter Quantity"
-//           keyboardType="numeric"
-//           value={quantity}
-//           onChangeText={setQuantity}
-//         />
-
-//         <H2 style={styles.label}>Tentative Price</H2>
-//         <TextInput
-//           style={styles.input}
-//           placeholder="Enter Tentative Price"
-//           keyboardType="numeric"
-//           value={price}
-//           onChangeText={setPrice}
-//         />
-
-//         <H2 style={styles.label}>Remarks</H2>
-//         <TextInput
-//           style={styles.input}
-//           placeholder="Enter Remarks"
-//           value={remarks}
-//           onChangeText={setRemarks}
-//         />
-
-//         <Button style={[styles.btn, styles.bgPrimary]} onPress={handleSubmit}>
-//           <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
-//             Submit
-//           </H2>
-//         </Button>
-//       </ScrollView>
-//     </ContainerComponent>
-//   );
-// };
-
-// export default FormScreen;
-
 import React, { useState } from "react";
 import { ScrollView, View, TextInput } from "react-native";
 import Button from "../components/buttons/Button";
-import { H2 } from "../components/text";
+import { H2, H4, H5, H6 } from "../components/text";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import SearchableDropdown from "../components/SearchableDropdown";
+import SearchBar from "../components/input/SearchBar";
 import { styles } from "../styles/components.styles";
 
 const FormScreen = () => {
@@ -114,14 +29,27 @@ const FormScreen = () => {
   return (
     <ContainerComponent>
       <ScrollView>
-        <MyHeader title="Add Item Details" />
+        <MyHeader
+          title="Add Item Details"
+          isBack={true}
+          hasIcon={true}
+          icon={""}
+        />
 
-        <H2 style={styles.label}>Search Item</H2>
-        <View>
+        <H5 style={styles.label}>Search Item</H5>
+        <View
+          style={{
+            borderWidth: 1,
+            borderColor: "#020409",
+            backgroundColor: "#f9f9f9",
+            paddingHorizontal: 2,
+            borderRadius: 5,
+          }}
+        >
           <SearchableDropdown onItemSelect={(item) => setSelectedItem(item)} />
         </View>
 
-        <H2 style={styles.label}>Make/Specifications</H2>
+        <H5 style={styles.label}>Make/Specifications</H5>
         <TextInput
           style={styles.input}
           placeholder="Make Specifications"
@@ -129,7 +57,7 @@ const FormScreen = () => {
           onChangeText={setModel}
         />
 
-        <H2 style={styles.label}>Model</H2>
+        <H5 style={styles.label}>Model</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Model"
@@ -137,7 +65,8 @@ const FormScreen = () => {
           onChangeText={setModel}
         />
 
-        <H2 style={styles.label}>Quantity</H2>
+        {/* <H2 style={styles.label}>Quantity</H2> */}
+        <H5 style={styles.label}>Quantity</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Quantity"
@@ -146,7 +75,7 @@ const FormScreen = () => {
           onChangeText={setQuantity}
         />
 
-        <H2 style={styles.label}>Tentative Price</H2>
+        <H5 style={styles.label}>Tentative Price</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Tentative Price"
@@ -155,7 +84,7 @@ const FormScreen = () => {
           onChangeText={setPrice}
         />
 
-        <H2 style={styles.label}>Remarks</H2>
+        <H5 style={styles.label}>Remarks</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Remarks"
@@ -163,7 +92,10 @@ const FormScreen = () => {
           onChangeText={setRemarks}
         />
 
-        <Button style={[styles.btn, styles.bgPrimary]} onPress={handleSubmit}>
+        <Button
+          style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
+          // onPress={onSubmit}
+        >
           <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
             Submit
           </H2>

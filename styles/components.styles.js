@@ -18,11 +18,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: LIGHT,
     alignItems: "center",
-    alignItems: "center",
     marginHorizontal: 8,
   },
   textLarge: {
-    fontSize: 20,
+    fontSize: 18,
   },
   imageContainer: {
     flex: 1,
@@ -30,23 +29,18 @@ export const styles = StyleSheet.create({
   titleContainer: {
     alignItems: "center",
     justifyContent: "space-between",
-    alignItems: "center",
-    justifyContent: "space-between",
     height: 0.1 * SCREEN_HEIGHT,
-    marginVertical: 0.02 * SCREEN_HEIGHT,
     marginVertical: 0.02 * SCREEN_HEIGHT,
   },
   imageContainerImg: {
     width: 0.6 * SCREEN_WIDTH,
     height: 0.6 * SCREEN_WIDTH,
     marginTop: 20,
-    marginTop: 20,
   },
   inputContainer: {
     width: SCREEN_WIDTH - 20,
   },
   textInput: {
-    marginVertical: 8,
     marginVertical: 8,
   },
   textInputField: {
@@ -58,7 +52,6 @@ export const styles = StyleSheet.create({
     paddingLeft: 14,
     borderColor: PRIMARY_COLOR,
     borderWidth: 1,
-    borderWidth: 1,
   },
   primaryButton: {
     marginVertical: 8,
@@ -66,11 +59,9 @@ export const styles = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: 6,
     alignItems: "center",
-    alignItems: "center",
   },
   btnText: {
     textTransform: "uppercase",
-    fontWeight: "bold",
     fontWeight: "bold",
   },
   rightLink: {
@@ -78,12 +69,9 @@ export const styles = StyleSheet.create({
     textAlign: "right",
     textDecorationLine: "underline",
     marginVertical: 12,
-    textDecorationLine: "underline",
-    marginVertical: 12,
   },
   headerStyle: {
     width: SCREEN_WIDTH,
-    borderBottomColor: "#6c6c6c",
     borderBottomColor: "#6c6c6c",
     borderBottomWidth: 0.5,
     height: 54,
@@ -94,14 +82,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   titleText: {
-    fontWeight: "700",
-    color: DARK,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  titleText: {
-    fontWeight: "700",
+    fontWeight: "800",
     color: DARK,
     flexDirection: "row",
     alignItems: "center",
@@ -112,13 +93,9 @@ export const styles = StyleSheet.create({
     width: SCREEN_WIDTH / 2.5,
     height: SCREEN_WIDTH / 3,
     margin: 8,
-    padding: 18,
-    padding: 18,
+    padding: 16,
   },
   row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
@@ -136,49 +113,37 @@ export const styles = StyleSheet.create({
     marginRight: 4,
     backgroundColor: LIGHT,
     width: SCREEN_WIDTH / 3.5,
-    width: SCREEN_WIDTH / 3.5,
   },
   btn: {
     marginVertical: 8,
     padding: 8,
     alignItems: "center",
     justifyContent: "space-between",
-    alignItems: "center",
-    justifyContent: "space-between",
     borderRadius: 6,
-    flexDirection: "row",
     flexDirection: "row",
   },
   bgDark: {
     backgroundColor: DARK,
-    backgroundColor: DARK,
   },
   bgInfo: {
-    backgroundColor: INFO_COLOR,
     backgroundColor: INFO_COLOR,
   },
   bgDanger: {
     backgroundColor: DANGER_COLOR,
-    backgroundColor: DANGER_COLOR,
   },
   bgWarning: {
-    backgroundColor: WARNING_COLOR,
     backgroundColor: WARNING_COLOR,
   },
   bgSuccess: {
     backgroundColor: SUCCESS_COLOR,
-    backgroundColor: SUCCESS_COLOR,
   },
   bgPrimary: {
-    backgroundColor: PRIMARY_COLOR,
     backgroundColor: PRIMARY_COLOR,
   },
   bgPrimaryTransParent: {
     backgroundColor: PRIMARY_COLOR_TRANSPARENT,
-    backgroundColor: PRIMARY_COLOR_TRANSPARENT,
   },
   bgSecondary: {
-    backgroundColor: SECONDARY_COLOR,
     backgroundColor: SECONDARY_COLOR,
   },
   round: {
@@ -186,39 +151,29 @@ export const styles = StyleSheet.create({
     width: 64,
     borderRadius: 32,
     justifyContent: "center",
-    justifyContent: "center",
   },
   textLight: {
-    color: LIGHT,
     color: LIGHT,
   },
   textDark: {
     color: DARK,
-    color: DARK,
   },
   textDanger: {
-    color: DANGER_COLOR,
     color: DANGER_COLOR,
   },
   textSecondary: {
     color: SECONDARY_COLOR,
-    color: SECONDARY_COLOR,
   },
   border: {
-    borderWidth: 1,
     borderWidth: 1,
   },
   fab: {
     elevation: 2,
     position: "absolute",
-    position: "absolute",
     bottom: 8,
-    right: 8,
     right: 8,
   },
   bottom: {
-    position: "absolute",
-    bottom: 2,
     position: "absolute",
     bottom: 2,
   },
@@ -237,7 +192,6 @@ export const styles = StyleSheet.create({
   },
   receivedMessage: {
     backgroundColor: SECONDARY_COLOR,
-    alignSelf: "flex-start",
     alignSelf: "flex-start",
   },
   messageText: {
@@ -269,7 +223,6 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 8,
     flexDirection: "row",
-    flexDirection: "row",
     minHeight: 48,
     alignItems: "center",
     justifyContent: "space-between",
@@ -279,7 +232,6 @@ export const styles = StyleSheet.create({
   snackMessage: {
     maxWidth: SCREEN_WIDTH / 1.6,
     fontSize: 16,
-    color: LIGHT,
     color: LIGHT,
   },
 
@@ -309,7 +261,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
     backgroundColor: "red",
-    backgroundColor: "red",
     marginBottom: 20,
   },
   profileImage: {
@@ -319,7 +270,6 @@ export const styles = StyleSheet.create({
     marginRight: 15,
     padding: 4,
     borderColor: SECONDARY_COLOR,
-    borderWidth: 1,
     borderWidth: 1,
   },
   profileInfo: {
@@ -338,74 +288,84 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
+
+  // Styles for horizontal padding
   ph1: {
-    paddingHorizontal: 4,
     paddingHorizontal: 4,
   },
   ph2: {
     paddingHorizontal: 8,
-    paddingHorizontal: 8,
   },
   ph3: {
-    paddingHorizontal: 12,
     paddingHorizontal: 12,
   },
   ph4: {
     paddingHorizontal: 16,
-    paddingHorizontal: 16,
   },
   ph5: {
     paddingHorizontal: 20,
-    paddingHorizontal: 20,
   },
+
+  // Styles for padding vertical
   pv1: {
-    paddingVertical: 4,
     paddingVertical: 4,
   },
   pv2: {
     paddingVertical: 8,
-    paddingVertical: 8,
   },
   pv3: {
-    paddingVertical: 12,
     paddingVertical: 12,
   },
   pv4: {
     paddingVertical: 16,
-    paddingVertical: 16,
   },
   pv5: {
     paddingVertical: 20,
-    paddingVertical: 20,
   },
+
+  // 
   p1: {
-    padding: 4,
     padding: 4,
   },
   p2: {
     padding: 8,
-    padding: 8,
   },
+
+  // Styles for horizontal margin
   mh1: {
-    marginHorizontal: 4,
     marginHorizontal: 4,
   },
   mh2: {
     marginHorizontal: 8,
-    marginHorizontal: 8,
   },
+  mh3: {
+    marginHorizontal: 12,
+  },
+  mh4: {
+    marginHorizontal: 16,
+  },
+  mh5: {
+    marginHorizontal: 20
+  },
+
+  // Styles for vertical margin
   mv1: {
-    marginVertical: 4,
     marginVertical: 4,
   },
   mv2: {
     marginVertical: 8,
-    marginVertical: 8,
   },
   mv3: {
     marginVertical: 12,
-    marginVertical: 12,
   },
+  mv4: {
+    marginVertical: 16,
+  },
+  mv5: {
+    marginVertical: 20,
+  },
+
+
   avatarContainer: {
     position: "relative",
     marginRight: 15,
@@ -420,7 +380,7 @@ export const styles = StyleSheet.create({
   card: {
     borderRadius: 16,
     padding: 16,
-    width: SCREEN_WIDTH - 40, //Apply this style to login screen textinput and button
+    width: SCREEN_WIDTH - 40,
     margin: 4,
     marginVertical: 8,
     elevation: 2,
@@ -488,38 +448,39 @@ export const styles = StyleSheet.create({
     fontWeight: "normal",
   },
   // HolidayListScreen
-  // container: {
-  //   paddingHorizontal: 8,
-  //   paddingTop: 10,
-  // },
+  Section: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 12,
+  },
   leftSection: {
     flexDirection: "row",
     alignItems: "center",
   },
+  rightSection: {
+    flexDirection: "column",
+    alignItems: "flex-start",
+    marginLeft: 20,
+  },
   iconWrapper: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
     backgroundColor: "#2b87b0",
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: 12,
+    padding: 8,
+    borderRadius: 5,
+    marginRight: 20,
   },
   dateText: {
     fontSize: 14,
-    color: "#333",
-  },
-  rightSection: {
-    alignItems: "flex-end",
+    color: "#020409",
   },
   title: {
     fontSize: 16,
-    fontWeight: "bold",
-    color: "#000",
+    // fontWeight: "bold",
+    color: "#020409",
   },
   day: {
     fontSize: 14,
-    color: "#999",
+    color: "#020409",
   },
   // Profile
   tabsContainer: {
@@ -572,12 +533,12 @@ export const styles = StyleSheet.create({
     color: "#020409",
   },
   // LandingPage
-  card: {
-    padding: 16,
-    borderRadius: 10,
-    marginBottom: 16,
-    backgroundColor: "#ffffff",
-  },
+  // card: {
+  //   padding: 16,
+  //   borderRadius: 10,
+  //   marginBottom: 16,
+  //   backgroundColor: "#ffffff",
+  // },
   progressContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -791,8 +752,8 @@ export const styles = StyleSheet.create({
   },
   //FormScreen
   label: {
-    fontSize: 16,
-    marginBottom: 5,
+    //fontSize: 16,
+    marginBottom: 10,
   },
   input: {
     height: 40,
@@ -803,26 +764,26 @@ export const styles = StyleSheet.create({
     marginBottom: 15,
     backgroundColor: "#ffffff",
   },
-  btn: {
-    marginTop: 20,
-    padding: 10,
-    borderRadius: 5,
-  },
-  bgPrimary: {
-    backgroundColor: "#2b87b0",
-  },
-  btnText: {
-    textAlign: "center",
-  },
-  textLarge: {
-    fontSize: 18,
-  },
-  textLight: {
-    color: "#ffffff",
-  },
+  // btn: {
+  //   marginTop: 20,
+  //   padding: 10,
+  //   borderRadius: 5,
+  // },
+  // bgPrimary: {
+  //   backgroundColor: "#2b87b0",
+  // },
+  // btnText: {
+  //   textAlign: "center",
+  // },
+  // textLarge: {
+  //   fontSize: 18,
+  // },
+  // textLight: {
+  //   color: "#ffffff",
+  // },
   // LineItemscreen
   scrollView: {
-    padding: 16,
+    padding: 4,
   },
   sectionTitle: {
     fontWeight: "bold",
@@ -894,28 +855,33 @@ export const styles = StyleSheet.create({
   },
   //PurchaseOrderScreen
   addIconContainer: {
-    width: 30,
-    height: 30,
+    // width: 30,
+    //height: 30,
     borderRadius: 15,
     backgroundColor: "#ffffff",
-    justifyContent: "center",
-    alignItems: "center",
+    //justifyContent: "center",
+    //alignItems: "center",
   },
-  card: {
-    padding: 10,
-    marginBottom: 12,
-    backgroundColor: "#fff",
-    marginLeft: 2,
-  },
+
+  // card: {
+  //   padding: 4,
+  //   marginBottom: 8,
+  //   backgroundColor: "#ffffff",
+  //   width: "93%",
+  //   alignSelf: "center",
+  //   borderRadius: 8,
+  //   elevation: 5,
+  //   marginRight: 16,
+  // },
 
   cardRow: {
     flexDirection: "row",
-    padding: 8,
+    padding: 4,
   },
 
   itemInfo: {
     flex: 3,
-    marginLeft: 6,
+    // marginLeft: 6,
   },
 
   itemDetails: {
@@ -925,8 +891,7 @@ export const styles = StyleSheet.create({
 
   amountCard: {
     padding: 10,
-    // marginTop: 20,
-    // marginBottom: 20,
+    paddingRight: 20,
     backgroundColor: "#fff",
     borderRadius: 6,
   },
@@ -940,34 +905,33 @@ export const styles = StyleSheet.create({
 
   //SearchableDropdown
   dropdownContainer: {
-    padding: 5,
+    padding: 8,
   },
   itemStyle: {
-    padding: 10,
-    marginTop: 2,
-    backgroundColor: "#2b87b022",
-    borderColor: "#bbb",
-    borderWidth: 1,
-    borderRadius: 5,
+    padding: 4,
+    marginTop: 4,
+    // backgroundColor: "#2b87b022",
+    //borderColor: "#020409",
+    // borderWidth: 1,
+    //borderRadius: 5,
   },
   itemTextStyle: {
-    color: "#020409",
+    //color: "#020409",
   },
   itemsContainerStyle: {
-    maxHeight: 170,
+    maxHeight: 100,
   },
   textInput: {
-    padding: 6,
-    borderWidth: 1,
-    borderColor: "gray",
-    borderRadius: 5,
-    width: 340,
-    marginRight: 18,
-    marginBottom: 4,
-    paddingLeft: 10,
-    marginLeft: -18,
-    backgroundColor: "#2b87b022",
+    // backgroundColor: "#2b87b022",
+    // padding: 4,
+    // borderColor: "gray",
+    //borderRadius: 5,
+    width: 310,
     color: "#020409",
+    //marginRight: 18,
+    // marginBottom: 4,
+    //paddingLeft: 6,
+    //marginLeft: -16,
   },
   //leavecard
   leaveCard: {
@@ -1123,5 +1087,85 @@ export const styles = StyleSheet.create({
     width: "98%",
     height: 200,
     borderRadius: 20,
+  },
+  message: {
+    marginTop: 4,
+    fontSize: 14,
+    textAlign: "center",
+  },
+  //Todo
+  projectList: {
+    marginTop: 20,
+  },
+
+  radioItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  //TaskList
+  card: {
+    backgroundColor: "#ffffff",
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  greeting: {
+    fontWeight: "bold",
+  },
+  statusContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 10,
+  },
+  statusButton: {
+    padding: 10,
+    backgroundColor: "#2b87b022",
+    borderRadius: 20,
+  },
+  activeButton: {
+    backgroundColor: "#2b87b0",
+  },
+  activeText: {
+    color: "#fff",
+  },
+  taskCard: {
+    backgroundColor: "#54B4D3",
+    padding: 15,
+    borderRadius: 15,
+    marginTop: 20,
+  },
+  taskTitle: {
+    fontSize: 18,
+    color: "#fff",
+    fontWeight: "bold",
+  },
+  taskInfo: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  infoText: {
+    color: "#fff",
+    marginLeft: 5,
+    marginRight: 15,
+  },
+  progressBar: {
+    height: 10,
+    borderRadius: 5,
+    marginVertical: 10,
+  },
+  progressText: {
+    fontWeight: "bold",
+    marginTop: 6,
+    color: "#fff",
+  },
+  completedText: {
+    textAlign: "center",
+    fontSize: 18,
+    color: "#2b87b0",
+    marginTop: 20,
   },
 });

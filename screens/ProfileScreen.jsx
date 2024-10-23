@@ -10,7 +10,7 @@ import { H4 } from "../components/text";
 import { styles } from "../styles/components.styles";
 
 const ProfileScreen = () => {
-  const [activeTab, setActiveTab] = useState("Personal");
+const [activeTab, setActiveTab] = useState("Personal");
 
   const renderContent = () => {
     if (activeTab === "Personal") {

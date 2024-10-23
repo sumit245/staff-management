@@ -17,12 +17,19 @@
     "@react-navigation/native-stack": "^6.11.0",
     "@react-navigation/stack": "^6.4.1",
     "expo": "~51.0.28",
+    "expo-camera": "~15.0.16",
     "expo-font": "~12.0.10",
+    "expo-location": "~17.0.1",
     "expo-status-bar": "~1.12.1",
     "link": "^2.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+<<<<<<< HEAD
     "react-native": "^0.74.6",
+=======
+    "react-native": "^0.74.5",
+    "react-native-biometrics": "^3.0.1",
+>>>>>>> 6c0347cae2dea00758ef2762d7e6ac90cff47589
     "react-native-camera": "^4.2.1",
     "react-native-chart-kit": "^6.11.0",
     "react-native-document-picker": "^9.3.1",
@@ -30,7 +37,11 @@
     "react-native-geolocation-service": "^5.3.1",
     "react-native-gesture-handler": "~2.16.1",
     "react-native-image-picker": "^7.1.2",
+<<<<<<< HEAD
     "react-native-maps": "^1.18.2",
+=======
+    "react-native-maps": "^1.14.0",
+>>>>>>> 6c0347cae2dea00758ef2762d7e6ac90cff47589
     "react-native-paper": "^5.12.5",
     "react-native-permissions": "^5.0.1",
     "react-native-picker-select": "^9.3.1",

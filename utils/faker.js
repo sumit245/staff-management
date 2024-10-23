@@ -12,7 +12,7 @@ export const tasks = [
     title: "Dashboard design for admin",
     description: "Create the admin dashboard for the app",
     status: "High",
-    count: 12,
+    count: 15,
     date: "14 Oct 2022",
     commentsCount: 5,
     attachmentsCount: 2,
@@ -27,7 +27,7 @@ export const tasks = [
     title: "Konom web application",
     description: "Develop the Konom web application",
     status: "Low",
-    count: 1,
+    count: 2,
     date: "14 Nov 2022",
     commentsCount: 2,
     attachmentsCount: 1,
@@ -40,7 +40,7 @@ export const tasks = [
     id: 1,
     title: "Task 1",
     description: "This is task 1",
-    count: 24,
+    count: 28,
     status: "In Progress",
     backgroundColor: INFO_COLOR,
   },
@@ -48,7 +48,7 @@ export const tasks = [
     id: 2,
     title: "Task 2",
     description: "This is task 2",
-    count: 25,
+    count: 31,
     status: "Done",
     backgroundColor: SUCCESS_COLOR,
   },
@@ -56,7 +56,7 @@ export const tasks = [
     id: 3,
     title: "Task 3",
     description: "This is task 3",
-    count: 20,
+    count: 24,
     status: "In Review",
     backgroundColor: WARNING_COLOR,
   },
@@ -64,9 +64,17 @@ export const tasks = [
     id: 4,
     title: "Task 4",
     description: "This is task 4",
-    count: 5,
+    count: 7,
     status: "Cancelled",
     backgroundColor: DANGER_COLOR,
+  },
+  {
+    id: 5,
+    title: "Task 5",
+    description: "This is task 5",
+    count: 12,
+    status: "Total Project",
+    backgroundColor: INFO_COLOR,
   },
 ];
 
@@ -112,24 +120,40 @@ export const leaveTypes = [
 export const dummyMessages = [
   {
     id: "1",
-    message: "Look at how chocho sleep in my arms!",
+    message: "Hey, have you finished the report for the meeting?",
     isSent: false,
-    time: "16.46",
+    time: "09:15",
   },
-  { id: "2", message: "Can I come over?", isSent: true, time: "16.46" },
+  {
+    id: "2",
+    message: "Not yet, I'm still working on the final sections.",
+    isSent: true,
+    time: "09:16",
+  },
   {
     id: "3",
-    message: "Of course, let me know if you’re on your way",
+    message: "No worries! Just wanted to check in. Do you need any help?",
     isSent: false,
-    time: "16.50",
+    time: "09:18",
   },
-  { id: "4", message: "K, I’m on my way", isSent: true, time: "16.50" },
+  {
+    id: "4",
+    message: "Actually, yes! I could use a hand with the data analysis.",
+    isSent: true,
+    time: "09:19",
+  },
   {
     id: "5",
-    message: "Good morning, did you sleep well?",
+    message: "Sure thing! Let’s meet in the conference room in 10 minutes?",
     isSent: false,
-    time: "09.13",
+    time: "09:20",
   },
+  // {
+  //   id: "6",
+  //   message: "Sounds good! I'll bring my laptop.",
+  //   isSent: true,
+  //   time: "09:21",
+  // },
 ];
 
 export const items = [
@@ -278,8 +302,8 @@ export const contactsData = [
 
 export const menuItems = [
   { label: "Account", icon: "person-outline" },
-  { label: "Chats", icon: "chatbubble-outline" },
-  { label: "Appearance", icon: "sunny-outline" },
+  { label: "My Purchase", icon: "cart-outline" },
+  // { label: "Appearance", icon: "sunny-outline" },
   { label: "Notification", icon: "notifications-outline" },
   { label: "Privacy", icon: "shield-checkmark-outline" },
   { label: "Data Usage", icon: "folder-outline" },
@@ -517,28 +541,28 @@ export const requisitions = [
   {
     id: "PR - 10050019",
     location: "PL01 - Texas Houston Plant",
-    date: "08/19/2020",
+    date: "08/19/2024",
     amount: "₹ 24.40 ",
     checked: false,
   },
   {
     id: "PR - 10050018",
     location: "PL01 - Texas Houston Plant",
-    date: "08/19/2020",
+    date: "08/23/2024",
     amount: "₹ 254.40 ",
     checked: false,
   },
   {
     id: "PR - 10050017",
     location: "PL01 - Texas Houston Plant",
-    date: "08/19/2020",
+    date: "09/11/2024",
     amount: "₹ 100.00 ",
     checked: false,
   },
   {
     id: "PR - 10050016",
     location: "PL01 - Texas Houston Plant",
-    date: "08/19/2020",
+    date: "10/19/2024",
     amount: "₹ 100.00 ",
     checked: false,
   },
@@ -568,14 +592,14 @@ export const requisitions = [
 //   { label: "Grand Total", value: 82.0 },
 // ];
 export const originalItems = [
-  { id: 1, name: "JavaScript" },
-  { id: 2, name: "Java" },
-  { id: 3, name: "Ruby" },
-  { id: 4, name: "React Native" },
-  { id: 5, name: "PHP" },
-  { id: 6, name: "Python" },
-  { id: 7, name: "Go" },
-  { id: 8, name: "Swift" },
+  { id: 1, name: "Robotics with Arduino" },
+  { id: 2, name: "Motor Control in Robotics" },
+  { id: 3, name: "Radio-Controlled Robots" },
+  { id: 4, name: "Robotics Programming Basics" },
+  { id: 5, name: "Autonomous Robot Design" },
+  { id: 6, name: "Obstacle Avoidance Robotics" },
+  { id: 7, name: "Sumo Robotics Challenge" },
+  { id: 8, name: "Robot Navigation with Sensors" },
 ];
 
 // export const itemsData = [
@@ -610,3 +634,42 @@ export const amountDetailsData = [
   { label: "Tax", value: 100 },
   { label: "Total", value: 1100 },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Robatic cell",
+    status: "toDo",
+    progress: 0.5,
+    due: "25 Apr",
+    est: "20 h",
+  },
+  {
+    id: 2,
+    title: "Coffee Vending Machine",
+    status: "toDo",
+    progress: 0.7,
+    due: "28 Apr",
+    est: "15 h",
+  },
+  {
+    id: 3,
+    title: "Automatic soap Dispensor machine jig",
+    status: "toDo",
+    progress: 0.7,
+    due: "28 Apr",
+    est: "15 h",
+  },
+];
+export const handleTaskProgress = (
+  tasks,
+  projectId,
+  setTasks,
+  setActiveStatus
+) => {
+  const updatedTasks = tasks.map((task) =>
+    task.id === projectId ? { ...task, status: "inProgress" } : task
+  );
+  setTasks(updatedTasks);
+  setActiveStatus("inProgress");
+};

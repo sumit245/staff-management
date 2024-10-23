@@ -15,10 +15,10 @@ export default function TimeClockScreen() {
     console.log("Checked Out!");
   };
 
-  // Coordinates for the location (e.g., Patna)
+
   const location = {
-    latitude: 25.6097, // Latitude for Patna
-    longitude: 85.1422, // Longitude for Patna
+    latitude: 25.6097, 
+    longitude: 85.1422, 
   };
 
   return (

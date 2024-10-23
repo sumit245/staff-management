@@ -7,9 +7,9 @@ import SearchBar from "../components/input/SearchBar";
 import MyHeader from "../components/header/MyHeader";
 import Button from "../components/buttons/Button";
 import { styles } from "../styles/components.styles";
-import { H1, H4, H5, H6, P } from "../components/text";
+import { H1, H2, H4, H5, H6, P } from "../components/text";
 
-const RequisitionScreen = () => {
+const RequisitionScreen = ({ navigation }) => {
   const [searchText, setSearchText] = useState("");
   const [requisitionList, setRequisitionList] = useState(requisitions);
 
@@ -23,6 +23,10 @@ const RequisitionScreen = () => {
     console.log(`Action button pressed for requisition ${id}`);
   };
 
+  const handleSearchIconPress = () => {
+    navigation.navigate("PurchaseOrderScreen"); //  purchase order screen
+  };
+
   return (
     <ContainerComponent>
       <View>
@@ -30,9 +34,9 @@ const RequisitionScreen = () => {
           isBack={true}
           title="Requisitions For Release"
           hasIcon={true}
-          icon="notifications"
-          hasBadge={true}
-          badgeCount={3}
+          //icon="pen-to-square"
+          icon="pencil"
+          onIconPress={handleSearchIconPress}
         />
 
         <SearchBar
@@ -56,10 +60,13 @@ const RequisitionScreen = () => {
           ))}
         </ScrollView>
 
-        <Button style={[styles.btn, styles.bgPrimary]}>
-          <H4 style={[styles.btnText, styles.textLarge, styles.textLight]}>
+        <Button
+          style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
+          // onPress={onSubmit}
+        >
+          <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
             Create Receipt
-          </H4>
+          </H2>
         </Button>
       </View>
     </ContainerComponent>
