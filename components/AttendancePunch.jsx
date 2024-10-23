@@ -156,7 +156,23 @@ export default function AttendancePunch() {
   };
 
   // Handle punch-in action
-  const handlePunchIn = () => {
+  const handlePunchIn = async () => {
+    // Check if location permission has been granted
+    if (Platform.OS === "android") {
+      const granted = await PermissionsAndroid.check(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+      );
+      if (!granted) {
+        Alert.alert(
+          "Permission Denied",
+          "Location permission is required before punching in."
+        );
+        await requestLocationPermission();
+        return;
+      }
+    }
+
+    // Ensure both location and photo are available
     if (!location || !photoUri) {
       Alert.alert(
         "Missing Information",
@@ -365,29 +381,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
-  //   buttonContainer: {
-  //     marginTop: 20,
-  //     alignItems: "center",
-  //   },
-  captureButton: {
-    // backgroundColor: "#2b87b0",
-    // paddingVertical: 12,
-    // paddingHorizontal: 20,
-    // borderRadius: 8,
-    //elevation: 3,
-    // shadowColor: "#000",
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 2,
-    // },
-    // shadowOpacity: 0.2,
-    // shadowRadius: 2.62,
-    // width: "80%",
-  },
-  //   buttonText: {
-  //     color: "#fff",
-  //     fontSize: 16,
-  //     fontWeight: "bold",
-  //     textAlign: "center",
-  //   },
 });
+
+

@@ -20,12 +20,14 @@ import ApplyLeaveForm from "./screens/ApplyLeaveForm";
 import AllLeaves from "./screens/AllLeaves";
 import CheckOut from "./screens/CheckOut";
 import AttendancePunch from "./components/AttendancePunch";
+import Map from "./components/Map";
 
 export default function App() {
   return (
     <PaperProvider>
       {/* <MyNavigationContainer /> */}
       <AttendancePunch />
+      {/* <Map /> */}
       {/* <NotificationScreen /> */}
       {/* <HolidayListScreen/> */}
       {/* <ProfileScreen /> */}
