@@ -1,4 +1,5 @@
 import "react-native-gesture-handler"; //Don't ever remove this line
+import { useEffect } from "react"
 import { PaperProvider } from "react-native-paper";
 import MyNavigationContainer from "./navigation/MyNavigationContainer";
 import NotificationScreen from "./screens/NotificationScreen";
@@ -20,8 +21,12 @@ import ApplyLeaveForm from "./screens/ApplyLeaveForm";
 import AllLeaves from "./screens/AllLeaves";
 import CheckOut from "./screens/CheckOut";
 import AttendancePunch from "./components/AttendancePunch";
+import { checkPermissions } from "./utils/checkPermissions";
 
 export default function App() {
+  useEffect(() => {
+    checkPermissions()
+  }, [])
   return (
     <PaperProvider>
       {/* <MyNavigationContainer /> */}

@@ -12,6 +12,7 @@ import { CameraView, useCameraPermissions } from "expo-camera";
 import ContainerComponent from "./ContainerComponent";
 import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
+import { PRIMARY_COLOR, SCREEN_WIDTH } from "../styles/constant";
 
 export default function AttendancePunch() {
   const [permission, requestPermission] = useCameraPermissions();
@@ -95,33 +96,35 @@ export default function AttendancePunch() {
           <Text style={styles.punchHistory}>Punch History</Text>
         </TouchableOpacity>
       </View>
+
       <View style={styles.cameraContainer}>
         {photoUri ? (
           <View style={styles.capturedImageContainer}>
             <Image source={{ uri: photoUri }} style={styles.capturedImage} />
           </View>
-        ) : (
+        ) :
           <CameraView style={styles.camera} ref={cameraRef} facing="front" />
-        )}
+        }
       </View>
 
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <TouchableOpacity
-          onPress={takePicture}
-          style={{
-            backgroundColor: "#2b87b0",
-            paddingVertical: 6,
-            paddingHorizontal: 18,
-            borderRadius: 5,
-            width: 140,
-            alignItems: "center",
-          }}
-        >
-          <Text style={{ color: "#fff", fontSize: 16, fontWeight: "bold" }}>
-            Capture Photo
-          </Text>
-        </TouchableOpacity>
-      </View>
+
+      <TouchableOpacity
+        onPress={takePicture}
+        style={{
+          backgroundColor: "#2b87b0",
+          marginVertical: 8,
+          paddingVertical: 6,
+          paddingHorizontal: 18,
+          borderRadius: 5,
+          width: 140,
+          alignItems: "center",
+        }}
+      >
+        <Text style={{ color: "#fff", fontSize: 16, fontWeight: "bold" }}>
+          Capture Photo
+        </Text>
+      </TouchableOpacity>
+
 
       <View style={styles.mapContainer}>
         {markerLocation ? ( // Use markerLocation instead of location
@@ -141,6 +144,7 @@ export default function AttendancePunch() {
         )}
       </View>
 
+
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.punchInButton} onPress={handlePunchIn}>
           <Text style={styles.buttonText}>PUNCH IN</Text>
@@ -149,6 +153,7 @@ export default function AttendancePunch() {
           <Text style={styles.buttonText}>PUNCH OUT</Text>
         </TouchableOpacity>
       </View>
+
     </ContainerComponent>
   );
 }
@@ -164,19 +169,19 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   cameraContainer: {
-    height: 240,
-    width: 240,
-    borderRadius: 120,
+    height: SCREEN_WIDTH / 1.5,
+    width: SCREEN_WIDTH / 1.5,
+    borderRadius: SCREEN_WIDTH / 3,
     borderWidth: 6,
-    borderColor: "#2b87b0",
+    borderColor: PRIMARY_COLOR,
     overflow: "hidden",
     justifyContent: "center",
     alignItems: "center",
     marginTop: 20,
   },
   camera: {
-    height: "100%",
-    width: "100%",
+    height: SCREEN_WIDTH / 1.5,
+    width: SCREEN_WIDTH / 1.5,
   },
   capturedImageContainer: {
     height: 240,
@@ -216,8 +221,8 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   map: {
-    width: "100%",
-    height: "100%",
+    width: SCREEN_WIDTH - 20,
+    height: SCREEN_WIDTH,
   },
   loadingText: {
     textAlign: "center",
