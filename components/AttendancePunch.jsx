@@ -1,97 +1,3 @@
-// import { CameraView, CameraType, useCameraPermissions } from "expo-camera";
-// import { useState } from "react";
-// import { Button, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-// import ContainerComponent from "./ContainerComponent";
-// //import MyHeader from "./header/MyHeader";
-
-// export default function AttendancePunch() {
-//   const [permission, requestPermission] = useCameraPermissions();
-
-//   if (!permission) {
-//     // Camera permissions are still loading.
-//     return <View />;
-//   }
-
-//   if (!permission.granted) {
-//     // Camera permissions are not granted yet.
-//     return (
-//       <View style={styles.container}>
-//         <Text style={styles.message}>
-//           We need your permission to show the camera
-//         </Text>
-//         <Button onPress={requestPermission} title="Grant Permission" />
-//       </View>
-//     );
-//   }
-
-//   return (
-//     <ContainerComponent>
-//       {/* <MyHeader
-//         title="Select Project Code"
-//         isBack={true}
-//         hasIcon={true}
-//         icon={"trash-outline"}
-//       /> */}
-//   <View style={styles.header}>
-//     <Text style={styles.title}>Attendance Punch</Text>
-//     <TouchableOpacity>
-//       <Text style={styles.punchHistory}>Punch History</Text>
-//     </TouchableOpacity>
-//   </View>
-//       <View style={styles.container}>
-//         {/* Circular frame container for the camera */}
-//         <View style={styles.cameraContainer}>
-//           <CameraView style={styles.camera} facing="front" />
-//         </View>
-//       </View>
-//     </ContainerComponent>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: "center",
-//     alignItems: "center",
-//   },
-//   message: {
-//     textAlign: "center",
-//     paddingBottom: 10,
-//   },
-//   cameraContainer: {
-//     height: 240, // Same width and height to maintain a square for the circle
-//     width: 240,
-//     borderRadius: 120, // Half of height/width to make a circle
-//     borderWidth: 6,
-//     borderColor: "#2b87b0",
-//     overflow: "hidden", // Ensures that the content inside is clipped to the circle
-//     justifyContent: "center",
-//     alignItems: "center",
-//   },
-//   camera: {
-//     height: "100%",
-//     width: "100%",
-//   },
-
-//   header: {
-//     flexDirection: "row",
-//     justifyContent: "space-between",
-//     alignItems: "center",
-//     width: "100%",
-//     paddingHorizontal: 2,
-//     marginTop: 10,
-//   },
-//   title: {
-//     fontSize: 20,
-//     fontWeight: "bold",
-//     color: "black",
-//   },
-//   punchHistory: {
-//     fontSize: 16,
-//     color: "#2b87b0",
-//   },
-// });
-
 import React, { useState, useEffect, useRef } from "react";
 import {
   View,
@@ -104,75 +10,41 @@ import {
 } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import ContainerComponent from "./ContainerComponent";
-import Geolocation from "react-native-geolocation-service";
+import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
-import { PermissionsAndroid, Platform } from "react-native";
 
 export default function AttendancePunch() {
   const [permission, requestPermission] = useCameraPermissions();
   const [location, setLocation] = useState(null);
+  const [markerLocation, setMarkerLocation] = useState(null); // State for marker location
   const [photoUri, setPhotoUri] = useState(null);
   const cameraRef = useRef(null);
 
-  // Request location permission
+  // Request location permission and fetch location
   const requestLocationPermission = async () => {
-    try {
-      if (Platform.OS === "android") {
-        const granted = await PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-          {
-            title: "Location Permission",
-            message: "This app needs access to your location for attendance.",
-            buttonNeutral: "Ask Me Later",
-            buttonNegative: "Cancel",
-            buttonPositive: "OK",
-          }
-        );
-        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-          getLocation();
-        } else {
-          Alert.alert("Permission Denied", "Location permission is required.");
-        }
-      } else {
-        getLocation();
-      }
-    } catch (err) {
-      console.warn(err);
+    const { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== "granted") {
+      Alert.alert("Permission Denied", "Location permission is required.");
+      return;
     }
+
+    // Get the current location
+    const currentLocation = await Location.getCurrentPositionAsync({});
+    setLocation({
+      latitude: currentLocation.coords.latitude,
+      longitude: currentLocation.coords.longitude,
+    });
   };
 
-  // Get current location
-  const getLocation = () => {
-    Geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        setLocation({ latitude, longitude });
-      },
-      (error) => {
-        Alert.alert("Error", "Unable to fetch location.");
-      },
-      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-    );
-  };
+  // Update marker location whenever the location changes
+  useEffect(() => {
+    if (location) {
+      setMarkerLocation(location); // Update marker location state
+    }
+  }, [location]);
 
   // Handle punch-in action
-  const handlePunchIn = async () => {
-    // Check if location permission has been granted
-    if (Platform.OS === "android") {
-      const granted = await PermissionsAndroid.check(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-      );
-      if (!granted) {
-        Alert.alert(
-          "Permission Denied",
-          "Location permission is required before punching in."
-        );
-        await requestLocationPermission();
-        return;
-      }
-    }
-
-    // Ensure both location and photo are available
+  const handlePunchIn = () => {
     if (!location || !photoUri) {
       Alert.alert(
         "Missing Information",
@@ -217,7 +89,6 @@ export default function AttendancePunch() {
 
   return (
     <ContainerComponent>
-      {/* Show the camera at the top */}
       <View style={styles.header}>
         <Text style={styles.title}>Attendance Punch</Text>
         <TouchableOpacity>
@@ -226,13 +97,11 @@ export default function AttendancePunch() {
       </View>
       <View style={styles.cameraContainer}>
         {photoUri ? (
-          <Image source={{ uri: photoUri }} style={styles.capturedImage} />
+          <View style={styles.capturedImageContainer}>
+            <Image source={{ uri: photoUri }} style={styles.capturedImage} />
+          </View>
         ) : (
-          <CameraView
-            style={styles.camera}
-            ref={cameraRef} // Store reference to the camera
-            facing="front"
-          />
+          <CameraView style={styles.camera} ref={cameraRef} facing="front" />
         )}
       </View>
 
@@ -248,38 +117,30 @@ export default function AttendancePunch() {
             alignItems: "center",
           }}
         >
-          <Text
-            style={{
-              color: "#fff",
-              fontSize: 16,
-              fontWeight: "bold",
-            }}
-          >
+          <Text style={{ color: "#fff", fontSize: 16, fontWeight: "bold" }}>
             Capture Photo
           </Text>
         </TouchableOpacity>
       </View>
 
-      {/* Display map for location in the middle */}
       <View style={styles.mapContainer}>
-        {location ? (
+        {markerLocation ? ( // Use markerLocation instead of location
           <MapView
             style={styles.map}
             initialRegion={{
-              latitude: location.latitude,
-              longitude: location.longitude,
+              latitude: markerLocation.latitude,
+              longitude: markerLocation.longitude,
               latitudeDelta: 0.01,
               longitudeDelta: 0.01,
             }}
           >
-            <Marker coordinate={location} title="Your Location" />
+            <Marker coordinate={markerLocation} title="Your Location" />
           </MapView>
         ) : (
           <Text style={styles.loadingText}>Fetching location...</Text>
         )}
       </View>
 
-      {/* Punch In and Punch Out Buttons at the bottom */}
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.punchInButton} onPress={handlePunchIn}>
           <Text style={styles.buttonText}>PUNCH IN</Text>
@@ -317,6 +178,20 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
   },
+  capturedImageContainer: {
+    height: 240,
+    width: 240,
+    borderRadius: 120,
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  capturedImage: {
+    height: "100%",
+    width: "100%",
+    borderRadius: 120,
+    position: "absolute",
+  },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -349,12 +224,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#666",
   },
-  capturedImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    alignSelf: "center",
-  },
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -382,5 +251,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
-
