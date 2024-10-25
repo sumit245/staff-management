@@ -144,7 +144,6 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-
   border: {
     borderWidth: 1,
   },
@@ -413,7 +412,7 @@ export const styles = StyleSheet.create({
   },
   label: {
     fontSize: 14,
-    color: "#888"
+    color: "#888",
   },
   value: {
     fontSize: 16,
