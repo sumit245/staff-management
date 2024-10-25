@@ -93,8 +93,7 @@ export const styles = StyleSheet.create({
     width: SCREEN_WIDTH / 2.5,
     height: SCREEN_WIDTH / 3,
     margin: 8,
-    padding: 18,
-    padding: 18,
+    padding: 16,
   },
   row: {
     flexDirection: "row",
