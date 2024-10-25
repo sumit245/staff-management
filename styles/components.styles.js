@@ -185,7 +185,6 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: LIGHT,
   },
-
   radioButton: {
     flexDirection: "row",
     alignItems: "center",
