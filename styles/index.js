@@ -2,7 +2,10 @@ import {
     SCREEN_HEIGHT,
     SCREEN_WIDTH,
     PRIMARY_COLOR,
-    PRIMARY_COLOR_TRANSPARENT
+    PRIMARY_COLOR_TRANSPARENT,
+    LIGHT,
+    DARK,
+    DANGER_COLOR
 } from './constant'
 
 import { spacing } from './spacing.styles'
@@ -15,6 +18,7 @@ export {
     SCREEN_WIDTH,
     PRIMARY_COLOR,
     PRIMARY_COLOR_TRANSPARENT,
+    LIGHT,
     spacing,
     typography,
     styles,

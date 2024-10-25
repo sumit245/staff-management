@@ -14,7 +14,7 @@ import AttendancePunchScreen from '../screens/AttendancePunchScreen'
 //import HolidayListScreen from "../screens/HolidayListScreen";
 //import ProfileScreen from "../screens/ProfileScreen";
 //import LandingPage from "../screens/LandingPage";
-//import ProjectTimeline from "../screens/ProjectTimeline";
+import ProjectTimeline from "../screens/ProjectTimeline";
 //import LineItemScreen from "../screens/LineItemScreen";
 //import AttendanceScreen from "../screens/AttendanceScreen";
 //import TermsAndConditions from "../screens/TermsAndConditions";
@@ -27,11 +27,12 @@ const Stack = createNativeStackNavigator();
 export default function MyStackNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="loginScreen"
+      initialRouteName="projectTimeLine"
       screenOptions={{
         headerShown: false,
       }}
     >
+      <Stack.Screen name="projectTimeLine" component={ProjectTimeline} />
       <Stack.Screen name="loginScreen" component={LoginScreen} />
       <Stack.Screen name="attendancePunch" component={AttendancePunchScreen} />
       <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
@@ -49,7 +50,6 @@ export default function MyStackNavigator() {
       {/* <Stack.Screen name="HolidayListScreen" component={HolidayListScreen} /> */}
       {/* <Stack.Screen name="ProfileScreen" component={ProfileScreen} /> */}
       {/* <Stack.Screen name="LandingPage" component={LandingPage} /> */}
-      {/* <Stack.Screen name="ProjectTimeline" component={ProjectTimeline}/> */}
       {/* <Stack.Screen name="LineItemScreen" component={LineItemScreen}/> */}
       {/* <Stack.Screen name="AttendanceScreen" component={AttendanceScreen} /> */}
       {/* <Stack.Screen name="TermsAndConditions" component={TermsAndConditions}/> */}

@@ -71,6 +71,12 @@ export const layouts = StyleSheet.create({
         width: SCREEN_WIDTH / 16,
         height: SCREEN_WIDTH / 16,
         borderRadius: SCREEN_WIDTH / 32
-    }
+    },
+
+
+    // Cards
+    card: {
+        elevation: 2,
+    },
 
 })

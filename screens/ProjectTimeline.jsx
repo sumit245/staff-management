@@ -1,62 +1,64 @@
-import { View, FlatList, Image, Text } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
-import * as Progress from "react-native-progress";
+import { useState, useEffect } from "react";
+import { FlatList, } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import { cardtasks } from "../utils/faker";
 import DateSelector from "../components/DateSelector";
-import { H1, H4, H5, H6 } from "../components/text";
-import { styles } from "../styles/components.styles";
+import ProjectCard from "../components/card/ProjectCard";
+import { SCREEN_WIDTH, spacing } from "../styles";
+import moment from "moment";
 
-const ProjectTimeline = ({ task }) => (
-  <View style={styles.taskCard}>
-    <View style={styles.taskHeader}>
-      <H4 style={styles.taskTitle}>{task.title}</H4>
-      <Icon name="ellipsis-h" size={20} color="#888" />
-    </View>
-    <H5 style={styles.taskTime}>{task.time}</H5>
-    <View style={styles.row}>
-      <Text style={styles.progressLabel}>Progress</Text>
-      <Progress.Bar progress={task.progress} width={150} color="#1abc9c" />
-      <Text style={styles.progressPercent}>{`${Math.round(
-        task.progress * 100
-      )}%`}</Text>
-    </View>
-    <View style={styles.participantsContainer}>
-      {task.avatars.map((avatar, index) => (
-        <Image key={index} source={{ uri: avatar }} style={styles.avatar} />
-      ))}
-      <H4 style={styles.participantText}>+{task.participants}</H4>
-    </View>
-  </View>
-);
-
-const ProjectTimelineScreen = () => {
-  const dates = ["10", "11", "12", "13", "14", "15", "16"];
-  const activeDate = "12";
+export default function ProjectTimelineScreen() {
+  const [dates, setDates] = useState([
+    { "currentDate": "31", "currentDay": "Thu" },
+    { "currentDate": "30", "currentDay": "Wed" },
+    { "currentDate": "29", "currentDay": "Tue" },
+    { "currentDate": "28", "currentDay": "Mon" },
+    { "currentDate": "27", "currentDay": "Sun" }]);
+  const [activeDate, setActiveState] = useState(moment().format('DD'));
 
   const onSelectDate = (date) => {
-    console.log("Selected date:", date);
+    setActiveState(date)
   };
+
+  function getDaysArrayByMonth() {
+    let daysInMonth = moment().daysInMonth();
+    let arrDays = [];
+
+    while (daysInMonth) {
+      let currentDate = moment().date(daysInMonth).format('DD');
+      let currentDay = moment().date(daysInMonth).format('ddd');
+      arrDays.push({ currentDate, currentDay });
+      daysInMonth--;
+    }
+
+    return arrDays;
+  }
+
+  useEffect(() => {
+    setDates(getDaysArrayByMonth().reverse())
+    console.log(activeDate)
+  }, [])
+
+
 
   return (
     <ContainerComponent>
-      <View>
-        <MyHeader title="Project Timeline" />
-        <DateSelector
-          dates={dates}
-          activeDate={activeDate}
-          onSelectDate={onSelectDate}
-        />
-        <FlatList
-          data={cardtasks}
-          renderItem={({ item }) => <ProjectTimeline task={item} />}
-          keyExtractor={(item) => item.id.toString()}
-          contentContainerStyle={styles.taskList}
-        />
-      </View>
+      <MyHeader title="Project Timeline" />
+      <DateSelector
+        dates={dates}
+        activeDate={activeDate}
+        onSelectDate={onSelectDate}
+      />
+      <FlatList
+        data={cardtasks}
+        renderItem={({ item }) => <ProjectCard task={item} />}
+        keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={[spacing.mh2, { width: SCREEN_WIDTH - 16 }]}
+        showsVerticalScrollIndicator={false}
+      />
     </ContainerComponent>
   );
 };
 
-export default ProjectTimelineScreen;
+

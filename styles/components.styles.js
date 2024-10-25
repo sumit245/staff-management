@@ -406,11 +406,6 @@ export const styles = StyleSheet.create({
   addIcon: {
     marginLeft: 8,
   },
-  row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 16,
-  },
   miniCard: {
     width: "32%",
     padding: 16,
@@ -422,11 +417,7 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: "center",
   },
-  taskCard: {
-    width: "48%",
-    padding: 16,
-    borderRadius: 10,
-  },
+
   taskContent: {
     justifyContent: "space-between",
   },
@@ -445,72 +436,7 @@ export const styles = StyleSheet.create({
     marginVertical: 20,
     paddingHorizontal: 10,
   },
-  dateItem: {
-    marginHorizontal: 10,
-    alignItems: "center",
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-    borderRadius: 15,
-  },
-  activeDate: {
-    backgroundColor: "#54B4D3",
-  },
-  dateNumber: {
-    fontSize: 18,
-    color: "#020409",
-  },
-  dateText: {
-    fontSize: 14,
-    color: "#020409",
-  },
-  //ProjectTimeline
-  taskList: {
-    paddingHorizontal: 20,
-  },
-  taskCard: {
-    backgroundColor: LIGHT,
-    borderRadius: 10,
-    padding: 15,
-    marginBottom: 20,
-    elevation: 2,
-  },
-  taskHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
 
-  progressContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 10,
-  },
-  progressLabel: {
-    fontSize: 14,
-    color: "#7f8c8d",
-    marginRight: 10,
-  },
-  progressPercent: {
-    marginLeft: 10,
-    fontSize: 12,
-    color: "#7f8c8d",
-  },
-  participantsContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 10,
-  },
-  avatar: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    marginRight: 5,
-  },
-  participantText: {
-    marginLeft: 10,
-    fontSize: 14,
-    color: "#3498db",
-  },
   // Attendancescreen
   profileContainer: {
     flexDirection: "row",
@@ -743,13 +669,6 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 16, // Adjust horizontal padding
     alignItems: "center", // Ensures content is centered
   },
-  row: {
-    flexDirection: "row",
-    justifyContent: "space-around", // Distribute tab buttons evenly
-    alignItems: "center",
-    width: "100%", // Ensure the row takes up full width
-    marginBottom: 16, // Add spacing below the tabs
-  },
   tabContainer: {
     marginTop: 16,
     marginBottom: 20,
@@ -909,17 +828,7 @@ export const styles = StyleSheet.create({
   activeText: {
     color: LIGHT,
   },
-  taskCard: {
-    backgroundColor: INFO_COLOR,
-    padding: 15,
-    borderRadius: 15,
-    marginTop: 20,
-  },
-  taskTitle: {
-    fontSize: 18,
-    color: LIGHT,
-    fontWeight: "bold",
-  },
+
   taskInfo: {
     flexDirection: "row",
     alignItems: "center",
