@@ -21,5 +21,22 @@ export const typography = StyleSheet.create({
     textInfo: {
         color: INFO_COLOR
     },
+    textBold: {
+        fontWeight: 'bold'
+    },
+
+    font12: {
+        fontSize: 12
+    },
+
+    font14: {
+        fontSize: 14
+    },
+    font16: {
+        fontSize: 16
+    },
+    font20: {
+        fontSize: 20
+    }
 
 })
