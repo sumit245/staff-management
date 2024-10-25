@@ -14,6 +14,9 @@ import { styles } from "../styles/temp.styles";
 import MyHeader from "../components/header/MyHeader";
 import Button from "../components/buttons/Button";
 
+
+
+
 export default function AttendancePunchScreen() {
   const [permission, requestPermission] = useCameraPermissions();
   const [location, setLocation] = useState(null);
@@ -80,10 +83,11 @@ export default function AttendancePunchScreen() {
     );
   }
 
-  const takePicture = async () => {
+  const takePictureAndNavigate = async () => {
     if (cameraRef.current) {
       const photo = await cameraRef.current.takePictureAsync();
       setPhotoUri(photo.uri);
+      navigation.navigate("Dashboard");
     }
   };
 
@@ -100,7 +104,6 @@ export default function AttendancePunchScreen() {
           <CameraView style={styles.camera} ref={cameraRef} facing="front" />
         )}
       </View>
-
 
       <View style={styles.mapContainer}>
         {markerLocation ? ( // Use markerLocation instead of location
@@ -123,9 +126,9 @@ export default function AttendancePunchScreen() {
       <View style={styles.buttonContainer}>
         <Button
           style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-          onPress={takePicture}
+          onPress={takePictureAndNavigate}
         >
-
+          <Text style={styles.buttonText}>Take Picture</Text>
         </Button>
       </View>
     </ContainerComponent>
