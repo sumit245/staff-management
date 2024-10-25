@@ -323,7 +323,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 
-  // 
+  //
   p1: {
     padding: 4,
   },
@@ -345,7 +345,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   mh5: {
-    marginHorizontal: 20
+    marginHorizontal: 20,
   },
 
   // Styles for vertical margin
@@ -364,8 +364,14 @@ export const styles = StyleSheet.create({
   mv5: {
     marginVertical: 20,
   },
+ ph1: {
+    paddingHorizontal: 4,
+  },
+  ph2: {
+    paddingHorizontal: 8,
+  },
 
-
+  
   avatarContainer: {
     position: "relative",
     marginRight: 15,
@@ -464,7 +470,7 @@ export const styles = StyleSheet.create({
     marginLeft: 20,
   },
   iconWrapper: {
-    backgroundColor: "#2b87b0",
+    backgroundColor: PRIMARY_COLOR,
     padding: 8,
     borderRadius: 5,
     marginRight: 20,
@@ -495,13 +501,13 @@ export const styles = StyleSheet.create({
     borderBottomColor: "transparent",
   },
   activeTabButton: {
-    borderBottomColor: "#2b87b0",
+    borderBottomColor: PRIMARY_COLOR,
   },
   tabText: {
     fontSize: 16,
   },
   activeTabText: {
-    color: "#2b87b0",
+    color: PRIMARY_COLOR,
     fontWeight: "bold",
   },
   content: {
@@ -532,13 +538,7 @@ export const styles = StyleSheet.create({
     marginLeft: 10,
     color: "#020409",
   },
-  // LandingPage
-  // card: {
-  //   padding: 16,
-  //   borderRadius: 10,
-  //   marginBottom: 16,
-  //   backgroundColor: "#ffffff",
-  // },
+
   progressContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -591,7 +591,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   taskText: {
-    color: "#fff",
+    color: LIGHT,
     fontWeight: "bold",
     marginBottom: 8,
   },
@@ -628,7 +628,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   taskCard: {
-    backgroundColor: "#fff",
+    backgroundColor: LIGHT,
     borderRadius: 10,
     padding: 15,
     marginBottom: 20,
@@ -639,12 +639,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  //   taskTitle: {
-  //     fontSize: 18,
-  //     color: "#2c3e50",
-  //     fontWeight: "bold",
-  //   },
-
+ 
   progressContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -708,7 +703,7 @@ export const styles = StyleSheet.create({
     width: "48%",
     padding: 16,
     borderRadius: 8,
-    backgroundColor: "#fff",
+    backgroundColor: LIGHT,
     alignItems: "center",
     marginVertical: 8,
   },
@@ -730,7 +725,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     padding: 16,
-    backgroundColor: "#fff",
+    backgroundColor: LIGHT,
     borderRadius: 8,
     marginVertical: 8,
   },
@@ -752,7 +747,6 @@ export const styles = StyleSheet.create({
   },
   //FormScreen
   label: {
-    //fontSize: 16,
     marginBottom: 10,
   },
   input: {
@@ -762,26 +756,8 @@ export const styles = StyleSheet.create({
     paddingLeft: 10,
     borderRadius: 5,
     marginBottom: 15,
-    backgroundColor: "#ffffff",
+    backgroundColor: LIGHT,
   },
-  // btn: {
-  //   marginTop: 20,
-  //   padding: 10,
-  //   borderRadius: 5,
-  // },
-  // bgPrimary: {
-  //   backgroundColor: "#2b87b0",
-  // },
-  // btnText: {
-  //   textAlign: "center",
-  // },
-  // textLarge: {
-  //   fontSize: 18,
-  // },
-  // textLight: {
-  //   color: "#ffffff",
-  // },
-  // LineItemscreen
   scrollView: {
     padding: 4,
   },
@@ -792,7 +768,7 @@ export const styles = StyleSheet.create({
   card: {
     padding: 15,
     marginBottom: 10,
-    backgroundColor: "#ffffff",
+    backgroundColor: LIGHT,
   },
   cardContent: {
     flexDirection: "row",
@@ -807,13 +783,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  // input: {
-  //   borderColor: "#ccc",
-  //   borderWidth: 1,
-  //   padding: 8,
-  //   borderRadius: 5,
-  //   width: 80,
-  // },
   unit: {
     marginLeft: 5,
   },
@@ -851,28 +820,13 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
   },
   actionButtonText: {
-    color: "#2b87b0",
+    color: PRIMARY_COLOR,
   },
   //PurchaseOrderScreen
   addIconContainer: {
-    // width: 30,
-    //height: 30,
     borderRadius: 15,
-    backgroundColor: "#ffffff",
-    //justifyContent: "center",
-    //alignItems: "center",
+    backgroundColor: LIGHT,
   },
-
-  // card: {
-  //   padding: 4,
-  //   marginBottom: 8,
-  //   backgroundColor: "#ffffff",
-  //   width: "93%",
-  //   alignSelf: "center",
-  //   borderRadius: 8,
-  //   elevation: 5,
-  //   marginRight: 16,
-  // },
 
   cardRow: {
     flexDirection: "row",
@@ -881,7 +835,6 @@ export const styles = StyleSheet.create({
 
   itemInfo: {
     flex: 3,
-    // marginLeft: 6,
   },
 
   itemDetails: {
@@ -892,7 +845,7 @@ export const styles = StyleSheet.create({
   amountCard: {
     padding: 10,
     paddingRight: 20,
-    backgroundColor: "#fff",
+    backgroundColor: LIGHT,
     borderRadius: 6,
   },
   amountDetails: {
@@ -910,30 +863,16 @@ export const styles = StyleSheet.create({
   itemStyle: {
     padding: 4,
     marginTop: 4,
-    // backgroundColor: "#2b87b022",
-    //borderColor: "#020409",
-    // borderWidth: 1,
-    //borderRadius: 5,
-  },
-  itemTextStyle: {
-    //color: "#020409",
   },
   itemsContainerStyle: {
     maxHeight: 100,
   },
   textInput: {
-    // backgroundColor: "#2b87b022",
-    // padding: 4,
-    // borderColor: "gray",
-    //borderRadius: 5,
     width: 310,
     color: "#020409",
-    //marginRight: 18,
-    // marginBottom: 4,
-    //paddingLeft: 6,
-    //marginLeft: -16,
+  
   },
-  //leavecard
+
   leaveCard: {
     position: "relative",
     padding: 16,
@@ -993,7 +932,7 @@ export const styles = StyleSheet.create({
   },
 
   checkoutButton: {
-    backgroundColor: "#2b87b0",
+    backgroundColor: PRIMARY_COLOR,
     borderRadius: 100,
     width: 150,
     height: 150,
@@ -1004,7 +943,7 @@ export const styles = StyleSheet.create({
     elevation: 5,
   },
   checkoutText: {
-    color: "#fff",
+    color: LIGHT,
     fontSize: 18,
     fontWeight: "bold",
     marginTop: 10,
@@ -1025,7 +964,7 @@ export const styles = StyleSheet.create({
     width: "100%",
   },
   locationText: {
-    color: "#fff",
+    color: LIGHT,
     fontSize: 14,
   },
   timeText: {
@@ -1034,7 +973,7 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
   },
   workHoursText: {
-    color: "#fff",
+    color: LIGHT,
     fontSize: 12,
   },
   workHoursTimeText: {
@@ -1043,7 +982,7 @@ export const styles = StyleSheet.create({
     marginTop: 5,
   },
   activityCard: {
-    backgroundColor: "#fff",
+    backgroundColor: LIGHT,
     borderRadius: 15,
     paddingVertical: 20,
     paddingHorizontal: 16,
@@ -1105,7 +1044,7 @@ export const styles = StyleSheet.create({
   },
   //TaskList
   card: {
-    backgroundColor: "#ffffff",
+    backgroundColor: LIGHT,
   },
   header: {
     flexDirection: "row",
@@ -1122,24 +1061,24 @@ export const styles = StyleSheet.create({
   },
   statusButton: {
     padding: 10,
-    backgroundColor: "#2b87b022",
+    backgroundColor: PRIMARY_COLOR_TRANSPARENT,
     borderRadius: 20,
   },
   activeButton: {
-    backgroundColor: "#2b87b0",
+    backgroundColor: PRIMARY_COLOR,
   },
   activeText: {
-    color: "#fff",
+    color: LIGHT,
   },
   taskCard: {
-    backgroundColor: "#54B4D3",
+    backgroundColor: INFO_COLOR,
     padding: 15,
     borderRadius: 15,
     marginTop: 20,
   },
   taskTitle: {
     fontSize: 18,
-    color: "#fff",
+    color: LIGHT,
     fontWeight: "bold",
   },
   taskInfo: {
@@ -1148,7 +1087,7 @@ export const styles = StyleSheet.create({
     marginTop: 10,
   },
   infoText: {
-    color: "#fff",
+    color: LIGHT,
     marginLeft: 5,
     marginRight: 15,
   },
@@ -1160,12 +1099,12 @@ export const styles = StyleSheet.create({
   progressText: {
     fontWeight: "bold",
     marginTop: 6,
-    color: "#fff",
+    color: LIGHT,
   },
   completedText: {
     textAlign: "center",
     fontSize: 18,
-    color: "#2b87b0",
+    color: PRIMARY_COLOR,
     marginTop: 20,
-  },
+  },x
 });
