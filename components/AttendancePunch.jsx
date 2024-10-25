@@ -37,7 +37,7 @@ export default function AttendancePunch() {
     });
   };
 
-  // Update marker location whenever the location changes
+  // Update marker location whenever the location changes 
   useEffect(() => {
     if (location) {
       setMarkerLocation(location); // Update marker location state
