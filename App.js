@@ -30,7 +30,6 @@ export default function App() {
   return (
     <PaperProvider>
       {/* <MyNavigationContainer /> */}
-      {/* <Attendance /> */}
       <AttendancePunch />
       {/* <NotificationScreen /> */}
       {/* <HolidayListScreen/> */}
