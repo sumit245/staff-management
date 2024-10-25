@@ -7,7 +7,7 @@ const DateSelector = ({ dates, activeDate, onSelectDate }) => (
   <ScrollView
     horizontal
     showsHorizontalScrollIndicator={false}
-    style={styles.dateSelector}
+    style={[spacing.ph2, spacing.mv4]}
 
   >
     {dates.map((date, index) => (

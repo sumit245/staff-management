@@ -431,11 +431,6 @@ export const styles = StyleSheet.create({
     borderRadius: 3,
     marginBottom: 8,
   },
-  // DateSelector
-  dateSelector: {
-    marginVertical: 20,
-    paddingHorizontal: 10,
-  },
 
   // Attendancescreen
   profileContainer: {
@@ -531,11 +526,7 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
   },
-  card: {
-    padding: 15,
-    marginBottom: 10,
-    backgroundColor: LIGHT,
-  },
+
   cardContent: {
     flexDirection: "row",
     alignItems: "center",
@@ -800,10 +791,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 10,
   },
-  //TaskList
-  card: {
-    backgroundColor: LIGHT,
-  },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -855,5 +842,4 @@ export const styles = StyleSheet.create({
     color: PRIMARY_COLOR,
     marginTop: 20,
   },
-
 });
