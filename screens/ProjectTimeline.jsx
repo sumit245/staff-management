@@ -15,7 +15,7 @@ const ProjectTimeline = ({ task }) => (
       <Icon name="ellipsis-h" size={20} color="#888" />
     </View>
     <H5 style={styles.taskTime}>{task.time}</H5>
-    <View style={styles.progressContainer}>
+    <View style={styles.row}>
       <Text style={styles.progressLabel}>Progress</Text>
       <Progress.Bar progress={task.progress} width={150} color="#1abc9c" />
       <Text style={styles.progressPercent}>{`${Math.round(

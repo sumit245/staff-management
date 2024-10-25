@@ -1,24 +1,26 @@
 
-import { View, Text } from "react-native";
-import { styles } from "../styles/components.styles";
+import { View } from "react-native";
+import { layouts, spacing, styles, typography } from "../styles";
+import { P, Span } from "./text";
 
 export default function ChatBubble({ message, isSent, time }) {
   return (
     <View
       style={[
-        styles.messageContainer,
-        isSent ? styles.sentMessage : styles.receivedMessage,
+        spacing.p3,
+        spacing.mv2,
+        spacing.br3,
+        isSent ? [styles.bgPrimary, layouts.selfEnd] : [styles.bgSecondary, layouts.selfStart]
       ]}
     >
-      <Text
+      <P
         style={[
-          styles.messageText,
-          isSent ? styles.sentMessageText : styles.receivedMessageText,
+          typography.textLight
         ]}
       >
         {message}
-      </Text>
-      <Text style={styles.messageTime}>{time}</Text>
+      </P>
+      <Span style={[spacing.pv1, typography.textLight]}>{time}</Span>
     </View>
   );
 };

@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
-import { styles } from "../styles/components.styles";
+import { styles, layouts } from "../styles";
 import { SCREEN_WIDTH } from "../styles/constant";
 import { P, Span } from "./text";
 import Avatar from "./Avatar";
+
 
 export default function ProfileCard({ imageUri, name, phoneNumber }) {
   return (
@@ -17,7 +18,7 @@ export default function ProfileCard({ imageUri, name, phoneNumber }) {
       ]}
     >
       <Avatar avatar={imageUri} name={name} />
-      <View style={styles.profileInfo}>
+      <View style={layouts.flex1}>
         <P style={{ fontWeight: "bold" }}>{name}</P>
         <Span>{phoneNumber}</Span>
       </View>

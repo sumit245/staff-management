@@ -16,7 +16,7 @@ import ModalPopup from "../components/Modal";
 import Avatar from "../components/Avatar";
 
 import { styles } from "../styles/components.styles";
-import { typography } from "../styles";
+import { layouts, spacing, typography } from "../styles";
 
 export default function LoginScreen() {
   const [popupVisible, setPopupVisible] = useState(false);
@@ -31,9 +31,9 @@ export default function LoginScreen() {
   return (
     <MyImageBackground>
       <ScrollView style={{ flex: 1 }}>
-        <View style={styles.titleContainer}>
-          <H1>Welcome Back</H1>
-          <H5>Sign in to continue</H5>
+        <View style={[layouts.center, spacing.mv5]}>
+          <H1 style={spacing.mv2}>Welcome Back</H1>
+          <H5 style={spacing.mb5}>Sign in to continue</H5>
         </View>
         <KeyboardAvoidingView
           behavior={Platform.OS === "ios" ? "padding" : "height"}
