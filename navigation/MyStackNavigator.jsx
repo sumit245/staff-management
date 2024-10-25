@@ -9,6 +9,7 @@ import FormScreen from "../screens/FormScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import PrivacyPolicy from "../screens/PrivacyPolicy";
 import TaskList from "../screens/TaskList";
+import AttendancePunchScreen from '../screens/AttendancePunchScreen'
 
 //import HolidayListScreen from "../screens/HolidayListScreen";
 //import ProfileScreen from "../screens/ProfileScreen";
@@ -32,6 +33,7 @@ export default function MyStackNavigator() {
       }}
     >
       <Stack.Screen name="loginScreen" component={LoginScreen} />
+      <Stack.Screen name="attendancePunch" component={AttendancePunchScreen} />
       <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
       <Stack.Screen name="homeScreen" component={MyMaterialBottomNavigator} />
       <Stack.Screen name="applyLeaveForm" component={ApplyLeaveForm} />

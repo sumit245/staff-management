@@ -16,14 +16,17 @@ import ModalPopup from "../components/Modal";
 import Avatar from "../components/Avatar";
 
 import { styles } from "../styles/components.styles";
+import { typography } from "../styles";
 
 export default function LoginScreen() {
   const [popupVisible, setPopupVisible] = useState(false);
+  const navigation = useNavigation();
+
   const onSubmit = () => {
-    setPopupVisible(true);
+    navigation.navigate('attendancePunch')
   };
 
-  const navigation = useNavigation();
+
 
   return (
     <MyImageBackground>
@@ -48,14 +51,17 @@ export default function LoginScreen() {
             style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
             onPress={onSubmit}
           >
-            <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
+            <H2 style={[
+              styles.btnText,
+              styles.textLarge,
+              typography.textLight]}>
               Login
             </H2>
           </Button>
         </KeyboardAvoidingView>
       </ScrollView>
 
-      {popupVisible && (
+      {/* {popupVisible && (
         <ModalPopup
           visible={popupVisible}
           close={() => setPopupVisible((prev) => !prev)}
@@ -83,7 +89,7 @@ export default function LoginScreen() {
             Put your finger on above sensor to create attendance!!
           </Text>
         </ModalPopup>
-      )}
+      )} */}
     </MyImageBackground>
   );
 }

@@ -1,16 +1,16 @@
 import { View, TextInput } from "react-native";
-import { H5, H6 } from "../text";
-import { styles } from "../../styles/components.styles";
+import { H5 } from "../text";
+import { spacing, styles, SCREEN_WIDTH } from "../../styles";
 import { PRIMARY_COLOR } from "../../styles/constant";
 
 export default function MyTextInput({ title, onChangeText, type, ...props }) {
   return (
-    <View style={styles.textInput}>
+    <View style={spacing.mb2}>
       <H5>{title}</H5>
       <TextInput
         onChangeText={onChangeText}
         keyboardType={type}
-        style={styles.textInputField}
+        style={[styles.textInputField, spacing.mv1, spacing.pl3, { width: SCREEN_WIDTH - 28 }]}
         cursorColor={PRIMARY_COLOR}
         title
         value

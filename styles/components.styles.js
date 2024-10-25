@@ -18,7 +18,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: LIGHT,
     alignItems: "center",
-    marginHorizontal: 8,
   },
   textLarge: {
     fontSize: 18,
@@ -37,19 +36,11 @@ export const styles = StyleSheet.create({
     height: 0.6 * SCREEN_WIDTH,
     marginTop: 20,
   },
-  inputContainer: {
-    width: SCREEN_WIDTH - 20,
-  },
-  textInput: {
-    marginVertical: 8,
-  },
   textInputField: {
-    marginVertical: 4,
     backgroundColor: PRIMARY_COLOR_TRANSPARENT,
     borderRadius: 6,
     height: 54,
     fontSize: 18,
-    paddingLeft: 14,
     borderColor: PRIMARY_COLOR,
     borderWidth: 1,
   },
@@ -152,18 +143,8 @@ export const styles = StyleSheet.create({
     borderRadius: 32,
     justifyContent: "center",
   },
-  textLight: {
-    color: LIGHT,
-  },
-  textDark: {
-    color: DARK,
-  },
-  textDanger: {
-    color: DANGER_COLOR,
-  },
-  textSecondary: {
-    color: SECONDARY_COLOR,
-  },
+
+
   border: {
     borderWidth: 1,
   },
@@ -287,97 +268,6 @@ export const styles = StyleSheet.create({
   rowBullet: {
     flexDirection: "row",
     alignItems: "center",
-  },
-
-  // Styles for horizontal padding
-  ph1: {
-    paddingHorizontal: 4,
-  },
-  ph2: {
-    paddingHorizontal: 8,
-  },
-  ph3: {
-    paddingHorizontal: 12,
-  },
-  ph4: {
-    paddingHorizontal: 16,
-  },
-  ph5: {
-    paddingHorizontal: 20,
-  },
-
-  // Styles for padding vertical
-  pv1: {
-    paddingVertical: 4,
-  },
-  pv2: {
-    paddingVertical: 8,
-  },
-  pv3: {
-    paddingVertical: 12,
-  },
-  pv4: {
-    paddingVertical: 16,
-  },
-  pv5: {
-    paddingVertical: 20,
-  },
-
-  //
-  p1: {
-    padding: 4,
-  },
-  p2: {
-    padding: 8,
-  },
-  p3: {
-    padding: 12,
-  },
-  p4: {
-    padding: 16,
-  },
-  p5: {
-    padding: 20,
-  },
-
-  // Styles for horizontal margin
-  mh1: {
-    marginHorizontal: 4,
-  },
-  mh2: {
-    marginHorizontal: 8,
-  },
-  mh3: {
-    marginHorizontal: 12,
-  },
-  mh4: {
-    marginHorizontal: 16,
-  },
-  mh5: {
-    marginHorizontal: 20,
-  },
-
-  // Styles for vertical margin
-  mv1: {
-    marginVertical: 4,
-  },
-  mv2: {
-    marginVertical: 8,
-  },
-  mv3: {
-    marginVertical: 12,
-  },
-  mv4: {
-    marginVertical: 16,
-  },
-  mv5: {
-    marginVertical: 20,
-  },
-  ph1: {
-    paddingHorizontal: 4,
-  },
-  ph2: {
-    paddingHorizontal: 8,
   },
 
   avatarContainer: {
@@ -523,8 +413,7 @@ export const styles = StyleSheet.create({
   },
   label: {
     fontSize: 14,
-    color: "#888",
-    marginBottom: 5,
+    color: "#888"
   },
   value: {
     fontSize: 16,
