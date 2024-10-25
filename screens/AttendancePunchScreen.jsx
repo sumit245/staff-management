@@ -9,7 +9,7 @@ import {
   Image,
 } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
-import ContainerComponent from "./ContainerComponent";
+import ContainerComponent from "../components/ContainerComponent";
 import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
 import { PRIMARY_COLOR, SCREEN_WIDTH } from "../styles/constant";
@@ -102,11 +102,10 @@ export default function AttendancePunch() {
           <View style={styles.capturedImageContainer}>
             <Image source={{ uri: photoUri }} style={styles.capturedImage} />
           </View>
-        ) :
+        ) : (
           <CameraView style={styles.camera} ref={cameraRef} facing="front" />
-        }
+        )}
       </View>
-
 
       <TouchableOpacity
         onPress={takePicture}
@@ -124,7 +123,6 @@ export default function AttendancePunch() {
           Capture Photo
         </Text>
       </TouchableOpacity>
-
 
       <View style={styles.mapContainer}>
         {markerLocation ? ( // Use markerLocation instead of location
@@ -144,7 +142,6 @@ export default function AttendancePunch() {
         )}
       </View>
 
-
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.punchInButton} onPress={handlePunchIn}>
           <Text style={styles.buttonText}>PUNCH IN</Text>
@@ -153,7 +150,6 @@ export default function AttendancePunch() {
           <Text style={styles.buttonText}>PUNCH OUT</Text>
         </TouchableOpacity>
       </View>
-
     </ContainerComponent>
   );
 }

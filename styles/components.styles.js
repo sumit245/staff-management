@@ -330,6 +330,15 @@ export const styles = StyleSheet.create({
   p2: {
     padding: 8,
   },
+  p3: {
+    padding: 12,
+  },
+  p4: {
+    padding: 16,
+  },
+  p5: {
+    padding: 20,
+  },
 
   // Styles for horizontal margin
   mh1: {
@@ -364,14 +373,13 @@ export const styles = StyleSheet.create({
   mv5: {
     marginVertical: 20,
   },
- ph1: {
+  ph1: {
     paddingHorizontal: 4,
   },
   ph2: {
     paddingHorizontal: 8,
   },
 
-  
   avatarContainer: {
     position: "relative",
     marginRight: 15,
@@ -639,7 +647,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
- 
+
   progressContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -870,7 +878,6 @@ export const styles = StyleSheet.create({
   textInput: {
     width: 310,
     color: "#020409",
-  
   },
 
   leaveCard: {
