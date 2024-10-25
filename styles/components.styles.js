@@ -1106,5 +1106,5 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: PRIMARY_COLOR,
     marginTop: 20,
-  },x
+  },
 });
