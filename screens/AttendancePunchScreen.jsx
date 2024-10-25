@@ -1,11 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Alert,
-  Image,
-} from "react-native";
+import { View, Text, StyleSheet, Alert, Image, typography } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import ContainerComponent from "../components/ContainerComponent";
 import * as Location from "expo-location";
@@ -13,6 +7,9 @@ import MapView, { Marker } from "react-native-maps";
 import { styles } from "../styles/temp.styles";
 import MyHeader from "../components/header/MyHeader";
 import Button from "../components/buttons/Button";
+import { H2 } from "../components/text";
+import { PRIMARY_COLOR } from "../styles";
+//import { typography } from "../styles";
 
 export default function AttendancePunchScreen() {
   const [permission, requestPermission] = useCameraPermissions();
@@ -37,7 +34,7 @@ export default function AttendancePunchScreen() {
     });
   };
 
-  // Update marker location whenever the location changes 
+  // Update marker location whenever the location changes
   useEffect(() => {
     if (location) {
       setMarkerLocation(location); // Update marker location state
@@ -101,7 +98,6 @@ export default function AttendancePunchScreen() {
         )}
       </View>
 
-
       <View style={styles.mapContainer}>
         {markerLocation ? ( // Use markerLocation instead of location
           <MapView
@@ -123,13 +119,11 @@ export default function AttendancePunchScreen() {
       <View style={styles.buttonContainer}>
         <Button
           style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-          onPress={takePicture}
+          onPress={handlePunchIn} // Update with your function
         >
-
+          <H2 style={[styles.btnText, styles.textLarge]}>PunchIn</H2>
         </Button>
       </View>
     </ContainerComponent>
   );
 }
-
-

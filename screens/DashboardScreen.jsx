@@ -39,9 +39,11 @@ export default function DashboardScreen() {
             }
           />
         )}
-        keyExtractor={(item) => item.id.toString()} // Use item.id instead of index for key
+        keyExtractor={(item) => item.id.toString()}
         numColumns={2}
       />
     </ContainerComponent>
   );
 }
+
+
