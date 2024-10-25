@@ -323,12 +323,21 @@ export const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 
-  // 
+  //
   p1: {
     padding: 4,
   },
   p2: {
     padding: 8,
+  },
+  p3: {
+    padding: 12,
+  },
+  p4: {
+    padding: 16,
+  },
+  p5: {
+    padding: 20,
   },
 
   // Styles for horizontal margin
@@ -345,7 +354,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   mh5: {
-    marginHorizontal: 20
+    marginHorizontal: 20,
   },
 
   // Styles for vertical margin
@@ -364,7 +373,6 @@ export const styles = StyleSheet.create({
   mv5: {
     marginVertical: 20,
   },
-
 
   avatarContainer: {
     position: "relative",
