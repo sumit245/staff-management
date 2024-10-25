@@ -136,4 +136,52 @@ export const spacing = StyleSheet.create({
         marginBottom: 20,
     },
 
+    ml1: {
+        marginLeft: 4,
+    },
+    ml2: {
+        marginLeft: 8,
+    },
+    ml3: {
+        marginLeft: 12,
+    },
+    ml4: {
+        marginLeft: 16,
+    },
+    ml5: {
+        marginLeft: 20,
+    },
+
+    mr1: {
+        marginRight: 4,
+    },
+    mr2: {
+        marginRight: 8,
+    },
+    mr3: {
+        marginRight: 12,
+    },
+    mr4: {
+        marginRight: 16,
+    },
+    mr5: {
+        marginRight: 20,
+    },
+
+    br1: {
+        borderRadius: 6
+    },
+    br2: {
+        borderRadius: 12
+    },
+    br3: {
+        borderRadius: 18
+    },
+    br4: {
+        borderRadius: 24
+    },
+    br5: {
+        borderRadius: 30
+    }
+
 })

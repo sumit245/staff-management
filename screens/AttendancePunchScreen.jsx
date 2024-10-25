@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, Text, Alert, Image } from "react-native";
+import { View, Text, Alert, Image, ScrollView } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import ContainerComponent from "../components/ContainerComponent";
 import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
-import { styles } from "../styles/temp.styles";
+// import { styles } from "../styles/temp.styles";
+import { styles, spacing, typography, SCREEN_WIDTH, layouts } from "../styles";
 import MyHeader from "../components/header/MyHeader";
 import Button from "../components/buttons/Button";
-import { H2 } from "../components/text";
 import { useNavigation } from "@react-navigation/native";
+import { H2 } from "../components/text";
 
 export default function AttendancePunchScreen() {
   const navigation = useNavigation(); // Get navigation instance
@@ -41,15 +42,6 @@ export default function AttendancePunchScreen() {
     }
   }, [location]);
 
-  // Handle punch-in action
-  const handlePunchIn = () => {
-    if (!location || !photoUri) {
-      return;
-    }
-
-    console.log("Punching in with location:", location);
-    console.log("Photo URI:", photoUri);
-  };
 
   // Request permissions on component mount
   useEffect(() => {
@@ -73,29 +65,38 @@ export default function AttendancePunchScreen() {
   }
 
   const takePictureAndNavigate = async () => {
-    if (cameraRef.current) {
-      const photo = await cameraRef.current.takePictureAsync();
-      setPhotoUri(photo.uri);
-      handlePunchIn(); // Call the punch-in handler to confirm location and photo
-      navigation.navigate("homeScreen"); // Navigate to homeScreen
-    }
+    navigation.navigate("homeScreen"); // Navigate to homeScreen
+    // if (cameraRef.current) {
+    //   const photo = await cameraRef.current.takePictureAsync();
+    //   setPhotoUri(photo.uri);
+    //   if (!location || !photoUri) {
+    //     return;
+    //   }
+    //   console.log("Punching in with location:", location);
+    //   console.log("Photo URI:", photoUri);
+    // }
   };
 
   return (
     <ContainerComponent>
       <MyHeader title="Record Your Face" />
-
-      <View style={styles.cameraContainer}>
-        {photoUri ? (
-          <View style={styles.capturedImageContainer}>
-            <Image source={{ uri: photoUri }} style={styles.capturedImage} />
+      <ScrollView
+        style={{ flex: 1, width: SCREEN_WIDTH - 20 }}
+      >
+        <View style={layouts.center}>
+          <View style={[styles.cameraContainer, layouts.circle75, spacing.mv5, layouts.center]}>
+            {photoUri ? (
+              <View style={[styles.cameraContainer, layouts.circle75, spacing.mv5, layouts.center]}>
+                <Image source={{ uri: photoUri }} style={layouts.circle75} />
+              </View>
+            ) : (
+              <CameraView style={[layouts.circle75]} ref={cameraRef} facing="front" />
+            )}
           </View>
-        ) : (
-          <CameraView style={styles.camera} ref={cameraRef} facing="front" />
-        )}
-      </View>
+        </View>
 
-      <View style={styles.mapContainer}>
+
+        {/* <View style={styles.mapContainer}> */}
         {markerLocation ? (
           <MapView
             style={styles.map}
@@ -111,16 +112,22 @@ export default function AttendancePunchScreen() {
         ) : (
           <Text style={styles.loadingText}>Fetching location...</Text>
         )}
-      </View>
+        {/* </View> */}
 
-      <View style={styles.buttonContainer}>
+
         <Button
           style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
           onPress={takePictureAndNavigate}
         >
-          <Text style={styles.buttonText}>Take Picture</Text>
+          <H2 style={[
+            styles.btnText,
+            styles.textLarge,
+            typography.textLight]}>
+            Punch In
+          </H2>
         </Button>
-      </View>
+
+      </ScrollView>
     </ContainerComponent>
   );
 }

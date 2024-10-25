@@ -6,7 +6,7 @@ import ContainerComponent from "../components/ContainerComponent";
 import DateSelector from "../components/DateSelector";
 import { H5, P, H4, H6 } from "../components/text";
 import { attendanceData, activityData } from "../utils/faker";
-import { styles } from "../styles/components.styles";
+import { styles, layouts, spacing } from "../styles";
 
 export default function AttendanceScreen() {
   const [activeDate, setActiveDate] = useState("08 Sat");
@@ -22,7 +22,7 @@ export default function AttendanceScreen() {
         <View style={styles.profileContainer}>
           <Image
             source={{ uri: "https://randomuser.me/api/portraits/men/5.jpg" }}
-            style={styles.profileImage}
+            style={[layouts.circle25, spacing.mh3, spacing.mv3, layouts.center]}
           />
           <View>
             <H5 style={styles.profileName}>Rohit Gupta</H5>

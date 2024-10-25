@@ -13,7 +13,7 @@ export default function LandingPage() {
 
       <View>
         <Card style={styles.card}>
-          <View style={styles.progressContainer}>
+          <View style={styles.row}>
             <View style={styles.leftContainer}>
               <Text style={styles.progressText}>72%</Text>
               <Text style={styles.subText}>Total progress</Text>

@@ -7,7 +7,7 @@ import {
 
 import { spacing } from './spacing.styles'
 import { typography } from './typography.styles'
-// import {layouts} from './layouts.styles'
+import { layouts } from './layouts.styles'
 import { styles } from './components.styles'
 
 export {
@@ -16,5 +16,7 @@ export {
     PRIMARY_COLOR,
     PRIMARY_COLOR_TRANSPARENT,
     spacing,
-    typography, styles
+    typography,
+    styles,
+    layouts
 }

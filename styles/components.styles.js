@@ -19,23 +19,22 @@ export const styles = StyleSheet.create({
     backgroundColor: LIGHT,
     alignItems: "center",
   },
-  textLarge: {
-    fontSize: 18,
-  },
-  imageContainer: {
-    flex: 1,
-  },
-  titleContainer: {
-    alignItems: "center",
-    justifyContent: "space-between",
-    height: 0.1 * SCREEN_HEIGHT,
-    marginVertical: 0.02 * SCREEN_HEIGHT,
+  cameraContainer: {
+    borderWidth: 6,
+    borderColor: PRIMARY_COLOR,
+    overflow: "hidden",
   },
   imageContainerImg: {
     width: 0.6 * SCREEN_WIDTH,
     height: 0.6 * SCREEN_WIDTH,
-    marginTop: 20,
   },
+
+  textLarge: {
+    fontSize: 18,
+  },
+
+
+
   textInputField: {
     backgroundColor: PRIMARY_COLOR_TRANSPARENT,
     borderRadius: 6,
@@ -116,6 +115,9 @@ export const styles = StyleSheet.create({
   bgDark: {
     backgroundColor: DARK,
   },
+  bgLight: {
+    backgroundColor: LIGHT,
+  },
   bgInfo: {
     backgroundColor: INFO_COLOR,
   },
@@ -137,16 +139,11 @@ export const styles = StyleSheet.create({
   bgSecondary: {
     backgroundColor: SECONDARY_COLOR,
   },
-  round: {
-    height: 64,
-    width: 64,
-    borderRadius: 32,
-    justifyContent: "center",
-  },
 
   border: {
     borderWidth: 1,
   },
+
   fab: {
     elevation: 2,
     position: "absolute",
@@ -159,32 +156,6 @@ export const styles = StyleSheet.create({
   },
   fullWidth: {
     width: SCREEN_WIDTH,
-  },
-
-  messageContainer: {
-    padding: 12,
-    borderRadius: 16,
-    marginVertical: 8,
-  },
-  sentMessage: {
-    backgroundColor: PRIMARY_COLOR,
-    alignSelf: "flex-end",
-  },
-  receivedMessage: {
-    backgroundColor: SECONDARY_COLOR,
-    alignSelf: "flex-start",
-  },
-  messageText: {
-    color: LIGHT,
-    fontSize: 16,
-  },
-  sentMessageText: {
-    color: LIGHT,
-  },
-  messageTime: {
-    color: LIGHT,
-    fontSize: 12,
-    marginTop: 4,
   },
   progressBarContainer: {
     width: "90%",
@@ -215,12 +186,6 @@ export const styles = StyleSheet.create({
     color: LIGHT,
   },
 
-  radioDot: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    backgroundColor: PRIMARY_COLOR,
-  },
   radioButton: {
     flexDirection: "row",
     alignItems: "center",
@@ -243,18 +208,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "red",
     marginBottom: 20,
   },
-  profileImage: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    marginRight: 15,
-    padding: 4,
-    borderColor: SECONDARY_COLOR,
-    borderWidth: 1,
-  },
-  profileInfo: {
-    flex: 1,
-  },
+
   rowItem: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -269,15 +223,11 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  avatarContainer: {
-    position: "relative",
-    marginRight: 15,
-  },
   onlineDot: {
     position: "absolute",
     bottom: 14,
     right: 14,
-    borderWidth: 1,
+    borderWidth: 4,
     borderColor: LIGHT,
   },
   card: {
@@ -435,12 +385,6 @@ export const styles = StyleSheet.create({
     color: "#020409",
   },
 
-  progressContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-
   progressText: {
     fontSize: 28,
     fontWeight: "bold",
@@ -572,13 +516,13 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
+
   profileImage: {
     width: 50,
     height: 50,
     borderRadius: 25,
-    marginRight: 12,
-    marginTop: 10,
   },
+
   profileName: {
     fontSize: 18,
   },
@@ -1002,4 +946,5 @@ export const styles = StyleSheet.create({
     color: PRIMARY_COLOR,
     marginTop: 20,
   },
+
 });
