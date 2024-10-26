@@ -7,7 +7,6 @@ import {
   Text, TouchableOpacity
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
 import MyImageBackground from "../components/MyImageBackground";
 import { H1, H5, Span, H2 } from "../components/text";
 import MyTextInput from "../components/input/MyTextInput";
@@ -25,8 +24,6 @@ export default function LoginScreen() {
   const onSubmit = () => {
     navigation.navigate('attendancePunch')
   };
-
-
 
   return (
     <MyImageBackground>
@@ -94,6 +91,4 @@ export default function LoginScreen() {
   );
 }
 
-// navigate is like href from any page to any page
-// goBack only push to previous page in stack
-// cangoBack allows or disallows back propagation
+

@@ -72,7 +72,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     borderRadius: 6,
-   
   },
 
   buttonText: {
