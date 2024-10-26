@@ -7,6 +7,7 @@ import MyHeader from "../components/header/MyHeader";
 import SearchableDropdown from "../components/SearchableDropdown";
 import SearchBar from "../components/input/SearchBar";
 import { styles } from "../styles/components.styles";
+import {  spacing } from "../styles";
 
 const FormScreen = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -36,7 +37,7 @@ const FormScreen = () => {
           icon={""}
         />
 
-        <H5 style={styles.label}>Search Item</H5>
+        <H5 style={spacing.mb3}>Search Item</H5>
         <View
           style={{
             borderWidth: 1,
@@ -49,7 +50,7 @@ const FormScreen = () => {
           <SearchableDropdown onItemSelect={(item) => setSelectedItem(item)} />
         </View>
 
-        <H5 style={styles.label}>Make/Specifications</H5>
+        <H5 style={spacing.mb3}>Make/Specifications</H5>
         <TextInput
           style={styles.input}
           placeholder="Make Specifications"
@@ -57,7 +58,7 @@ const FormScreen = () => {
           onChangeText={setModel}
         />
 
-        <H5 style={styles.label}>Model</H5>
+        <H5 style={spacing.mb3}>Model</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Model"
@@ -65,8 +66,8 @@ const FormScreen = () => {
           onChangeText={setModel}
         />
 
-        {/* <H2 style={styles.label}>Quantity</H2> */}
-        <H5 style={styles.label}>Quantity</H5>
+      
+        <H5 style={spacing.mb3}>Quantity</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Quantity"
@@ -75,7 +76,7 @@ const FormScreen = () => {
           onChangeText={setQuantity}
         />
 
-        <H5 style={styles.label}>Tentative Price</H5>
+        <H5 style={spacing.mb3}>Tentative Price</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Tentative Price"
@@ -84,7 +85,7 @@ const FormScreen = () => {
           onChangeText={setPrice}
         />
 
-        <H5 style={styles.label}>Remarks</H5>
+        <H5 style={spacing.mb3}>Remarks</H5>
         <TextInput
           style={styles.input}
           placeholder="Enter Remarks"
@@ -94,7 +95,6 @@ const FormScreen = () => {
 
         <Button
           style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-          // onPress={onSubmit}
         >
           <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
             Submit

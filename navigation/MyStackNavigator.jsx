@@ -27,7 +27,7 @@ const Stack = createNativeStackNavigator();
 export default function MyStackNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="projectTimeLine"
+      initialRouteName="FormScreen"
       screenOptions={{
         headerShown: false,
       }}
