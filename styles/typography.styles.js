@@ -29,7 +29,7 @@ export const typography = StyleSheet.create({
     },
     textPrimarytransparent: {
         color : PRIMARY_COLOR_TRANSPARENT,
-    }
+    },
     textBold: {
         fontWeight: 'bold'
     },
