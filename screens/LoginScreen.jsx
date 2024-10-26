@@ -1,10 +1,8 @@
-import { useState } from "react";
 import {
   KeyboardAvoidingView,
   View,
   Platform,
   ScrollView,
-  Text, TouchableOpacity
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -12,34 +10,30 @@ import MyImageBackground from "../components/MyImageBackground";
 import { H1, H5, Span, H2 } from "../components/text";
 import MyTextInput from "../components/input/MyTextInput";
 import Button from "../components/buttons/Button";
-import ModalPopup from "../components/Modal";
-import Avatar from "../components/Avatar";
 
-import { styles } from "../styles/components.styles";
-import { layouts, spacing, typography } from "../styles";
+import { layouts, spacing, typography, styles } from "../styles";
 
 export default function LoginScreen() {
-  const [popupVisible, setPopupVisible] = useState(false);
   const navigation = useNavigation();
 
   const onSubmit = () => {
     navigation.navigate('attendancePunch')
   };
 
-
-
   return (
     <MyImageBackground>
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView
+        style={{ flex: 1 }}
+      >
         <View style={[layouts.center, spacing.mv5]}>
           <H1 style={spacing.mv2}>Welcome Back</H1>
           <H5 style={spacing.mb5}>Sign in to continue</H5>
         </View>
         <KeyboardAvoidingView
           behavior={Platform.OS === "ios" ? "padding" : "height"}
-          style={styles.inputContainer}
+          style={spacing.mb5}
         >
-          <MyTextInput title="Username" type="text" placeholder="abc@xyz.com" />
+          <MyTextInput title="Username" type="text" placeholder="abc@rsrobotic.com" />
           <MyTextInput
             title="Password"
             type="password"
@@ -47,18 +41,18 @@ export default function LoginScreen() {
           />
 
           <Span style={styles.rightLink}>Forgot Password?</Span>
-          <Button
-            style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-            onPress={onSubmit}
-          >
-            <H2 style={[
-              styles.btnText,
-              styles.textLarge,
-              typography.textLight]}>
-              Login
-            </H2>
-          </Button>
         </KeyboardAvoidingView>
+        <Button
+          style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
+          onPress={onSubmit}
+        >
+          <H2 style={[
+            styles.btnText,
+            styles.textLarge,
+            typography.textLight]}>
+            Login
+          </H2>
+        </Button>
       </ScrollView>
 
       {/* {popupVisible && (

@@ -1,11 +1,12 @@
-import { FlatList, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { H5, H4 } from "../components/text";
 import { styles } from "../styles/components.styles";
+import MyFlatList from "./utility/MyFlatList";
 
 const DocumentsList = ({ documentData }) => {
   return (
-    <FlatList
+    <MyFlatList
       data={documentData}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (

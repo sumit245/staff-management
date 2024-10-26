@@ -8,7 +8,7 @@ const DateSelector = ({ dates, activeDate, onSelectDate }) => (
     horizontal
     showsHorizontalScrollIndicator={false}
     style={[spacing.ph2, spacing.mv4]}
-
+  // FIXME:Show page containing activeDate
   >
     {dates.map((date, index) => (
       <TouchableOpacity

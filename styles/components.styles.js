@@ -443,9 +443,6 @@ export const styles = StyleSheet.create({
     borderRadius: 25,
   },
 
-  profileName: {
-    fontSize: 18,
-  },
   notificationIcon: {
     marginLeft: "auto",
   },
@@ -663,10 +660,6 @@ export const styles = StyleSheet.create({
     marginTop: 16,
     marginBottom: 20,
   },
-  inputContainer: {
-    width: "100%", // Take full width of the screen
-    paddingHorizontal: 16, // Padding for content inside
-  },
   tabButtonActive: {
     fontWeight: "bold",
     borderBottomWidth: 2,
@@ -764,16 +757,8 @@ export const styles = StyleSheet.create({
     color: "#020409",
     marginLeft: 5,
   },
-  mapContainer: {
-    alignItems: "center",
-    marginTop: 16,
-    overflow: "hidden",
-    borderRadius: 30,
-  },
   map: {
-    width: "98%",
-    height: 200,
-    borderRadius: 20,
+    height: SCREEN_WIDTH / 1.5,
   },
   message: {
     marginTop: 4,
