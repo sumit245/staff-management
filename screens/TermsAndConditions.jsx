@@ -43,27 +43,21 @@ const TermsAndConditions = () => {
             error-free operation of the app.
           </H6>
 
-          <View style={styles.checkboxContainer}>
             <CustomCheckbox
               isChecked={isChecked}
               onPress={handleCheckboxChange}
               label="I accept the terms and conditions"
             />
-          </View>
+       
         </ScrollView>
-
-        {/* Button fixed at the bottom */}
-        <View style={{ position: "absolute", bottom: 50, left: 20, right: 20 }}>
           <Button
-            style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
             onPress={onSubmit}
           >
-            <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
+            <H2 >
               Submit
             </H2>
           </Button>
         </View>
-      </View>
     </ContainerComponent>
   );
 };

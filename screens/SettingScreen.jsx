@@ -26,8 +26,8 @@ export default function SettingsScreen() {
   };
 
   const handleLogoutPress = () => {
-    console.log("Logout pressed"); // Replace with your logout functionality
-    navigation.navigate("loginScreen"); // Navigate to LoginScreen
+    console.log("Logout pressed"); 
+    navigation.navigate("loginScreen"); 
   };
 
   return (

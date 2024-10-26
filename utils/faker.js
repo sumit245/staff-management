@@ -309,6 +309,7 @@ export const menuItems = [
   { label: "Data Usage", icon: "folder-outline" },
   { label: "Help", icon: "help-circle-outline" },
 ];
+
 export const notifications = [
   {
     id: "1",
@@ -339,6 +340,7 @@ export const notifications = [
     time: "25 sept,21:22 Pm",
   },
 ];
+
 export const holidays = [
   {
     id: "1",
@@ -383,12 +385,14 @@ export const holidays = [
     icon: "calendar",
   },
 ];
+
 export const personalData = {
   fullName: "Bittu Kumar",
   email: "bittu230@gmail.com",
   phone: "+91 7945671265",
   address: "Delhi India",
 };
+
 export const professionalData = {
   employeeId: "7879987",
   designation: " UI/UX Designer",
@@ -399,6 +403,7 @@ export const professionalData = {
   companyExperience: "2 Year 5 Months",
   officeTime: "10:00 am to 07:00 pm",
 };
+
 export const documentData = [
   { id: "1", name: "Offer Letter", icon: "file-document-outline" },
   { id: "2", name: "Appointment Letter", icon: "file-document-outline" },
@@ -411,19 +416,23 @@ export const activities = [
   { id: "1", title: "Capital Icon", time: "9:15 AM - 11:00 AM" },
   { id: "2", title: "Baroda Bank", time: "11:00 AM - 11:30 AM" },
 ];
+
 export const profileImages = [
   "https://randomuser.me/api/portraits/men/1.jpg",
   "https://randomuser.me/api/portraits/women/1.jpg",
 ];
+
 export const miniCards = [
   { id: 1, icon: "time-outline", text: "Est: 20h" },
   { id: 2, icon: "calendar-outline", text: "Due: 25 Apr" },
   { id: 3, icon: "checkmark-circle-outline", text: "Tasks: 1/3" },
 ];
+
 export const taskCards = [
   { id: 1, text: "Design Concept", progress: 0.7, bgColor: "#54B4D3" },
   { id: 2, text: "Development Phase", progress: 0.4, bgColor: "#2b87b0" },
 ];
+
 export const cardtasks = [
   {
     id: 1,
@@ -475,6 +484,7 @@ export const cardtasks = [
     ],
   },
 ];
+
 export const attendanceData = [
   {
     icon: "login",
@@ -501,6 +511,7 @@ export const attendanceData = [
     status: "Working Days",
   },
 ];
+
 export const activityData = [
   {
     title: "Check In",
@@ -521,6 +532,7 @@ export const activityData = [
     icon: "logout",
   },
 ];
+
 export const lineItems = [
   {
     id: "AS1001",
@@ -535,7 +547,6 @@ export const lineItems = [
     subInventory: "Seattle Manufacturing",
   },
 ];
-// requisitionsData.js
 
 export const requisitions = [
   {
@@ -567,30 +578,7 @@ export const requisitions = [
     checked: false,
   },
 ];
-// PurchaseOrderScreen
-// export const itemsData = [
-//   {
-//     id: "AS1001",
-//     name: "HP Deskjet 1010 Color Inkjet Printer",
-//     price: 15.0,
-//     quantity: 2,
-//     total: 30.0,
-//   },
-//   {
-//     id: "AS1002",
-//     name: "Logitech B100 Optical Wired USB Mouse",
-//     price: 8.0,
-//     quantity: 6,
-//     total: 48.0,
-//   },
-// ];
-// export const amountDetailsData = [
-//   { label: "Amount", value: 78.0 },
-//   { label: "Tax", value: 2.0 },
-//   { label: "Freight", value: 2.0 },
-//   { label: "Currency", value: "IND" },
-//   { label: "Grand Total", value: 82.0 },
-// ];
+
 export const originalItems = [
   { id: 1, name: "Robotics with Arduino" },
   { id: 2, name: "Motor Control in Robotics" },
@@ -601,25 +589,6 @@ export const originalItems = [
   { id: 7, name: "Sumo Robotics Challenge" },
   { id: 8, name: "Robot Navigation with Sensors" },
 ];
-
-// export const itemsData = [
-//   {
-//     id: 1,
-//     productCode: "ABC123",
-//     name: "Product A",
-//     price: 100,
-//     quantity: 2,
-//     total: 200,
-//   },
-//   {
-//     id: 2,
-//     productCode: "XYZ789",
-//     name: "Product B",
-//     price: 150,
-//     quantity: 1,
-//     total: 150,
-//   },
-// ];
 
 export const itemsData = [
   { id: "P001", name: "Product A", price: 120.5, quantity: 2, total: 241.0 },
@@ -661,6 +630,7 @@ export const projects = [
     est: "15 h",
   },
 ];
+
 export const handleTaskProgress = (
   tasks,
   projectId,
@@ -673,3 +643,29 @@ export const handleTaskProgress = (
   setTasks(updatedTasks);
   setActiveStatus("inProgress");
 };
+
+export const staff = {
+  id: 1,
+  first_name: "Rakesh",
+  last_name: "Sharma",
+  user_type: "staff",
+  is_admin: 0,
+  role_id: 0,
+  email: "rakesh.sharma@gmail.com",
+  password: "12345678",
+  image: "https://randomuser.me/api/portraits/men/1.jpg",
+  status: "active",
+  job_title: "Technical Assistant",
+  disable_login: 0,
+  note: [],
+  address: "123 gali, jhajjar, Haryana",
+  alternative_address: "",
+  phone: "9909230912",
+  alternative_phone: "",
+  dob: "",
+  gender: "male",
+  sticky_note: [],
+  skype: "",
+  language: "",
+  last_online: "2024-10-03 05:41:49",
+}

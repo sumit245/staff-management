@@ -63,7 +63,6 @@ export const styles = StyleSheet.create({
     borderBottomColor: "#6c6c6c",
     borderBottomWidth: 0.5,
     height: 54,
-    margin: 0,
     paddingHorizontal: 8,
     flexDirection: "row",
     alignItems: "center",
@@ -80,8 +79,6 @@ export const styles = StyleSheet.create({
   statCard: {
     width: SCREEN_WIDTH / 2.5,
     height: SCREEN_WIDTH / 3,
-    margin: 8,
-    padding: 16,
   },
   row: {
     flexDirection: "row",
@@ -183,7 +180,6 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: LIGHT,
   },
-
   radioButton: {
     flexDirection: "row",
     alignItems: "center",
@@ -391,10 +387,6 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     color: "#666",
   },
-  profileContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
   profileImage: {
     width: 30,
     height: 30,
@@ -439,9 +431,6 @@ export const styles = StyleSheet.create({
     borderRadius: 25,
   },
 
-  profileName: {
-    fontSize: 18,
-  },
   notificationIcon: {
     marginLeft: "auto",
   },
@@ -647,21 +636,17 @@ export const styles = StyleSheet.create({
   },
 
   scrollContainer: {
-    flex: 1, // Ensures ScrollView fills the available space
-    backgroundColor: LIGHT, // Apply your background color
+    flex: 1,
+    backgroundColor: LIGHT,
   },
   scrollViewContent: {
-    paddingVertical: 20, // Add padding for the content
-    paddingHorizontal: 16, // Adjust horizontal padding
-    alignItems: "center", // Ensures content is centered
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    alignItems: "center",
   },
   tabContainer: {
     marginTop: 16,
     marginBottom: 20,
-  },
-  inputContainer: {
-    width: "100%", // Take full width of the screen
-    paddingHorizontal: 16, // Padding for content inside
   },
   tabButtonActive: {
     fontWeight: "bold",
@@ -760,16 +745,8 @@ export const styles = StyleSheet.create({
     color: "#020409",
     marginLeft: 5,
   },
-  mapContainer: {
-    alignItems: "center",
-    marginTop: 16,
-    overflow: "hidden",
-    borderRadius: 30,
-  },
   map: {
-    width: "98%",
-    height: 200,
-    borderRadius: 20,
+    height: SCREEN_WIDTH / 1.5,
   },
   message: {
     marginTop: 4,

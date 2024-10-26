@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { View, TouchableOpacity, FlatList, ScrollView } from "react-native";
+import { View, TouchableOpacity, ScrollView } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import ChatBubble from "../components/ChatBubble";
-import { dummyMessages } from "../utils/faker"; // Importing the dummy data
-import { styles } from "../styles/components.styles";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
-import { LIGHT } from "../styles/constant";
 import EllipticalInput from "../components/input/EllipticalInput";
-import { spacing } from "../styles";
+import MyFlatList from "../components/utility/MyFlatList";
+import { layouts, spacing, styles, LIGHT, SCREEN_HEIGHT } from "../styles";
+import { dummyMessages } from "../utils/faker"; // Importing the dummy data
 
 const ChatScreen = () => {
   const [messages, setMessages] = useState(dummyMessages); // Using dummy data
@@ -29,9 +28,10 @@ const ChatScreen = () => {
       <MyHeader title="Mihir" isBack={true} hasIcon={true} icon={"search-outline"} />
       <ScrollView style={{ flex: 1 }}>
         {/* Chat body here */}
-        <FlatList
+        <MyFlatList
           data={messages}
-          style={[styles.bgPrimaryTransParent, styles.fullWidth, { paddingHorizontal: 4 }]}
+          style={[styles.bgPrimaryTransParent, styles.fullWidth, { paddingHorizontal: 4, }]}
+          contentContainerStyle={{ height: SCREEN_HEIGHT - 280 }}
           renderItem={({ item }) => (
             <ChatBubble
               message={item.message}
@@ -43,8 +43,8 @@ const ChatScreen = () => {
         />
 
         {/* Chat Footer here */}
-        <View style={[styles.row, styles.fullWidth, styles.bgLight, spacing.ph1]}>
-          <TouchableOpacity style={[styles.btn, styles.round, styles.border, { width: 48, height: 48 }]}>
+        <View style={[styles.row, styles.fullWidth, styles.bgLight, spacing.ph1, { alignItems: 'center', }]}>
+          <TouchableOpacity style={[styles.btn, styles.border, layouts.circle12]}>
             <Ionicons name="add" size={32} color="black" />
           </TouchableOpacity>
           <EllipticalInput
@@ -53,7 +53,7 @@ const ChatScreen = () => {
             value={message} />
 
           <TouchableOpacity
-            style={[styles.btn, styles.round, styles.bgInfo, { width: 48, height: 48, justifyContent: "flex-end" }]}
+            style={[styles.btn, styles.bgInfo, layouts.circle12, { justifyContent: 'flex-end' }]}
             onPress={() => handleSendMessage(message)}
           >
             <Ionicons name="send" size={28} color={LIGHT} />
