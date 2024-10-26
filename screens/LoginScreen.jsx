@@ -1,23 +1,38 @@
+import { useState, useEffect } from "react";
 import {
   KeyboardAvoidingView,
   View,
   Platform,
   ScrollView,
+  Text,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
 import MyImageBackground from "../components/MyImageBackground";
 import { H1, H5, Span, H2 } from "../components/text";
 import MyTextInput from "../components/input/MyTextInput";
 import Button from "../components/buttons/Button";
-
-import { layouts, spacing, typography, styles } from "../styles";
+import { styles } from "../styles/components.styles";
+import { layouts, spacing, typography } from "../styles";
 
 export default function LoginScreen() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigation = useNavigation();
 
+  useEffect(() => {
+    setError("");
+  }, []);
+
   const onSubmit = () => {
-    navigation.navigate('attendancePunch')
+    const fakeEmail = "abc@xyz.com";
+    const fakePassword = "123";
+
+    if (username === fakeEmail && password === fakePassword) {
+      navigation.navigate("attendancePunch");
+    } else {
+      setError("Please provide the correct credentials");
+    }
   };
 
   return (
@@ -33,14 +48,36 @@ export default function LoginScreen() {
           behavior={Platform.OS === "ios" ? "padding" : "height"}
           style={spacing.mb5}
         >
-          <MyTextInput title="Username" type="text" placeholder="abc@rsrobotic.com" />
+          <MyTextInput
+            title="Username"
+            type="text"
+            placeholder="abc@xyz.com"
+            value={username}
+            onChangeText={setUsername}
+          />
           <MyTextInput
             title="Password"
             type="password"
             secureTextEntry={true}
+            value={password}
+            onChangeText={setPassword}
           />
 
+          {error ? (
+            <Text style={{ color: "red", marginBottom: 10 }}>{error}</Text>
+          ) : null}
+
           <Span style={styles.rightLink}>Forgot Password?</Span>
+          <Button
+            style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
+            onPress={onSubmit}
+          >
+            <H2
+              style={[styles.btnText, styles.textLarge, typography.textLight]}
+            >
+              Login
+            </H2>
+          </Button>
         </KeyboardAvoidingView>
         <Button
           style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
@@ -54,40 +91,6 @@ export default function LoginScreen() {
           </H2>
         </Button>
       </ScrollView>
-
-      {/* {popupVisible && (
-        <ModalPopup
-          visible={popupVisible}
-          close={() => setPopupVisible((prev) => !prev)}
-          negativeButton="Cancel"
-          positiveButton="Login"
-          action={() => { }}
-        >
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate("homeScreen");
-              setPopupVisible(false);
-            }}
-            activeOpacity={0.9}
-            style={{ alignItems: "center", marginBottom: 4 }}
-          >
-            <Avatar
-              // style={{ height: "40px" }}
-              name="Rohit"
-              avatar="https://cbx-prod.b-cdn.net/COLOURBOX24637694.jpg?width=800&height=800&quality=70"
-              style={{ width: 120, height: 120 }}
-            />
-          </TouchableOpacity>
-
-          <Text style={styles.message} numberOfLines={1}>
-            Put your finger on above sensor to create attendance!!
-          </Text>
-        </ModalPopup>
-      )} */}
     </MyImageBackground>
   );
 }
-
-// navigate is like href from any page to any page
-// goBack only push to previous page in stack
-// cangoBack allows or disallows back propagation

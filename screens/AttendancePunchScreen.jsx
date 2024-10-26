@@ -11,7 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 import { H2 } from "../components/text";
 
 export default function AttendancePunchScreen() {
-  const navigation = useNavigation(); // Get navigation instance
+  const navigation = useNavigation();
   const [permission, requestPermission] = useCameraPermissions();
   const [location, setLocation] = useState(null);
   const [markerLocation, setMarkerLocation] = useState(null);

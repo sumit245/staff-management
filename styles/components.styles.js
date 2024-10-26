@@ -392,10 +392,6 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     color: "#666",
   },
-  profileContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
   profileImage: {
     width: 30,
     height: 30,
@@ -648,13 +644,13 @@ export const styles = StyleSheet.create({
   },
 
   scrollContainer: {
-    flex: 1, // Ensures ScrollView fills the available space
-    backgroundColor: LIGHT, // Apply your background color
+    flex: 1,
+    backgroundColor: LIGHT,
   },
   scrollViewContent: {
-    paddingVertical: 20, // Add padding for the content
-    paddingHorizontal: 16, // Adjust horizontal padding
-    alignItems: "center", // Ensures content is centered
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    alignItems: "center",
   },
   tabContainer: {
     marginTop: 16,
