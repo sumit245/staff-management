@@ -8,9 +8,10 @@ import PurchaseOrderScreen from "../screens/PurchaseOrderScreen";
 import FormScreen from "../screens/FormScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import PrivacyPolicy from "../screens/PrivacyPolicy";
-import TaskList from "../screens/TaskList";
+// import TaskList from "../screens/TaskList";
 import AttendancePunchScreen from '../screens/AttendancePunchScreen'
 import ProjectTimeline from "../screens/ProjectTimeline";
+import TaskList from "../components/card/CardTask";
 
 //import HolidayListScreen from "../screens/HolidayListScreen";
 //import ProfileScreen from "../screens/ProfileScreen";
@@ -27,7 +28,7 @@ const Stack = createNativeStackNavigator();
 export default function MyStackNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="dashboardScreen"
+      initialRouteName="loginScreen"
       screenOptions={{
         headerShown: false,
       }}

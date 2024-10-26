@@ -13,6 +13,7 @@ import MyTextInput from "../components/input/MyTextInput";
 import Button from "../components/buttons/Button";
 import { styles } from "../styles/components.styles";
 import { layouts, spacing, typography } from "../styles";
+import { login } from "../redux/actions";
 
 export default function LoginScreen() {
   const [username, setUsername] = useState("");
@@ -25,10 +26,8 @@ export default function LoginScreen() {
   }, []);
 
   const onSubmit = () => {
-    const fakeEmail = "abc@xyz.com";
-    const fakePassword = "123";
-
-    if (username === fakeEmail && password === fakePassword) {
+    const result = login(username, password);
+    if (result) {
       navigation.navigate("attendancePunch");
     } else {
       setError("Please provide the correct credentials");
@@ -68,16 +67,6 @@ export default function LoginScreen() {
           ) : null}
 
           <Span style={styles.rightLink}>Forgot Password?</Span>
-          <Button
-            style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-            onPress={onSubmit}
-          >
-            <H2
-              style={[styles.btnText, styles.textLarge, typography.textLight]}
-            >
-              Login
-            </H2>
-          </Button>
         </KeyboardAvoidingView>
         <Button
           style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}

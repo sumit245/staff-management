@@ -9,6 +9,8 @@ import MyHeader from "../components/header/MyHeader";
 import Button from "../components/buttons/Button";
 import { useNavigation } from "@react-navigation/native";
 import { H2 } from "../components/text";
+import { punchIn } from "../redux/actions";
+import moment from "moment";
 
 export default function AttendancePunchScreen() {
   const navigation = useNavigation();
@@ -64,18 +66,17 @@ export default function AttendancePunchScreen() {
   }
 
   const takePictureAndNavigate = async () => {
-    navigation.navigate("homeScreen"); // Navigate to
     // TODO: Record current selfie, location and time in global state
+    if (cameraRef.current) {
 
-    // if (cameraRef.current) {
-    //   const photo = await cameraRef.current.takePictureAsync();
-    //   setPhotoUri(photo.uri);
-    //   if (!location || !photoUri) {
-    //     return;
-    //   }
-    //   console.log("Punching in with location:", location);
-    //   console.log("Photo URI:", photoUri);
-    // }
+      const photo = await cameraRef.current.takePictureAsync();
+
+      if (!location || !photo.uri) {
+        return;
+      }
+      punchIn(photo.uri, location, moment().format('DD-MM-YYYY HH:mm:ss A'))
+      navigation.navigate("homeScreen"); // Navigate to
+    }
   };
 
   return (

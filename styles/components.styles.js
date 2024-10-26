@@ -65,7 +65,6 @@ export const styles = StyleSheet.create({
     borderBottomColor: "#6c6c6c",
     borderBottomWidth: 0.5,
     height: 54,
-    margin: 0,
     paddingHorizontal: 8,
     flexDirection: "row",
     alignItems: "center",
@@ -82,8 +81,6 @@ export const styles = StyleSheet.create({
   statCard: {
     width: SCREEN_WIDTH / 2.5,
     height: SCREEN_WIDTH / 3,
-    margin: 8,
-    padding: 16,
   },
   row: {
     flexDirection: "row",

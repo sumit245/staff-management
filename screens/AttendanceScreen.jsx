@@ -7,13 +7,13 @@ import DateSelector from "../components/DateSelector";
 import { H5, P, H4, H6, H3 } from "../components/text";
 import { attendanceData, activityData } from "../utils/faker";
 import { styles, layouts, spacing, typography } from "../styles";
-import moment from "moment";
+
 
 export default function AttendanceScreen() {
 
   const [activeDate, setActiveDate] = useState("08 Sat");
   const dates = ["06 Thu", "07 Fri", "08 Sat", "09 Sun"];
-  const today = useState(moment().format('DD MMM YYYY'))
+
 
   const handleSelectDate = (date) => {
     setActiveDate(date);

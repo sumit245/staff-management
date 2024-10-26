@@ -68,6 +68,7 @@ export const spacing = StyleSheet.create({
     pl5: {
         paddingLeft: 20,
     },
+    // TODO:pr,pt,pb
 
     // Styles for horizontal margin
     mh1: {
@@ -167,6 +168,7 @@ export const spacing = StyleSheet.create({
     mr5: {
         marginRight: 20,
     },
+    // TODO:m
 
     br1: {
         borderRadius: 6
