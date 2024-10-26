@@ -21,6 +21,15 @@ export const typography = StyleSheet.create({
     textInfo: {
         color: INFO_COLOR
     },
+    textWarning: {
+      color:  WARNING_COLOR
+    },
+    textSuccess: {
+        color: SUCCESS_COLOR
+    },
+    textPrimarytransparent: {
+        color : PRIMARY_COLOR_TRANSPARENT,
+    }
     textBold: {
         fontWeight: 'bold'
     },
