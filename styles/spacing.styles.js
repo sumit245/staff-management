@@ -199,4 +199,15 @@ export const spacing = StyleSheet.create({
     br5: {
         borderRadius: 30,
     },
+
+    bw05: {
+        borderWidth: 0.5
+    },
+    bw1: {
+        borderWidth: 1
+    },
+    bw2: {
+        borderWidth: 2
+    }
+
 });

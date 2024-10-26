@@ -6,7 +6,7 @@ import { tasks } from "../utils/faker";
 import MyFlatList from "../components/utility/MyFlatList";
 import { useNavigation } from "@react-navigation/native";
 import { View, Image } from "react-native";
-import { layouts, SCREEN_WIDTH, spacing, styles, typography } from "../styles";
+import { layouts, LIGHT, SCREEN_WIDTH, spacing, styles, typography } from "../styles";
 import { H3, P } from "../components/text";
 import moment from "moment";
 import { staff } from "../utils/faker"; //TODO: This will come from reducer store
@@ -30,7 +30,7 @@ export default function DashboardScreen() {
       <View style={[styles.row, spacing.mh2, { alignItems: 'center', width: SCREEN_WIDTH - 16 }]}>
         <View>
           <H3 style={typography.textBold}>Good Morning,  {staff.first_name}</H3>
-          <P>{today}</P>
+          <P style={spacing.ml1}>{today}</P>
         </View>
         <Image
           source={{ uri: staff.image }}
@@ -39,9 +39,9 @@ export default function DashboardScreen() {
       </View>
       {/* Welcome message */}
 
-      <View>
+      <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18, }]}>
         <H3 style={typography.textBold}>My Attendance</H3>
-        <CardFullWidth>
+        <CardFullWidth backgroundColor={LIGHT}>
 
         </CardFullWidth>
       </View>

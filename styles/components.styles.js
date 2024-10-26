@@ -79,11 +79,13 @@ export const styles = StyleSheet.create({
   cardHalfWidth: {
     width: SCREEN_WIDTH / 2.2,
     height: SCREEN_WIDTH / 3,
+    elevation: 2
   },
 
   cardFullWidth: {
-    width: SCREEN_WIDTH / 1.1,
+    width: SCREEN_WIDTH / 1.05,
     height: SCREEN_WIDTH / 3,
+    elevation: 2
   },
 
   row: {

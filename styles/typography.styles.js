@@ -21,6 +21,7 @@ export const typography = StyleSheet.create({
     textInfo: {
         color: INFO_COLOR
     },
+
     textBold: {
         fontWeight: 'bold'
     },
