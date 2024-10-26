@@ -10,6 +10,7 @@ import { layouts, SCREEN_WIDTH, spacing, styles, typography } from "../styles";
 import { H3, P } from "../components/text";
 import moment from "moment";
 import { staff } from "../utils/faker"; //TODO: This will come from reducer store
+import CardFullWidth from "../components/card/CardFullWidth";
 
 
 export default function DashboardScreen() {
@@ -36,7 +37,15 @@ export default function DashboardScreen() {
           style={[layouts.circle12, spacing.mv3, layouts.center]}
         />
       </View>
-      {/* <TaskList/> */}
+      {/* Welcome message */}
+
+      <View>
+        <H3 style={typography.textBold}>My Attendance</H3>
+        <CardFullWidth>
+
+        </CardFullWidth>
+      </View>
+      {/* Attendance Data */}
 
       <MyFlatList
         data={tasks}

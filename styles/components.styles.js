@@ -33,8 +33,6 @@ export const styles = StyleSheet.create({
     fontSize: 18,
   },
 
-
-
   textInputField: {
     backgroundColor: PRIMARY_COLOR_TRANSPARENT,
     borderRadius: 6,
@@ -78,10 +76,16 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
 
-  statCard: {
-    width: SCREEN_WIDTH / 2.5,
+  cardHalfWidth: {
+    width: SCREEN_WIDTH / 2.2,
     height: SCREEN_WIDTH / 3,
   },
+
+  cardFullWidth: {
+    width: SCREEN_WIDTH / 1.1,
+    height: SCREEN_WIDTH / 3,
+  },
+
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -425,10 +429,7 @@ export const styles = StyleSheet.create({
   },
 
   // Attendancescreen
-  profileContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
+
 
   profileImage: {
     width: 50,
@@ -519,7 +520,7 @@ export const styles = StyleSheet.create({
   cardContent: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 15,
+    marginBottom: 14,
   },
   itemDetails: {
     marginLeft: 10,

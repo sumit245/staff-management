@@ -51,7 +51,7 @@ export default function MyStackNavigator() {
       {/* <Stack.Screen name="LandingPage" component={LandingPage} /> */}
       {/* <Stack.Screen name="LineItemScreen" component={LineItemScreen}/> */}
       {/* <Stack.Screen name="TermsAndConditions" component={TermsAndConditions}/> */}
-      {/* <Stack.Screen name="ApplyLeaveForm" component={ApplyLeaveForm}/> */}
+      <Stack.Screen name="ApplyLeaveForm" component={ApplyLeaveForm} />
       {/* <Stack.Screen name="AllLeaves" component={AllLeaves}/> */}
       {/* <Stack.Screen name="CheckOut" component={CheckOut}/> */}
       {/* <Stack.Screen name="SuccessModal" component={SuccessModal}/> */}

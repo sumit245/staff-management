@@ -5,7 +5,7 @@ import { styles, LIGHT, spacing } from "../../styles";
 
 export default function StatCard({ backgroundColor, tasks, status, onPress }) {
   return (
-    <TouchableOpacity style={[spacing.mb2, { ...styles.statCard, backgroundColor }]} onPress={onPress}>
+    <TouchableOpacity style={[spacing.m2, spacing.p3, spacing.br2, { ...styles.cardHalfWidth, backgroundColor }]} onPress={onPress}>
       <View style={styles.row}>
         <View>
           <H1 style={styles.titleText}>{tasks}</H1>

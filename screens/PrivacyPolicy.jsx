@@ -65,9 +65,7 @@ const PrivacyPolicy = () => {
             style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
             onPress={onSubmit}
           >
-            <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
-              Submit
-            </H2>
+            <H2>Submit</H2>
           </Button>
         </ScrollView>
       </View>
