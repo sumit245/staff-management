@@ -14,7 +14,7 @@ import AttendancePunchScreen from '../screens/AttendancePunchScreen'
 //import HolidayListScreen from "../screens/HolidayListScreen";
 //import ProfileScreen from "../screens/ProfileScreen";
 //import LandingPage from "../screens/LandingPage";
-import ProjectTimeline from "../screens/ProjectTimeline";
+// import ProjectTimeline from "../screens/ProjectTimeline";
 //import LineItemScreen from "../screens/LineItemScreen";
 //import AttendanceScreen from "../screens/AttendanceScreen";
 //import TermsAndConditions from "../screens/TermsAndConditions";
@@ -32,7 +32,7 @@ export default function MyStackNavigator() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="projectTimeLine" component={ProjectTimeline} />
+      {/* <Stack.Screen name="projectTimeLine" component={ProjectTimeline} /> */}
       <Stack.Screen name="loginScreen" component={LoginScreen} />
       <Stack.Screen name="attendancePunch" component={AttendancePunchScreen} />
       <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
