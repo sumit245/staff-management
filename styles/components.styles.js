@@ -393,10 +393,6 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     color: "#666",
   },
-  profileContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
   profileImage: {
     width: 30,
     height: 30,
