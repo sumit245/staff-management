@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Image, ScrollView } from "react-native";
+import { View, Image, ScrollView, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import moment from "moment";
 import Icon from "react-native-vector-icons/Ionicons";
@@ -19,18 +19,17 @@ import {
   typography,
 } from "../styles";
 import { staff, tasks } from "../utils/faker"; //TODO: This will come from reducer store
-import { TouchableOpacity } from "react-native";
 
 export default function DashboardScreen() {
   const navigation = useNavigation();
   const today = useState(moment().format("DD MMM YYYY"));
 
-  const navigateToNotification = () => {
-    navigation.navigate("NotificationScreen");
-  };
-
   const navigateToTaskList = () => {
     navigation.navigate("taskList");
+  };
+
+  const navigateToTaskCardScreen = () => {
+    navigation.navigate("TaskCardScreen"); // Ensure this screen is registered in your navigation stack
   };
 
   return (
@@ -128,8 +127,10 @@ export default function DashboardScreen() {
                 <P>2</P>
               </View>
               <View style={{ alignItems: "center", marginRight: 140 }}>
-                <P style={typography.textBold}>Done</P>
-                <P>2</P>
+                <TouchableOpacity onPress={navigateToTaskCardScreen}>
+                  <P style={typography.textBold}>Done</P>
+                  <P>3</P>
+                </TouchableOpacity>
               </View>
             </View>
             <TouchableOpacity style={layouts.center}></TouchableOpacity>
@@ -157,7 +158,6 @@ export default function DashboardScreen() {
       </ScrollView>
 
       {/* Attendance Data */}
-
       <MyFlatList
         data={tasks}
         renderItem={({ item }) => (

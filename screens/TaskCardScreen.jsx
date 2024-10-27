@@ -23,10 +23,10 @@ const TaskCardScreen = ({
               <Icon name="check-circle" size={20} color="#2b87b0" />
             )}
             {status === "critical" && (
-              <Icon name="warning" size={20} color="#2b87b0" />
+              <Icon name="check-circle" size={20} color="#2b87b0" />
             )}
             {status === "blocker" && (
-              <Icon name="cancel" size={20} color="#2b87b0" />
+              <Icon name="check-circle" size={20} color="#2b87b0" />
             )}
           </View>
           <View style={styles.cardInfo}>
