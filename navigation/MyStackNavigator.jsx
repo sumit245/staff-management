@@ -26,6 +26,7 @@ import AttendanceScreen from "../screens/AttendanceScreen";
 import EditProfileScreen from "../screens/EditProfileScreen";
 import SettingsScreen from "../screens/SettingScreen";
 import InternalSetting from "../screens/InternalSetting";
+import TaskCardScreen from "../screens/TaskCardScreen";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
@@ -65,6 +66,7 @@ export default function MyStackNavigator() {
       <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
       <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
       <Stack.Screen name="InternalSetting" component={InternalSetting} />
+      <Stack.Screen name="TaskCardScreen" component={TaskCardScreen} />
     </Stack.Navigator>
   );
 }
