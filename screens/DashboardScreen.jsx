@@ -129,7 +129,7 @@ export default function DashboardScreen() {
               </View>
               <View style={{ alignItems: "center", marginRight: 140 }}>
                 <P style={typography.textBold}>Done</P>
-                <P>2</P>
+                <P>3</P>
               </View>
             </View>
             <TouchableOpacity style={layouts.center}></TouchableOpacity>
