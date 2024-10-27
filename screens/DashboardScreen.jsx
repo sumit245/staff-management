@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { View, Image, ScrollView } from "react-native";
+import { View, Image, ScrollView} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import moment from "moment";
 import Icon from "react-native-vector-icons/Ionicons";
 import ContainerComponent from "../components/ContainerComponent";
 import MyFlatList from "../components/utility/MyFlatList";
-import { H2, H3, H4, H5, P } from "../components/text";
+import { H2,H3, H4, H5, P } from "../components/text";
 import CardFullWidth from "../components/card/CardFullWidth";
 import StatCard from "../components/card/Statcard";
 
@@ -52,20 +52,21 @@ export default function DashboardScreen() {
         />
       </View>
       {/* Welcome message */}
-      <ScrollView>
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
-          <CardFullWidth backgroundColor={LIGHT}>
-            <View style={[styles.row, { alignItems: "center" }]}>
-              <Icon name="alarm" size={64} color={PRIMARY_COLOR} />
-              <TouchableOpacity style={layouts.center}>
-                <Icon name="log-out-outline" size={32} color={PRIMARY_COLOR} />
-                <H4>Clock Out</H4>
-              </TouchableOpacity>
-            </View>
-            <H5>Clock started at: {moment().format("HH:mm:ss A")}</H5>
-          </CardFullWidth>
-        </View>
-
+   <ScrollView >
+      <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
+        <CardFullWidth backgroundColor={LIGHT}>
+          <View style={[styles.row, { alignItems: "center" }]}>
+            <Icon name="alarm" size={64} color={PRIMARY_COLOR} />
+            <TouchableOpacity style={layouts.center}>
+              <Icon name="log-out-outline" size={32} color={PRIMARY_COLOR} />
+              <H4>Clock Out</H4>
+            </TouchableOpacity>
+          </View>
+          <H5>Clock started at: {moment().format("HH:mm:ss A")}</H5>
+        </CardFullWidth>
+      </View>
+    
+  
         <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, { alignItems: "center" }]}>
@@ -81,7 +82,7 @@ export default function DashboardScreen() {
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="calendar-clear" size={34} color={PRIMARY_COLOR} />
-              <H5 style={[typography.textBold, { marginRight: 130 }]}>
+              <H5 style={[typography.textBold, { marginRight: 160 }]}>
                 Project Overview
               </H5>
             </View>
@@ -112,8 +113,8 @@ export default function DashboardScreen() {
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="filter" size={34} color={PRIMARY_COLOR} />
-              <H5 style={[typography.textBold, { marginRight: 130 }]}>
-                All Task Overview
+              <H5 style={[typography.textBold, { marginRight: 150 }]}>
+                All Tasks Overview
               </H5>
             </View>
             <View style={[spacing.bbw05, spacing.mv1]} />
@@ -122,25 +123,15 @@ export default function DashboardScreen() {
                 styles.row,
                 { justifyContent: "space-between", paddingVertical: 10 },
               ]}
-            >
-              <View style={{ alignItems: "center" }}>
-                <P style={typography.textBold}>To Do</P>
-                <P>2</P>
-              </View>
-              <View style={{ alignItems: "center", marginRight: 140 }}>
-                <P style={typography.textBold}>Done</P>
-                <P>3</P>
-              </View>
-            </View>
+            ></View>
             <TouchableOpacity style={layouts.center}></TouchableOpacity>
           </CardFullWidth>
         </View>
-
         <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="document-text" size={34} color={PRIMARY_COLOR} />
-              <H5 style={[typography.textBold, { marginRight: 150 }]}>
+              <H5 style={[typography.textBold, { marginRight: 180 }]}>
                 My timeSheet
               </H5>
             </View>
