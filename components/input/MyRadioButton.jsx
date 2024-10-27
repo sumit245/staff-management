@@ -1,5 +1,5 @@
 import { View, TouchableOpacity } from "react-native"
-import { styles } from "../../styles/components.styles"
+import { styles, layouts } from "../../styles"
 import { H5 } from "../text";
 
 export default function MyRadioButton({ options, selectedValue, onValueChange, title }) {
@@ -13,7 +13,7 @@ export default function MyRadioButton({ options, selectedValue, onValueChange, t
           onPress={() => onValueChange(option.value)}
         >
           <View style={styles.radioInner}>
-            {selectedValue === option.value && <View style={styles.radioDot} />}
+            {selectedValue === option.value && <View style={layouts.circle625} />}
           </View>
           <H5 style={{ fontWeight: 'bold' }}>{option.label}</H5>
         </TouchableOpacity>

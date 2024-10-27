@@ -1,15 +1,16 @@
 import { TextInput } from 'react-native'
-import { styles } from '../../styles/components.styles'
-import { PRIMARY_COLOR } from '../../styles/constant'
+import { styles, PRIMARY_COLOR, spacing, layouts } from '../../styles'
+
 
 export default function EllipticalInput({ placeholder, value, onChangeText }) {
     return (
         <TextInput
-            style={[styles.border, styles.round, styles.bgPrimaryTransParent, { flex: 1, marginHorizontal: 4, height: 48, paddingLeft: 20, fontSize: 16 }]}
+            style={[styles.border, styles.bgPrimaryTransParent, spacing.pl5, layouts.flex1, spacing.mh1, spacing.br4, { height: 48, fontSize: 16 }]}
             placeholder={placeholder}
             value={value}
             cursorColor={PRIMARY_COLOR}
             onChangeText={onChangeText}
+            multiline={true}
         />
     )
 }

@@ -1,20 +1,38 @@
 import { View } from "react-native";
 import { H4, H5, Span } from "../components/text";
-import { styles } from "../styles/components.styles";
-const PersonalInfo = ({ personalData }) => {
+import { styles, spacing, SCREEN_WIDTH, typography } from '../styles'
+const PersonalInfo = ({ data }) => {
   return (
-    <View style={styles.content}>
-      <Span style={styles.label}>Full Name</Span>
-      <H4 style={styles.value}>{personalData.fullName}</H4>
+    <View style={[spacing.mt5, spacing.mh2, { width: SCREEN_WIDTH - 16 }]}>
+      <Span style={[styles.label, spacing.mb1]}>First Name</Span>
+      <H4 style={[typography.textBold, typography.font16, spacing.mb2]}>{data.first_name}</H4>
 
-      <Span style={styles.label}>Email Address</Span>
-      <H4 style={styles.value}>{personalData.email}</H4>
+      <View style={[spacing.bbw05, spacing.mv1]} />
 
-      <Span style={styles.label}>Phone Number</Span>
-      <H4 style={styles.value}>{personalData.phone}</H4>
+      <Span style={[styles.label, spacing.mb1]}>Last Name</Span>
+      <H4 style={[typography.textBold, typography.font16, spacing.mb2]}>{data.last_name}</H4>
+      <View style={[spacing.bbw05, spacing.mv1]} />
 
-      <Span style={styles.label}>Address</Span>
-      <H4 style={styles.value}>{personalData.address}</H4>
+      <Span style={[styles.label, spacing.mb1]}>Email Address</Span>
+      <H4 style={[typography.textBold, typography.font16, spacing.mb2]}>{data.email}</H4>
+      <View style={[spacing.bbw05, spacing.mv1]} />
+
+      <Span style={[styles.label, spacing.mb1]}>Phone Number</Span>
+      <H4 style={[typography.textBold, typography.font16, spacing.mb2]}>{data.phone}</H4>
+      <View style={[spacing.bbw05, spacing.mv1]} />
+
+      <Span style={[styles.label, spacing.mb1]}>Mailing address</Span>
+      <H4 style={[typography.textBold, typography.font16, spacing.mb2]}>{data.address}</H4>
+      <View style={[spacing.bbw05, spacing.mv1]} />
+
+      <Span style={[styles.label, spacing.mb1]}>Date of Birth</Span>
+      <H4 style={[typography.textBold, typography.font16, spacing.mb2]}>{data.dob}</H4>
+      <View style={[spacing.bbw05, spacing.mv1]} />
+
+      <Span style={[styles.label, spacing.mb1]}>Gender</Span>
+      <H4 style={[typography.textBold, typography.font16, spacing.mb2, typography.textCapitalize]}>{data.gender}</H4>
+
+
     </View>
   );
 };

@@ -1,21 +1,23 @@
 import { ScrollView, TouchableOpacity } from "react-native";
-import { styles } from "../styles/components.styles";
-import { H1, H4, H5, H6 } from "./text";
+
+import { H4, H6 } from "./text";
+import { layouts, spacing, styles, } from "../styles";
 
 const DateSelector = ({ dates, activeDate, onSelectDate }) => (
   <ScrollView
     horizontal
     showsHorizontalScrollIndicator={false}
-    style={styles.dateSelector}
+    style={[spacing.ph2, spacing.mv4]}
+  // FIXME:Show page containing activeDate
   >
     {dates.map((date, index) => (
       <TouchableOpacity
         key={index}
-        style={[styles.dateItem, date === activeDate && styles.activeDate]}
-        onPress={() => onSelectDate(date)}
+        style={[spacing.mh2, spacing.p3, spacing.br2, layouts.center, date.currentDate === activeDate && styles.bgPrimary]}
+        onPress={() => onSelectDate(date.currentDate)}
       >
-        <H6 style={styles.dateNumber}>{date}</H6>
-        <H5 style={styles.dateText}>Fri</H5>
+        <H4>{date.currentDate}</H4>
+        <H6>{date.currentDay}</H6>
       </TouchableOpacity>
     ))}
   </ScrollView>

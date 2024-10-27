@@ -4,13 +4,16 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Card } from "react-native-paper";
 import ContainerComponent from "../components/ContainerComponent";
 import DateSelector from "../components/DateSelector";
-import { H5, P, H4, H6 } from "../components/text";
+import { H5, P, H4, H6, H3 } from "../components/text";
 import { attendanceData, activityData } from "../utils/faker";
-import { styles } from "../styles/components.styles";
+import { styles, layouts, spacing, typography } from "../styles";
+
 
 export default function AttendanceScreen() {
+
   const [activeDate, setActiveDate] = useState("08 Sat");
   const dates = ["06 Thu", "07 Fri", "08 Sat", "09 Sun"];
+
 
   const handleSelectDate = (date) => {
     setActiveDate(date);
@@ -19,28 +22,7 @@ export default function AttendanceScreen() {
   return (
     <ContainerComponent>
       <ScrollView>
-        <View style={styles.profileContainer}>
-          <Image
-            source={{ uri: "https://randomuser.me/api/portraits/men/5.jpg" }}
-            style={styles.profileImage}
-          />
-          <View>
-            <H5 style={styles.profileName}>Rohit Gupta</H5>
-            <P style={styles.profileTitle}>UI/UX Designer</P>
-          </View>
-          <Icon
-            name="bell-outline"
-            size={28}
-            color="#000"
-            style={styles.notificationIcon}
-          />
-        </View>
 
-        <DateSelector
-          dates={dates}
-          activeDate={activeDate}
-          onSelectDate={handleSelectDate}
-        />
 
         <H4 style={styles.sectionTitle}>Today Attendance</H4>
         <View style={styles.attendanceContainer}>

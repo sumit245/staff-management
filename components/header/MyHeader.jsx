@@ -17,15 +17,7 @@ export default function MyHeader({
   const navigation = useNavigation();
   return (
     <View style={styles.headerStyle}>
-      {/* {isBack && (
-        <View style={{ height: 54, width: 54 }}>
-          <Icon
-            name="arrow-back"
-            size={30}
-            style={{ position: "absolute", top: 10, left: 4 }}
-          />
-        </View>
-      )} */}
+
       {isBack && (
         <TouchableOpacity
           onPress={() => navigation.goBack()}

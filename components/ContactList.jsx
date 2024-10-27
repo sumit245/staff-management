@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { contactsData } from "../utils/faker";
-import { styles } from "../styles/components.styles";
+import { styles, layouts } from "../styles";
 import ContainerComponent from "./ContainerComponent";
 import SearchBar from "./input/SearchBar";
 import Avatar from "./Avatar";
@@ -34,7 +34,7 @@ export default function ContactList() {
         renderItem={({ item }) => (
           <TouchableOpacity style={styles.rowItem}>
             <Avatar avatar={item.avatar} name={item.name} online={item.online} />
-            <View style={styles.profileInfo}>
+            <View style={layouts.flex1}>
               <H4 style={[styles.textDark, { fontWeight: 'bold', fontSize: 18 }]}>{item.name}</H4>
               <Span>{item.status}</Span>
             </View>
