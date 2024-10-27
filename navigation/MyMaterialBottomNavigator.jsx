@@ -35,9 +35,8 @@ export default function MyMaterialBottomNavigator() {
           ),
         }}
       />
-
       <BottomTab.Screen
-        name="taskListScreen" // Add TaskList screen
+        name="taskListScreen" 
         component={TaskList}
         options={{
           tabBarLabel: "Tasks",
@@ -50,8 +49,8 @@ export default function MyMaterialBottomNavigator() {
         name="chatScreen"
         component={ChatScreen}
         options={{
-          tabBarLabel: "Chats",
-          tabBarBadge: "10",
+          tabBarLabel: "Messages",
+          tabBarBadge: "2",
           tabBarIcon: ({ color }) => (
             <Icon name="chatbubbles-outline" size={26} color={color} />
           ),
