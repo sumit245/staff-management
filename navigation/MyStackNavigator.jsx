@@ -9,7 +9,7 @@ import FormScreen from "../screens/FormScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import PrivacyPolicy from "../screens/PrivacyPolicy";
 // import TaskList from "../screens/TaskList";
-import AttendancePunchScreen from '../screens/AttendancePunchScreen'
+import AttendancePunchScreen from "../screens/AttendancePunchScreen";
 import ProjectTimeline from "../screens/ProjectTimeline";
 import TaskList from "../components/card/CardTask";
 
@@ -23,6 +23,7 @@ import AttendanceScreen from "../screens/AttendanceScreen";
 //import  AllLeaves from "../screens/AllLeaves"
 //import CheckOut  from "../screens/CheckOut"
 //import SuccessModal from "../components/SuccessModal";
+import EditProfileScreen from "../screens/EditProfileScreen";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
@@ -40,7 +41,10 @@ export default function MyStackNavigator() {
       <Stack.Screen name="projectTimeLine" component={ProjectTimeline} />
       <Stack.Screen name="applyLeaveForm" component={ApplyLeaveForm} />
       <Stack.Screen name="requisitions" component={RequisitionScreen} />
-      <Stack.Screen name="purchaseOrderScreen" component={PurchaseOrderScreen} />
+      <Stack.Screen
+        name="purchaseOrderScreen"
+        component={PurchaseOrderScreen}
+      />
       <Stack.Screen name="formScreen" component={FormScreen} />
       <Stack.Screen name="notificationScreen" component={NotificationScreen} />
       <Stack.Screen name="privacyPolicy" component={PrivacyPolicy} />
@@ -55,6 +59,7 @@ export default function MyStackNavigator() {
       {/* <Stack.Screen name="AllLeaves" component={AllLeaves}/> */}
       {/* <Stack.Screen name="CheckOut" component={CheckOut}/> */}
       {/* <Stack.Screen name="SuccessModal" component={SuccessModal}/> */}
+      <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
     </Stack.Navigator>
   );
 }

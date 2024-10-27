@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TouchableOpacity, } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import PersonalInfo from "../components/PersonalInfo";
 import ProfessionalInfo from "../components/ProfessionalInfo";
 import DocumentsList from "../components/DocumentsList";
@@ -12,9 +12,11 @@ import TabNavigation from "../components/TabNavigation";
 import CardFullWidth from "../components/card/CardFullWidth";
 import Avatar from "../components/Avatar";
 import Icon from "react-native-vector-icons/Ionicons";
+import { useNavigation } from "@react-navigation/native";
 
 const ProfileScreen = () => {
   const [activeTab, setActiveTab] = useState("Personal");
+  const navigation = useNavigation();
 
   const renderContent = () => {
     if (activeTab === "Personal") {
@@ -32,9 +34,16 @@ const ProfileScreen = () => {
       <MyHeader title="My Profile" isBack={true} hasIcon={true} />
       <CardFullWidth backgroundColor={PRIMARY_COLOR}>
         <View style={styles.row}>
-          <Avatar avatar={staff.image} name={staff.first_name + ' ' + staff.last_name} online={false} />
-          <TouchableOpacity style={layouts.center} >
-            <Icon name='pencil' size={24} color={LIGHT} />
+          <Avatar
+            avatar={staff.image}
+            name={`${staff.first_name} ${staff.last_name}`}
+            online={false}
+          />
+          <TouchableOpacity
+            style={layouts.center}
+            onPress={() => navigation.navigate("EditProfileScreen")}
+          >
+            <Icon name="pencil" size={24} color={LIGHT} />
             <Span style={typography.textLight}>EDIT</Span>
           </TouchableOpacity>
         </View>
@@ -45,10 +54,8 @@ const ProfileScreen = () => {
         setCurrentTab={setActiveTab}
       />
       {renderContent()}
-
     </ContainerComponent>
   );
 };
 
 export default ProfileScreen;
-
