@@ -3,7 +3,6 @@ import Icon from "react-native-vector-icons/Ionicons";
 import DashboardScreen from "../screens/DashboardScreen";
 import ChatScreen from "../screens/ChatScreen";
 import SettingsScreen from "../screens/SettingScreen";
-//import ProjectScreen from "../screens/ProjectScreen";
 import TaskList from "../screens/TaskList";
 
 import { INFO_COLOR, LIGHT, PRIMARY_COLOR } from "../styles/constant";
@@ -36,22 +35,14 @@ export default function MyMaterialBottomNavigator() {
           ),
         }}
       />
-      {/* <BottomTab.Screen
-                name='projectScreen'
-                component={ProjectScreen}
-                options={{
-                    tabBarLabel: 'Projects',
-                    tabBarIcon: ({ color }) =>
-                        <Icon name="grid-outline" size={26} color={color} />
-                }}
-            /> */}
+
       <BottomTab.Screen
         name="taskListScreen" // Add TaskList screen
         component={TaskList}
         options={{
           tabBarLabel: "Tasks",
           tabBarIcon: ({ color }) => (
-           <Icon name="grid-outline" size={26} color={color}/>
+            <Icon name="grid-outline" size={26} color={color} />
           ),
         }}
       />
@@ -79,88 +70,3 @@ export default function MyMaterialBottomNavigator() {
     </BottomTab.Navigator>
   );
 }
-
-// import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
-// import Icon from "react-native-vector-icons/Ionicons";
-
-// import DashboardScreen from "../screens/DashboardScreen";
-// import ChatScreen from "../screens/ChatScreen";
-// import SettingsScreen from "../screens/SettingScreen";
-// import ProjectScreen from "../screens/ProjectScreen";
-// import TaskList from "../screens/TaskList"; // Import TaskList
-
-// import { INFO_COLOR, LIGHT, PRIMARY_COLOR } from "../styles/constant";
-
-// const BottomTab = createMaterialBottomTabNavigator();
-
-// export default function MyMaterialBottomNavigator() {
-//   return (
-//     <BottomTab.Navigator
-//       initialRouteName="dashboardScreen"
-//       activeColor={PRIMARY_COLOR}
-//       inactiveColor={INFO_COLOR}
-//       activeIndicatorStyle={{ backgroundColor: "transparent" }}
-//       barStyle={{
-//         backgroundColor: LIGHT,
-//         height: 70,
-//         borderTopWidth: 0.5,
-//         borderTopColor: "#6c6c6c",
-//         paddingTop: 0,
-//       }}
-//     >
-//       <BottomTab.Screen
-//         name="dashboardScreen"
-//         component={DashboardScreen}
-//         options={{
-//           tabBarLabel: "Home",
-//           tabBarIcon: ({ color }) => (
-//             <Icon name="desktop-outline" size={26} color={color} />
-//           ),
-//         }}
-//       />
-//       <BottomTab.Screen
-//         name="projectScreen"
-//         component={ProjectScreen}
-//         options={{
-//           tabBarLabel: "Projects",
-//           tabBarIcon: ({ color }) => (
-//             <Icon name="grid-outline" size={26} color={color} />
-//           ),
-//           // Navigate to TaskList on press
-//           tabBarOnPress: () => navigation.navigate("TaskList"),
-//         }}
-//       />
-//       <BottomTab.Screen
-//         name="chatScreen"
-//         component={ChatScreen}
-//         options={{
-//           tabBarLabel: "Chats",
-//           tabBarBadge: "10",
-//           tabBarIcon: ({ color }) => (
-//             <Icon name="chatbubbles-outline" size={26} color={color} />
-//           ),
-//         }}
-//       />
-//       <BottomTab.Screen
-//         name="settingsScreen"
-//         component={SettingsScreen}
-//         options={{
-//           tabBarLabel: "Me",
-//           tabBarIcon: ({ color }) => (
-//             <Icon name="person-outline" size={26} color={color} />
-//           ),
-//         }}
-//       />
-//       <BottomTab.Screen
-//         name="taskListScreen" // Add TaskList screen
-//         component={TaskList}
-//         options={{
-//           tabBarLabel: "Tasks",
-//           tabBarIcon: ({ color }) => (
-//             <Icon name="checkmark-done-outline" size={26} color={color} />
-//           ),
-//         }}
-//       />
-//     </BottomTab.Navigator>
-//   );
-// }

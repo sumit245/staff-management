@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image, Dimensions } from "react-native";
 import { Card, Avatar, IconButton, ProgressBar } from "react-native-paper";
 import Icon from "react-native-vector-icons/Ionicons";
 import ContainerComponent from "../components/ContainerComponent";
@@ -10,7 +10,12 @@ import {
 } from "../utils/faker";
 import ToDo from "../components/input/ToDo";
 import { styles } from "../styles/components.styles";
-import { H1, H3, H4, H5, H6, P } from "../components/text";
+import { H3, H5, H6 } from "../components/text";
+
+import { layouts, spacing, typography, LIGHT } from "../styles";
+import { staff, tasks } from "../utils/faker";
+
+const SCREEN_WIDTH = Dimensions.get("window").width;
 
 const TaskList = () => {
   const [activeStatus, setActiveStatus] = useState("toDo");
@@ -30,14 +35,23 @@ const TaskList = () => {
         icon={"search-outline"}
       />
 
-      <Card style={styles.card}>
-        <Card.Content>
-          <View style={styles.header}>
-            <H4 style={styles.greeting}>Good morning, Rohit!</H4>
-            <IconButton icon="bell" size={24} onPress={() => {}} />
-            <Avatar.Image
-              size={40}
-              source={{ uri: "https://randomuser.me/api/portraits/men/1.jpg" }}
+      <Card>
+        <Card.Content backgroundColor={LIGHT}>
+          <View
+            style={[
+              styles.row,
+              spacing.mh2,
+              { alignItems: "center", width: SCREEN_WIDTH - 32 },
+            ]}
+          >
+            <View>
+              <H3 style={typography.textBold}>
+                Good Morning, {staff.first_name}
+              </H3>
+            </View>
+            <Image
+              source={{ uri: staff.image }}
+              style={[layouts.circle12, spacing.mv3, layouts.center]}
             />
           </View>
 
@@ -82,11 +96,10 @@ const TaskList = () => {
             </TouchableOpacity>
           </View>
 
-          {/* Conditional rendering based on activeStatus */}
           {activeStatus === "toDo" && (
             <ToDo
               projects={projects}
-              setProjects={setProjects} // Pass setProjects to child
+              setProjects={setProjects}
               checkedProject={checkedProject}
               setCheckedProject={setCheckedProject}
               handleTaskProgress={handleTaskProgress}
@@ -121,7 +134,7 @@ const TaskList = () => {
           )}
 
           {activeStatus === "complete" && (
-            <Text style={styles.completedText}></Text>
+            <Text style={styles.completedText}>All tasks are complete!</Text>
           )}
         </Card.Content>
       </Card>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { View, TouchableOpacity } from "react-native";
 import PersonalInfo from "../components/PersonalInfo";
-import ProfessionalInfo from "../components/ProfessionalInfo";
 import JobInfo from "../components/JobInfo";
 import DocumentsList from "../components/DocumentsList";
 import ContainerComponent from "../components/ContainerComponent";
@@ -22,8 +21,6 @@ const ProfileScreen = () => {
   const renderContent = () => {
     if (activeTab === "Personal") {
       return <PersonalInfo data={staff} />;
-    } else if (activeTab === "Professional") {
-      return <ProfessionalInfo professionalData={staff} />;
     } else if (activeTab === "Job Info") {
       return <JobInfo jobData={staff} />;
     } else if (activeTab === "Documents") {

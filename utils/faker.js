@@ -303,9 +303,9 @@ export const contactsData = [
 export const menuItems = [
   { label: "Reports", page: "", icon: "pie-chart-outline" },
   { label: "Events", page: "", icon: "calendar-outline" },
-  { label: "My Purchases", page: "requisitions", icon: "cart-outline" },
+  { label: "My Purchases", icon: "cart-outline" },
   { label: "My Projects", page: "", icon: "grid-outline" },
-  { label: "My Tasks", page: "", icon: "grid-outline" },
+  { label: "My Tasks", page: "requisitions", icon: "grid-outline" },
   { label: "My Notes", page: "NotificationScreen", icon: "reader-outline" },
   { label: "Settings", page: "", icon: "cog-outline" },
 ];
@@ -316,7 +316,7 @@ export const internal = [
     icon: "notifications-outline",
   },
   { label: "Privacy", page: "privacyPolicy", icon: "shield-checkmark-outline" },
-  { label: "Data Usage",page:"", icon: "folder-outline" },
+  { label: "Data Usage", page: "", icon: "folder-outline" },
 ];
 
 export const notifications = [
@@ -680,7 +680,7 @@ export const staff = {
   skype: "",
   language: "",
   last_online: "2024-10-03 05:41:49",
-  file: "",
+  file: "file-pdf",
   size: "",
   uploaded_by: "rakesh sharma",
   created_date: "",

@@ -7,7 +7,6 @@ import SearchBar from "../components/input/SearchBar";
 import MyHeader from "../components/header/MyHeader";
 import Button from "../components/buttons/Button";
 import { styles } from "../styles/components.styles";
-//import {styles} from "../styles/temp.styles"
 import { H2, H5, H6, P } from "../components/text";
 
 const RequisitionScreen = ({ navigation }) => {
