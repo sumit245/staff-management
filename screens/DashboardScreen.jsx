@@ -2,19 +2,27 @@ import { useState } from "react";
 import { View, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import moment from "moment";
-import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from "react-native-vector-icons/Ionicons";
 import ContainerComponent from "../components/ContainerComponent";
 import MyFlatList from "../components/utility/MyFlatList";
 import { H3, H4, H5, P } from "../components/text";
 import CardFullWidth from "../components/card/CardFullWidth";
 import StatCard from "../components/card/Statcard";
-import { layouts, LIGHT, PRIMARY_COLOR, SCREEN_WIDTH, spacing, styles, typography } from "../styles";
+import {
+  layouts,
+  LIGHT,
+  PRIMARY_COLOR,
+  SCREEN_WIDTH,
+  spacing,
+  styles,
+  typography,
+} from "../styles";
 import { staff, tasks } from "../utils/faker"; //TODO: This will come from reducer store
 import { TouchableOpacity } from "react-native";
 
 export default function DashboardScreen() {
   const navigation = useNavigation();
-  const today = useState(moment().format('DD MMM YYYY'))
+  const today = useState(moment().format("DD MMM YYYY"));
 
   const navigateToNotification = () => {
     navigation.navigate("NotificationScreen");
@@ -26,9 +34,15 @@ export default function DashboardScreen() {
 
   return (
     <ContainerComponent>
-      <View style={[styles.row, spacing.mh2, { alignItems: 'center', width: SCREEN_WIDTH - 16 }]}>
+      <View
+        style={[
+          styles.row,
+          spacing.mh2,
+          { alignItems: "center", width: SCREEN_WIDTH - 16 },
+        ]}
+      >
         <View>
-          <H3 style={typography.textBold}>Good Morning,  {staff.first_name}</H3>
+          <H3 style={typography.textBold}>Good Morning, {staff.first_name}</H3>
           <P style={spacing.ml1}>{today}</P>
         </View>
         <Image
@@ -37,6 +51,7 @@ export default function DashboardScreen() {
         />
       </View>
       {/* Welcome message */}
+     
 
       <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18, }]}>
         <H3 style={typography.textBold}>My Attendance</H3>
@@ -51,6 +66,8 @@ export default function DashboardScreen() {
           <H5>Clock started at: {moment().format('HH:mm:ss A')}</H5>
         </CardFullWidth>
       </View>
+      
+
       {/* Attendance Data */}
 
       <MyFlatList
@@ -61,17 +78,15 @@ export default function DashboardScreen() {
             backgroundColor={item.backgroundColor}
             tasks={item.count}
             status={item.status}
-            onPress={
-              item.id === 1 ? navigateToTaskList : null
-            }
+            onPress={item.id === 1 ? navigateToTaskList : null}
           />
         )}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
-        ListHeaderComponent={() => <H3 style={[typography.textBold, spacing.m2]}>My Projects</H3>}
+        ListHeaderComponent={() => (
+          <H3 style={[typography.textBold, spacing.m2]}>My Projects</H3>
+        )}
       />
     </ContainerComponent>
   );
 }
-
-

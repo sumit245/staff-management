@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { View, TextInput, Text, StyleSheet } from "react-native";
+import { View, TextInput } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
 import { styles, spacing, SCREEN_WIDTH, typography } from "../styles";
 import MyHeader from "../components/header/MyHeader";
-import { H2 } from "../components/text";
-import Button from "../components/buttons/Button"; 
+import { H2, P } from "../components/text";
+import Button from "../components/buttons/Button";
 
 const EditProfileScreen = () => {
   const [email, setEmail] = useState("");
@@ -19,14 +19,14 @@ const EditProfileScreen = () => {
     <ContainerComponent>
       <MyHeader title="Edit Profile" isBack={true} />
       <View style={[spacing.mt5, spacing.mh2, { width: SCREEN_WIDTH - 16 }]}>
-        <Text style={styles.label}>Current Password</Text>
+        <P style={styles.label}>Current Password</P>
         <TextInput
           style={styles.input}
           placeholder="Enter current password"
           value={password}
           onChangeText={setEmail}
         />
-        <Text style={styles.label}> New Password</Text>
+        <P style={styles.label}> New Password</P>
         <TextInput
           style={styles.input}
           placeholder="Enter new password"
@@ -34,7 +34,7 @@ const EditProfileScreen = () => {
           secureTextEntry
           onChangeText={setPassword}
         />
-        <Text style={styles.label}>Confirm  New Password</Text>
+        <P style={styles.label}>Confirm New Password</P>
         <TextInput
           style={styles.input}
           placeholder="Confirm new password"
