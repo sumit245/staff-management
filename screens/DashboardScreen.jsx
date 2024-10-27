@@ -82,7 +82,7 @@ export default function DashboardScreen() {
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="calendar-clear" size={34} color={PRIMARY_COLOR} />
-              <H5 style={[typography.textBold, { marginRight: 150 }]}>
+              <H5 style={[typography.textBold, { marginRight: 160 }]}>
                 Project Overview
               </H5>
             </View>
@@ -131,7 +131,7 @@ export default function DashboardScreen() {
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="document-text" size={34} color={PRIMARY_COLOR} />
-              <H5 style={[typography.textBold, { marginRight: 150 }]}>
+              <H5 style={[typography.textBold, { marginRight: 180 }]}>
                 My timeSheet
               </H5>
             </View>
