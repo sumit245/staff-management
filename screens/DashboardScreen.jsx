@@ -32,6 +32,10 @@ export default function DashboardScreen() {
     navigation.navigate("TaskCardScreen"); // Ensure this screen is registered in your navigation stack
   };
 
+  const navigateToToDoTaskCardScreen = () => {
+    navigation.navigate("ToDoTaskCardScreen"); // Ensure this screen is registered in your navigation stack
+  };
+
   return (
     <ContainerComponent>
       <View
@@ -123,13 +127,15 @@ export default function DashboardScreen() {
               ]}
             >
               <View style={{ alignItems: "center" }}>
-                <P style={typography.textBold}>To Do</P>
-                <P>2</P>
+                <TouchableOpacity onPress={navigateToToDoTaskCardScreen}>
+                  <P style={typography.textBold}>To Do</P>
+                  <P style={spacing.ml2}>2</P>
+                </TouchableOpacity>
               </View>
               <View style={{ alignItems: "center", marginRight: 140 }}>
                 <TouchableOpacity onPress={navigateToTaskCardScreen}>
                   <P style={typography.textBold}>Done</P>
-                  <P>3</P>
+                  <P style={spacing.ml2}>3</P>
                 </TouchableOpacity>
               </View>
             </View>

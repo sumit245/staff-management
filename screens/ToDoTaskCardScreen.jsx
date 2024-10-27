@@ -4,7 +4,7 @@ import { Card } from "react-native-elements";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import ContainerComponent from "../components/ContainerComponent";
 
-// TaskCard component to display each task
+
 const ToDoTaskCard = ({
   id,
   title,
