@@ -24,7 +24,7 @@ const RequisitionScreen = ({ navigation }) => {
   };
 
   const handleSearchIconPress = () => {
-    navigation.navigate("PurchaseOrderScreen"); //  purchase order screen
+    navigation.navigate("purchaseOrderScreen");
   };
 
   return (
@@ -34,9 +34,8 @@ const RequisitionScreen = ({ navigation }) => {
           isBack={true}
           title="Requisitions For Release"
           hasIcon={true}
-          //icon="pen-to-square"
           icon="pencil"
-          onIconPress={handleSearchIconPress}
+          onIconPress={handleSearchIconPress} // This will trigger navigation to PurchaseOrderScreen
         />
 
         <SearchBar
@@ -62,7 +61,6 @@ const RequisitionScreen = ({ navigation }) => {
 
         <Button
           style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-          // onPress={onSubmit}
         >
           <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
             Create Receipt
