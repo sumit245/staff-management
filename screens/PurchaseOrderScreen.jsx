@@ -43,7 +43,7 @@ const PurchaseOrderScreen = () => {
   };
 
   const navigateToFormScreen = () => {
-    navigation.navigate("FormScreen"); // Navigate to FormScreen
+    navigation.navigate("formScreen"); // Navigate to FormScreen
   };
 
   return (
