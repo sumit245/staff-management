@@ -1,13 +1,13 @@
 import {
-  INFO_COLOR,
-  PRIMARY_COLOR,
-  PRIMARY_COLOR_TRANSPARENT,
-  SECONDARY_COLOR,
-  LIGHT,
-  DANGER_COLOR,
-  DARK,
-  WARNING_COLOR,
-  SUCCESS_COLOR,
+    PRIMARY_COLOR,
+    PRIMARY_COLOR_TRANSPARENT,
+    SECONDARY_COLOR,
+    WARNING_COLOR,
+    INFO_COLOR,
+    DANGER_COLOR,
+    SUCCESS_COLOR,
+    LIGHT,
+    DARK
 } from "./constant";
 
 import { StyleSheet } from "react-native";
@@ -32,13 +32,13 @@ export const typography = StyleSheet.create({
         color: INFO_COLOR
     },
     textWarning: {
-      color:  WARNING_COLOR
+        color: WARNING_COLOR
     },
     textSuccess: {
         color: SUCCESS_COLOR
     },
-    textPrimarytransparent: {
-        color : PRIMARY_COLOR_TRANSPARENT,
+    textPrimaryTransparent: {
+        color: PRIMARY_COLOR_TRANSPARENT,
     },
     textBold: {
         fontWeight: 'bold'
@@ -56,6 +56,11 @@ export const typography = StyleSheet.create({
     },
     font20: {
         fontSize: 20
+    },
+
+    // uppercase,lowercase,capitalize
+    textCapitalize: {
+        textTransform: 'capitalize'
     }
 
 })

@@ -49,7 +49,7 @@ export default function LoginScreen() {
         >
           <MyTextInput
             title="Username"
-            type="text"
+            type="email"
             placeholder="abc@xyz.com"
             value={username}
             onChangeText={setUsername}
