@@ -1,4 +1,14 @@
-import { INFO_COLOR, PRIMARY_COLOR, PRIMARY_COLOR_TRANSPARENT, SECONDARY_COLOR, LIGHT, DANGER_COLOR, DARK } from "./constant";
+import {
+  INFO_COLOR,
+  PRIMARY_COLOR,
+  PRIMARY_COLOR_TRANSPARENT,
+  SECONDARY_COLOR,
+  LIGHT,
+  DANGER_COLOR,
+  DARK,
+  WARNING_COLOR,
+  SUCCESS_COLOR,
+} from "./constant";
 
 import { StyleSheet } from "react-native";
 
