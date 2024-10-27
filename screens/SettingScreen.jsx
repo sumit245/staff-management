@@ -28,6 +28,11 @@ export default function SettingsScreen() {
     navigation.navigate("requisitions");
   };
 
+  const handleHolidayList = () => {
+    console.log("Navigating to HolidayListScreen");
+    navigation.navigate("HolidayListScreen");
+  };
+
   return (
     <ContainerComponent justifyContent="space-between">
       <ProfileCard
@@ -46,7 +51,9 @@ export default function SettingsScreen() {
               if (item.label === "Settings") {
                 handleInternalSetting();
               } else if (item.label === "My Purchases") {
-                handlerequisitions(); // Navigate to RequisitionScreen
+                handlerequisitions();
+              } else if (item.label === "Events") {
+                handleHolidayList(); // Navigate to HolidayListScreen
               } else {
                 navigation.navigate(item.page);
               }

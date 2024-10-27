@@ -275,7 +275,7 @@ export const menuItems = [
   { label: "Events", page: "", icon: "calendar-outline" },
   { label: "My Purchases", icon: "cart-outline" },
   { label: "My Projects", page: "", icon: "grid-outline" },
-  { label: "My Tasks", page: "requisitions", icon: "grid-outline" },
+  { label: "My Tasks", page: "", icon: "grid-outline" },
   { label: "My Notes", page: "NotificationScreen", icon: "reader-outline" },
   { label: "Settings", page: "", icon: "cog-outline" },
 ];

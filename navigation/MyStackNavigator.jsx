@@ -13,7 +13,7 @@ import AttendancePunchScreen from "../screens/AttendancePunchScreen";
 import ProjectTimeline from "../screens/ProjectTimeline";
 import TaskList from "../components/card/CardTask";
 
-//import HolidayListScreen from "../screens/HolidayListScreen";
+import HolidayListScreen from "../screens/HolidayListScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 //import LandingPage from "../screens/LandingPage";
 //import LineItemScreen from "../screens/LineItemScreen";
@@ -27,6 +27,7 @@ import EditProfileScreen from "../screens/EditProfileScreen";
 import SettingsScreen from "../screens/SettingScreen";
 import InternalSetting from "../screens/InternalSetting";
 import TaskCardScreen from "../screens/TaskCardScreen";
+import ToDoTaskCardScreen from "../screens/ToDoTaskCardScreen";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
@@ -55,9 +56,9 @@ export default function MyStackNavigator() {
       <Stack.Screen name="taskList" component={TaskList} />
       <Stack.Screen name="attendanceScreen" component={AttendanceScreen} />
       <Stack.Screen name="profileScreen" component={ProfileScreen} />
-      {/* <Stack.Screen name="HolidayListScreen" component={HolidayListScreen} /> */}
+      <Stack.Screen name="HolidayListScreen" component={HolidayListScreen} />
       {/* <Stack.Screen name="LandingPage" component={LandingPage} /> */}
-      {/* <Stack.Screen name="LineItemScreen" component={LineItemScreen}/> */}
+      {/* <Stack.Screen name="LineItemScreen" component={LineItemScreen} /> */}
       {/* <Stack.Screen name="TermsAndConditions" component={TermsAndConditions}/> */}
       <Stack.Screen name="ApplyLeaveForm" component={ApplyLeaveForm} />
       {/* <Stack.Screen name="AllLeaves" component={AllLeaves}/> */}
@@ -67,6 +68,7 @@ export default function MyStackNavigator() {
       <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
       <Stack.Screen name="InternalSetting" component={InternalSetting} />
       <Stack.Screen name="TaskCardScreen" component={TaskCardScreen} />
+      <Stack.Screen name="ToDoTaskCardScreen" component={ToDoTaskCardScreen} />
     </Stack.Navigator>
   );
 }
