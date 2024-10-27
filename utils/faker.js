@@ -301,13 +301,13 @@ export const contactsData = [
 ];
 
 export const menuItems = [
-  { label: "Account", icon: "person-outline" },
-  { label: "My Purchase", icon: "cart-outline" },
-  // { label: "Appearance", icon: "sunny-outline" },
-  { label: "Notification", icon: "notifications-outline" },
-  { label: "Privacy", icon: "shield-checkmark-outline" },
-  { label: "Data Usage", icon: "folder-outline" },
-  { label: "Help", icon: "help-circle-outline" },
+  { label: "Reports", page: '', icon: "pie-chart-outline" },
+  { label: "Events", page: '', icon: "calendar-outline" },
+  { label: "My Purchases", page: 'requisitions', icon: "cart-outline" },
+  { label: "My Projects", page: 'requisitions', icon: "grid-outline" },
+  { label: "My Tasks", page: 'requisitions', icon: "grid-outline" },
+  { label: "My Notes", page: 'NotificationScreen', icon: "reader-outline" },
+  { label: "Settings", page: '', icon: "cog-outline" },
 ];
 
 export const notifications = [

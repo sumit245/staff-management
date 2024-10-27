@@ -208,6 +208,9 @@ export const spacing = StyleSheet.create({
     },
     bw2: {
         borderWidth: 2
+    },
+    bbw05: {
+        borderBottomWidth: 0.5
     }
 
 });

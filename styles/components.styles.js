@@ -100,12 +100,10 @@ export const styles = StyleSheet.create({
   },
   chipButton: {
     borderWidth: 1,
-    borderColor: SECONDARY_COLOR,
     borderRadius: 6,
     padding: 4,
-    marginRight: 4,
-    backgroundColor: LIGHT,
-    width: SCREEN_WIDTH / 3.5,
+    margin: 4,
+    width: SCREEN_WIDTH / 4,
   },
   btn: {
     marginVertical: 8,
@@ -337,12 +335,7 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     color: "#020409",
   },
-  // Profile
-  tabsContainer: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginBottom: 20,
-  },
+
   tabButton: {
     paddingVertical: 10,
     paddingHorizontal: 15,
@@ -359,19 +352,11 @@ export const styles = StyleSheet.create({
     color: PRIMARY_COLOR,
     fontWeight: "bold",
   },
-  content: {
-    marginTop: 20,
-  },
   label: {
     fontSize: 14,
     color: "#888",
   },
-  value: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 15,
-    color: "#333",
-  },
+
   documentRow: {
     flexDirection: "row",
     justifyContent: "space-between",
