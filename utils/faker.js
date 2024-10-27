@@ -124,7 +124,6 @@ export const dummyMessages = [
     isSent: false,
     time: "12:53:42 pm",
   },
-  
 ];
 
 export const items = [

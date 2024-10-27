@@ -5,7 +5,6 @@ import MyNavigationContainer from "./navigation/MyNavigationContainer";
 import { checkPermissions } from "./utils/checkPermissions";
 
 export default function App() {
-
   return (
     <PaperProvider>
       <MyNavigationContainer />
