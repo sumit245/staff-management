@@ -8,34 +8,24 @@ import { H5 } from "../components/text";
 import { DANGER_COLOR } from "../styles/constant";
 import Icon from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
+import { staff } from "../utils/faker";
 
 export default function SettingsScreen() {
   const navigation = useNavigation();
-  const [isHovered, setIsHovered] = useState(false);
 
-  const handleMenuItemPress = (label) => {
-    if (label === "My Purchase") {
-      navigation.navigate("Requisitions");
-    } else if (label === "Notification") {
-      navigation.navigate("NotificationScreen");
-    } else if (label === "Privacy") {
-      navigation.navigate("PrivacyPolicy");
-    } else {
-      console.log(label);
-    }
-  };
 
   const handleLogoutPress = () => {
-    console.log("Logout pressed"); 
-    navigation.navigate("loginScreen"); 
+    console.log("Logout pressed");
+    navigation.navigate("loginScreen");
   };
 
   return (
     <ContainerComponent justifyContent="space-between">
       <ProfileCard
-        imageUri="https://randomuser.me/api/portraits/men/7.jpg"
-        name="Mihir Mishra"
-        phoneNumber="+91 6204765678"
+        imageUri={staff.image}
+        name={staff.first_name + ' ' + staff.last_name}
+        phoneNumber={staff.phone}
+        onPress={() => navigation.navigate('profileScreen')}
       />
       <View style={{ flex: 1 }}>
         {menuItems.map((item, index) => (
@@ -43,7 +33,7 @@ export default function SettingsScreen() {
             key={index}
             label={item.label}
             icon={item.icon}
-            onPress={() => handleMenuItemPress(item.label)}
+            onPress={() => navigation.navigate(item.page)}
           />
         ))}
       </View>
@@ -55,11 +45,9 @@ export default function SettingsScreen() {
           alignItems: "center",
         }}
         onPress={handleLogoutPress}
-        onPressIn={() => setIsHovered(true)}
-        onPressOut={() => setIsHovered(false)}
       >
         <Icon name="power-outline" size={24} color={DANGER_COLOR} />
-        <H5 style={{ color: isHovered ? "darkred" : DANGER_COLOR }}>Logout</H5>
+        <H5 style={{ color: DANGER_COLOR }}>Logout</H5>
       </TouchableOpacity>
     </ContainerComponent>
   );

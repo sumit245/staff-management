@@ -1,17 +1,16 @@
 import { useState } from "react";
-import ContainerComponent from "../components/ContainerComponent";
-import MyHeader from "../components/header/MyHeader";
-import StatCard from "../components/card/Statcard";
-import { tasks } from "../utils/faker";
-import MyFlatList from "../components/utility/MyFlatList";
-import { useNavigation } from "@react-navigation/native";
 import { View, Image } from "react-native";
-import { layouts, SCREEN_WIDTH, spacing, styles, typography } from "../styles";
-import { H3, P } from "../components/text";
+import { useNavigation } from "@react-navigation/native";
 import moment from "moment";
-import { staff } from "../utils/faker"; //TODO: This will come from reducer store
+import Icon from 'react-native-vector-icons/Ionicons'
+import ContainerComponent from "../components/ContainerComponent";
+import MyFlatList from "../components/utility/MyFlatList";
+import { H3, H4, H5, P } from "../components/text";
 import CardFullWidth from "../components/card/CardFullWidth";
-
+import StatCard from "../components/card/Statcard";
+import { layouts, LIGHT, PRIMARY_COLOR, SCREEN_WIDTH, spacing, styles, typography } from "../styles";
+import { staff, tasks } from "../utils/faker"; //TODO: This will come from reducer store
+import { TouchableOpacity } from "react-native";
 
 export default function DashboardScreen() {
   const navigation = useNavigation();
@@ -30,7 +29,7 @@ export default function DashboardScreen() {
       <View style={[styles.row, spacing.mh2, { alignItems: 'center', width: SCREEN_WIDTH - 16 }]}>
         <View>
           <H3 style={typography.textBold}>Good Morning,  {staff.first_name}</H3>
-          <P>{today}</P>
+          <P style={spacing.ml1}>{today}</P>
         </View>
         <Image
           source={{ uri: staff.image }}
@@ -39,10 +38,17 @@ export default function DashboardScreen() {
       </View>
       {/* Welcome message */}
 
-      <View>
+      <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18, }]}>
         <H3 style={typography.textBold}>My Attendance</H3>
-        <CardFullWidth>
-
+        <CardFullWidth backgroundColor={LIGHT}>
+          <View style={[styles.row, { alignItems: 'center' }]}>
+            <Icon name="alarm" size={64} color={PRIMARY_COLOR} />
+            <TouchableOpacity style={layouts.center}>
+              <Icon name="log-out-outline" size={32} color={PRIMARY_COLOR} />
+              <H4>Clock Out</H4>
+            </TouchableOpacity>
+          </View>
+          <H5>Clock started at: {moment().format('HH:mm:ss A')}</H5>
         </CardFullWidth>
       </View>
       {/* Attendance Data */}
@@ -62,6 +68,7 @@ export default function DashboardScreen() {
         )}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
+        ListHeaderComponent={() => <H3 style={[typography.textBold, spacing.m2]}>My Projects</H3>}
       />
     </ContainerComponent>
   );

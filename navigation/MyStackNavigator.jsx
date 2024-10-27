@@ -14,7 +14,7 @@ import ProjectTimeline from "../screens/ProjectTimeline";
 import TaskList from "../components/card/CardTask";
 
 //import HolidayListScreen from "../screens/HolidayListScreen";
-//import ProfileScreen from "../screens/ProfileScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 //import LandingPage from "../screens/LandingPage";
 //import LineItemScreen from "../screens/LineItemScreen";
 import AttendanceScreen from "../screens/AttendanceScreen";
@@ -46,8 +46,8 @@ export default function MyStackNavigator() {
       <Stack.Screen name="privacyPolicy" component={PrivacyPolicy} />
       <Stack.Screen name="taskList" component={TaskList} />
       <Stack.Screen name="attendanceScreen" component={AttendanceScreen} />
+      <Stack.Screen name="profileScreen" component={ProfileScreen} />
       {/* <Stack.Screen name="HolidayListScreen" component={HolidayListScreen} /> */}
-      {/* <Stack.Screen name="ProfileScreen" component={ProfileScreen} /> */}
       {/* <Stack.Screen name="LandingPage" component={LandingPage} /> */}
       {/* <Stack.Screen name="LineItemScreen" component={LineItemScreen}/> */}
       {/* <Stack.Screen name="TermsAndConditions" component={TermsAndConditions}/> */}
