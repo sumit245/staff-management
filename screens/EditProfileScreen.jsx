@@ -19,17 +19,25 @@ const EditProfileScreen = () => {
     <ContainerComponent>
       <MyHeader title="Edit Profile" isBack={true} />
       <View style={[spacing.mt5, spacing.mh2, { width: SCREEN_WIDTH - 16 }]}>
-        <Text style={styles.label}>Email</Text>
+        <Text style={styles.label}>Current Password</Text>
         <TextInput
           style={styles.input}
-          placeholder="Enter new email"
-          value={email}
+          placeholder="Enter current password"
+          value={password}
           onChangeText={setEmail}
         />
-        <Text style={styles.label}>Password</Text>
+        <Text style={styles.label}> New Password</Text>
         <TextInput
           style={styles.input}
           placeholder="Enter new password"
+          value={password}
+          secureTextEntry
+          onChangeText={setPassword}
+        />
+        <Text style={styles.label}>Confirm  New Password</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Confirm new password"
           value={password}
           secureTextEntry
           onChangeText={setPassword}

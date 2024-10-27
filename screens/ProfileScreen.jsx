@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, TouchableOpacity } from "react-native";
 import PersonalInfo from "../components/PersonalInfo";
 import ProfessionalInfo from "../components/ProfessionalInfo";
+import JobInfo from "../components/JobInfo";
 import DocumentsList from "../components/DocumentsList";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
@@ -23,6 +24,8 @@ const ProfileScreen = () => {
       return <PersonalInfo data={staff} />;
     } else if (activeTab === "Professional") {
       return <ProfessionalInfo professionalData={staff} />;
+    } else if (activeTab === "Job Info") {
+      return <JobInfo jobData={staff} />;
     } else if (activeTab === "Documents") {
       return <DocumentsList documentData={staff} />;
     }
@@ -49,7 +52,7 @@ const ProfileScreen = () => {
         </View>
       </CardFullWidth>
       <TabNavigation
-        tabs={["Personal", "Job Info", "Documents"]}
+        tabs={["Personal", "Job Info", "Document"]}
         currentTab={activeTab}
         setCurrentTab={setActiveTab}
       />

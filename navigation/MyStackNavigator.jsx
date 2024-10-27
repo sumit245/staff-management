@@ -24,6 +24,8 @@ import AttendanceScreen from "../screens/AttendanceScreen";
 //import CheckOut  from "../screens/CheckOut"
 //import SuccessModal from "../components/SuccessModal";
 import EditProfileScreen from "../screens/EditProfileScreen";
+import SettingsScreen from "../screens/SettingScreen";
+import InternalSetting from "../screens/InternalSetting";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
@@ -60,6 +62,8 @@ export default function MyStackNavigator() {
       {/* <Stack.Screen name="CheckOut" component={CheckOut}/> */}
       {/* <Stack.Screen name="SuccessModal" component={SuccessModal}/> */}
       <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
+      <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
+      <Stack.Screen name="InternalSetting" component={InternalSetting} />
     </Stack.Navigator>
   );
 }

@@ -301,13 +301,22 @@ export const contactsData = [
 ];
 
 export const menuItems = [
-  { label: "Reports", page: '', icon: "pie-chart-outline" },
-  { label: "Events", page: '', icon: "calendar-outline" },
-  { label: "My Purchases", page: 'requisitions', icon: "cart-outline" },
-  { label: "My Projects", page: 'requisitions', icon: "grid-outline" },
-  { label: "My Tasks", page: 'requisitions', icon: "grid-outline" },
-  { label: "My Notes", page: 'NotificationScreen', icon: "reader-outline" },
-  { label: "Settings", page: '', icon: "cog-outline" },
+  { label: "Reports", page: "", icon: "pie-chart-outline" },
+  { label: "Events", page: "", icon: "calendar-outline" },
+  { label: "My Purchases", page: "requisitions", icon: "cart-outline" },
+  { label: "My Projects", page: "requisitions", icon: "grid-outline" },
+  { label: "My Tasks", page: "requisitions", icon: "grid-outline" },
+  { label: "My Notes", page: "NotificationScreen", icon: "reader-outline" },
+  { label: "Settings", page: "", icon: "cog-outline" },
+];
+export const internal = [
+  {
+    label: "Notification",
+    page: "notification",
+    icon: "notifications-outline",
+  },
+  { label: "Privacy", icon: "shield-checkmark-outline" },
+  { label: "Data Usage", icon: "folder-outline" },
 ];
 
 export const notifications = [
@@ -656,6 +665,9 @@ export const staff = {
   image: "https://randomuser.me/api/portraits/men/1.jpg",
   status: "active",
   job_title: "Technical Assistant",
+  salary: "20000",
+  salary_term: "Monthly",
+  Date_of_hire: "2024-08-27",
   disable_login: 0,
   note: [],
   address: "123 gali, jhajjar, Haryana",
@@ -668,4 +680,8 @@ export const staff = {
   skype: "",
   language: "",
   last_online: "2024-10-03 05:41:49",
-}
+  file: "",
+  size: "",
+  uploaded_by: "rakesh sharma",
+  created_date: "",
+};

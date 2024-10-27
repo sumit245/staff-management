@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ProfileCard from "../components/ProfileCard";
 import MenuItem from "../components/MenuItem";
 import { menuItems } from "../utils/faker";
@@ -13,19 +13,23 @@ import { staff } from "../utils/faker";
 export default function SettingsScreen() {
   const navigation = useNavigation();
 
-
   const handleLogoutPress = () => {
     console.log("Logout pressed");
     navigation.navigate("loginScreen");
+  };
+
+  const handleInternalSetting = () => {
+    console.log("Navigating to Internal Setting"); // Debug line
+    navigation.navigate("InternalSetting");
   };
 
   return (
     <ContainerComponent justifyContent="space-between">
       <ProfileCard
         imageUri={staff.image}
-        name={staff.first_name + ' ' + staff.last_name}
+        name={`${staff.first_name} ${staff.last_name}`}
         phoneNumber={staff.phone}
-        onPress={() => navigation.navigate('profileScreen')}
+        onPress={() => navigation.navigate("profileScreen")}
       />
       <View style={{ flex: 1 }}>
         {menuItems.map((item, index) => (
@@ -33,7 +37,13 @@ export default function SettingsScreen() {
             key={index}
             label={item.label}
             icon={item.icon}
-            onPress={() => navigation.navigate(item.page)}
+            onPress={() => {
+              if (item.label === "Settings") {
+                handleInternalSetting(); // Handle specific case
+              } else {
+                navigation.navigate(item.page);
+              }
+            }}
           />
         ))}
       </View>
