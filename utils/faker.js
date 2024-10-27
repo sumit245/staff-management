@@ -304,19 +304,19 @@ export const menuItems = [
   { label: "Reports", page: "", icon: "pie-chart-outline" },
   { label: "Events", page: "", icon: "calendar-outline" },
   { label: "My Purchases", page: "requisitions", icon: "cart-outline" },
-  { label: "My Projects", page: "requisitions", icon: "grid-outline" },
-  { label: "My Tasks", page: "requisitions", icon: "grid-outline" },
+  { label: "My Projects", page: "", icon: "grid-outline" },
+  { label: "My Tasks", page: "", icon: "grid-outline" },
   { label: "My Notes", page: "NotificationScreen", icon: "reader-outline" },
   { label: "Settings", page: "", icon: "cog-outline" },
 ];
 export const internal = [
   {
     label: "Notification",
-    page: "notification",
+    page: "notificationScreen",
     icon: "notifications-outline",
   },
-  { label: "Privacy", icon: "shield-checkmark-outline" },
-  { label: "Data Usage", icon: "folder-outline" },
+  { label: "Privacy", page: "privacyPolicy", icon: "shield-checkmark-outline" },
+  { label: "Data Usage",page:"", icon: "folder-outline" },
 ];
 
 export const notifications = [
