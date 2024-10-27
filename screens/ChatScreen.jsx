@@ -19,13 +19,13 @@ const ChatScreen = () => {
         ...messages,
         { id: `${messages.length + 1}`, message, isSent: true, time: "16.50" },
       ]);
-      setMessage(""); // Clear the input after sending
+      setMessage(""); 
     }
   };
 
   return (
     <ContainerComponent>
-      <MyHeader title="Mihir" isBack={true} hasIcon={true} icon={"search-outline"} />
+      <MyHeader title="Sumit Ranjan" isBack={true} hasIcon={true} icon={"search-outline"} />
       <ScrollView style={{ flex: 1 }}>
         {/* Chat body here */}
         <MyFlatList
