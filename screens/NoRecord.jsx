@@ -1,10 +1,23 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import ContainerComponent from "../components/ContainerComponent";
 
-export default function NoRecord() {
+const NoRecord = () => {
   return (
-    <View>
-      <Text>NoRecord</Text>
-    </View>
-  )
-}
+    <ContainerComponent>
+      <View>
+        <Text style={styles.message}>No records found</Text>
+      </View>
+    </ContainerComponent>
+  );
+};
+
+const styles = StyleSheet.create({
+  message: {
+    fontSize: 18,
+    color: "#333",
+    fontWeight: "bold",
+  },
+});
+
+export default NoRecord;
