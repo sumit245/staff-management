@@ -57,21 +57,21 @@ const ToDoTaskListScreen = () => {
   const [tasks, setTasks] = useState([
     {
       id: 4,
-      title: "Upcoming Task 1",
+      title: "Manufacturing",
       status: "to-do",
-      deadline: "2024-11-15",
-      start: "2024-11-10",
-      project: "Project D",
-      assignedTo: "User D",
+      deadline: "2024-10-22",
+      start: "2024-10-08",
+      project: "Robotic Cell",
+      assignedTo: "Anand Dhariwal",
     },
     {
       id: 5,
-      title: "Upcoming Task 2",
+      title: "Material Procurement",
       status: "to-do",
-      deadline: "2024-11-20",
-      start: "2024-11-12",
-      project: "Project E",
-      assignedTo: "User E",
+      deadline: "2024-10-20",
+      start: "2024-10-08",
+      project: "Robotic Cell",
+      assignedTo: "Mansi Khatri",
     },
   ]);
 
