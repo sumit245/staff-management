@@ -60,7 +60,7 @@ export default function DashboardScreen() {
       </View>
       {/* Welcome message */}
       <ScrollView>
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
+        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }, spacing.pv3]}>
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, { alignItems: "center" }]}>
               <Icon name="alarm" size={64} color={PRIMARY_COLOR} />
@@ -73,22 +73,7 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
-          <CardFullWidth backgroundColor={LIGHT}>
-            <View style={[styles.row, { alignItems: "center" }]}>
-              <Icon name="document-text" size={64} color={PRIMARY_COLOR} />
-              <TouchableOpacity
-                onPress={navigateToNoRecord}
-                style={layouts.center}
-              >
-                <H2>0</H2>
-                <H5>My Open Tasks</H5>
-              </TouchableOpacity>
-            </View>
-          </CardFullWidth>
-        </View>
-
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
+        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }, spacing.pv3]}>
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="calendar-clear" size={34} color={PRIMARY_COLOR} />
@@ -128,7 +113,7 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
+        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }, spacing.pv3]}>
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="filter" size={34} color={PRIMARY_COLOR} />
@@ -159,7 +144,7 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
+        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }, spacing.pv3]}>
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="document-text" size={34} color={PRIMARY_COLOR} />
@@ -173,7 +158,7 @@ export default function DashboardScreen() {
       </ScrollView>
 
       {/* Attendance Data */}
-      <MyFlatList
+      {/* <MyFlatList
         data={tasks}
         renderItem={({ item }) => (
           <StatCard
@@ -189,7 +174,7 @@ export default function DashboardScreen() {
         ListHeaderComponent={() => (
           <H3 style={[typography.textBold, spacing.m2]}>My Projects</H3>
         )}
-      />
+      /> */}
     </ContainerComponent>
   );
 }
