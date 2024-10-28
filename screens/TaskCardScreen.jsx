@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 15,
     margin: 0,
+    marginBottom: 12,
     width: Dimensions.get("window").width - 20, // Full screen width minus padding for margin
     alignSelf: "center", // Center the card
     shadowColor: "#000",

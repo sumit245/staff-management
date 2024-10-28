@@ -4,7 +4,6 @@ import { Card } from "react-native-elements";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import ContainerComponent from "../components/ContainerComponent";
 
-
 const ToDoTaskCard = ({
   id,
   title,
@@ -103,6 +102,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 15,
     margin: 0,
+    marginBottom: 12,
     width: Dimensions.get("window").width - 20, // Full screen width minus padding for margin
     alignSelf: "center", // Center the card
     shadowColor: "#000",
