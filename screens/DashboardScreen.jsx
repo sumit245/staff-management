@@ -40,7 +40,7 @@ export default function DashboardScreen() {
     navigation.navigate("NoRecord");
   };
 
-  // Slice the tasks array
+  
   const firstFourTasks = tasks.slice(0, 4);
   const lastTwoTasks = tasks.slice(4, 6);
 
@@ -129,7 +129,7 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-        {/* First MyFlatList with first four tasks */}
+       
         <MyFlatList
           data={firstFourTasks}
           renderItem={({ item }) => (
@@ -182,7 +182,7 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-        {/* Second MyFlatList with last two tasks */}
+       
         <MyFlatList
           data={lastTwoTasks}
           renderItem={({ item }) => (
