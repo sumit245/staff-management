@@ -11,8 +11,8 @@ export const tasks = [
     backgroundColor: "#FFCCCB",
     title: "Dashboard design for admin",
     description: "Create the admin dashboard for the app",
-    status: "High",
-    count: 15,
+    status: "Sticky Note(Private)",
+
     date: "14 Oct 2022",
     commentsCount: 5,
     attachmentsCount: 2,
@@ -26,7 +26,7 @@ export const tasks = [
     backgroundColor: "#D1E7DD",
     title: "Konom web application",
     description: "Develop the Konom web application",
-    status: "Low",
+    status: " Open Projects",
     count: 2,
     date: "14 Nov 2022",
     commentsCount: 2,
@@ -65,7 +65,7 @@ export const tasks = [
     title: "Task 4",
     description: "This is task 4",
     count: 7,
-    status: "Cancelled",
+    status: "Events",
     backgroundColor: DANGER_COLOR,
   },
   {

@@ -40,6 +40,10 @@ export default function DashboardScreen() {
     navigation.navigate("NoRecord");
   };
 
+  
+  const firstFourTasks = tasks.slice(0, 4);
+  const lastTwoTasks = tasks.slice(4, 6);
+
   return (
     <ContainerComponent>
       <View
@@ -60,7 +64,13 @@ export default function DashboardScreen() {
       </View>
       {/* Welcome message */}
       <ScrollView>
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }, spacing.pv3]}>
+        <View
+          style={[
+            spacing.mt2,
+            { width: SCREEN_WIDTH - 18, alignSelf: "center" },
+            spacing.pv3,
+          ]}
+        >
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, { alignItems: "center" }]}>
               <Icon name="alarm" size={64} color={PRIMARY_COLOR} />
@@ -73,7 +83,13 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }, spacing.pv3]}>
+        <View
+          style={[
+            spacing.mt2,
+            { width: SCREEN_WIDTH - 18, alignSelf: "center" },
+            spacing.pv3,
+          ]}
+        >
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="calendar-clear" size={34} color={PRIMARY_COLOR} />
@@ -113,7 +129,29 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }, spacing.pv3]}>
+       
+        <MyFlatList
+          data={firstFourTasks}
+          renderItem={({ item }) => (
+            <StatCard
+              key={item.id}
+              backgroundColor={item.backgroundColor}
+              tasks={item.count}
+              status={item.status}
+              onPress={item.id === 1 ? navigateToTaskList : null}
+            />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+          numColumns={2}
+        />
+
+        <View
+          style={[
+            spacing.mt2,
+            { width: SCREEN_WIDTH - 18, alignSelf: "center" },
+            spacing.pv3,
+          ]}
+        >
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="filter" size={34} color={PRIMARY_COLOR} />
@@ -144,7 +182,29 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-        <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }, spacing.pv3]}>
+       
+        <MyFlatList
+          data={lastTwoTasks}
+          renderItem={({ item }) => (
+            <StatCard
+              key={item.id}
+              backgroundColor={item.backgroundColor}
+              tasks={item.count}
+              status={item.status}
+              onPress={item.id === 1 ? navigateToTaskList : null}
+            />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+          numColumns={2}
+        />
+
+        <View
+          style={[
+            spacing.mt2,
+            { width: SCREEN_WIDTH - 18, alignSelf: "center" },
+            spacing.pv3,
+          ]}
+        >
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
               <Icon name="document-text" size={34} color={PRIMARY_COLOR} />
@@ -156,25 +216,6 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
       </ScrollView>
-
-      {/* Attendance Data */}
-      {/* <MyFlatList
-        data={tasks}
-        renderItem={({ item }) => (
-          <StatCard
-            key={item.id}
-            backgroundColor={item.backgroundColor}
-            tasks={item.count}
-            status={item.status}
-            onPress={item.id === 1 ? navigateToTaskList : null}
-          />
-        )}
-        keyExtractor={(item) => item.id.toString()}
-        numColumns={2}
-        ListHeaderComponent={() => (
-          <H3 style={[typography.textBold, spacing.m2]}>My Projects</H3>
-        )}
-      /> */}
     </ContainerComponent>
   );
 }
