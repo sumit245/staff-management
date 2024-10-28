@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
   message: {
     fontSize: 18,
     color: "#333",
-    fontWeight: "bold",
+        fontWeight: "bold",
+    marginBottom : "90",
   },
 });
 

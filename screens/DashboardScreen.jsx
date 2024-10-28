@@ -29,11 +29,15 @@ export default function DashboardScreen() {
   };
 
   const navigateToTaskCardScreen = () => {
-    navigation.navigate("TaskCardScreen"); // Ensure this screen is registered in your navigation stack
+    navigation.navigate("TaskCardScreen");
   };
 
   const navigateToToDoTaskCardScreen = () => {
-    navigation.navigate("ToDoTaskCardScreen"); // Ensure this screen is registered in your navigation stack
+    navigation.navigate("ToDoTaskCardScreen");
+  };
+
+  const navigateToNoRecord = () => {
+    navigation.navigate("NoRecord");
   };
 
   return (
@@ -73,13 +77,17 @@ export default function DashboardScreen() {
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, { alignItems: "center" }]}>
               <Icon name="document-text" size={64} color={PRIMARY_COLOR} />
-              <TouchableOpacity style={layouts.center}>
+              <TouchableOpacity
+                onPress={navigateToNoRecord}
+                style={layouts.center}
+              >
                 <H2>0</H2>
                 <H5>My Open Tasks</H5>
               </TouchableOpacity>
             </View>
           </CardFullWidth>
         </View>
+
         <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
@@ -95,22 +103,31 @@ export default function DashboardScreen() {
                 { justifyContent: "space-between", paddingVertical: 10 },
               ]}
             >
-              <View style={{ alignItems: "center" }}>
+              <TouchableOpacity
+                style={{ alignItems: "center" }}
+                onPress={navigateToNoRecord}
+              >
                 <P style={typography.textBold}>Open</P>
                 <P>0</P>
-              </View>
-              <View style={{ alignItems: "center" }}>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{ alignItems: "center" }}
+                onPress={navigateToNoRecord}
+              >
                 <P style={typography.textBold}>Completed</P>
                 <P>0</P>
-              </View>
-              <View style={{ alignItems: "center" }}>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{ alignItems: "center" }}
+                onPress={navigateToNoRecord}
+              >
                 <P style={typography.textBold}>Hold</P>
                 <P>0</P>
-              </View>
+              </TouchableOpacity>
             </View>
-            <TouchableOpacity style={layouts.center}></TouchableOpacity>
           </CardFullWidth>
         </View>
+
         <View style={[spacing.mt2, { width: SCREEN_WIDTH - 18 }]}>
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
@@ -139,7 +156,6 @@ export default function DashboardScreen() {
                 </TouchableOpacity>
               </View>
             </View>
-            <TouchableOpacity style={layouts.center}></TouchableOpacity>
           </CardFullWidth>
         </View>
 
@@ -152,13 +168,6 @@ export default function DashboardScreen() {
               </H5>
             </View>
             <View style={[spacing.bbw05, spacing.mv1]} />
-            <View
-              style={[
-                styles.row,
-                { justifyContent: "space-between", paddingVertical: 10 },
-              ]}
-            ></View>
-            <TouchableOpacity style={layouts.center}></TouchableOpacity>
           </CardFullWidth>
         </View>
       </ScrollView>
