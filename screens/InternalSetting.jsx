@@ -4,7 +4,7 @@ import { internal } from "../utils/faker";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import { View } from "react-native";
-import Icon from "react-native-vector-icons/Ionicons";
+
 import { useNavigation } from "@react-navigation/native";
 
 export default function SettingsScreen() {
@@ -13,7 +13,7 @@ export default function SettingsScreen() {
   return (
     <ContainerComponent justifyContent="space-between">
       <MyHeader
-        title="Setting"
+        title="Settings"
         isBack={true}
         hasIcon={true}
         icon={"cog-outline"}

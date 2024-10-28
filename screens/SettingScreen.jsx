@@ -19,8 +19,18 @@ export default function SettingsScreen() {
   };
 
   const handleInternalSetting = () => {
-    console.log("Navigating to Internal Setting"); // Debug line
+    console.log("Navigating to Internal Setting");
     navigation.navigate("InternalSetting");
+  };
+
+  const handlerequisitions = () => {
+    console.log("Navigating to RequisitionScreen");
+    navigation.navigate("requisitions");
+  };
+
+  const handleHolidayList = () => {
+    console.log("Navigating to HolidayListScreen");
+    navigation.navigate("HolidayListScreen");
   };
 
   return (
@@ -39,7 +49,11 @@ export default function SettingsScreen() {
             icon={item.icon}
             onPress={() => {
               if (item.label === "Settings") {
-                handleInternalSetting(); // Handle specific case
+                handleInternalSetting();
+              } else if (item.label === "My Purchases") {
+                handlerequisitions();
+              } else if (item.label === "Events") {
+                handleHolidayList(); // Navigate to HolidayListScreen
               } else {
                 navigation.navigate(item.page);
               }

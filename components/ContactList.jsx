@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { contactsData } from "../utils/faker";
-import { styles, layouts } from "../styles";
+import { styles, layouts, spacing , typography} from "../styles";
 import ContainerComponent from "./ContainerComponent";
 import SearchBar from "./input/SearchBar";
 import Avatar from "./Avatar";
@@ -19,8 +19,7 @@ export default function ContactList() {
 
   return (
     <ContainerComponent>
-
-      <MyHeader isBack={true} title="Contacts" hasIcon={true} icon="add-outline" />
+      <MyHeader isBack={true} title="Inbox" hasIcon={true} />
       <SearchBar
         placeholder="Search"
         value={searchText}
@@ -32,17 +31,29 @@ export default function ContactList() {
           item.name.toLowerCase().includes(searchText.toLowerCase())
         )}
         renderItem={({ item }) => (
-          <TouchableOpacity style={styles.rowItem}>
-            <Avatar avatar={item.avatar} name={item.name} online={item.online} />
-            <View style={layouts.flex1}>
-              <H4 style={[styles.textDark, { fontWeight: 'bold', fontSize: 18 }]}>{item.name}</H4>
-              <Span>{item.status}</Span>
+        <TouchableOpacity style={[styles.rowItem, spacing.pv3, spacing.ph4, { marginBottom: 8 }]}>
+
+            <Avatar
+              avatar={item.avatar}
+              name={item.name}
+              online={item.online}
+            />
+            <View style={[layouts.flex1, spacing.ml3]}>
+              <H4
+                style={[
+                  typography.textDark,
+                  typography.font16,
+                  typography.textBold,
+                ]}
+              >
+                {item.name}
+              </H4>
+              <Span style={typography.font14}>{item.status}</Span>
             </View>
-          </TouchableOpacity>)}
+          </TouchableOpacity>
+        )}
         keyExtractor={(item) => item.id}
       />
-      <AnimatedFAB icon='add-outline' />
-
     </ContainerComponent>
   );
 }

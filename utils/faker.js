@@ -11,8 +11,8 @@ export const tasks = [
     backgroundColor: "#FFCCCB",
     title: "Dashboard design for admin",
     description: "Create the admin dashboard for the app",
-    status: "High",
-    count: 15,
+    status: "Sticky Note(Private)",
+
     date: "14 Oct 2022",
     commentsCount: 5,
     attachmentsCount: 2,
@@ -26,7 +26,7 @@ export const tasks = [
     backgroundColor: "#D1E7DD",
     title: "Konom web application",
     description: "Develop the Konom web application",
-    status: "Low",
+    status: " Open Projects",
     count: 2,
     date: "14 Nov 2022",
     commentsCount: 2,
@@ -65,7 +65,7 @@ export const tasks = [
     title: "Task 4",
     description: "This is task 4",
     count: 7,
-    status: "Cancelled",
+    status: "Events",
     backgroundColor: DANGER_COLOR,
   },
   {
@@ -120,40 +120,10 @@ export const leaveTypes = [
 export const dummyMessages = [
   {
     id: "1",
-    message: "Hey, have you finished the report for the meeting?",
+    message: "Come in cabin",
     isSent: false,
-    time: "09:15",
+    time: "12:53:42 pm",
   },
-  {
-    id: "2",
-    message: "Not yet, I'm still working on the final sections.",
-    isSent: true,
-    time: "09:16",
-  },
-  {
-    id: "3",
-    message: "No worries! Just wanted to check in. Do you need any help?",
-    isSent: false,
-    time: "09:18",
-  },
-  {
-    id: "4",
-    message: "Actually, yes! I could use a hand with the data analysis.",
-    isSent: true,
-    time: "09:19",
-  },
-  {
-    id: "5",
-    message: "Sure thing! Let’s meet in the conference room in 10 minutes?",
-    isSent: false,
-    time: "09:20",
-  },
-  // {
-  //   id: "6",
-  //   message: "Sounds good! I'll bring my laptop.",
-  //   isSent: true,
-  //   time: "09:21",
-  // },
 ];
 
 export const items = [
@@ -303,7 +273,7 @@ export const contactsData = [
 export const menuItems = [
   { label: "Reports", page: "", icon: "pie-chart-outline" },
   { label: "Events", page: "", icon: "calendar-outline" },
-  { label: "My Purchases", page: "requisitions", icon: "cart-outline" },
+  { label: "My Purchases", icon: "cart-outline" },
   { label: "My Projects", page: "", icon: "grid-outline" },
   { label: "My Tasks", page: "", icon: "grid-outline" },
   { label: "My Notes", page: "NotificationScreen", icon: "reader-outline" },
@@ -316,7 +286,7 @@ export const internal = [
     icon: "notifications-outline",
   },
   { label: "Privacy", page: "privacyPolicy", icon: "shield-checkmark-outline" },
-  { label: "Data Usage",page:"", icon: "folder-outline" },
+  { label: "Data Usage", page: "", icon: "folder-outline" },
 ];
 
 export const notifications = [
@@ -680,7 +650,7 @@ export const staff = {
   skype: "",
   language: "",
   last_online: "2024-10-03 05:41:49",
-  file: "",
+  file: "file-pdf",
   size: "",
   uploaded_by: "rakesh sharma",
   created_date: "",
