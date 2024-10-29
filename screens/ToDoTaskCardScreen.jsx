@@ -52,7 +52,7 @@ const ToDoTaskCard = ({
 
 // Main component to render a list of to-do tasks
 const ToDoTaskListScreen = () => {
-  // Mock data for to-do tasks
+  // Mock data for to-do task
   const [tasks, setTasks] = useState([
     {
       id: 4,

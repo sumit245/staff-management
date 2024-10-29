@@ -655,3 +655,36 @@ export const staff = {
   uploaded_by: "rakesh sharma",
   created_date: "",
 };
+
+
+// taskData.js
+ export const taskslist = [
+  {
+    id: 1,
+    title: "Design in Solidworks",
+    status: "done",
+    deadline: "2024-10-13",
+    start: "2024-10-08",
+    project: "Robotic Cell",
+    assignedTo: "Rakesh Sharma",
+  },
+  {
+    id: 2,
+    title: "Purchase Parts",
+    status: "critical",
+    deadline: "2024-08-28",
+    start: "2024-08-28",
+    project: "Coffee Vending Machine",
+    assignedTo: "Rakesh Sharma",
+  },
+  {
+    id: 3,
+    title: "Purchase Parts",
+    status: "blocker",
+    deadline: "2024-08-28",
+    start: "2024-08-28",
+    project: "Automatic Soap Dispenser Machine Jig",
+    assignedTo: "Rakesh Sharma",
+  },
+];
+

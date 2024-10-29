@@ -1,26 +1,26 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
+import { H4 } from "../components/text";
+import { SCREEN_WIDTH, spacing } from "../styles";
 
 const NoRecord = () => {
   return (
     <ContainerComponent>
-      <View style={styles.container}>
-        <Text style={styles.message}>No records found</Text>
+      <View
+        style={[
+          spacing.mh3,
+          {
+            alignItems: "center",
+            width: SCREEN_WIDTH - 16,
+            paddingVertical: 10,
+          },
+        ]}
+      >
+        <H4>No records found</H4>
       </View>
     </ContainerComponent>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 40,
-  },
-  message: {
-    fontSize: 18,
-    color: "#333",
-    fontWeight: "bold",
-  },
-});
 
 export default NoRecord;

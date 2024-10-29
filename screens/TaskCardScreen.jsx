@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { View, ScrollView, StyleSheet, Text, Dimensions } from "react-native";
+import React from "react";
+import { View, ScrollView, StyleSheet, Text } from "react-native";
 import { Card } from "react-native-elements";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import ContainerComponent from "../components/ContainerComponent";
+import { taskslist } from "../utils/faker";
+import { SCREEN_WIDTH, spacing } from "../styles";
+import { H3 } from "../components/text";
 
-// TaskCardScreen component to display each task
 const TaskCardScreen = ({
   id,
   title,
@@ -16,8 +18,8 @@ const TaskCardScreen = ({
 }) => {
   return (
     <ContainerComponent>
-      <Card containerStyle={styles.card}>
-        <View style={styles.cardHeader}>
+      <Card>
+        <View style={[spacing.mh1, { width: SCREEN_WIDTH - 32 }]}>
           <View style={styles.statusIcon}>
             {status === "done" && (
               <Icon name="check-circle" size={20} color="#2b87b0" />
@@ -30,7 +32,7 @@ const TaskCardScreen = ({
             )}
           </View>
           <View style={styles.cardInfo}>
-            <Text style={styles.title}>{title}</Text>
+            <H3>{title}</H3>
             <Text style={styles.id}>ID: {id}</Text>
           </View>
         </View>
@@ -59,40 +61,9 @@ const TaskCardScreen = ({
 
 // Main component to render a list of tasks
 const TaskListScreen = () => {
-  // Mock data for tasks
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Design in Solidworks",
-      status: "done",
-      deadline: "2024-10-13",
-      start: "2024-10-08",
-      project: "Robotic Cell",
-      assignedTo: "Rakesh Sharma",
-    },
-    {
-      id: 2,
-      title: "Purchase Parts",
-      status: "critical",
-      deadline: "2024-08-28",
-      start: "2024-08-28",
-      project: "coffee Vending Machine",
-      assignedTo: "Rakesh Sharma",
-    },
-    {
-      id: 3,
-      title: "Purchase Parts",
-      status: "blocker",
-      deadline: "2024-08-28",
-      start: "2024-08-28",
-      project: "Automatic Soap Dispensor MAchine Jig",
-      assignedTo: "Rakesh Sharma",
-    },
-  ]);
-
   return (
     <ScrollView style={styles.container}>
-      {tasks.map((task) => (
+      {taskslist.map((task) => (
         <TaskCardScreen
           key={task.id}
           id={task.id}
@@ -110,31 +81,31 @@ const TaskListScreen = () => {
 
 // Styles for the components
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 0, // Remove horizontal padding to ensure full width
-  },
-  card: {
-    borderRadius: 10,
-    padding: 15,
-    margin: 0,
-    marginBottom: 12,
-    width: Dimensions.get("window").width - 20, // Full screen width minus padding for margin
-    alignSelf: "center", // Center the card
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  cardHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
+  // container: {
+  //   flex: 1,
+  //   paddingHorizontal: 0,
+  // },
+  // card: {
+  //   borderRadius: 10,
+  //   padding: 15,
+  //   margin: 0,
+  //   marginBottom: 12,
+  //   width: Dimensions.get("window").width - 20,
+  //   alignSelf: "center",
+  //   shadowColor: "#000",
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 2,
+  //   },
+  //   shadowOpacity: 0.25,
+  //   shadowRadius: 3.84,
+  //   elevation: 5,
+  // },
+  // cardHeader: {
+  //   flexDirection: "row",
+  //   alignItems: "center",
+  //   justifyContent: "space-between",
+  // },
   statusIcon: {
     marginRight: 10,
   },
@@ -163,7 +134,7 @@ const styles = StyleSheet.create({
   },
   detailsValue: {
     fontSize: 14,
-    textAlign: "right", // Align text to the right
+    textAlign: "right",
   },
 });
 
