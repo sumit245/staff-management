@@ -30,7 +30,6 @@ export default function HolidayListScreen() {
           <H5
             style={{
               ...typography.textDark,
-              Top: 10,
               fontWeight: "bold",
             }}
           >
