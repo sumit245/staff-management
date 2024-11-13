@@ -43,6 +43,10 @@ export default function DashboardScreen() {
   {
     navigation.navigate( "HolidayListScreen" );
   };
+  const navigateToMyNotesScreen = () =>
+  {
+    navigation.navigate("myNotesScreen");
+  }
 
   
   const firstFourTasks = tasks.slice(0, 4);
@@ -141,7 +145,16 @@ export default function DashboardScreen() {
               backgroundColor={item.backgroundColor}
               tasks={item.count}
               status={item.status}
-              onPress={item.id === 1 ? navigateToTaskList : null}
+              onPress={() => {
+                if (item.id === 1) {
+                  navigateToTaskList(); 
+                } else if (item.id === 2) {
+                  navigateToTaskCardScreen(); 
+                }
+                else if (item.id === 5) {
+                  navigateToMyNotesScreen(); 
+                }
+              }}
             />
           )}
           keyExtractor={(item) => item.id.toString()}
@@ -195,9 +208,9 @@ export default function DashboardScreen() {
               status={item.status}
               onPress={() => {
                 if (item.id === 1) {
-                  navigateToTaskList(); 
+                  navigateToTaskList();
                 } else if (item.id === 4) {
-                  navigation.navigate("HolidayListScreen"); 
+                  navigation.navigate("HolidayListScreen");
                 }
               }}
             />

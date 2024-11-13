@@ -38,6 +38,11 @@ export default function SettingsScreen() {
     console.log( "Navigating to TaskList" );
     navigation.navigate("taskList");
   }
+  const handleMyNotesScreen = () =>
+  {
+    console.log( "Navigating to MyNotesScreen" );
+    navigation.navigate("myNotesScreen");
+  }
 
   return (
     <ContainerComponent justifyContent="space-between">
@@ -62,6 +67,8 @@ export default function SettingsScreen() {
                 handleHolidayList();
               } else if ( item.label === "My Tasks" ){
                 handleTaskList();
+              } else if ( item.label === "My Notes" ){
+                handleMyNotesScreen(); 
               } else {
                 navigation.navigate(item.page);
               }
