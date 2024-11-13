@@ -14,16 +14,6 @@ const PrivacyPolicy = () => {
     setIsChecked((prev) => !prev);
     console.log("Checkbox state changed:", !isChecked);
   };
-
-  const onSubmit = () => {
-    console.log("Submit clicked, checkbox is checked:", isChecked);
-    if (isChecked) {
-      alert("You have accepted the privacy policy.");
-    } else {
-      alert("Please accept the privacy policy to proceed.");
-    }
-  };
-
   return (
     <ContainerComponent>
       <View style={styles.container}>
@@ -53,20 +43,7 @@ const PrivacyPolicy = () => {
             industry standards.
           </P>
 
-          <View style={styles.checkboxContainer}>
-            <CustomCheckbox
-              isChecked={isChecked}
-              onPress={handleCheckboxChange}
-              label="I accept the Privacy Policy"
-            />
-          </View>
-
-          <Button
-            style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-            onPress={onSubmit}
-          >
-            <H2>Submit</H2>
-          </Button>
+        
         </ScrollView>
       </View>
     </ContainerComponent>

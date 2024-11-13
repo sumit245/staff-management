@@ -13,24 +13,47 @@ const ChatScreen = () => {
   const [messages, setMessages] = useState(dummyMessages); // Using dummy data
   const [message, setMessage] = useState("");
 
+  // Function to format the current time as HH:mm (24-hour format)
+  const getCurrentTime = () => {
+    const currentDate = new Date();
+    const hours = String(currentDate.getHours()).padStart(2, "0");
+    const minutes = String(currentDate.getMinutes()).padStart(2, "0");
+    return `${hours}:${minutes}`;
+  };
+
   const handleSendMessage = (message) => {
     if (message.trim()) {
+      const currentTime = getCurrentTime(); // Get the current time
       setMessages([
         ...messages,
-        { id: `${messages.length + 1}`, message, isSent: true, time: "16.50" },
+        {
+          id: `${messages.length + 1}`,
+          message,
+          isSent: true,
+          time: currentTime,
+        },
       ]);
-      setMessage(""); 
+      setMessage(""); // Clear input after sending
     }
   };
 
   return (
     <ContainerComponent>
-      <MyHeader title="Sumit Ranjan" isBack={true} hasIcon={true} icon={"search-outline"} />
+      <MyHeader
+        title="Sumit Ranjan"
+        isBack={true}
+        hasIcon={true}
+        icon={"search-outline"}
+      />
       <ScrollView style={{ flex: 1 }}>
         {/* Chat body here */}
         <MyFlatList
           data={messages}
-          style={[styles.bgPrimaryTransParent, styles.fullWidth, { paddingHorizontal: 4, }]}
+          style={[
+            styles.bgPrimaryTransParent,
+            styles.fullWidth,
+            { paddingHorizontal: 4 },
+          ]}
           contentContainerStyle={{ height: SCREEN_HEIGHT - 280 }}
           renderItem={({ item }) => (
             <ChatBubble
@@ -43,17 +66,33 @@ const ChatScreen = () => {
         />
 
         {/* Chat Footer here */}
-        <View style={[styles.row, styles.fullWidth, styles.bgLight, spacing.ph1, { alignItems: 'center', }]}>
-          <TouchableOpacity style={[styles.btn, styles.border, layouts.circle12]}>
+        <View
+          style={[
+            styles.row,
+            styles.fullWidth,
+            styles.bgLight,
+            spacing.ph1,
+            { alignItems: "center" },
+          ]}
+        >
+          <TouchableOpacity
+            style={[styles.btn, styles.border, layouts.circle12]}
+          >
             <Ionicons name="add" size={32} color="black" />
           </TouchableOpacity>
           <EllipticalInput
             placeholder="Type a message"
             onChangeText={setMessage}
-            value={message} />
+            value={message}
+          />
 
           <TouchableOpacity
-            style={[styles.btn, styles.bgInfo, layouts.circle12, { justifyContent: 'flex-end' }]}
+            style={[
+              styles.btn,
+              styles.bgInfo,
+              layouts.circle12,
+              { justifyContent: "flex-end" },
+            ]}
             onPress={() => handleSendMessage(message)}
           >
             <Ionicons name="send" size={28} color={LIGHT} />
@@ -63,4 +102,5 @@ const ChatScreen = () => {
     </ContainerComponent>
   );
 };
+
 export default ChatScreen;
