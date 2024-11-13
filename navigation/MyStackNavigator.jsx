@@ -28,12 +28,13 @@ import InternalSetting from "../screens/InternalSetting";
 import TaskCardScreen from "../screens/TaskCardScreen";
 import ToDoTaskCardScreen from "../screens/ToDoTaskCardScreen";
 import NoRecord from "../screens/NoRecord";
+import MyNotesScreen from "../screens/MyNotesScreen";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="loginScreen"
+      initialRouteName="myNotesScreen"
       screenOptions={{
         headerShown: false,
       }}
@@ -70,6 +71,7 @@ export default function MyStackNavigator() {
       <Stack.Screen name="TaskCardScreen" component={TaskCardScreen} />
       <Stack.Screen name="ToDoTaskCardScreen" component={ToDoTaskCardScreen} />
       <Stack.Screen name="NoRecord" component={NoRecord} />
+      <Stack.Screen name="myNotesScreen" component={MyNotesScreen} />
     </Stack.Navigator>
   );
 }
