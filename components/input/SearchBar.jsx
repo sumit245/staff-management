@@ -11,7 +11,6 @@ export default function SearchBar({ placeholder, value, onChangeText }) {
         styles.row,
         styles.border,
         styles.round,
-        styles.mh2,
         styles.ph5,
         styles.mv2,
         styles.bgPrimaryTransParent,
@@ -19,24 +18,25 @@ export default function SearchBar({ placeholder, value, onChangeText }) {
           alignItems: "center",
           justifyContent: "flex-start",
           height: 48,
-          width: SCREEN_WIDTH - 16,
+          width: SCREEN_WIDTH - 4,
+          marginHorizontal: 4,
+          borderRadius: 12,
         },
       ]}
     >
-      <Ionicons name="search-outline" size={20} color="#333" />
+      <Ionicons
+        name="search-outline"
+        size={20}
+        color="#333"
+        style={{ marginLeft: 4 }}
+      />
       <TextInput
         placeholder={placeholder}
         value={value}
         onChangeText={onChangeText}
         style={[
-          {
-            marginHorizontal: 4,
-            height: 48,
-            paddingLeft: 20,
-            fontSize: 18,
-            paddingRight: 10,
-          },
-        ]} 
+          { marginHorizontal: 4, height: 48, paddingLeft: 12, fontSize: 18 },
+        ]}
       />
     </View>
   );
