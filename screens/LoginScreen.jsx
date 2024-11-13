@@ -71,7 +71,7 @@ export default function LoginScreen() {
               style={{
                 position: "absolute",
                 right: spacing.mr2.marginRight,
-                top: 40,
+                top: 45,
               }}
               onPress={togglePasswordVisibility}
             >
