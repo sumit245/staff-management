@@ -39,6 +39,10 @@ export default function DashboardScreen() {
   const navigateToNoRecord = () => {
     navigation.navigate("NoRecord");
   };
+  const navigateToHolidayListScreen = () =>
+  {
+    navigation.navigate( "HolidayListScreen" );
+  };
 
   
   const firstFourTasks = tasks.slice(0, 4);
@@ -129,7 +133,6 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-       
         <MyFlatList
           data={firstFourTasks}
           renderItem={({ item }) => (
@@ -182,7 +185,6 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-       
         <MyFlatList
           data={lastTwoTasks}
           renderItem={({ item }) => (
@@ -191,7 +193,13 @@ export default function DashboardScreen() {
               backgroundColor={item.backgroundColor}
               tasks={item.count}
               status={item.status}
-              onPress={item.id === 1 ? navigateToTaskList : null}
+              onPress={() => {
+                if (item.id === 1) {
+                  navigateToTaskList(); 
+                } else if (item.id === 4) {
+                  navigation.navigate("HolidayListScreen"); 
+                }
+              }}
             />
           )}
           keyExtractor={(item) => item.id.toString()}
@@ -204,17 +212,7 @@ export default function DashboardScreen() {
             { width: SCREEN_WIDTH - 18, alignSelf: "center" },
             spacing.pv3,
           ]}
-        >
-          <CardFullWidth backgroundColor={LIGHT}>
-            <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
-              <Icon name="document-text" size={34} color={PRIMARY_COLOR} />
-              <H5 style={[typography.textBold, { marginRight: 150 }]}>
-                My timeSheet
-              </H5>
-            </View>
-            <View style={[spacing.bbw05, spacing.mv1]} />
-          </CardFullWidth>
-        </View>
+        ></View>
       </ScrollView>
     </ContainerComponent>
   );

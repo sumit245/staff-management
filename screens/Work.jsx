@@ -9,15 +9,15 @@ import {
 } from "react-native";
 import { H1, H2, H3, H4, H5, H6 } from "../components/text";
 import ProfileCard from "../components/ProfileCard";
-// import MyTextInput from "../components/input/MyTextInput";
 
 
-// Card Component
+
+
 const Card = ({ children, style }) => (
   <View style={[styles.card, style]}>{children}</View>
 );
 
-// Custom Input Component
+
 const MyTextInput = ({ title, value, icon }) => (
   <View style={styles.textInputContainer}>
     {/* Icon (Placeholder for actual icon implementation) */}
@@ -31,7 +31,7 @@ const MyTextInput = ({ title, value, icon }) => (
   </View>
 );
 
-// Main Screen Component
+
 const DashboardScreen = () => {
   const task = {
     label: "In Progress",
