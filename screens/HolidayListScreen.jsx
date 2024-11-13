@@ -1,4 +1,3 @@
-import React from "react";
 import { View, TouchableOpacity, FlatList } from "react-native";
 import { Divider } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -11,22 +10,32 @@ import { SCREEN_WIDTH, spacing, typography } from "../styles";
 
 export default function HolidayListScreen() {
   const renderItem = ({ item }) => (
-    <TouchableOpacity>
-      <View style={[spacing.mh1, { width: SCREEN_WIDTH - 16 }]}>
-        <View style={[{ flexDirection: "row", alignItems: "center" }]}>
-          <View style={styles.iconWrapper}>
+    <TouchableOpacity style={{ marginVertical: 8 }}>
+      <View
+        style={[
+          spacing.mh1,
+          {
+            width: SCREEN_WIDTH - 16,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            paddingVertical: 8,
+            paddingHorizontal: 8,
+          },
+        ]}
+      >
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <View
+            style={[
+              styles.iconWrapper,
+              { justifyContent: "center", alignItems: "center" },
+            ]}
+          >
             <Icon name="calendar" size={24} color="#fff" />
           </View>
-          <H6>{item.date}</H6>
+          <H6 style={{ marginLeft: 4 }}>{item.date}</H6>
         </View>
 
-        <View
-          style={[
-            styles.titleAndDayContainer,
-            { marginLeft: "auto", alignItems: "flex-end" },
-          ]}
-        >
-          {/* <H5 style={typography.textDark}>{item.title}</H5> */}
+        <View style={{ alignItems: "flex-end" }}>
           <H5
             style={{
               ...typography.textDark,
@@ -35,7 +44,7 @@ export default function HolidayListScreen() {
           >
             {item.title}
           </H5>
-          <P style={typography.textDark}>{item.day}</P>
+          <P style={{ ...typography.textDark }}>{item.day}</P>
         </View>
       </View>
       <Divider />

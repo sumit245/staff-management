@@ -303,10 +303,11 @@ export const styles = StyleSheet.create({
 
   iconWrapper: {
     backgroundColor: PRIMARY_COLOR,
-    padding: 6,
+    padding: 4,
     borderRadius: 5,
-    marginRight: 14,
+    marginRight: 8,
   },
+
   tabButton: {
     paddingVertical: 10,
     paddingHorizontal: 15,
