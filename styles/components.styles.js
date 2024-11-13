@@ -233,8 +233,8 @@ export const styles = StyleSheet.create({
   card: {
     borderRadius: 16,
     padding: 16,
-    width: SCREEN_WIDTH - 40,
-    margin: 4,
+    width: SCREEN_WIDTH - 12,
+    margin: 6,
     marginVertical: 8,
     elevation: 2,
     backgroundColor: LIGHT,
@@ -499,13 +499,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   //Requisitionscreen
-  listItemContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    padding: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "#e0e0e0",
-  },
+
   leftContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -533,10 +527,10 @@ export const styles = StyleSheet.create({
     backgroundColor: LIGHT,
   },
 
-  cardRow: {
-    flexDirection: "row",
-    padding: 4,
-  },
+  // cardRow: {
+  //   flexDirection: "row",
+  //   padding: 4,
+  // },
 
   itemInfo: {
     flex: 3,
@@ -547,16 +541,9 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
 
-  amountCard: {
-    padding: 10,
-    paddingRight: 20,
-    backgroundColor: LIGHT,
-    borderRadius: 6,
-  },
   amountDetails: {
     flexDirection: "row",
     justifyContent: "space-between",
-
     marginBottom: 2,
     marginLeft: 10,
   },

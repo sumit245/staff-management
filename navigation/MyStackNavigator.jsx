@@ -35,7 +35,7 @@ const Stack = createNativeStackNavigator();
 export default function MyStackNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="myNotesScreen"
+      initialRouteName="purchaseOrderScreen"
       screenOptions={{
         headerShown: false,
       }}
