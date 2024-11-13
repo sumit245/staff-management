@@ -35,15 +35,15 @@ const PurchaseOrderScreen = () => {
     } else {
       const filtered = itemsData.filter(
         (item) =>
-          item.id.toLowerCase().includes(text.toLowerCase()) || // Search by product code
-          item.name.toLowerCase().includes(text.toLowerCase()) // Search by product name
+          item.id.toLowerCase().includes(text.toLowerCase()) || 
+          item.name.toLowerCase().includes(text.toLowerCase()) 
       );
       setFilteredItems(filtered);
     }
   };
 
   const navigateToFormScreen = () => {
-    navigation.navigate("formScreen"); // Navigate to FormScreen
+    navigation.navigate("formScreen"); 
   };
 
   return (

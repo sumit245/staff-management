@@ -35,7 +35,7 @@ const RequisitionScreen = ({ navigation }) => {
           title="Requisitions For Release"
           hasIcon={true}
           icon="pencil"
-          onIconPress={handleSearchIconPress} // This will trigger navigation to PurchaseOrderScreen
+          onIconPress={handleSearchIconPress} 
         />
 
         <SearchBar

@@ -8,7 +8,6 @@ import PurchaseOrderScreen from "../screens/PurchaseOrderScreen";
 import FormScreen from "../screens/FormScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import PrivacyPolicy from "../screens/PrivacyPolicy";
-// import TaskList from "../screens/TaskList";
 import AttendancePunchScreen from "../screens/AttendancePunchScreen";
 import ProjectTimeline from "../screens/ProjectTimeline";
 import TaskList from "../components/card/CardTask";

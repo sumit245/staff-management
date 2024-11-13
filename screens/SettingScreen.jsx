@@ -33,6 +33,12 @@ export default function SettingsScreen() {
     navigation.navigate("HolidayListScreen");
   };
 
+  const handleTaskList = () =>
+  {
+    console.log( "Navigating to TaskList" );
+    navigation.navigate("taskList");
+  }
+
   return (
     <ContainerComponent justifyContent="space-between">
       <ProfileCard
@@ -53,7 +59,9 @@ export default function SettingsScreen() {
               } else if (item.label === "My Purchases") {
                 handlerequisitions();
               } else if (item.label === "Events") {
-                handleHolidayList(); // Navigate to HolidayListScreen
+                handleHolidayList();
+              } else if ( item.label === "My Tasks" ){
+                handleTaskList();
               } else {
                 navigation.navigate(item.page);
               }
