@@ -6,6 +6,8 @@ import { styles } from "../../styles/components.styles";
 import MyFlatList from "../utility/MyFlatList";
 import { H4, Span, P } from "../text";
 import { TouchableOpacity } from "react-native";
+import ContainerComponent from "../ContainerComponent";
+import MyHeader from "../header/MyHeader";
 
 const CardTask = ({ task }) => {
   return (
@@ -55,11 +57,14 @@ const CardTask = ({ task }) => {
 };
 
 const TaskList = () => (
-  <MyFlatList
-    data={cardData}
-    renderItem={({ item }) => <CardTask task={item} />}
-    keyExtractor={(item) => item.id.toString()}
-  />
+  <ContainerComponent>
+    <MyHeader title="Project in progress" isBack={true} hasIcon={true} />
+    <MyFlatList
+      data={cardData}
+      renderItem={({ item }) => <CardTask task={item} />}
+      keyExtractor={(item) => item.id.toString()}
+    />
+  </ContainerComponent>
 );
 
 export default TaskList;
