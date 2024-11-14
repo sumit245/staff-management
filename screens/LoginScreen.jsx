@@ -42,7 +42,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <MyImageBackground>
+    <MyImageBackground imageSource={require("../assets/Login.png")}>
       <ScrollView style={{ flex: 1 }}>
         <View style={[layouts.center, spacing.mv5]}>
           <H1 style={spacing.mv2}>Welcome Back</H1>
@@ -71,13 +71,13 @@ export default function LoginScreen() {
               style={{
                 position: "absolute",
                 right: spacing.mr2.marginRight,
-                top: 45,
+                top: 40,
               }}
               onPress={togglePasswordVisibility}
             >
               <Icon
                 name={isPasswordVisible ? "eye-off" : "eye"}
-                size={20}
+                size={30}
                 color="gray"
               />
             </TouchableOpacity>
