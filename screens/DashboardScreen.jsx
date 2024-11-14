@@ -45,6 +45,9 @@ export default function DashboardScreen() {
   const navigateToMyNotesScreen = () => {
     navigation.navigate("myNotesScreen");
   };
+  const navigateToInReviewScreen = () => {
+    navigation.navigate("ReviewScreen");
+  }
 
   const firstFourTasks = tasks.slice(0, 4);
   const lastTwoTasks = tasks.slice(4, 6);
@@ -198,7 +201,6 @@ export default function DashboardScreen() {
           data={lastTwoTasks}
           renderItem={({ item }) => (
             <StatCard
-              key={item.id}
               backgroundColor={item.backgroundColor}
               tasks={item.count}
               status={item.status}
@@ -207,6 +209,8 @@ export default function DashboardScreen() {
                   navigateToTaskList();
                 } else if (item.id === 4) {
                   navigation.navigate("HolidayListScreen");
+                } else if (item.id === 3) {
+                  navigation.navigate("inReviewScreen");
                 }
               }}
             />
