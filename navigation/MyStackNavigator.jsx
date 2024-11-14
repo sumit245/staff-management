@@ -29,6 +29,8 @@ import TaskCardScreen from "../screens/TaskCardScreen";
 import ToDoTaskCardScreen from "../screens/ToDoTaskCardScreen";
 import NoRecord from "../screens/NoRecord";
 import MyNotesScreen from "../screens/MyNotesScreen";
+import InReviewScreen from "../screens/InReviewScreen";
+import OpenProjectScreen from "../screens/OpenProjectScreen";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
@@ -72,6 +74,8 @@ export default function MyStackNavigator() {
       <Stack.Screen name="ToDoTaskCardScreen" component={ToDoTaskCardScreen} />
       <Stack.Screen name="NoRecord" component={NoRecord} />
       <Stack.Screen name="myNotesScreen" component={MyNotesScreen} />
+      <Stack.Screen name="inReviewScreen" component={InReviewScreen} />
+      <Stack.Screen name="openProjectScreen" component={OpenProjectScreen} />
     </Stack.Navigator>
   );
 }

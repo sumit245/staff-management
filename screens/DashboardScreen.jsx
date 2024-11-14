@@ -39,16 +39,13 @@ export default function DashboardScreen() {
   const navigateToNoRecord = () => {
     navigation.navigate("NoRecord");
   };
-  const navigateToHolidayListScreen = () =>
-  {
-    navigation.navigate( "HolidayListScreen" );
+  const navigateToHolidayListScreen = () => {
+    navigation.navigate("HolidayListScreen");
   };
-  const navigateToMyNotesScreen = () =>
-  {
+  const navigateToMyNotesScreen = () => {
     navigation.navigate("myNotesScreen");
-  }
+  };
 
-  
   const firstFourTasks = tasks.slice(0, 4);
   const lastTwoTasks = tasks.slice(4, 6);
 
@@ -147,12 +144,11 @@ export default function DashboardScreen() {
               status={item.status}
               onPress={() => {
                 if (item.id === 1) {
-                  navigateToTaskList(); 
+                  navigateToTaskList();
                 } else if (item.id === 2) {
-                  navigateToTaskCardScreen(); 
-                }
-                else if (item.id === 5) {
-                  navigateToMyNotesScreen(); 
+                  navigateToTaskCardScreen();
+                } else if (item.id === 5) {
+                  navigateToMyNotesScreen();
                 }
               }}
             />
