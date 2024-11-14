@@ -45,8 +45,13 @@ export default function DashboardScreen() {
   const navigateToMyNotesScreen = () => {
     navigation.navigate("myNotesScreen");
   };
-  const navigateToInReviewScreen = () => {
-    navigation.navigate("ReviewScreen");
+  const navigateToInReviewScreen = () =>
+  {
+    navigation.navigate( "ReviewScreen" );
+  };
+  const navigateTOOpenProjectScreen = () =>
+  {
+    navigation.navigate("openProjectScreen");
   }
 
   const firstFourTasks = tasks.slice(0, 4);
@@ -152,6 +157,9 @@ export default function DashboardScreen() {
                   navigateToTaskCardScreen();
                 } else if (item.id === 5) {
                   navigateToMyNotesScreen();
+                } else if ( item.id === 6 )
+                {
+                  navigateTOOpenProjectScreen();
                 }
               }}
             />
