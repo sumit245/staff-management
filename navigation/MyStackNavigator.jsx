@@ -31,6 +31,7 @@ import NoRecord from "../screens/NoRecord";
 import MyNotesScreen from "../screens/MyNotesScreen";
 import InReviewScreen from "../screens/InReviewScreen";
 import OpenProjectScreen from "../screens/OpenProjectScreen";
+import ReportsScreen from "../screens/ReportsScreen";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
@@ -76,6 +77,7 @@ export default function MyStackNavigator() {
       <Stack.Screen name="myNotesScreen" component={MyNotesScreen} />
       <Stack.Screen name="inReviewScreen" component={InReviewScreen} />
       <Stack.Screen name="openProjectScreen" component={OpenProjectScreen} />
+      <Stack.Screen name="reportsScreen" component={ReportsScreen} />
     </Stack.Navigator>
   );
 }

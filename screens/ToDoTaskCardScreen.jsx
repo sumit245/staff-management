@@ -3,6 +3,7 @@ import { View, ScrollView, StyleSheet, Text, Dimensions } from "react-native";
 import { Card } from "react-native-elements";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import ContainerComponent from "../components/ContainerComponent";
+import MyHeader from "../components/header/MyHeader";
 
 const ToDoTaskCard = ({
   id,
@@ -50,7 +51,6 @@ const ToDoTaskCard = ({
   );
 };
 
-
 const ToDoTaskListScreen = () => {
   const [tasks, setTasks] = useState([
     {
@@ -75,6 +75,7 @@ const ToDoTaskListScreen = () => {
 
   return (
     <ScrollView style={styles.container}>
+      <MyHeader title="Task" isBack={true} hasIcon={true} />
       {tasks.map((task) => (
         <ToDoTaskCard
           key={task.id}
@@ -91,11 +92,10 @@ const ToDoTaskListScreen = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 0, 
+    paddingHorizontal: 0,
   },
   card: {
     borderRadius: 10,
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     margin: 0,
     marginBottom: 12,
     width: Dimensions.get("window").width - 20,
-    alignSelf: "center", 
+    alignSelf: "center",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   detailsValue: {
     fontSize: 14,
-    textAlign: "right", 
+    textAlign: "right",
   },
 });
 

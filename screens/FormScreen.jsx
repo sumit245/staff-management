@@ -7,7 +7,7 @@ import MyHeader from "../components/header/MyHeader";
 import SearchableDropdown from "../components/SearchableDropdown";
 import SearchBar from "../components/input/SearchBar";
 import { styles } from "../styles/components.styles";
-import {  spacing } from "../styles";
+import { spacing } from "../styles";
 
 const FormScreen = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -66,7 +66,6 @@ const FormScreen = () => {
           onChangeText={setModel}
         />
 
-      
         <H5 style={spacing.mb3}>Quantity</H5>
         <TextInput
           style={styles.input}
