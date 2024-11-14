@@ -8,6 +8,7 @@ import MyHeader from "../components/header/MyHeader";
 import Button from "../components/buttons/Button";
 import { styles } from "../styles/components.styles";
 import { H2, H5, H6, P } from "../components/text";
+import { SCREEN_WIDTH, spacing, typography } from "../styles";
 
 const RequisitionScreen = ({ navigation }) => {
   const [searchText, setSearchText] = useState("");
@@ -35,7 +36,7 @@ const RequisitionScreen = ({ navigation }) => {
           title="Requisitions For Release"
           hasIcon={true}
           icon="pencil"
-          onIconPress={handleSearchIconPress} // This will trigger navigation to PurchaseOrderScreen
+          onIconPress={handleSearchIconPress}
         />
 
         <SearchBar
@@ -43,7 +44,6 @@ const RequisitionScreen = ({ navigation }) => {
           value={searchText}
           onChangeText={setSearchText}
         />
-
         <ScrollView>
           {requisitionList.map((item, index) => (
             <ListItem
@@ -60,9 +60,14 @@ const RequisitionScreen = ({ navigation }) => {
         </ScrollView>
 
         <Button
-          style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
+          style={[
+            styles.btn,
+            styles.bgPrimary,
+            { justifyContent: "center", marginHorizontal: 16 },
+          ]}
+          //onPress={handleSave}
         >
-          <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
+          <H2 style={[styles.btnText, styles.textLarge, typography.textLight]}>
             Create Receipt
           </H2>
         </Button>
@@ -81,7 +86,17 @@ const ListItem = ({
   onActionPress,
 }) => {
   return (
-    <View style={styles.listItemContainer}>
+    <View
+      style={[
+        spacing.mh2,
+        {
+          width: SCREEN_WIDTH - 16,
+          flexDirection: "row",
+          justifyContent: "space-between",
+          paddingVertical: 12,
+        },
+      ]}
+    >
       <View style={styles.leftContainer}>
         <Checkbox
           status={checked ? "checked" : "unchecked"}

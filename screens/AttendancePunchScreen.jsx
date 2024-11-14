@@ -69,13 +69,13 @@ export default function AttendancePunchScreen() {
     // TODO: Record current selfie, location and time in global state
     if (cameraRef.current) {
 
+      navigation.navigate("homeScreen"); // Navigate to
       const photo = await cameraRef.current.takePictureAsync();
 
       if (!location || !photo.uri) {
         return;
       }
       punchIn(photo.uri, location, moment().format('DD-MM-YYYY HH:mm:ss A'))
-      navigation.navigate("homeScreen"); // Navigate to
     }
   };
 

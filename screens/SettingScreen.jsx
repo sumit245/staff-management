@@ -33,6 +33,26 @@ export default function SettingsScreen() {
     navigation.navigate("HolidayListScreen");
   };
 
+  const handleTaskList = () =>
+  {
+    console.log( "Navigating to TaskList" );
+    navigation.navigate("taskList");
+  }
+  const handleMyNotesScreen = () =>
+  {
+    console.log( "Navigating to MyNotesScreen" );
+    navigation.navigate("myNotesScreen");
+  }
+  const handleReportsScren = () =>
+  {
+    console.log( "Navigating to ReportsScreen" );
+    navigation.navigate("reportsScreen");
+  }
+  const handleOpenProjectScreen = () =>
+  {
+    console.log( "Navigating to OpenProjectScreen" );
+    navigation.navigate("openProjectScreen");
+  }
   return (
     <ContainerComponent justifyContent="space-between">
       <ProfileCard
@@ -48,13 +68,29 @@ export default function SettingsScreen() {
             label={item.label}
             icon={item.icon}
             onPress={() => {
-              if (item.label === "Settings") {
+              if ( item.label === "Settings" )
+              {
                 handleInternalSetting();
-              } else if (item.label === "My Purchases") {
+              } else if ( item.label === "My Purchases" )
+              {
                 handlerequisitions();
-              } else if (item.label === "Events") {
-                handleHolidayList(); // Navigate to HolidayListScreen
-              } else {
+              } else if ( item.label === "Events" )
+              {
+                handleHolidayList();
+              } else if ( item.label === "My Tasks" )
+              {
+                handleTaskList();
+              } else if ( item.label === "My Notes" )
+              {
+                handleMyNotesScreen();
+              } else if ( item.label === "Reports" )
+              {
+                handleReportsScren();
+              } else if ( item.label === "My Projects" )
+              {
+                handleOpenProjectScreen();
+              }
+              else {
                 navigation.navigate(item.page);
               }
             }}

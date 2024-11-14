@@ -11,6 +11,7 @@ import { itemsData, amountDetailsData } from "../utils/faker";
 import { H2, H3, H5, H6, P } from "../components/text";
 import { useNavigation } from "@react-navigation/native";
 import SearchBar from "../components/input/SearchBar";
+import { SCREEN_WIDTH, spacing, typography } from "../styles";
 
 const PurchaseOrderScreen = () => {
   const [checkedItems, setCheckedItems] = useState({});
@@ -35,26 +36,21 @@ const PurchaseOrderScreen = () => {
     } else {
       const filtered = itemsData.filter(
         (item) =>
-          item.id.toLowerCase().includes(text.toLowerCase()) || // Search by product code
-          item.name.toLowerCase().includes(text.toLowerCase()) // Search by product name
+          item.id.toLowerCase().includes(text.toLowerCase()) || 
+          item.name.toLowerCase().includes(text.toLowerCase()) 
       );
       setFilteredItems(filtered);
     }
   };
 
   const navigateToFormScreen = () => {
-    navigation.navigate("formScreen"); // Navigate to FormScreen
+    navigation.navigate("formScreen"); 
   };
 
   return (
     <ContainerComponent>
       <ScrollView>
-        <MyHeader
-          title="Select Project Code"
-          isBack={true}
-          hasIcon={true}
-          icon={"trash-outline"}
-        />
+        <MyHeader title="Select Project Code" isBack={true} hasIcon={true} />
 
         <SearchBar
           placeholder="Search Project Code or Name"
@@ -62,25 +58,23 @@ const PurchaseOrderScreen = () => {
           onChangeText={handleSearch}
         />
 
-        <Button style={[styles.btn, styles.bgPrimary]}>
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              flex: 1,
-              justifyContent: "center",
-            }}
+        <Button
+          style={[
+            styles.btn,
+            styles.bgPrimary,
+            { justifyContent: "center", marginHorizontal: 8 },
+          ]}
+          onPress={navigateToFormScreen}
+        >
+          <H2 style={[styles.btnText, styles.textLarge, typography.textLight]}>
+            Add New Line Item
+          </H2>
+          <TouchableOpacity
+            onPress={navigateToFormScreen}
+            style={[styles.addIconContainer, { marginLeft: 15 }]}
           >
-            <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
-              Add New Line Item
-            </H2>
-            <TouchableOpacity
-              onPress={navigateToFormScreen} // Navigate to form screen on button click
-              style={[styles.addIconContainer, { marginLeft: 15 }]}
-            >
-              <Icon name="add" size={20} color="#020409" />
-            </TouchableOpacity>
-          </View>
+            <Icon name="add" size={20} color="#020409" />
+          </TouchableOpacity>
         </Button>
 
         {filteredItems.length > 0 ? (
@@ -90,7 +84,15 @@ const PurchaseOrderScreen = () => {
               // onPress={() => navigation.navigate("TaskList")}
             >
               <Card style={styles.card}>
-                <View style={styles.cardRow}>
+                <View
+                  style={[
+                    spacing.mh1,
+                    {
+                      width: SCREEN_WIDTH - 32,
+                      flexDirection: "row",
+                    },
+                  ]}
+                >
                   <CheckBox
                     checked={checkedItems[item.id] || false}
                     onPress={() => toggleCheck(item.id)}
@@ -112,7 +114,17 @@ const PurchaseOrderScreen = () => {
           <H3>No products found</H3>
         )}
 
-        <Card style={styles.amountCard}>
+        <Card
+          style={[
+            spacing.mh1,
+            {
+              width: SCREEN_WIDTH - 12,
+              padding: 10,
+             // paddingRight: 10,
+              backgroundColor: "#ffffff",
+            },
+          ]}
+        >
           {amountDetailsData.map((detail, index) => (
             <View
               key={index}
@@ -127,11 +139,14 @@ const PurchaseOrderScreen = () => {
             </View>
           ))}
         </Card>
-
         <Button
-          style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
+          style={[
+            styles.btn,
+            styles.bgPrimary,
+            { justifyContent: "center", marginHorizontal: 8 },
+          ]}
         >
-          <H2 style={[styles.btnText, styles.textLarge, styles.textLight]}>
+          <H2 style={[styles.btnText, styles.textLarge, typography.textLight]}>
             Create Purchase Order
           </H2>
         </Button>

@@ -79,13 +79,13 @@ export const styles = StyleSheet.create({
   cardHalfWidth: {
     width: SCREEN_WIDTH / 2.2,
     height: SCREEN_WIDTH / 3,
-    elevation: 2
+    elevation: 2,
   },
 
   cardFullWidth: {
     width: SCREEN_WIDTH / 1.05,
     height: SCREEN_WIDTH / 3,
-    elevation: 2
+    elevation: 2,
   },
 
   row: {
@@ -233,8 +233,8 @@ export const styles = StyleSheet.create({
   card: {
     borderRadius: 16,
     padding: 16,
-    width: SCREEN_WIDTH - 40,
-    margin: 4,
+    width: SCREEN_WIDTH - 12,
+    margin: 6,
     marginVertical: 8,
     elevation: 2,
     backgroundColor: LIGHT,
@@ -300,40 +300,12 @@ export const styles = StyleSheet.create({
     color: "#666",
     fontWeight: "normal",
   },
-  // HolidayListScreen
-  Section: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: 12,
-  },
-  leftSection: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  rightSection: {
-    flexDirection: "column",
-    alignItems: "flex-start",
-    marginLeft: 20,
-  },
+
   iconWrapper: {
     backgroundColor: PRIMARY_COLOR,
-    padding: 8,
+    padding: 4,
     borderRadius: 5,
-    marginRight: 20,
-  },
-  dateText: {
-    fontSize: 14,
-    color: "#020409",
-  },
-  title: {
-    fontSize: 16,
-    // fontWeight: "bold",
-    color: "#020409",
-  },
-  day: {
-    fontSize: 14,
-    color: "#020409",
+    marginRight: 8,
   },
 
   tabButton: {
@@ -416,7 +388,6 @@ export const styles = StyleSheet.create({
   },
 
   // Attendancescreen
-
 
   profileImage: {
     width: 50,
@@ -528,13 +499,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   //Requisitionscreen
-  listItemContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    padding: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "#e0e0e0",
-  },
+
   leftContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -562,10 +527,10 @@ export const styles = StyleSheet.create({
     backgroundColor: LIGHT,
   },
 
-  cardRow: {
-    flexDirection: "row",
-    padding: 4,
-  },
+  // cardRow: {
+  //   flexDirection: "row",
+  //   padding: 4,
+  // },
 
   itemInfo: {
     flex: 3,
@@ -576,16 +541,9 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
 
-  amountCard: {
-    padding: 10,
-    paddingRight: 20,
-    backgroundColor: LIGHT,
-    borderRadius: 6,
-  },
   amountDetails: {
     flexDirection: "row",
     justifyContent: "space-between",
-
     marginBottom: 2,
     marginLeft: 10,
   },

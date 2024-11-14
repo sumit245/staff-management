@@ -3,8 +3,8 @@ import { View, ScrollView, StyleSheet, Text, Dimensions } from "react-native";
 import { Card } from "react-native-elements";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import ContainerComponent from "../components/ContainerComponent";
+import MyHeader from "../components/header/MyHeader";
 
-// TaskCardScreen component to display each task
 const TaskCardScreen = ({
   id,
   title,
@@ -57,9 +57,7 @@ const TaskCardScreen = ({
   );
 };
 
-// Main component to render a list of tasks
 const TaskListScreen = () => {
-  // Mock data for tasks
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -92,6 +90,7 @@ const TaskListScreen = () => {
 
   return (
     <ScrollView style={styles.container}>
+      <MyHeader title="Complete Task" isBack={true} hasIcon={true} />
       {tasks.map((task) => (
         <TaskCardScreen
           key={task.id}
@@ -108,19 +107,18 @@ const TaskListScreen = () => {
   );
 };
 
-// Styles for the components
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 0, // Remove horizontal padding to ensure full width
+    paddingHorizontal: 0,
   },
   card: {
     borderRadius: 10,
     padding: 15,
     margin: 0,
     marginBottom: 12,
-    width: Dimensions.get("window").width - 20, // Full screen width minus padding for margin
-    alignSelf: "center", // Center the card
+    width: Dimensions.get("window").width - 20,
+    alignSelf: "center",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -163,7 +161,7 @@ const styles = StyleSheet.create({
   },
   detailsValue: {
     fontSize: 14,
-    textAlign: "right", // Align text to the right
+    textAlign: "right",
   },
 });
 

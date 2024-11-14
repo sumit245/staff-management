@@ -8,7 +8,6 @@ import PurchaseOrderScreen from "../screens/PurchaseOrderScreen";
 import FormScreen from "../screens/FormScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import PrivacyPolicy from "../screens/PrivacyPolicy";
-// import TaskList from "../screens/TaskList";
 import AttendancePunchScreen from "../screens/AttendancePunchScreen";
 import ProjectTimeline from "../screens/ProjectTimeline";
 import TaskList from "../components/card/CardTask";
@@ -29,6 +28,10 @@ import InternalSetting from "../screens/InternalSetting";
 import TaskCardScreen from "../screens/TaskCardScreen";
 import ToDoTaskCardScreen from "../screens/ToDoTaskCardScreen";
 import NoRecord from "../screens/NoRecord";
+import MyNotesScreen from "../screens/MyNotesScreen";
+import InReviewScreen from "../screens/InReviewScreen";
+import OpenProjectScreen from "../screens/OpenProjectScreen";
+import ReportsScreen from "../screens/ReportsScreen";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
@@ -71,6 +74,10 @@ export default function MyStackNavigator() {
       <Stack.Screen name="TaskCardScreen" component={TaskCardScreen} />
       <Stack.Screen name="ToDoTaskCardScreen" component={ToDoTaskCardScreen} />
       <Stack.Screen name="NoRecord" component={NoRecord} />
+      <Stack.Screen name="myNotesScreen" component={MyNotesScreen} />
+      <Stack.Screen name="inReviewScreen" component={InReviewScreen} />
+      <Stack.Screen name="openProjectScreen" component={OpenProjectScreen} />
+      <Stack.Screen name="reportsScreen" component={ReportsScreen} />
     </Stack.Navigator>
   );
 }

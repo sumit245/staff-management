@@ -18,11 +18,16 @@ import {
   styles,
   typography,
 } from "../styles";
-import { staff, tasks } from "../utils/faker"; //TODO: This will come from reducer store
+import { staff, tasks } from "../utils/faker";
 
 export default function DashboardScreen() {
   const navigation = useNavigation();
   const today = useState(moment().format("DD MMM YYYY"));
+
+  
+  const handleClockOut = () => {
+    navigation.navigate("loginScreen"); 
+  };
 
   const navigateToTaskList = () => {
     navigation.navigate("taskList");
@@ -40,7 +45,22 @@ export default function DashboardScreen() {
     navigation.navigate("NoRecord");
   };
 
-  
+  const navigateToHolidayListScreen = () => {
+    navigation.navigate("HolidayListScreen");
+  };
+
+  const navigateToMyNotesScreen = () => {
+    navigation.navigate("myNotesScreen");
+  };
+
+  const navigateToInReviewScreen = () => {
+    navigation.navigate("ReviewScreen");
+  };
+
+  const navigateTOOpenProjectScreen = () => {
+    navigation.navigate("openProjectScreen");
+  };
+
   const firstFourTasks = tasks.slice(0, 4);
   const lastTwoTasks = tasks.slice(4, 6);
 
@@ -62,7 +82,7 @@ export default function DashboardScreen() {
           style={[layouts.circle12, spacing.mv3, layouts.center]}
         />
       </View>
-      {/* Welcome message */}
+
       <ScrollView>
         <View
           style={[
@@ -74,7 +94,7 @@ export default function DashboardScreen() {
           <CardFullWidth backgroundColor={LIGHT}>
             <View style={[styles.row, { alignItems: "center" }]}>
               <Icon name="alarm" size={64} color={PRIMARY_COLOR} />
-              <TouchableOpacity style={layouts.center}>
+              <TouchableOpacity style={layouts.center} onPress={handleClockOut}>
                 <Icon name="log-out-outline" size={32} color={PRIMARY_COLOR} />
                 <H4>Clock Out</H4>
               </TouchableOpacity>
@@ -129,7 +149,6 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-       
         <MyFlatList
           data={firstFourTasks}
           renderItem={({ item }) => (
@@ -138,7 +157,17 @@ export default function DashboardScreen() {
               backgroundColor={item.backgroundColor}
               tasks={item.count}
               status={item.status}
-              onPress={item.id === 1 ? navigateToTaskList : null}
+              onPress={() => {
+                if (item.id === 1) {
+                  navigateToTaskList();
+                } else if (item.id === 2) {
+                  navigateToTaskCardScreen();
+                } else if (item.id === 5) {
+                  navigation.navigate("inReviewScreen");
+                } else if (item.id === 6) {
+                  navigateTOOpenProjectScreen();
+                }
+              }}
             />
           )}
           keyExtractor={(item) => item.id.toString()}
@@ -182,16 +211,22 @@ export default function DashboardScreen() {
           </CardFullWidth>
         </View>
 
-       
         <MyFlatList
           data={lastTwoTasks}
           renderItem={({ item }) => (
             <StatCard
-              key={item.id}
               backgroundColor={item.backgroundColor}
               tasks={item.count}
               status={item.status}
-              onPress={item.id === 1 ? navigateToTaskList : null}
+              onPress={() => {
+                if (item.id === 1) {
+                  navigateToTaskList();
+                } else if (item.id === 3) {
+                  navigation.navigate("HolidayListScreen");
+                } else if (item.id === 4) {
+                  navigateToMyNotesScreen();
+                }
+              }}
             />
           )}
           keyExtractor={(item) => item.id.toString()}
@@ -204,17 +239,7 @@ export default function DashboardScreen() {
             { width: SCREEN_WIDTH - 18, alignSelf: "center" },
             spacing.pv3,
           ]}
-        >
-          <CardFullWidth backgroundColor={LIGHT}>
-            <View style={[styles.row, spacing.mr5, { alignItems: "center" }]}>
-              <Icon name="document-text" size={34} color={PRIMARY_COLOR} />
-              <H5 style={[typography.textBold, { marginRight: 150 }]}>
-                My timeSheet
-              </H5>
-            </View>
-            <View style={[spacing.bbw05, spacing.mv1]} />
-          </CardFullWidth>
-        </View>
+        ></View>
       </ScrollView>
     </ContainerComponent>
   );
