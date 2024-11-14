@@ -18,7 +18,7 @@ import {
   styles,
   typography,
 } from "../styles";
-import { staff, tasks } from "../utils/faker"; //TODO: This will come from reducer store
+import { staff, tasks } from "../utils/faker"; 
 
 export default function DashboardScreen() {
   const navigation = useNavigation();
@@ -75,7 +75,7 @@ export default function DashboardScreen() {
           style={[layouts.circle12, spacing.mv3, layouts.center]}
         />
       </View>
-      {/* Welcome message */}
+   
       <ScrollView>
         <View
           style={[
@@ -155,8 +155,10 @@ export default function DashboardScreen() {
                   navigateToTaskList();
                 } else if (item.id === 2) {
                   navigateToTaskCardScreen();
+                // } else if (item.id === 5) {
+                  //   navigateToMyNotesScreen();
                 } else if (item.id === 5) {
-                  navigateToMyNotesScreen();
+                  navigation.navigate("inReviewScreen");
                 } else if ( item.id === 6 )
                 {
                   navigateTOOpenProjectScreen();
@@ -213,12 +215,14 @@ export default function DashboardScreen() {
               tasks={item.count}
               status={item.status}
               onPress={() => {
-                if (item.id === 1) {
+                if ( item.id === 1 )
+                {
                   navigateToTaskList();
-                } else if (item.id === 4) {
+                } else if ( item.id === 3 )
+                {
                   navigation.navigate("HolidayListScreen");
-                } else if (item.id === 3) {
-                  navigation.navigate("inReviewScreen");
+                  } else if (item.id === 4) {
+                    navigateToMyNotesScreen();
                 }
               }}
             />

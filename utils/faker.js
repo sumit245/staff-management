@@ -7,11 +7,12 @@ import {
 
 export const tasks = [
   {
-    id: 5,
+    id: 6,
     backgroundColor: "#FFCCCB",
     title: "Dashboard design for admin",
     description: "Create the admin dashboard for the app",
-    status: "Sticky Note(Private)",
+    status: "Open Projects",
+    count: "2",
 
     date: "14 Oct 2022",
     commentsCount: 5,
@@ -22,11 +23,11 @@ export const tasks = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     backgroundColor: "#D1E7DD",
     title: "Konom web application",
     description: "Develop the Konom web application",
-    status: " Open Projects",
+    status: "In Review",
     count: 2,
     date: "14 Nov 2022",
     commentsCount: 2,
@@ -56,16 +57,15 @@ export const tasks = [
     id: 3,
     title: "Task 3",
     description: "This is task 3",
-    count: 24,
-    status: "In Review",
+    status: "Events",
+    count: 7,
     backgroundColor: WARNING_COLOR,
   },
   {
     id: 4,
     title: "Task 4",
     description: "This is task 4",
-    count: 7,
-    status: "Events",
+    status: "Sticky Note(Private)",
     backgroundColor: DANGER_COLOR,
   },
   {
