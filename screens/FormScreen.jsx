@@ -33,11 +33,11 @@ const FormScreen = () => {
       <ScrollView>
         <MyHeader title="Add Item Details" isBack={true} hasIcon={true} />
 
-        <View style={{ paddingHorizontal: 12 }}>
+        {/* <View style={{ paddingHorizontal: 12 }}>
           <H5>Search Item</H5>
-        </View>
+        </View> */}
 
-        <View
+        {/* <View
           style={{
             borderWidth: 1,
             borderColor: "#020409",
@@ -47,7 +47,7 @@ const FormScreen = () => {
           }}
         >
           <SearchableDropdown onItemSelect={(item) => setSelectedItem(item)} />
-        </View>
+        </View> */}
 
         <View style={{ paddingHorizontal: 12 }}>
           <MyTextInput
