@@ -1,28 +1,24 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import ContainerComponent from "../components/ContainerComponent";
+import { View } from "react-native";
 import MyHeader from "../components/header/MyHeader";
+import MyImageBackground from "../components/MyImageBackground";
+import ContainerComponent from "../components/ContainerComponent";
+import { H4 } from "../components/text";
 
 const NoRecord = () => {
   return (
     <ContainerComponent>
-      <MyHeader title="Project overview" isBack={true} hasIcon={true} />
-      <View style={styles.container}>
-        <Text style={styles.message}>No records found</Text>
+      <View>
+        <MyHeader title="No records " isBack={true} hasIcon={true} />
+
+        <MyImageBackground imageSource={require("../assets/nofound.png")}>
+          <View>
+            <H4>No records found</H4>
+          </View>
+        </MyImageBackground>
       </View>
     </ContainerComponent>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 40,
-  },
-  message: {
-    fontSize: 18,
-    color: "#333",
-    fontWeight: "bold",
-  },
-});
 
 export default NoRecord;

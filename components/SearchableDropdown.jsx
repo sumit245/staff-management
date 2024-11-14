@@ -64,7 +64,7 @@ class SearchableDropdown extends Component {
               chip={true}
               resetValue={false}
               textInputProps={{
-                placeholder: "Search or Items",
+                placeholder: "Search Items",
                 underlineColorAndroid: "transparent",
                 style: [styles.textInput, textInputStyle], // Merge passed textInputStyle
                 onTextChange: this.handleTextChange, // Update onTextChange
