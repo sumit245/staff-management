@@ -9,7 +9,7 @@ const NoRecord = () => {
   return (
     <ContainerComponent>
       <View>
-        <MyHeader title="Project Overview" isBack={true} hasIcon={true} />
+        <MyHeader title="No records " isBack={true} hasIcon={true} />
 
         <MyImageBackground imageSource={require("../assets/nofound.png")}>
           <View>
