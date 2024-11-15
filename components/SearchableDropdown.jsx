@@ -10,36 +10,33 @@ class SearchableDropdown extends Component {
     super(props);
     this.state = {
       selectedItems: [],
-      filteredItems: originalItems, // Use filteredItems to control dropdown items
+      filteredItems: originalItems, 
     };
   }
 
-  // Function to handle text change and filter the items
   handleTextChange = (text) => {
     if (text === "") {
-      // If the input is cleared, reset the filtered items to the originalItems
       this.setState({ filteredItems: originalItems });
     } else {
-      // Filter the items based on the search input
       const filteredItems = originalItems.filter((item) =>
         item.name.toLowerCase().includes(text.toLowerCase())
       );
 
-      // If no items are found, show an alert
       if (filteredItems.length === 0) {
         Alert.alert("Item not found");
       }
 
-      // Update the filteredItems state
       this.setState({ filteredItems });
     }
   };
 
   render() {
+    const { style, containerStyle, itemStyle, itemTextStyle, textInputStyle } = this.props; // Destructure passed style props
+
     return (
       <ContainerComponent>
         <Fragment>
-          <View style={styles.container}>
+          <View style={[styles.container, style]}>
             <SearchableDropdownNative
               multi={true}
               selectedItems={this.state.selectedItems}
@@ -53,15 +50,15 @@ class SearchableDropdown extends Component {
                   this.setState({ selectedItems: items });
                 }
               }}
-              containerStyle={styles.dropdownContainer}
+              containerStyle={[styles.dropdownContainer, containerStyle]} // Merge passed containerStyle
               onRemoveItem={(item) => {
                 const items = this.state.selectedItems.filter(
                   (sitem) => sitem.id !== item.id
                 );
                 this.setState({ selectedItems: items });
               }}
-              itemStyle={styles.itemStyle}
-              itemTextStyle={styles.itemTextStyle}
+              itemStyle={[styles.itemStyle, itemStyle]} // Merge passed itemStyle
+              itemTextStyle={[styles.itemTextStyle, itemTextStyle]} // Merge passed itemTextStyle
               itemsContainerStyle={styles.itemsContainerStyle}
               items={this.state.filteredItems} // Use filteredItems for dropdown
               chip={true}
@@ -69,7 +66,7 @@ class SearchableDropdown extends Component {
               textInputProps={{
                 placeholder: "Search Items",
                 underlineColorAndroid: "transparent",
-                style: styles.textInput,
+                style: [styles.textInput, textInputStyle], // Merge passed textInputStyle
                 onTextChange: this.handleTextChange, // Update onTextChange
               }}
               listProps={{ nestedScrollEnabled: true }}
