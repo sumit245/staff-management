@@ -655,3 +655,88 @@ export const staff = {
   uploaded_by: "rakesh sharma",
   created_date: "",
 };
+
+// projectData.js
+export const projectDataList = [
+  {
+    id: 1,
+    name: "Robotic Cell",
+    startDate: "2024-10-08",
+    deadline: "2024-10-22",
+    description: "A project focused on automating the cell assembly process.",
+    manager: "Anand Dhariwal",
+    teamMembers: ["Anand Dhariwal", "John Doe"],
+  },
+  {
+    id: 2,
+    name: "AI Analytics",
+    startDate: "2024-09-01",
+    deadline: "2024-12-15",
+    description: "Developing AI-powered analytics tools for data insights.",
+    manager: "Priya Sen",
+    teamMembers: ["Priya Sen", "Alex Lee", "Maria Garcia"],
+  },
+  {
+    id: 3,
+    name: "Mobile App Development",
+    startDate: "2024-11-01",
+    deadline: "2025-01-15",
+    description: "Building a cross-platform mobile application.",
+    manager: "Raj Patel",
+    teamMembers: ["Raj Patel", "Samir Khan", "Lucy Brown"],
+  },
+  {
+    id: 4,
+    name: "Website Redesign",
+    startDate: "2024-08-15",
+    deadline: "2024-10-30",
+    description: "Revamping the company website with a new design.",
+    manager: "Rita Das",
+    teamMembers: ["Rita Das", "Tom Wilson", "Emma Clark"],
+  },
+  {
+    id: 5,
+    name: "IoT Integration",
+    startDate: "2024-07-10",
+    deadline: "2024-11-20",
+    description: "Integrating IoT devices for smart office automation.",
+    manager: "John Smith",
+    teamMembers: ["John Smith", "Mark Kim", "Alice Wong"],
+  },
+];
+
+// reviewsData.js
+export const reviewsData = [
+  {
+    id: "1",
+    title: "Product A",
+    status: "In Review",
+    startDate: "2024-01-01",
+    endDate: "2024-01-10",
+    details: "Detailed review information for Product.",
+  },
+  {
+    id: "2",
+    title: "Product B",
+    status: "Approved",
+    startDate: "2024-02-01",
+    endDate: "2024-02-05",
+    details: "This product was approved quickly.",
+  },
+  {
+    id: "3",
+    title: "Product C",
+    status: "Rejected",
+    startDate: "2024-03-01",
+    endDate: "2024-03-15",
+    details: "Issues found in Product C.",
+  },
+  {
+    id: "4",
+    title: "Product D",
+    status: "In Review",
+    startDate: "2024-04-01",
+    endDate: "2024-04-10",
+    details: "Pending review for Product D.",
+  },
+];
