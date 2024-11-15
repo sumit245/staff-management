@@ -34,7 +34,7 @@ export default function DashboardScreen() {
   };
 
   const navigateToTaskCardScreen = () => {
-    navigation.navigate("TaskCardScreen");
+    navigation.navigate("taskCardScreen");
   };
 
   const navigateToToDoTaskCardScreen = () => {
@@ -43,22 +43,6 @@ export default function DashboardScreen() {
 
   const navigateToNoRecord = () => {
     navigation.navigate("NoRecord");
-  };
-
-  const navigateToHolidayListScreen = () => {
-    navigation.navigate("HolidayListScreen");
-  };
-
-  const navigateToMyNotesScreen = () => {
-    navigation.navigate("myNotesScreen");
-  };
-
-  const navigateToInReviewScreen = () => {
-    navigation.navigate("ReviewScreen");
-  };
-
-  const navigateTOOpenProjectScreen = () => {
-    navigation.navigate("openProjectScreen");
   };
 
   const firstFourTasks = tasks.slice(0, 4);
@@ -157,17 +141,7 @@ export default function DashboardScreen() {
               backgroundColor={item.backgroundColor}
               tasks={item.count}
               status={item.status}
-              onPress={() => {
-                if (item.id === 1) {
-                  navigateToTaskList();
-                } else if (item.id === 2) {
-                  navigateToTaskCardScreen();
-                } else if (item.id === 5) {
-                  navigation.navigate("inReviewScreen");
-                } else if (item.id === 6) {
-                  navigateTOOpenProjectScreen();
-                }
-              }}
+              onPress={() => navigation.navigate(item.page)}
             />
           )}
           keyExtractor={(item) => item.id.toString()}
@@ -218,15 +192,7 @@ export default function DashboardScreen() {
               backgroundColor={item.backgroundColor}
               tasks={item.count}
               status={item.status}
-              onPress={() => {
-                if (item.id === 1) {
-                  navigateToTaskList();
-                } else if (item.id === 3) {
-                  navigation.navigate("HolidayListScreen");
-                } else if (item.id === 4) {
-                  navigateToMyNotesScreen();
-                }
-              }}
+              onPress={() => navigation.navigate(item.page)}
             />
           )}
           keyExtractor={(item) => item.id.toString()}
