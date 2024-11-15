@@ -12,7 +12,6 @@ export const tasks = [
     status: "Open Projects",
     page: "openProjectScreen",
     count: "2",
-   
   },
   {
     id: 5,
@@ -178,7 +177,7 @@ export const menuItems = [
     page: "holidayListScreen",
   },
   { label: "My Purchases", icon: "cart-outline", page: "requisitions" },
-  { label: "My Projects", page: "openProjectScreen", icon: "grid-outline",},
+  { label: "My Projects", page: "openProjectScreen", icon: "grid-outline" },
   { label: "My Tasks", icon: "grid-outline", page: "taskList" },
   { label: "My Notes", page: "myNotesScreen", icon: "reader-outline" },
   { label: "Settings", icon: "cog-outline", page: "internalSetting" },
@@ -274,7 +273,6 @@ export const holidays = [
     icon: "calendar",
   },
 ];
-
 
 export const documentData = [
   { id: "1", name: "Offer Letter", icon: "file-document-outline" },
@@ -501,7 +499,6 @@ export const staff = {
   created_date: "",
 };
 
-
 export const projectDataList = [
   {
     id: 1,
@@ -550,7 +547,6 @@ export const projectDataList = [
   },
 ];
 
-
 export const reviewsData = [
   {
     id: "1",
@@ -583,5 +579,56 @@ export const reviewsData = [
     startDate: "2024-04-01",
     endDate: "2024-04-10",
     details: "Pending review for Product D.",
+  },
+];
+
+export const task = [
+  {
+    id: 1,
+    title: "Design in Solidworks",
+    status: "done",
+    deadline: "2024-10-13",
+    start: "2024-10-08",
+    project: "Robotic Cell",
+    assignedTo: "Rakesh Sharma",
+  },
+  {
+    id: 2,
+    title: "Purchase Parts",
+    status: "critical",
+    deadline: "2024-08-28",
+    start: "2024-08-28",
+    project: "coffee Vending Machine",
+    assignedTo: "Rakesh Sharma",
+  },
+  {
+    id: 3,
+    title: "Purchase Parts",
+    status: "blocker",
+    deadline: "2024-08-28",
+    start: "2024-08-28",
+    project: "Automatic Soap Dispensor MAchine Jig",
+    assignedTo: "Rakesh Sharma",
+  },
+];
+
+export const todotask = [
+  {
+    id: 4,
+    title: "Manufacturing",
+    status: "to-do",
+    deadline: "2024-10-22",
+    start: "2024-10-08",
+    project: "Robotic Cell",
+    assignedTo: "Anand Dhariwal",
+  },
+  {
+    id: 5,
+    title: "Material Procurement",
+    status: "to-do",
+    deadline: "2024-10-20",
+    start: "2024-10-08",
+    project: "Robotic Cell",
+    assignedTo: "Rohit Gupta ",
   },
 ];

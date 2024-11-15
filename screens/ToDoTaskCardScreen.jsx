@@ -1,49 +1,73 @@
-import React, { useState } from "react";
-import { View, ScrollView, StyleSheet, Text, Dimensions } from "react-native";
+import { View, ScrollView } from "react-native";
 import { Card } from "react-native-elements";
-import Icon from "react-native-vector-icons/MaterialIcons";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
+import { todotask } from "../utils/faker";
+import { spacing, typography, SCREEN_WIDTH } from "../styles";
+import { styles } from "../styles/components.styles";
+import { DARK } from "../styles/constant";
+import { H4, H5, H6 } from "../components/text";
 
-const ToDoTaskCard = ({
-  id,
-  title,
-  status,
-  deadline,
-  start,
-  project,
-  assignedTo,
-}) => {
+const ToDoTaskCard = ({ title, deadline, start, project, assignedTo }) => {
   return (
     <ContainerComponent>
       <Card containerStyle={styles.card}>
-        <View style={styles.cardHeader}>
-          <View style={styles.statusIcon}>
-            {status === "to-do" && (
-              <Icon name="schedule" size={20} color="#2b87b0" />
-            )}
-          </View>
-          <View style={styles.cardInfo}>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.id}>ID: {id}</Text>
-          </View>
+        <View style={{ flexDirection: "row", marginBottom: 12 }}>
+          <H4 style={[typography.textBold, { color: DARK }]}>{title}</H4>
         </View>
-        <View style={styles.cardDetails}>
-          <View style={styles.detailsRow}>
-            <Text style={styles.detailsLabel}>Start Date:</Text>
-            <Text style={styles.detailsValue}>{start}</Text>
+        <View>
+          <View style={{ flexDirection: "row", marginBottom: 8 }}>
+            <H5 style={[typography.font8, { color: "black", flex: 1 }]}>
+              Start Date:
+            </H5>
+            <H6
+              style={[
+                typography.font8,
+                { color: "black", textAlign: "right", flex: 1 },
+              ]}
+            >
+              {start}
+            </H6>
           </View>
-          <View style={styles.detailsRow}>
-            <Text style={styles.detailsLabel}>Deadline:</Text>
-            <Text style={styles.detailsValue}>{deadline}</Text>
+          <View style={{ flexDirection: "row", marginBottom: 8 }}>
+            <H5 style={[typography.font8, { color: "black", flex: 1 }]}>
+              Deadline:
+            </H5>
+            <H6
+              style={[
+                typography.font8,
+                { color: "black", textAlign: "right", flex: 1 },
+              ]}
+            >
+              {deadline}
+            </H6>
           </View>
-          <View style={styles.detailsRow}>
-            <Text style={styles.detailsLabel}>Project:</Text>
-            <Text style={styles.detailsValue}>{project}</Text>
+          <View style={{ flexDirection: "row", marginBottom: 8 }}>
+            <H5 style={[typography.font8, { color: "black", flex: 1 }]}>
+              Project:
+            </H5>
+
+            <H6
+              style={[
+                typography.font8,
+                { color: "black", textAlign: "right", flex: 1 },
+              ]}
+            >
+              {project}
+            </H6>
           </View>
-          <View style={styles.detailsRow}>
-            <Text style={styles.detailsLabel}>Assigned To:</Text>
-            <Text style={styles.detailsValue}>{assignedTo}</Text>
+          <View style={{ flexDirection: "row", marginBottom: 8 }}>
+            <H5 style={[typography.font8, { color: "black", flex: 1 }]}>
+              Assigned To:
+            </H5>
+            <H6
+              style={[
+                typography.font8,
+                { color: "black", textAlign: "right", flex: 1 },
+              ]}
+            >
+              {assignedTo}
+            </H6>
           </View>
         </View>
       </Card>
@@ -52,102 +76,32 @@ const ToDoTaskCard = ({
 };
 
 const ToDoTaskListScreen = () => {
-  const [tasks, setTasks] = useState([
-    {
-      id: 4,
-      title: "Manufacturing",
-      status: "to-do",
-      deadline: "2024-10-22",
-      start: "2024-10-08",
-      project: "Robotic Cell",
-      assignedTo: "Anand Dhariwal",
-    },
-    {
-      id: 5,
-      title: "Material Procurement",
-      status: "to-do",
-      deadline: "2024-10-20",
-      start: "2024-10-08",
-      project: "Robotic Cell",
-      assignedTo: "Mansi Khatri",
-    },
-  ]);
-
   return (
-    <ScrollView style={styles.container}>
+    <View
+      style={[
+        spacing.mh1,
+        {
+          width: SCREEN_WIDTH - 8,
+        },
+      ]}
+    >
       <MyHeader title="Task" isBack={true} hasIcon={true} />
-      {tasks.map((task) => (
-        <ToDoTaskCard
-          key={task.id}
-          id={task.id}
-          title={task.title}
-          status={task.status}
-          deadline={task.deadline}
-          start={task.start}
-          project={task.project}
-          assignedTo={task.assignedTo}
-        />
-      ))}
-    </ScrollView>
+      <ScrollView>
+        {todotask.map((task) => (
+          <ToDoTaskCard
+            key={task.id}
+            id={task.id}
+            title={task.title}
+            status={task.status}
+            deadline={task.deadline}
+            start={task.start}
+            project={task.project}
+            assignedTo={task.assignedTo}
+          />
+        ))}
+      </ScrollView>
+    </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 0,
-  },
-  card: {
-    borderRadius: 10,
-    padding: 15,
-    margin: 0,
-    marginBottom: 12,
-    width: Dimensions.get("window").width - 20,
-    alignSelf: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  cardHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  statusIcon: {
-    marginRight: 10,
-  },
-  cardInfo: {
-    flex: 1,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  id: {
-    fontSize: 14,
-    color: "gray",
-  },
-  cardDetails: {
-    paddingVertical: 10,
-  },
-  detailsRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 10,
-  },
-  detailsLabel: {
-    fontSize: 14,
-    color: "gray",
-  },
-  detailsValue: {
-    fontSize: 14,
-    textAlign: "right",
-  },
-});
 
 export default ToDoTaskListScreen;

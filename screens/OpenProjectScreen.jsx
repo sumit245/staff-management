@@ -1,20 +1,13 @@
 import React from "react";
-import { View, ScrollView, StyleSheet, Text, Dimensions } from "react-native";
+import { View, ScrollView } from "react-native";
 import { Card } from "react-native-elements";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import { projectDataList } from "../utils/faker";
 import { styles } from "../styles/components.styles";
-//import { SCREEN_WIDTH, spacing, typography } from "../styles";
-import { H1, H2, H3, H4, H5, H6 } from "../components/text";
-import {
-  LIGHT,
-  PRIMARY_COLOR,
-  //styles,
-  spacing,
-  typography,
-  SCREEN_WIDTH,
-} from "../styles";
+
+import { H4, H5, H6 } from "../components/text";
+import { spacing, typography, SCREEN_WIDTH } from "../styles";
 import { DARK } from "../styles/constant";
 
 const ProjectCard = ({
@@ -29,10 +22,7 @@ const ProjectCard = ({
     <ContainerComponent>
       <Card containerStyle={styles.card}>
         <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            marginBottom: 10,
+          style={{ flexDirection: "row", marginBottom: 12,
           }}
         >
           <H4 style={[typography.textBold, { color: DARK }]}>{name}</H4>
@@ -52,9 +42,7 @@ const ProjectCard = ({
             </H6>
           </View>
           <View
-            style={{
-              flexDirection: "row",
-              marginBottom: 8,
+            style={{ flexDirection: "row", marginBottom: 8,
             }}
           >
             <H5 style={[typography.font8, { color: "black", flex: 1 }]}>
@@ -70,9 +58,7 @@ const ProjectCard = ({
             </H6>
           </View>
           <View
-            style={{
-              flexDirection: "row",
-              marginBottom: 8,
+            style={{ flexDirection: "row", marginBottom: 8,
             }}
           >
             <H5 style={[typography.font8, { color: "black", flex: 1 }]}>
@@ -88,9 +74,7 @@ const ProjectCard = ({
             </H6>
           </View>
           <View
-            style={{
-              flexDirection: "row",
-              marginBottom: 8,
+            style={{  flexDirection: "row", marginBottom: 8,
             }}
           >
             <H5 style={[typography.font8, { color: "black", flex: 1 }]}>
@@ -106,9 +90,7 @@ const ProjectCard = ({
             </H6>
           </View>
           <View
-            style={{
-              flexDirection: "row",
-              marginBottom: 8,
+            style={{ flexDirection: "row", marginBottom: 8,
             }}
           >
             <H5 style={[typography.font8, { color: "black", flex: 1 }]}>
