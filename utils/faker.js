@@ -9,34 +9,18 @@ export const tasks = [
   {
     id: 6,
     backgroundColor: "#FFCCCB",
-    title: "Dashboard design for admin",
-    description: "Create the admin dashboard for the app",
     status: "Open Projects",
     page: "openProjectScreen",
     count: "2",
-    date: "14 Oct 2022",
-    commentsCount: 5,
-    attachmentsCount: 2,
-    teamMembers: [
-      { image: "https://randomuser.me/api/portraits/men/1.jpg" },
-      { image: "https://randomuser.me/api/portraits/women/1.jpg" },
-    ],
+   
   },
   {
     id: 5,
     backgroundColor: "#D1E7DD",
-    title: "Konom web application",
-    description: "Develop the Konom web application",
     status: "In Review",
     page: "inReviewScreen",
     count: 2,
-    date: "14 Nov 2022",
     commentsCount: 2,
-    attachmentsCount: 1,
-    teamMembers: [
-      { image: "https://randomuser.me/api/portraits/men/2.jpg" },
-      { image: "https://randomuser.me/api/portraits/women/2.jpg" },
-    ],
   },
   {
     id: 1,
@@ -131,20 +115,6 @@ export const dummyMessages = [
   },
 ];
 
-export const items = [
-  { label: "JavaScript", value: "javascript" },
-  { label: "Python", value: "python" },
-  { label: "Java", value: "java" },
-];
-
-export const dummyData = [
-  { id: "1", title: "Item 1" },
-  { id: "2", title: "Item 2" },
-  { id: "3", title: "Item 3" },
-  { id: "4", title: "Item 4" },
-  { id: "5", title: "Item 5" },
-];
-
 export const cardData = [
   {
     id: 1,
@@ -197,81 +167,6 @@ export const cardData = [
       "https://randomuser.me/api/portraits/men/7.jpg",
       "https://randomuser.me/api/portraits/women/8.jpg",
     ],
-  },
-];
-
-export const data = [
-  { id: "1", title: "Attendance ", icon: "time-outline" },
-  { id: "2", title: "Salary ", icon: "document-text-outline" },
-  { id: "3", title: "Leave records", icon: "calendar-outline" },
-  { id: "4", title: "Settings", icon: "settings-outline" },
-  { id: "5", title: "Reports", icon: "bar-chart-outline" },
-  { id: "6", title: "Bag", icon: "bag-outline" },
-];
-
-export const contactsData = [
-  {
-    id: "1",
-    name: "Dhruv",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "2",
-    name: "Shrishti ",
-    avatar: "https://randomuser.me/api/portraits/women/8.jpg",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "3",
-    name: "Anants",
-    avatar: "https://randomuser.me/api/portraits/men/7.jpg",
-    status: "Last seen 1 hours ago",
-    online: false,
-  },
-  {
-    id: "4",
-    name: "Naisha Singh",
-    avatar: "",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "5",
-    name: "Raki Devon",
-    avatar: "",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "6",
-    name: "Shanaya Akira",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
-    status: "Last seen 3 minutes ago",
-    online: false,
-  },
-  {
-    id: "8",
-    name: "Naisha Singh",
-    avatar: "",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "9",
-    name: "Raki Devon",
-    avatar: "",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "7",
-    name: "Shanaya Akira",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
-    status: "Last seen 3 minutes ago",
-    online: false,
   },
 ];
 
@@ -380,23 +275,6 @@ export const holidays = [
   },
 ];
 
-export const personalData = {
-  fullName: "Bittu Kumar",
-  email: "bittu230@gmail.com",
-  phone: "+91 7945671265",
-  address: "Delhi India",
-};
-
-export const professionalData = {
-  employeeId: "7879987",
-  designation: " UI/UX Designer",
-  companyEmail: "bittu89@example.com",
-  employeeType: "Permanent",
-  department: "Design",
-  reportingManager: "Ashish Kumar",
-  companyExperience: "2 Year 5 Months",
-  officeTime: "10:00 am to 07:00 pm",
-};
 
 export const documentData = [
   { id: "1", name: "Offer Letter", icon: "file-document-outline" },
@@ -476,54 +354,6 @@ export const cardtasks = [
       "https://randomuser.me/api/portraits/women/55.jpg",
       "https://randomuser.me/api/portraits/men/41.jpg",
     ],
-  },
-];
-
-export const attendanceData = [
-  {
-    icon: "login",
-    title: "Check In",
-    time: "10:20 am",
-    status: "On Time",
-  },
-  {
-    icon: "logout",
-    title: "Check Out",
-    time: "07:00 pm",
-    status: "Go Home",
-  },
-  {
-    icon: "clock-outline",
-    title: "Break Time",
-    time: "00:30 min",
-    status: "Avg Time 30 min",
-  },
-  {
-    icon: "calendar-check-outline",
-    title: "Total Days",
-    time: "28",
-    status: "Working Days",
-  },
-];
-
-export const activityData = [
-  {
-    title: "Check In",
-    time: "10:00 am",
-    status: "On Time",
-    icon: "login",
-  },
-  {
-    title: "Break In",
-    time: "12:30 pm",
-    status: "On Time",
-    icon: "pause-circle-outline",
-  },
-  {
-    title: "Check Out",
-    time: "07:00 pm",
-    status: "On Time",
-    icon: "logout",
   },
 ];
 
@@ -671,7 +501,7 @@ export const staff = {
   created_date: "",
 };
 
-// projectData.js
+
 export const projectDataList = [
   {
     id: 1,
@@ -720,7 +550,7 @@ export const projectDataList = [
   },
 ];
 
-// reviewsData.js
+
 export const reviewsData = [
   {
     id: "1",
