@@ -49,10 +49,7 @@ const TaskList = () => {
                 Good Morning, {staff.first_name}
               </H3>
             </View>
-            {/* <Image
-              source={{ uri: staff.image }}
-              style={[layouts.circle12, spacing.mv3, layouts.center]}
-            /> */}
+           
           </View>
 
           <View style={styles.statusContainer}>

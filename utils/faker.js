@@ -12,8 +12,8 @@ export const tasks = [
     title: "Dashboard design for admin",
     description: "Create the admin dashboard for the app",
     status: "Open Projects",
+    page: "openProjectScreen",
     count: "2",
-
     date: "14 Oct 2022",
     commentsCount: 5,
     attachmentsCount: 2,
@@ -28,6 +28,7 @@ export const tasks = [
     title: "Konom web application",
     description: "Develop the Konom web application",
     status: "In Review",
+    page: "inReviewScreen",
     count: 2,
     date: "14 Nov 2022",
     commentsCount: 2,
@@ -43,6 +44,7 @@ export const tasks = [
     description: "This is task 1",
     count: 28,
     status: "In Progress",
+    page: "taskList",
     backgroundColor: INFO_COLOR,
   },
   {
@@ -51,6 +53,7 @@ export const tasks = [
     description: "This is task 2",
     count: 31,
     status: "Done",
+    page: "taskCardScreen",
     backgroundColor: SUCCESS_COLOR,
   },
   {
@@ -58,6 +61,7 @@ export const tasks = [
     title: "Task 3",
     description: "This is task 3",
     status: "Events",
+    page: "holidayListScreen",
     count: 7,
     backgroundColor: WARNING_COLOR,
   },
@@ -66,6 +70,7 @@ export const tasks = [
     title: "Task 4",
     description: "This is task 4",
     status: "Sticky Note(Private)",
+    page: "myNotesScreen",
     backgroundColor: DANGER_COLOR,
   },
   {
@@ -271,13 +276,23 @@ export const contactsData = [
 ];
 
 export const menuItems = [
-  { label: "Events", page: "", icon: "calendar-outline" },
-  { label: "My Purchases", icon: "cart-outline" },
-  { label: "My Projects", page: "", icon: "grid-outline" },
-  { label: "My Tasks", page: "", icon: "grid-outline" },
-  { label: "My Notes", page: "NotificationScreen", icon: "reader-outline" },
-  { label: "Settings", page: "", icon: "cog-outline" },
-  { label: "Reports", page: "", icon: "pie-chart-outline" },
+  {
+    label: "Events",
+    page: "holidayListScreen",
+    icon: "calendar-outline",
+    page: "holidayListScreen",
+  },
+  { label: "My Purchases", icon: "cart-outline", page: "requisitions" },
+  { label: "My Projects", page: "openProjectScreen", icon: "grid-outline",},
+  { label: "My Tasks", icon: "grid-outline", page: "taskList" },
+  { label: "My Notes", page: "myNotesScreen", icon: "reader-outline" },
+  { label: "Settings", icon: "cog-outline", page: "internalSetting" },
+  {
+    label: "Reports",
+    page: "myNotesScreen",
+    icon: "pie-chart-outline",
+    page: "reportsScreen",
+  },
 ];
 export const internal = [
   {

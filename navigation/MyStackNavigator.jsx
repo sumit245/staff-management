@@ -60,7 +60,7 @@ export default function MyStackNavigator() {
       <Stack.Screen name="taskList" component={TaskList} />
       <Stack.Screen name="attendanceScreen" component={AttendanceScreen} />
       <Stack.Screen name="profileScreen" component={ProfileScreen} />
-      <Stack.Screen name="HolidayListScreen" component={HolidayListScreen} />
+      <Stack.Screen name="holidayListScreen" component={HolidayListScreen} />
       {/* <Stack.Screen name="LandingPage" component={LandingPage} /> */}
       {/* <Stack.Screen name="LineItemScreen" component={LineItemScreen} /> */}
       {/* <Stack.Screen name="TermsAndConditions" component={TermsAndConditions}/> */}
@@ -70,8 +70,8 @@ export default function MyStackNavigator() {
       {/* <Stack.Screen name="SuccessModal" component={SuccessModal}/> */}
       <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
       <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
-      <Stack.Screen name="InternalSetting" component={InternalSetting} />
-      <Stack.Screen name="TaskCardScreen" component={TaskCardScreen} />
+      <Stack.Screen name="internalSetting" component={InternalSetting} />
+      <Stack.Screen name="taskCardScreen" component={TaskCardScreen} />
       <Stack.Screen name="ToDoTaskCardScreen" component={ToDoTaskCardScreen} />
       <Stack.Screen name="NoRecord" component={NoRecord} />
       <Stack.Screen name="myNotesScreen" component={MyNotesScreen} />
