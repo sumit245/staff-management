@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/components.styles";
 import { SCREEN_WIDTH } from "../../styles/constant";
 
-export default function SearchBar({ placeholder, value, onChangeText }) {
+export default function SearchBar({ placeholder, value, onChangeText, style }) {
   return (
     <View
       style={[
@@ -22,6 +22,7 @@ export default function SearchBar({ placeholder, value, onChangeText }) {
           marginHorizontal: 4,
           borderRadius: 12,
         },
+        style, // Add additional styles passed via the 'style' prop
       ]}
     >
       <Ionicons

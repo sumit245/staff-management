@@ -9,33 +9,18 @@ export const tasks = [
   {
     id: 6,
     backgroundColor: "#FFCCCB",
-    title: "Dashboard design for admin",
-    description: "Create the admin dashboard for the app",
     status: "Open Projects",
+    page: "openProjectScreen",
     count: "2",
-
-    date: "14 Oct 2022",
-    commentsCount: 5,
-    attachmentsCount: 2,
-    teamMembers: [
-      { image: "https://randomuser.me/api/portraits/men/1.jpg" },
-      { image: "https://randomuser.me/api/portraits/women/1.jpg" },
-    ],
+   
   },
   {
     id: 5,
     backgroundColor: "#D1E7DD",
-    title: "Konom web application",
-    description: "Develop the Konom web application",
     status: "In Review",
+    page: "inReviewScreen",
     count: 2,
-    date: "14 Nov 2022",
     commentsCount: 2,
-    attachmentsCount: 1,
-    teamMembers: [
-      { image: "https://randomuser.me/api/portraits/men/2.jpg" },
-      { image: "https://randomuser.me/api/portraits/women/2.jpg" },
-    ],
   },
   {
     id: 1,
@@ -43,6 +28,7 @@ export const tasks = [
     description: "This is task 1",
     count: 28,
     status: "In Progress",
+    page: "taskList",
     backgroundColor: INFO_COLOR,
   },
   {
@@ -51,6 +37,7 @@ export const tasks = [
     description: "This is task 2",
     count: 31,
     status: "Done",
+    page: "taskCardScreen",
     backgroundColor: SUCCESS_COLOR,
   },
   {
@@ -58,6 +45,7 @@ export const tasks = [
     title: "Task 3",
     description: "This is task 3",
     status: "Events",
+    page: "holidayListScreen",
     count: 7,
     backgroundColor: WARNING_COLOR,
   },
@@ -66,6 +54,7 @@ export const tasks = [
     title: "Task 4",
     description: "This is task 4",
     status: "Sticky Note(Private)",
+    page: "myNotesScreen",
     backgroundColor: DANGER_COLOR,
   },
   {
@@ -126,20 +115,6 @@ export const dummyMessages = [
   },
 ];
 
-export const items = [
-  { label: "JavaScript", value: "javascript" },
-  { label: "Python", value: "python" },
-  { label: "Java", value: "java" },
-];
-
-export const dummyData = [
-  { id: "1", title: "Item 1" },
-  { id: "2", title: "Item 2" },
-  { id: "3", title: "Item 3" },
-  { id: "4", title: "Item 4" },
-  { id: "5", title: "Item 5" },
-];
-
 export const cardData = [
   {
     id: 1,
@@ -195,89 +170,24 @@ export const cardData = [
   },
 ];
 
-export const data = [
-  { id: "1", title: "Attendance ", icon: "time-outline" },
-  { id: "2", title: "Salary ", icon: "document-text-outline" },
-  { id: "3", title: "Leave records", icon: "calendar-outline" },
-  { id: "4", title: "Settings", icon: "settings-outline" },
-  { id: "5", title: "Reports", icon: "bar-chart-outline" },
-  { id: "6", title: "Bag", icon: "bag-outline" },
-];
-
-export const contactsData = [
-  {
-    id: "1",
-    name: "Dhruv",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "2",
-    name: "Shrishti ",
-    avatar: "https://randomuser.me/api/portraits/women/8.jpg",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "3",
-    name: "Anants",
-    avatar: "https://randomuser.me/api/portraits/men/7.jpg",
-    status: "Last seen 1 hours ago",
-    online: false,
-  },
-  {
-    id: "4",
-    name: "Naisha Singh",
-    avatar: "",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "5",
-    name: "Raki Devon",
-    avatar: "",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "6",
-    name: "Shanaya Akira",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
-    status: "Last seen 3 minutes ago",
-    online: false,
-  },
-  {
-    id: "8",
-    name: "Naisha Singh",
-    avatar: "",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "9",
-    name: "Raki Devon",
-    avatar: "",
-    status: "Online",
-    online: true,
-  },
-  {
-    id: "7",
-    name: "Shanaya Akira",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
-    status: "Last seen 3 minutes ago",
-    online: false,
-  },
-];
-
 export const menuItems = [
-  { label: "Events", page: "", icon: "calendar-outline" },
-  { label: "My Purchases", icon: "cart-outline" },
-  { label: "My Projects", page: "", icon: "grid-outline" },
-  { label: "My Tasks", page: "", icon: "grid-outline" },
-  { label: "My Notes", page: "NotificationScreen", icon: "reader-outline" },
-  { label: "Settings", page: "", icon: "cog-outline" },
-  { label: "Reports", page: "", icon: "pie-chart-outline" },
+  {
+    label: "Events",
+    page: "holidayListScreen",
+    icon: "calendar-outline",
+    page: "holidayListScreen",
+  },
+  { label: "My Purchases", icon: "cart-outline", page: "requisitions" },
+  { label: "My Projects", page: "openProjectScreen", icon: "grid-outline",},
+  { label: "My Tasks", icon: "grid-outline", page: "taskList" },
+  { label: "My Notes", page: "myNotesScreen", icon: "reader-outline" },
+  { label: "Settings", icon: "cog-outline", page: "internalSetting" },
+  {
+    label: "Reports",
+    page: "myNotesScreen",
+    icon: "pie-chart-outline",
+    page: "reportsScreen",
+  },
 ];
 export const internal = [
   {
@@ -365,23 +275,6 @@ export const holidays = [
   },
 ];
 
-export const personalData = {
-  fullName: "Bittu Kumar",
-  email: "bittu230@gmail.com",
-  phone: "+91 7945671265",
-  address: "Delhi India",
-};
-
-export const professionalData = {
-  employeeId: "7879987",
-  designation: " UI/UX Designer",
-  companyEmail: "bittu89@example.com",
-  employeeType: "Permanent",
-  department: "Design",
-  reportingManager: "Ashish Kumar",
-  companyExperience: "2 Year 5 Months",
-  officeTime: "10:00 am to 07:00 pm",
-};
 
 export const documentData = [
   { id: "1", name: "Offer Letter", icon: "file-document-outline" },
@@ -461,54 +354,6 @@ export const cardtasks = [
       "https://randomuser.me/api/portraits/women/55.jpg",
       "https://randomuser.me/api/portraits/men/41.jpg",
     ],
-  },
-];
-
-export const attendanceData = [
-  {
-    icon: "login",
-    title: "Check In",
-    time: "10:20 am",
-    status: "On Time",
-  },
-  {
-    icon: "logout",
-    title: "Check Out",
-    time: "07:00 pm",
-    status: "Go Home",
-  },
-  {
-    icon: "clock-outline",
-    title: "Break Time",
-    time: "00:30 min",
-    status: "Avg Time 30 min",
-  },
-  {
-    icon: "calendar-check-outline",
-    title: "Total Days",
-    time: "28",
-    status: "Working Days",
-  },
-];
-
-export const activityData = [
-  {
-    title: "Check In",
-    time: "10:00 am",
-    status: "On Time",
-    icon: "login",
-  },
-  {
-    title: "Break In",
-    time: "12:30 pm",
-    status: "On Time",
-    icon: "pause-circle-outline",
-  },
-  {
-    title: "Check Out",
-    time: "07:00 pm",
-    status: "On Time",
-    icon: "logout",
   },
 ];
 
@@ -655,3 +500,88 @@ export const staff = {
   uploaded_by: "rakesh sharma",
   created_date: "",
 };
+
+
+export const projectDataList = [
+  {
+    id: 1,
+    name: "Robotic Cell",
+    startDate: "2024-10-08",
+    deadline: "2024-10-22",
+    description: "A project focused on automating the cell assembly process.",
+    manager: "Anand Dhariwal",
+    teamMembers: ["Anand Dhariwal", "John Doe"],
+  },
+  {
+    id: 2,
+    name: "AI Analytics",
+    startDate: "2024-09-01",
+    deadline: "2024-12-15",
+    description: "Developing AI-powered analytics tools for data insights.",
+    manager: "Priya Sen",
+    teamMembers: ["Priya Sen", "Alex Lee", "Maria Garcia"],
+  },
+  {
+    id: 3,
+    name: "Mobile App Development",
+    startDate: "2024-11-01",
+    deadline: "2025-01-15",
+    description: "Building a cross-platform mobile application.",
+    manager: "Raj Patel",
+    teamMembers: ["Raj Patel", "Samir Khan", "Lucy Brown"],
+  },
+  {
+    id: 4,
+    name: "Website Redesign",
+    startDate: "2024-08-15",
+    deadline: "2024-10-30",
+    description: "Revamping the company website with a new design.",
+    manager: "Rita Das",
+    teamMembers: ["Rita Das", "Tom Wilson", "Emma Clark"],
+  },
+  {
+    id: 5,
+    name: "IoT Integration",
+    startDate: "2024-07-10",
+    deadline: "2024-11-20",
+    description: "Integrating IoT devices for smart office automation.",
+    manager: "John Smith",
+    teamMembers: ["John Smith", "Mark Kim", "Alice Wong"],
+  },
+];
+
+
+export const reviewsData = [
+  {
+    id: "1",
+    title: "Product A",
+    status: "In Review",
+    startDate: "2024-01-01",
+    endDate: "2024-01-10",
+    details: "Detailed review information for Product.",
+  },
+  {
+    id: "2",
+    title: "Product B",
+    status: "Approved",
+    startDate: "2024-02-01",
+    endDate: "2024-02-05",
+    details: "This product was approved quickly.",
+  },
+  {
+    id: "3",
+    title: "Product C",
+    status: "Rejected",
+    startDate: "2024-03-01",
+    endDate: "2024-03-15",
+    details: "Issues found in Product C.",
+  },
+  {
+    id: "4",
+    title: "Product D",
+    status: "In Review",
+    startDate: "2024-04-01",
+    endDate: "2024-04-10",
+    details: "Pending review for Product D.",
+  },
+];

@@ -33,7 +33,7 @@ const FormScreen = () => {
       <ScrollView>
         <MyHeader title="Add Item Details" isBack={true} hasIcon={true} />
 
-        {/* <View style={{ paddingHorizontal: 12 }}>
+        {/* <View style={{ paddingHorizontal: 14 }}>
           <H5>Search Item</H5>
         </View> */}
 
