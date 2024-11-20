@@ -14,31 +14,31 @@ import MyTextInput from "../components/input/MyTextInput";
 import Button from "../components/buttons/Button";
 import { styles } from "../styles/components.styles";
 import { layouts, spacing, typography } from "../styles";
-import { login } from "../redux/actions";
+import { useDispatch } from "react-redux";
 import Icon from "react-native-vector-icons/Ionicons";
+import { login } from "../redux/actions/staffActions";
 
 export default function LoginScreen() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const dispatch = useDispatch();
   const navigation = useNavigation();
 
-  useEffect(() => {
+  const onSubmit = async () => {
     setError("");
-  }, []);
-
-  const onSubmit = () => {
-    const result = login(username, password);
-    if (result) {
-      navigation.navigate("attendancePunch");
-    } else {
-      setError("Please provide the correct credentials");
+    try {
+      const result = await dispatch(login(username, password));
+      if (result) {
+        navigation.navigate("attendancePunch");
+      } else {
+        setError("Invalid credentials. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      setError("An error occurred during login.");
     }
-  };
-
-  const togglePasswordVisibility = () => {
-    setIsPasswordVisible(!isPasswordVisible);
   };
 
   return (
@@ -55,7 +55,7 @@ export default function LoginScreen() {
           <MyTextInput
             title="Username"
             type="email"
-            placeholder="abc@xyz.com"
+            placeholder="Enter your email"
             value={username}
             onChangeText={setUsername}
           />
@@ -73,7 +73,7 @@ export default function LoginScreen() {
                 right: spacing.mr2.marginRight,
                 top: 40,
               }}
-              onPress={togglePasswordVisibility}
+              onPress={() => setIsPasswordVisible(!isPasswordVisible)}
             >
               <Icon
                 name={isPasswordVisible ? "eye-off" : "eye"}
@@ -82,11 +82,9 @@ export default function LoginScreen() {
               />
             </TouchableOpacity>
           </View>
-
           {error ? (
             <Text style={{ color: "red", marginBottom: 10 }}>{error}</Text>
           ) : null}
-
           <Span style={styles.rightLink}>Forgot Password?</Span>
         </KeyboardAvoidingView>
         <Button
