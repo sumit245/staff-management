@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { View, ScrollView, StyleSheet, Text, Dimensions } from "react-native";
+import React from "react";
+import { View, ScrollView, StyleSheet, Text } from "react-native";
 import { Card } from "react-native-elements";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import ContainerComponent from "../components/ContainerComponent";
@@ -16,8 +16,8 @@ const TaskCardScreen = ({
 }) => {
   return (
     <ContainerComponent>
-      <Card containerStyle={styles.card}>
-        <View style={styles.cardHeader}>
+      <Card>
+        <View style={[spacing.mh1, { width: SCREEN_WIDTH - 32 }]}>
           <View style={styles.statusIcon}>
             {status === "done" && (
               <Icon name="check-circle" size={20} color="#2b87b0" />
@@ -30,7 +30,7 @@ const TaskCardScreen = ({
             )}
           </View>
           <View style={styles.cardInfo}>
-            <Text style={styles.title}>{title}</Text>
+            <H3>{title}</H3>
             <Text style={styles.id}>ID: {id}</Text>
           </View>
         </View>
@@ -161,6 +161,7 @@ const styles = StyleSheet.create({
   },
   detailsValue: {
     fontSize: 14,
+    textAlign: "right",
     textAlign: "right",
   },
 });
