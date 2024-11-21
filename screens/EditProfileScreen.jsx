@@ -1,53 +1,58 @@
-import React, { useState } from "react";
-import { View, TextInput } from "react-native";
+import { useState } from "react";
+import { View } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
-import { styles, spacing, SCREEN_WIDTH, typography } from "../styles";
+import { spacing, SCREEN_WIDTH, typography, styles } from "../styles";
 import MyHeader from "../components/header/MyHeader";
-import { H2, P } from "../components/text";
+import { H2 } from "../components/text";
 import Button from "../components/buttons/Button";
+import MyTextInput from "../components/input/MyTextInput";
 
 const EditProfileScreen = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSave = () => {
-    console.log("Updated Email:", email);
-    console.log("Updated Password:", password);
+    console.log("Current Password:", currentPassword);
+    console.log("New Password:", newPassword);
+    console.log("Confirm Password:", confirmPassword);
   };
 
   return (
     <ContainerComponent>
-      <MyHeader title="Edit Profile" isBack={true} />
+      <MyHeader isBack={true} title="Edit Profile" hasIcon={true} />
       <View style={[spacing.mt5, spacing.mh2, { width: SCREEN_WIDTH - 16 }]}>
-        <P style={styles.label}>Current Password</P>
-        <TextInput
-          style={styles.input}
+        <MyTextInput
+          title="Current Password"
           placeholder="Enter current password"
-          value={password}
-          onChangeText={setEmail}
+          value={currentPassword}
+          onChangeText={setCurrentPassword}
+          secureTextEntry
         />
-        <P style={styles.label}> New Password</P>
-        <TextInput
-          style={styles.input}
+        <MyTextInput
+          title="New Password"
           placeholder="Enter new password"
-          value={password}
+          value={newPassword}
+          onChangeText={setNewPassword}
           secureTextEntry
-          onChangeText={setPassword}
         />
-        <P style={styles.label}>Confirm New Password</P>
-        <TextInput
-          style={styles.input}
+        <MyTextInput
+          title="Confirm New Password"
           placeholder="Confirm new password"
-          value={password}
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
           secureTextEntry
-          onChangeText={setPassword}
         />
+
         <Button
-          style={[styles.btn, styles.bgPrimary, { justifyContent: "center" }]}
-          onPress={handleSave}
+          style={[
+            styles.btn,
+            styles.bgPrimary,
+            { justifyContent: "center", marginHorizontal: 18 },
+          ]}
         >
           <H2 style={[styles.btnText, styles.textLarge, typography.textLight]}>
-            Save Changes
+            Save
           </H2>
         </Button>
       </View>
