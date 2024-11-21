@@ -6,8 +6,6 @@ import { notifications } from "../utils/faker";
 import { TouchableOpacity } from "react-native";
 import { styles } from "../styles/components.styles";
 import { H2, H5, P } from "../components/text";
-import { useFonts } from "expo-font";
-//import MyFlatList from "../components/utility/MyFlatList";
 
 export default function NotificationScreen() {
   const renderItem = ({ item }) => (

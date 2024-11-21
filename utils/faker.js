@@ -611,6 +611,7 @@ export const task = [
     assignedTo: "Rakesh Sharma",
   },
 ];
+export const PRIVACY_POLICY = "lorem ipsum sit dolor amet";
 
 export const todotask = [
   {

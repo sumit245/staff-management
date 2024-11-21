@@ -5,7 +5,7 @@ import moment from "moment";
 import Icon from "react-native-vector-icons/Ionicons";
 import ContainerComponent from "../components/ContainerComponent";
 import MyFlatList from "../components/utility/MyFlatList";
-import { H2, H3, H4, H5, P } from "../components/text";
+import { H3, H4, H5, P } from "../components/text";
 import CardFullWidth from "../components/card/CardFullWidth";
 import StatCard from "../components/card/Statcard";
 
@@ -24,9 +24,8 @@ export default function DashboardScreen() {
   const navigation = useNavigation();
   const today = useState(moment().format("DD MMM YYYY"));
 
-  
   const handleClockOut = () => {
-    navigation.navigate("loginScreen"); 
+    navigation.navigate("loginScreen");
   };
 
   const navigateToTaskList = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Image, Dimensions } from "react-native";
-import { Card, Avatar, IconButton, ProgressBar } from "react-native-paper";
+import { View, Text, TouchableOpacity, Dimensions } from "react-native";
+import { Card, ProgressBar } from "react-native-paper";
 import Icon from "react-native-vector-icons/Ionicons";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
@@ -12,8 +12,8 @@ import ToDo from "../components/input/ToDo";
 import { styles } from "../styles/components.styles";
 import { H3, H5, H6 } from "../components/text";
 
-import { layouts, spacing, typography, LIGHT } from "../styles";
-import { staff, tasks } from "../utils/faker";
+import { spacing, typography, LIGHT } from "../styles";
+import { staff } from "../utils/faker";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
@@ -49,7 +49,6 @@ const TaskList = () => {
                 Good Morning, {staff.first_name}
               </H3>
             </View>
-           
           </View>
 
           <View style={styles.statusContainer}>
