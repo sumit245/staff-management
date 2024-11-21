@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { FlatList, View, ActivityIndicator } from "react-native";
 import { styles } from "../../styles/components.styles";
 import { PRIMARY_COLOR } from "../../styles/constant";

@@ -1,4 +1,4 @@
-import { View, Text, FlatList } from "react-native";
+import { View } from "react-native";
 import { Card, Avatar, IconButton } from "react-native-paper";
 import Icon from "react-native-vector-icons/Ionicons";
 import { cardData } from "../../utils/faker";
@@ -13,9 +13,9 @@ const CardTask = ({ task }) => {
   return (
     <TouchableOpacity>
       <Card style={styles.card}>
-        <View style={[styles.row, { alignItems: 'center' }]}>
+        <View style={[styles.row, { alignItems: "center" }]}>
           <H4>{task.title}</H4>
-          <IconButton icon="dots-horizontal" size={24} onPress={() => { }} />
+          <IconButton icon="dots-horizontal" size={24} onPress={() => {}} />
         </View>
 
         <View style={[styles.row, styles.mv3]}>
@@ -26,9 +26,14 @@ const CardTask = ({ task }) => {
             <Span style={styles.textLight}>{task.status}</Span>
           </View>
         </View>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, non odio. Amet, iste consectetur debitis assumenda, harum quia labore temporibus dolores, eius maxime quod quasi laboriosam! Quis nulla pariatur tempore!</P>
+        <P>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, non
+          odio. Amet, iste consectetur debitis assumenda, harum quia labore
+          temporibus dolores, eius maxime quod quasi laboriosam! Quis nulla
+          pariatur tempore!
+        </P>
 
-        <View style={[styles.row, styles.mv3, { alignItems: 'center' }]}>
+        <View style={[styles.row, styles.mv3, { alignItems: "center" }]}>
           <View style={styles.taskFooterItem}>
             <Icon name="calendar-outline" size={16} color="#6b7280" />
             <P style={styles.footerText}>{task.date}</P>
@@ -68,4 +73,3 @@ const TaskList = () => (
 );
 
 export default TaskList;
-
