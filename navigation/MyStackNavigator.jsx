@@ -11,16 +11,10 @@ import PrivacyPolicy from "../screens/PrivacyPolicy";
 import AttendancePunchScreen from "../screens/AttendancePunchScreen";
 import ProjectTimeline from "../screens/ProjectTimeline";
 import TaskList from "../components/card/CardTask";
-
 import HolidayListScreen from "../screens/HolidayListScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-//import LandingPage from "../screens/LandingPage";
-//import LineItemScreen from "../screens/LineItemScreen";
-import AttendanceScreen from "../screens/AttendanceScreen";
-//import TermsAndConditions from "../screens/TermsAndConditions";
+
 //import ApplyLeaveForm from "../screens/ApplyLeaveForm";
-//import  AllLeaves from "../screens/AllLeaves"
-//import CheckOut  from "../screens/CheckOut"
 //import SuccessModal from "../components/SuccessModal";
 import EditProfileScreen from "../screens/EditProfileScreen";
 import SettingsScreen from "../screens/SettingScreen";
@@ -37,7 +31,7 @@ const Stack = createNativeStackNavigator();
 export default function MyStackNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="TaskCardScreen"
+      initialRouteName="loginScreen"
       screenOptions={{
         headerShown: false,
       }}
@@ -58,15 +52,11 @@ export default function MyStackNavigator() {
       <Stack.Screen name="notificationScreen" component={NotificationScreen} />
       <Stack.Screen name="privacyPolicy" component={PrivacyPolicy} />
       <Stack.Screen name="taskList" component={TaskList} />
-      <Stack.Screen name="attendanceScreen" component={AttendanceScreen} />
       <Stack.Screen name="profileScreen" component={ProfileScreen} />
       <Stack.Screen name="holidayListScreen" component={HolidayListScreen} />
-      {/* <Stack.Screen name="LandingPage" component={LandingPage} /> */}
-      {/* <Stack.Screen name="LineItemScreen" component={LineItemScreen} /> */}
-      {/* <Stack.Screen name="TermsAndConditions" component={TermsAndConditions}/> */}
+
       <Stack.Screen name="ApplyLeaveForm" component={ApplyLeaveForm} />
-      {/* <Stack.Screen name="AllLeaves" component={AllLeaves}/> */}
-      {/* <Stack.Screen name="CheckOut" component={CheckOut}/> */}
+
       {/* <Stack.Screen name="SuccessModal" component={SuccessModal}/> */}
       <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
       <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
