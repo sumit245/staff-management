@@ -17,10 +17,10 @@ import ProfileScreen from "../screens/ProfileScreen";
 //import LandingPage from "../screens/LandingPage";
 //import LineItemScreen from "../screens/LineItemScreen";
 import AttendanceScreen from "../screens/AttendanceScreen";
-//import TermsAndConditions from "../screens/TermsAndConditions";
+
 //import ApplyLeaveForm from "../screens/ApplyLeaveForm";
 //import  AllLeaves from "../screens/AllLeaves"
-//import CheckOut  from "../screens/CheckOut"
+
 //import SuccessModal from "../components/SuccessModal";
 import EditProfileScreen from "../screens/EditProfileScreen";
 import SettingsScreen from "../screens/SettingScreen";
