@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { View, ScrollView } from "react-native";
 import MyHeader from "../components/header/MyHeader";
-import CustomCheckbox from "../components/input/CustomCheckbox";
-import Button from "../components/buttons/Button";
-import { H6, H2, P } from "../components/text";
+import { P } from "../components/text";
 import { styles } from "../styles/components.styles";
 import ContainerComponent from "../components/ContainerComponent";
 
@@ -12,7 +10,6 @@ const PrivacyPolicy = () => {
 
   const handleCheckboxChange = () => {
     setIsChecked((prev) => !prev);
-    console.log("Checkbox state changed:", !isChecked);
   };
   return (
     <ContainerComponent>
@@ -42,8 +39,6 @@ const PrivacyPolicy = () => {
             are continually updated to adapt to evolving security threats and
             industry standards.
           </P>
-
-        
         </ScrollView>
       </View>
     </ContainerComponent>

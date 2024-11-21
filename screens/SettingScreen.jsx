@@ -14,7 +14,6 @@ export default function SettingsScreen() {
   const navigation = useNavigation();
 
   const handleLogoutPress = () => {
-    console.log("Logout pressed");
     navigation.navigate("loginScreen");
   };
 
@@ -32,7 +31,7 @@ export default function SettingsScreen() {
             key={index}
             label={item.label}
             icon={item.icon}
-               onPress={() => navigation.navigate(item.page)}
+            onPress={() => navigation.navigate(item.page)}
           />
         ))}
       </View>

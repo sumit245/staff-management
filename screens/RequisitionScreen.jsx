@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Checkbox } from "react-native-paper";
 import { View, ScrollView, Text, TouchableOpacity } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
@@ -20,9 +20,7 @@ const RequisitionScreen = ({ navigation }) => {
     setRequisitionList(updatedRequisitions);
   };
 
-  const handleActionPress = (id) => {
-    console.log(`Action button pressed for requisition ${id}`);
-  };
+  const handleActionPress = (id) => {};
 
   const handleSearchIconPress = () => {
     navigation.navigate("purchaseOrderScreen");

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FlatList, } from "react-native";
+import { FlatList } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import { cardtasks } from "../utils/faker";
@@ -10,15 +10,16 @@ import moment from "moment";
 
 export default function ProjectTimelineScreen() {
   const [dates, setDates] = useState([
-    { "currentDate": "31", "currentDay": "Thu" },
-    { "currentDate": "30", "currentDay": "Wed" },
-    { "currentDate": "29", "currentDay": "Tue" },
-    { "currentDate": "28", "currentDay": "Mon" },
-    { "currentDate": "27", "currentDay": "Sun" }]);
-  const [activeDate, setActiveState] = useState(moment().format('DD'));
+    { currentDate: "31", currentDay: "Thu" },
+    { currentDate: "30", currentDay: "Wed" },
+    { currentDate: "29", currentDay: "Tue" },
+    { currentDate: "28", currentDay: "Mon" },
+    { currentDate: "27", currentDay: "Sun" },
+  ]);
+  const [activeDate, setActiveState] = useState(moment().format("DD"));
 
   const onSelectDate = (date) => {
-    setActiveState(date)
+    setActiveState(date);
   };
 
   function getDaysArrayByMonth() {
@@ -26,8 +27,8 @@ export default function ProjectTimelineScreen() {
     let arrDays = [];
 
     while (daysInMonth) {
-      let currentDate = moment().date(daysInMonth).format('DD');
-      let currentDay = moment().date(daysInMonth).format('ddd');
+      let currentDate = moment().date(daysInMonth).format("DD");
+      let currentDay = moment().date(daysInMonth).format("ddd");
       arrDays.push({ currentDate, currentDay });
       daysInMonth--;
     }
@@ -36,11 +37,8 @@ export default function ProjectTimelineScreen() {
   }
 
   useEffect(() => {
-    setDates(getDaysArrayByMonth().reverse())
-    console.log(activeDate)
-  }, [])
-
-
+    setDates(getDaysArrayByMonth().reverse());
+  }, []);
 
   return (
     <ContainerComponent>
@@ -59,6 +57,4 @@ export default function ProjectTimelineScreen() {
       />
     </ContainerComponent>
   );
-};
-
-
+}

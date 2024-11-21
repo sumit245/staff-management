@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { View, TextInput } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
-import { SCREEN_WIDTH, spacing, typography } from "../styles";
+import { SCREEN_WIDTH, typography } from "../styles";
 import Button from "../components/buttons/Button";
 import { H2 } from "../components/text";
 import { styles } from "../styles/components.styles";
@@ -10,9 +10,7 @@ import { styles } from "../styles/components.styles";
 export default function MyNotesScreen() {
   const [note, setNote] = useState("");
 
-  const handleSave = () => {
-    console.log("Note saved:", note);
-  };
+  const handleSave = () => {};
 
   return (
     <ContainerComponent>

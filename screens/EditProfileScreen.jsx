@@ -1,27 +1,21 @@
 import { useState } from "react";
 import { View } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
-import { spacing, SCREEN_WIDTH, typography, styles } from "../styles";
+import { SCREEN_WIDTH, typography, styles } from "../styles";
 import MyHeader from "../components/header/MyHeader";
 import { H2 } from "../components/text";
 import Button from "../components/buttons/Button";
 import MyTextInput from "../components/input/MyTextInput";
 
-const EditProfileScreen = () => {
+export default function EditProfileScreen() {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSave = () => {
-    console.log("Current Password:", currentPassword);
-    console.log("New Password:", newPassword);
-    console.log("Confirm Password:", confirmPassword);
-  };
-
   return (
     <ContainerComponent>
       <MyHeader isBack={true} title="Edit Profile" hasIcon={true} />
-      <View style={[spacing.mt5, spacing.mh2, { width: SCREEN_WIDTH - 16 }]}>
+      <View style={[{ width: SCREEN_WIDTH - 16 }]}>
         <MyTextInput
           title="Current Password"
           placeholder="Enter current password"
@@ -48,7 +42,7 @@ const EditProfileScreen = () => {
           style={[
             styles.btn,
             styles.bgPrimary,
-            { justifyContent: "center", marginHorizontal: 18 },
+            { justifyContent: "center", marginHorizontal: 12 },
           ]}
         >
           <H2 style={[styles.btnText, styles.textLarge, typography.textLight]}>
@@ -58,6 +52,4 @@ const EditProfileScreen = () => {
       </View>
     </ContainerComponent>
   );
-};
-
-export default EditProfileScreen;
+}

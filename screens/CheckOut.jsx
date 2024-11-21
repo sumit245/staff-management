@@ -11,14 +11,11 @@ import { styles } from "../styles/components.styles";
 import MapView, { Marker } from "react-native-maps";
 
 export default function TimeClockScreen() {
-  const handleCheckout = () => {
-    console.log("Checked Out!");
-  };
-
+  const handleCheckout = () => {};
 
   const location = {
-    latitude: 25.6097, 
-    longitude: 85.1422, 
+    latitude: 25.6097,
+    longitude: 85.1422,
   };
 
   return (
@@ -56,8 +53,7 @@ export default function TimeClockScreen() {
           color="#ffffff"
         />
 
-     
-        <View style={ styles.mapContainer }>
+        <View style={styles.mapContainer}>
           <MapView
             style={styles.map}
             initialRegion={{
