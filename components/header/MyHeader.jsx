@@ -1,9 +1,10 @@
 import { View, TouchableOpacity } from "react-native";
-import { H4 } from "../text";
+import { H4, H5 } from "../text";
 import Icon from "react-native-vector-icons/Ionicons";
 import { Badge } from "react-native-paper";
 import { styles } from "../../styles/components.styles";
 import { useNavigation } from "@react-navigation/native";
+import { typography } from "../../styles";
 
 export default function MyHeader({
   isBack,
@@ -25,7 +26,9 @@ export default function MyHeader({
           <Icon name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
       )}
-      <H4 style={styles.titleText}>{title}</H4>
+
+      <H4 style={[typography.font18]}>{title}</H4>
+
       {hasIcon && (
         <TouchableOpacity
           onPress={onIconPress}

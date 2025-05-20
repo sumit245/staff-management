@@ -176,7 +176,7 @@ export const menuItems = [
     icon: "calendar-outline",
     page: "holidayListScreen",
   },
-  { label: "My Purchases", icon: "cart-outline", page: "requisitions" },
+  { label: "Inventory", icon: "cart-outline", page: "requisitions" },
   { label: "My Projects", page: "openProjectScreen", icon: "grid-outline" },
   { label: "My Tasks", icon: "grid-outline", page: "taskList" },
   { label: "My Notes", page: "myNotesScreen", icon: "reader-outline" },
@@ -372,31 +372,18 @@ export const lineItems = [
 
 export const requisitions = [
   {
-    id: "PR - 10050019",
-    location: "PL01 - Texas Houston Plant",
-    date: "08/19/2024",
-    amount: "₹ 24.40 ",
+    id: "1",
+    materialName: "Wire",
+    category: "Electrical",
+    specification: "2.5mm",
     checked: false,
   },
   {
-    id: "PR - 10050018",
-    location: "PL01 - Texas Houston Plant",
-    date: "08/23/2024",
-    amount: "₹ 254.40 ",
-    checked: false,
-  },
-  {
-    id: "PR - 10050017",
-    location: "PL01 - Texas Houston Plant",
-    date: "09/11/2024",
-    amount: "₹ 100.00 ",
-    checked: false,
-  },
-  {
-    id: "PR - 10050016",
-    location: "PL01 - Texas Houston Plant",
-    date: "10/19/2024",
-    amount: "₹ 100.00 ",
+    id: "2",
+    materialName: "Bolt",
+    category: "Fasteners",
+    specification: "1.5mm",
+
     checked: false,
   },
 ];
@@ -632,4 +619,8 @@ export const todotask = [
     project: "Robotic Cell",
     assignedTo: "Rohit Gupta ",
   },
+];
+
+export const dummyWorkers = [
+  { id: "1", name: "Rakesh Sharma", job: "plumber", status: "" },
 ];

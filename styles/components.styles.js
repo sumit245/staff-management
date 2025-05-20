@@ -20,7 +20,8 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   cameraContainer: {
-    borderWidth: 6,
+    borderWidth: 2,
+    borderStyle: "dotted",
     borderColor: PRIMARY_COLOR,
     overflow: "hidden",
   },

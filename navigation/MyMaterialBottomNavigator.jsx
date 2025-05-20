@@ -4,6 +4,7 @@ import DashboardScreen from "../screens/DashboardScreen";
 import ChatScreen from "../screens/ChatScreen";
 import SettingsScreen from "../screens/SettingScreen";
 import TaskList from "../screens/TaskList";
+import VendorAttendanceScreen from "../screens/VendorAttendanceScreen";
 
 import { INFO_COLOR, LIGHT, PRIMARY_COLOR } from "../styles/constant";
 
@@ -35,7 +36,7 @@ export default function MyMaterialBottomNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="taskListScreen" 
+        name="taskListScreen"
         component={TaskList}
         options={{
           tabBarLabel: "Tasks",
@@ -52,6 +53,16 @@ export default function MyMaterialBottomNavigator() {
           tabBarBadge: "2",
           tabBarIcon: ({ color }) => (
             <Icon name="chatbubbles-outline" size={26} color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="vendorAttendanceScreen"
+        component={VendorAttendanceScreen}
+        options={{
+          tabBarLabel: "Attendance",
+          tabBarIcon: ({ color }) => (
+            <Icon name="man-outline" size={26} color={color} />
           ),
         }}
       />

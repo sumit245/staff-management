@@ -2,6 +2,7 @@ export const LOGIN_STAFF = "LOGIN_STAFF";
 export const LOGOUT_STAFF = "LOGOUT_STAFF";
 export const CHANGE_PASSWORD_STAFF = "CHANGE_PASSWORD_STAFF";
 export const VIEW_PROFILE_STAFF = "VIEW_PROFILE_STAFF";
+export const PUNCH_IN = "PUNCH_IN";
 
 export const VIEW_TASK = "VIEW_TASK";
 export const UPDATE_TASK = "UPDATE_TASK,";

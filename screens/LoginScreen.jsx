@@ -1,3 +1,4 @@
+// import all react native
 import { useState } from "react";
 import {
   KeyboardAvoidingView,
@@ -7,24 +8,25 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import Icon from "react-native-vector-icons/Ionicons";
+// import components
 import MyImageBackground from "../components/MyImageBackground";
-import { H1, H5, Span, H2 } from "../components/text";
 import MyTextInput from "../components/input/MyTextInput";
 import Button from "../components/buttons/Button";
-import { styles } from "../styles/components.styles";
-import { layouts, spacing, typography } from "../styles";
+
+// import styles
+import { Span, H2, H3, P } from "../components/text";
+import { layouts, spacing, styles, typography } from "../styles";
+// import redux
 import { useDispatch } from "react-redux";
-import Icon from "react-native-vector-icons/Ionicons";
 import { login } from "../redux/actions/staffActions";
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const dispatch = useDispatch();
-  const navigation = useNavigation();
 
   const onSubmit = async () => {
     setError("");
@@ -45,8 +47,8 @@ export default function LoginScreen() {
     <MyImageBackground imageSource={require("../assets/Login.png")}>
       <ScrollView style={{ flex: 1 }}>
         <View style={[layouts.center, spacing.mv5]}>
-          <H1 style={spacing.mv2}>Welcome Back</H1>
-          <H5 style={spacing.mb5}>Sign in to continue</H5>
+          <H3 style={spacing.mv2}>Welcome Back</H3>
+          <P style={spacing.mb5}>Sign in to continue</P>
         </View>
         <KeyboardAvoidingView
           behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -70,8 +72,8 @@ export default function LoginScreen() {
             <TouchableOpacity
               style={{
                 position: "absolute",
-                right: spacing.mr2.marginRight,
-                top: 40,
+                right: 12,
+                top: 33,
               }}
               onPress={() => setIsPasswordVisible(!isPasswordVisible)}
             >

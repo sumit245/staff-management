@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, View, Text, TouchableOpacity } from "react-native";
 import Button from "../components/buttons/Button";
 import { H2 } from "../components/text";
 import ContainerComponent from "../components/ContainerComponent";
@@ -8,38 +8,69 @@ import MyTextInput from "../components/input/MyTextInput";
 import { styles, typography } from "../styles";
 
 const FormScreen = () => {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [materialName, setMaterialName] = useState(""); // For material name
+  const [itemCode, setItemCode] = useState(""); // For item code
   const [model, setModel] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [price, setPrice] = useState("");
   const [remarks, setRemarks] = useState("");
-  const [selectedOption, setSelectedOption] = useState("");
+  const [isRemarksVisible, setIsRemarksVisible] = useState(false); // State to toggle visibility of remarks input
 
   const handleSubmit = () => {
     console.log("Form Submitted:", {
-      selectedItem,
+      materialName,
+      itemCode,
       model,
-      quantity,
-      price,
       remarks,
-      selectedOption,
     });
+  };
+
+  const toggleRemarksInput = () => {
+    setIsRemarksVisible(!isRemarksVisible); // Toggle the visibility of remarks input
   };
 
   return (
     <ContainerComponent>
       <ScrollView>
-        <MyHeader title="Add Item Details" isBack={true} hasIcon={true} />
+        <MyHeader title="Add New Material" isBack={true} hasIcon={true} />
 
+        {/* Material Name */}
         <View style={{ paddingHorizontal: 12 }}>
           <MyTextInput
-            title="Make/Specifications"
-            placeholder="Make Specifications"
-            value={model}
-            onChangeText={setModel}
+            title="Material Name"
+            placeholder="Enter Material Name"
+            value={materialName}
+            onChangeText={setMaterialName}
+          />
+          {/* Material Name Character Count */}
+          <Text style={{ textAlign: "right", color: "#888", bottom: 12 }}>
+            {materialName.length}/30
+          </Text>
+        </View>
+
+        {/* Item Code */}
+        <View style={{ paddingHorizontal: 12 }}>
+          <MyTextInput
+            title="Item Code"
+            placeholder="Enter Item Code"
+            value={itemCode}
+            onChangeText={setItemCode}
           />
         </View>
 
+        {/* Specifications */}
+        <View style={{ paddingHorizontal: 12 }}>
+          <MyTextInput
+            title="Specifications"
+            placeholder="Material brand, color, size, etc."
+            value={model}
+            onChangeText={setModel}
+          />
+          {/* Specifications Character Count */}
+          <Text style={{ textAlign: "right", color: "#888", bottom: 12 }}>
+            {model.length}/100
+          </Text>
+        </View>
+
+        {/* Model */}
         <View style={{ paddingHorizontal: 12 }}>
           <MyTextInput
             title="Model"
@@ -49,47 +80,36 @@ const FormScreen = () => {
           />
         </View>
 
+        {/* Additional Details (formerly Remarks) */}
         <View style={{ paddingHorizontal: 12 }}>
-          <MyTextInput
-            title="Quantity"
-            placeholder="Enter Quantity"
-            type="numeric"
-            value={quantity}
-            onChangeText={setQuantity}
-          />
+          <TouchableOpacity onPress={toggleRemarksInput}>
+            <Text style={{ color: "#007BFF", fontSize: 16 }}>Remarks</Text>
+          </TouchableOpacity>
+
+          {isRemarksVisible && (
+            <MyTextInput
+              title="Additional Details"
+              placeholder="Enter Additional Details"
+              value={remarks}
+              onChangeText={setRemarks}
+              multiline={true}
+              style={[
+                styles.textInputField,
+                {
+                  height: 120,
+                  textAlignVertical: "top",
+                },
+              ]}
+            />
+          )}
         </View>
 
-        <View style={{ paddingHorizontal: 12 }}>
-          <MyTextInput
-            title="Tentative Price"
-            placeholder="Enter Tentative Price"
-            type="numeric"
-            value={price}
-            onChangeText={setPrice}
-          />
-        </View>
-        <View style={{ paddingHorizontal: 12 }}>
-          <MyTextInput
-            title="Remarks"
-            placeholder="Enter Remarks"
-            value={remarks}
-            onChangeText={setRemarks}
-            multiline={true}
-            style={[
-              styles.textInputField,
-              {
-                height: 120,
-                textAlignVertical: "top",
-              },
-            ]}
-          />
-        </View>
-
+        {/* Submit Button */}
         <Button
           style={[
             styles.btn,
             styles.bgPrimary,
-            { justifyContent: "center", marginHorizontal: 12 },
+            { justifyContent: "center", marginHorizontal: 12, top: 200 },
           ]}
           onPress={handleSubmit}
         >

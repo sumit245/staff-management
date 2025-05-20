@@ -5,7 +5,7 @@ import moment from "moment";
 import Icon from "react-native-vector-icons/Ionicons";
 import ContainerComponent from "../components/ContainerComponent";
 import MyFlatList from "../components/utility/MyFlatList";
-import { H3, H4, H5, P } from "../components/text";
+import { H4, H5, P } from "../components/text";
 import CardFullWidth from "../components/card/CardFullWidth";
 import StatCard from "../components/card/Statcard";
 
@@ -47,6 +47,17 @@ export default function DashboardScreen() {
   const firstFourTasks = tasks.slice(0, 4);
   const lastTwoTasks = tasks.slice(4, 6);
 
+  const getGreeting = () => {
+    const currentHour = moment().hour();
+    if (currentHour < 12) {
+      return "Good Morning";
+    } else if (currentHour < 17) {
+      return "Good Afternoon";
+    } else {
+      return "Good Evening";
+    }
+  };
+
   return (
     <ContainerComponent>
       <View
@@ -57,7 +68,9 @@ export default function DashboardScreen() {
         ]}
       >
         <View>
-          <H3 style={typography.textBold}>Good Morning, {staff.first_name}</H3>
+          <H4 style={typography.font18}>
+            {getGreeting()}, {staff.first_name}
+          </H4>
           <P style={spacing.ml1}>{today}</P>
         </View>
         <Image
@@ -74,15 +87,67 @@ export default function DashboardScreen() {
             spacing.pv3,
           ]}
         >
-          <CardFullWidth backgroundColor={LIGHT}>
-            <View style={[styles.row, { alignItems: "center" }]}>
-              <Icon name="alarm" size={64} color={PRIMARY_COLOR} />
-              <TouchableOpacity style={layouts.center} onPress={handleClockOut}>
-                <Icon name="log-out-outline" size={32} color={PRIMARY_COLOR} />
-                <H4>Clock Out</H4>
+          <CardFullWidth
+            backgroundColor={LIGHT}
+            style={[
+              spacing.pv1,
+              spacing.ph2,
+              spacing.br1,
+              {
+                height: 60,
+                // overflow: "hidden",
+              },
+            ]}
+          >
+            <View
+              style={[
+                spacing.pv1,
+                spacing.ph1,
+                {
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                },
+              ]}
+            >
+              <View style={{ alignItems: "center", flexDirection: "row" }}>
+                <Icon
+                  name="alarm"
+                  size={32}
+                  color={PRIMARY_COLOR}
+                  style={{ marginRight: 10 }}
+                />
+                <View>
+                  <H5 style={[typography.font12]}>Clock started at:</H5>
+                  <P style={[typography.font12, { color: "#666" }]}>
+                    {moment().format("hh:mm:ss A")}
+                  </P>
+                </View>
+              </View>
+
+              <TouchableOpacity
+                style={[
+                  styles.row,
+                  spacing.pv1,
+                  spacing.ph2,
+                  spacing.br2,
+                  {
+                    backgroundColor: PRIMARY_COLOR,
+                  },
+                ]}
+                onPress={handleClockOut}
+              >
+                <Icon
+                  name="log-out-outline"
+                  size={20}
+                  color="#fff"
+                  style={{ marginRight: 5 }}
+                />
+                <H5 style={[typography.font12, { color: "#fff" }]}>
+                  Clock Out
+                </H5>
               </TouchableOpacity>
             </View>
-            <H5>Clock started at: {moment().format("HH:mm:ss A")}</H5>
           </CardFullWidth>
         </View>
 
