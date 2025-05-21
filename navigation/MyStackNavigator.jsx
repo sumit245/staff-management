@@ -13,6 +13,7 @@ import ProjectTimeline from "../screens/ProjectTimeline";
 import TaskList from "../components/card/CardTask";
 import HolidayListScreen from "../screens/HolidayListScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import ConveyanceBillForm from "../screens/ConveyanceBillForm";
 
 //import ApplyLeaveForm from "../screens/ApplyLeaveForm";
 //import SuccessModal from "../components/SuccessModal";
@@ -68,8 +69,9 @@ export default function MyStackNavigator() {
       <Stack.Screen name="myNotesScreen" component={MyNotesScreen} />
       <Stack.Screen name="inReviewScreen" component={InReviewScreen} />
       <Stack.Screen name="openProjectScreen" component={OpenProjectScreen} />
-      <Stack.Screen name="reportsScreen" component={ ReportsScreen } />
-      <Stack.Screen name= "conveyance" component={ConveyanceManagementScreen}/>
+      <Stack.Screen name="reportsScreen" component={ReportsScreen} />
+      <Stack.Screen name="conveyance" component={ConveyanceManagementScreen} />
+      <Stack.Screen name="conveyancebill" component={ConveyanceBillForm} />
     </Stack.Navigator>
   );
 }

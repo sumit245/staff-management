@@ -16,11 +16,11 @@ import {
 } from "../styles";
 
 const ConveyanceManagementScreen = ({ navigation }) => {
-  const firstName = "John";
   const [index, setIndex] = useState(0);
 
   return (
     <ContainerComponent style={{ flex: 1 }}>
+      {/* Search bar and filter icon */}
       <View
         style={[spacing.mv4, styles.row, spacing.mh1, { alignItems: "center" }]}
       >
@@ -32,11 +32,29 @@ const ConveyanceManagementScreen = ({ navigation }) => {
         </Button>
       </View>
 
+      {/* Floating Add Button with Large Bold Icon */}
       <Button
-        style={styles.addButton}
-        onPress={() => navigation.navigate("conveyanceBillForm")}
+        style={[
+          {
+            position: "absolute",
+            right: 20,
+            bottom: 30,
+            width: 60,
+            height: 60,
+            borderRadius: 30,
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: PRIMARY_COLOR,
+            elevation: 6,
+            shadowColor: "#000",
+            shadowOffset: { width: 0, height: 2 },
+            shadowOpacity: 0.3,
+            shadowRadius: 4,
+          },
+        ]}
+        onPress={() => navigation.navigate("conveyancebill")}
       >
-        <Icon name="add" size={ICON_LARGE} color="white" />
+        <Icon name="add" size={ICON_LARGE + 10} color="black" />
       </Button>
     </ContainerComponent>
   );
