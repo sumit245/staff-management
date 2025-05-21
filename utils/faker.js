@@ -179,6 +179,7 @@ export const menuItems = [
   { label: "Inventory", icon: "cart-outline", page: "requisitions" },
   { label: "My Projects", page: "openProjectScreen", icon: "grid-outline" },
   { label: "My Tasks", icon: "grid-outline", page: "taskList" },
+  { label: "Conveyance", icon: "disc-outline", page: "conveyance" },
   { label: "My Notes", page: "myNotesScreen", icon: "reader-outline" },
   { label: "Settings", icon: "cog-outline", page: "internalSetting" },
   {

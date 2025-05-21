@@ -19,7 +19,7 @@ export default function MyMaterialBottomNavigator() {
       activeIndicatorStyle={{ backgroundColor: "transparent" }}
       barStyle={{
         backgroundColor: LIGHT,
-        height: 70,
+        height: 100,
         borderTopWidth: 0.5,
         borderTopColor: "#6c6c6c",
         paddingTop: 0,

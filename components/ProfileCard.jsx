@@ -12,7 +12,7 @@ export default function ProfileCard({ imageUri, name, phoneNumber, onPress }) {
     <TouchableOpacity
       style={[
         styles.rowItem,
-        spacing.p3, { height: 120, width: SCREEN_WIDTH },
+        spacing.p3, { height: 130, width: SCREEN_WIDTH },
       ]}
       onPress={onPress}
     >
