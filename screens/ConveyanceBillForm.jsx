@@ -76,7 +76,7 @@ const ConveyanceBillForm = ({ navigation, route }) => {
   };
 
   const getDistance = async (origin, destination) => {
-    const apiKey = "AIzaSyA5JDAMBbrSLpX8YO__G8Br9d-Sh1camko"; // Distance  key
+    // const apiKey = "AIzaSyA5JDAMBbrSLpX8YO__G8Br9d-Sh1camko"; // Distance  key
     const url = `https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=${encodeURIComponent(
       origin
     )}&destinations=${encodeURIComponent(destination)}&key=${apiKey}`;
@@ -236,7 +236,7 @@ const ConveyanceBillForm = ({ navigation, route }) => {
                   if (from) getDistance(from, address);
                 }}
                 query={{
-                  key: "AIzaSyA5JDAMBbrSLpX8YO__G8Br9d-Sh1camko",
+                //  key: "AIzaSyA5JDAMBbrSLpX8YO__G8Br9d-Sh1camko",
                   language: "en",
                 }}
                 styles={{

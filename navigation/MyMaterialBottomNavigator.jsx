@@ -23,6 +23,8 @@ export default function MyMaterialBottomNavigator() {
         borderTopWidth: 0.5,
         borderTopColor: "#6c6c6c",
         paddingTop: 0,
+        paddingBottom: 20,
+        marginBottom: 40,
       }}
     >
       <BottomTab.Screen

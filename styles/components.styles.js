@@ -18,6 +18,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: LIGHT,
     alignItems: "center",
+    marginTop: StatusBar.currentHeight,
   },
   cameraContainer: {
     borderWidth: 2,
