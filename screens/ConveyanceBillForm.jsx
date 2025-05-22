@@ -7,6 +7,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { styles, typography, spacing, LIGHT, SCREEN_WIDTH } from "../styles";
@@ -75,6 +76,43 @@ const ConveyanceBillForm = ({ navigation, route }) => {
     setSnackbarVisible(true);
   };
 
+  const getDistance = async (origin, destination) => {
+    const apiKey = "AIzaSyAt1JbRbL4WT44dk75UVrUHo556N5_iaqc"; // Distance  key
+    const url = `https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=${encodeURIComponent(
+      origin
+    )}&destinations=${encodeURIComponent(destination)}&key=${apiKey}`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log("Distance API Response:", JSON.stringify(data, null, 2));
+
+      if (data.status !== "OK") {
+        showSnackbar(`API Error: ${data.status}`);
+        return;
+      }
+
+      const element = data.rows[0].elements[0];
+      if (element.status !== "OK") {
+        showSnackbar(`Element Error: ${element.status}`);
+        return;
+      }
+
+      const km = element.distance.value / 1000;
+      setKilometer(km.toFixed(2));
+      calculateAmount(km);
+    } catch (error) {
+      console.error("Distance fetch error:", error);
+      showSnackbar("Error fetching distance.");
+    }
+  };
+
+  useEffect(() => {
+    if (from && to) {
+      getDistance(from, to);
+    }
+  }, [from, to]);
+
   return (
     <ContainerComponent>
       <MyHeader title="Drop" hasIcon={true} isBack={true} />
@@ -126,7 +164,7 @@ const ConveyanceBillForm = ({ navigation, route }) => {
             />
           </View>
 
-          <View style={{ flex: 1 }}>
+          {/* <View style={{ flex: 1 }}>
             <View
               style={{
                 flexDirection: "row",
@@ -187,6 +225,153 @@ const ConveyanceBillForm = ({ navigation, route }) => {
                   fontSize: 16,
                   flex: 1,
                   height: 40,
+                }}
+              />
+              {to !== "" && (
+                <TouchableOpacity
+                  onPress={() => {
+                    setTo("");
+                    setKilometer(null);
+                    setAmount({ car: 0, bike: 0, publicTransport: 0 });
+                  }}
+                >
+                  <Ionicons name="close-circle" size={20} color="#999" />
+                </TouchableOpacity>
+              )}
+              <Ionicons name="location-outline" size={20} color="red" />
+            </View>
+
+            <View style={[styles.row, { alignItems: "center" }]}>
+              <TouchableOpacity
+                onPress={() => handleLocationSelection("drop")}
+                style={[
+                  styles.row,
+                  spacing.br4,
+                  spacing.p2,
+                  {
+                    backgroundColor: LIGHT,
+                    elevation: 3,
+                    top: 8,
+                  },
+                ]}
+              >
+                <Ionicons name="location-outline" size={20} color="red" />
+                <P
+                  style={[
+                    typography.font12,
+                    typography.fontLato,
+                    spacing.mr3,
+                    typography.textBold,
+                  ]}
+                >
+                  {isToSelected ? "Change Drop Location" : " Select Location"}
+                </P>
+              </TouchableOpacity>
+
+              <View style={[styles.row, { alignItems: "center", top: 12 }]}>
+                <P
+                  style={[typography.font14, typography.fontLato, spacing.mr1]}
+                >
+                  Distance:
+                </P>
+                {kilometer && (
+                  <P style={[typography.font12, spacing.ml1, spacing.mr1]}>
+                    {kilometer} km
+                  </P>
+                )}
+              </View>
+            </View>
+          </View> */}
+
+          <View style={{ flex: 1 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                backgroundColor: "#F8F8F8",
+                borderWidth: 1,
+                borderColor: "#ccc",
+                borderRadius: 5,
+                paddingVertical: 10,
+                paddingHorizontal: 12,
+                marginBottom: 10,
+              }}
+            >
+              <GooglePlacesAutocomplete
+                placeholder="From"
+                fetchDetails
+                onPress={(data, details = null) => {
+                  if (details && details.formatted_address) {
+                    const address = details.formatted_address;
+                    setFrom(address);
+                    if (to) getDistance(address, to);
+                  }
+                }}
+                query={{
+                  key: "AIzaSyAt1JbRbL4WT44dk75UVrUHo556N5_iaqc",
+                  language: "en",
+                }}
+                styles={{
+                  textInput: {
+                    backgroundColor: "transparent",
+                    fontSize: 16,
+                    flex: 1,
+                    height: 40,
+                  },
+                  listView: { backgroundColor: "white" },
+                  container: { flex: 1 },
+                }}
+              />
+              {from !== "" && (
+                <TouchableOpacity
+                  onPress={() => {
+                    setFrom("");
+                    setKilometer(null);
+                    setAmount({ car: 0, bike: 0, publicTransport: 0 });
+                  }}
+                >
+                  <Ionicons name="close-circle" size={20} color="#999" />
+                </TouchableOpacity>
+              )}
+              <Ionicons name="location-outline" size={20} color="green" />
+            </View>
+
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                backgroundColor: "#F8F8F8",
+                borderWidth: 1,
+                borderColor: "#ccc",
+                borderRadius: 5,
+                paddingVertical: 10,
+                paddingHorizontal: 12,
+                marginBottom: 10,
+              }}
+            >
+              <GooglePlacesAutocomplete
+                placeholder="To"
+                fetchDetails
+                onPress={(data, details = null) => {
+                  if (details && details.formatted_address) {
+                    const address = details.formatted_address;
+                    setTo(address);
+                    if (from) getDistance(from, address);
+                  }
+                }}
+                query={{
+                  key: "AIzaSyAt1JbRbL4WT44dk75UVrUHo556N5_iaqc",
+                  language: "en",
+                }}
+                styles={{
+                  textInput: {
+                    backgroundColor: "transparent",
+                    fontSize: 16,
+                    flex: 1,
+                    height: 40,
+                  },
+                  listView: { backgroundColor: "white" },
+                  container: { flex: 1 },
                 }}
               />
               {to !== "" && (
