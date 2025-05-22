@@ -51,7 +51,7 @@ export default function MyStackNavigator() {
 
       <Stack.Screen
         name="purchaseOrderScreen"
-        component={PurchaseOrderScreen}
+        component={PurchaseOrderScreen} 
       />
       <Stack.Screen name="formScreen" component={FormScreen} />
       <Stack.Screen name="notificationScreen" component={NotificationScreen} />

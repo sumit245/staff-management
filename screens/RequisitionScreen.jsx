@@ -1,16 +1,12 @@
 import { useState } from "react";
-import { Checkbox } from "react-native-paper";
-import { View, ScrollView, Text, TouchableOpacity } from "react-native";
-import Ionicons from "react-native-vector-icons/Ionicons";
-
+import { View, ScrollView } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
 import { requisitions } from "../utils/faker";
 import SearchBar from "../components/input/SearchBar";
 import MyHeader from "../components/header/MyHeader";
-import Button from "../components/buttons/Button";
 import { styles } from "../styles/components.styles";
-import { H2, H5, H6, P } from "../components/text";
-import { PRIMARY_COLOR, SCREEN_WIDTH, spacing, typography } from "../styles";
+import { H5, P } from "../components/text";
+import { spacing, typography } from "../styles";
 
 const RequisitionScreen = ({ navigation }) => {
   const [searchText, setSearchText] = useState("");
@@ -35,7 +31,8 @@ const RequisitionScreen = ({ navigation }) => {
           isBack={true}
           title="Inventory"
           hasIcon={true}
-          icon="pencil"
+          icon="add"
+          isIconGreen={true}
           onIconPress={handleSearchIconPress}
         />
 
@@ -50,6 +47,7 @@ const RequisitionScreen = ({ navigation }) => {
               key={index}
               materialName={item.materialName}
               specification={item.specification}
+              status={item.status}
               checked={item.checked}
               onToggle={() => handleToggleCheck(index)}
               onActionPress={() => handleActionPress(item.id)}
@@ -57,7 +55,9 @@ const RequisitionScreen = ({ navigation }) => {
           ))}
         </ScrollView>
 
-        <TouchableOpacity
+        {/* + new Material add code comment hai  */}
+
+        {/* <TouchableOpacity
           onPress={() => navigation.navigate("formScreen")}
           style={[
             spacing.br2,
@@ -79,25 +79,13 @@ const RequisitionScreen = ({ navigation }) => {
             </P>
             <P style={[typography.font16, { color: "white" }]}>New Material</P>
           </View>
-        </TouchableOpacity>
-
-        {/* <Button
-          style={[
-            styles.btn,
-            styles.bgPrimary,
-            { justifyContent: "center", marginHorizontal: 16 },
-          ]}
-        >
-          <H2 style={[styles.btnText, styles.textLarge, typography.textLight]}>
-            Create Receipt
-          </H2>
-        </Button> */}
+        </TouchableOpacity> */}
       </View>
     </ContainerComponent>
   );
 };
 
-const ListItem = ({ materialName, specification }) => {
+const ListItem = ({ materialName, specification, status }) => {
   return (
     <View
       style={[
@@ -108,6 +96,7 @@ const ListItem = ({ materialName, specification }) => {
         {
           borderBottomColor: "#ccc",
           alignItems: "center",
+          justifyContent: "space-between",
         },
       ]}
     >
@@ -118,18 +107,23 @@ const ListItem = ({ materialName, specification }) => {
         </View>
       </View>
 
-      <View
-        style={[
-          spacing.pv1,
-          spacing.ph3,
-          spacing.br1,
-          spacing.bw1,
-          {
-            borderColor: "#007acc",
-          },
-        ]}
-      >
-        <P style={[typography.font12, { color: "#007acc" }]}>Update</P>
+      {/* Status Pill with Background */}
+      <View>
+        <P
+          style={[
+            typography.font12,
+            {
+              color:
+                status === "Approved"
+                  ? "#155724"
+                  : status === "Pending"
+                  ? "#856404"
+                  : "#000",
+            },
+          ]}
+        >
+          {status}
+        </P>
       </View>
     </View>
   );

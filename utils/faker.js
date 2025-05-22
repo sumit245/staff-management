@@ -378,13 +378,14 @@ export const requisitions = [
     category: "Electrical",
     specification: "2.5mm",
     checked: false,
+    status: "Pending",
   },
   {
     id: "2",
     materialName: "Bolt",
     category: "Fasteners",
     specification: "1.5mm",
-
+    status: "Approved",
     checked: false,
   },
 ];
@@ -403,9 +404,9 @@ export const originalItems = [
 export const itemsData = [
   { id: "P001", name: "Product A", price: 120.5, quantity: 2, total: 241.0 },
   { id: "P002", name: "Product B", price: 80.25, quantity: 3, total: 240.75 },
-  { id: "P003", name: "Product C", price: 50.0, quantity: 1, total: 50.0 },
-  { id: "P004", name: "Product D", price: 150.75, quantity: 5, total: 753.75 },
-  { id: "P005", name: "Product E", price: 99.99, quantity: 4, total: 399.96 },
+  // { id: "P003", name: "Product C", price: 50.0, quantity: 1, total: 50.0 },
+  // { id: "P004", name: "Product D", price: 150.75, quantity: 5, total: 753.75 },
+  // { id: "P005", name: "Product E", price: 99.99, quantity: 4, total: 399.96 },
 ];
 
 export const amountDetailsData = [

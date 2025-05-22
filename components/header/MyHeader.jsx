@@ -4,7 +4,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { Badge } from "react-native-paper";
 import { styles } from "../../styles/components.styles";
 import { useNavigation } from "@react-navigation/native";
-import { typography } from "../../styles";
+import { typography, PRIMARY_COLOR, LIGHT } from "../../styles";
 
 export default function MyHeader({
   isBack,
@@ -14,6 +14,7 @@ export default function MyHeader({
   hasBadge,
   badgeCount,
   onIconPress,
+  isIconGreen,
 }) {
   const navigation = useNavigation();
   return (
@@ -39,10 +40,29 @@ export default function MyHeader({
             size={30}
             style={{ position: "absolute", top: 10, left: 14 }}
           />
-          {hasBadge && (
+          {/* {hasBadge && (
             <Badge style={{ position: "absolute", top: 7, right: 7 }}>
               {badgeCount}
             </Badge>
+          )} */}
+
+          {hasIcon && (
+            <TouchableOpacity
+              onPress={onIconPress}
+              style={{
+                height: 40,
+                width: 40,
+                backgroundColor: isIconGreen ? PRIMARY_COLOR : "transparent",
+                borderRadius: 27,
+                justifyContent: "center",
+                alignItems: "center",
+                top: 8,
+                left:12,
+              }}
+            >
+              <Icon name={icon} size={30} color="#ffffff" />
+              {hasBadge && <Badge>{badgeCount}</Badge>}
+            </TouchableOpacity>
           )}
         </TouchableOpacity>
       )}
