@@ -42,7 +42,7 @@ const ConveyanceBillForm = ({ navigation, route }) => {
     if (type === "pickup") {
       navigation.navigate("locationSet", { type: "pickup" });
     } else if (type === "drop") {
-      navigation.navigate("locationSet", { type: "drop" });
+      navigation.navigate("locationset", { type: "drop" });
     }
   };
 
@@ -57,8 +57,8 @@ const ConveyanceBillForm = ({ navigation, route }) => {
       setKilometer(km);
       calculateAmount(km);
     } else {
-      setKilometer("2.5");
-      calculateAmount(2.5);
+      setKilometer("");
+      calculateAmount("");
     }
   }, [route.params]);
 
@@ -268,7 +268,7 @@ const ConveyanceBillForm = ({ navigation, route }) => {
               return;
             }
             setVehicleCategoryId(vehicleCategoryMap.car);
-            navigation.navigate("transportCamera", {
+            navigation.navigate("transportcamera", {
               vehicle_category: vehicleCategoryMap.car,
               from,
               to,

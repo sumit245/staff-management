@@ -28,6 +28,9 @@ import InReviewScreen from "../screens/InReviewScreen";
 import OpenProjectScreen from "../screens/OpenProjectScreen";
 import ReportsScreen from "../screens/ReportsScreen";
 import ConveyanceManagementScreen from "../screens/ConveyanceManagementScreen";
+import LocationSetScreen from "../screens/LocationSetScreen";
+import TransportCamera from "../screens/TransportCamera";
+import MapScreen from "../screens/MapScreen";
 const Stack = createNativeStackNavigator();
 
 export default function MyStackNavigator() {
@@ -72,6 +75,9 @@ export default function MyStackNavigator() {
       <Stack.Screen name="reportsScreen" component={ReportsScreen} />
       <Stack.Screen name="conveyance" component={ConveyanceManagementScreen} />
       <Stack.Screen name="conveyancebill" component={ConveyanceBillForm} />
+      <Stack.Screen name="locationset" component={LocationSetScreen} />
+      <Stack.Screen name="transportcamera" component={TransportCamera} />
+      <Stack.Screen name="mapScreen" component={MapScreen} />
     </Stack.Navigator>
   );
 }
