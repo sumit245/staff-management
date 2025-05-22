@@ -45,60 +45,54 @@ const ChatScreen = () => {
         hasIcon={true}
         icon={"search-outline"}
       />
-      <ScrollView style={{ flex: 1 }}>
-        {/* Chat body here */}
-        <MyFlatList
-          data={messages}
-          style={[
-            styles.bgPrimaryTransParent,
-            styles.fullWidth,
-            { paddingHorizontal: 4 },
-          ]}
-          contentContainerStyle={{ height: SCREEN_HEIGHT - 280 }}
-          renderItem={({ item }) => (
-            <ChatBubble
-              message={item.message}
-              isSent={item.isSent}
-              time={item.time}
-            />
-          )}
-          keyExtractor={(item) => item.id}
-        />
-
-        {/* Chat Footer here */}
-        <View
-          style={[
-            styles.row,
-            styles.fullWidth,
-            styles.bgLight,
-            spacing.ph1,
-            { alignItems: "center" },
-          ]}
-        >
-          <TouchableOpacity
-            style={[styles.btn, styles.border, layouts.circle12]}
-          >
-            <Ionicons name="add" size={32} color="black" />
-          </TouchableOpacity>
-          <EllipticalInput
-            placeholder="Type a message"
-            onChangeText={setMessage}
-            value={message}
+      <MyFlatList
+        data={messages}
+        style={[
+          styles.bgPrimaryTransParent,
+          styles.fullWidth,
+          { paddingHorizontal: 4 },
+        ]}
+        contentContainerStyle={{ paddingBottom: 16 }} // Optional padding for bottom spacing
+        renderItem={({ item }) => (
+          <ChatBubble
+            message={item.message}
+            isSent={item.isSent}
+            time={item.time}
           />
+        )}
+        keyExtractor={(item) => item.id}
+      />
 
-          <TouchableOpacity
-            style={[
-              styles.btn,
-              styles.bgInfo,
-              layouts.circle12,
-              { justifyContent: "flex-end" },
-            ]}
-            onPress={() => handleSendMessage(message)}
-          >
-            <Ionicons name="send" size={28} color={LIGHT} />
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
+      {/* Chat Footer here */}
+      <View
+        style={[
+          styles.row,
+          styles.fullWidth,
+          styles.bgLight,
+          spacing.ph1,
+          { alignItems: "center" },
+        ]}
+      >
+        <TouchableOpacity style={[styles.btn, styles.border, layouts.circle12]}>
+          <Ionicons name="add" size={32} color="black" />
+        </TouchableOpacity>
+        <EllipticalInput
+          placeholder="Type a message"
+          onChangeText={setMessage}
+          value={message}
+        />
+        <TouchableOpacity
+          style={[
+            styles.btn,
+            styles.bgInfo,
+            layouts.circle12,
+            { justifyContent: "flex-end" },
+          ]}
+          onPress={() => handleSendMessage(message)}
+        >
+          <Ionicons name="send" size={28} color={LIGHT} />
+        </TouchableOpacity>
+      </View>
     </ContainerComponent>
   );
 };
