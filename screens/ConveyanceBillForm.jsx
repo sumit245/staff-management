@@ -19,7 +19,7 @@ const ConveyanceBillForm = ({ navigation, route }) => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [kilometer, setKilometer] = useState("2.5");
-  const [currentDate, setCurrentDate] = useState("");
+  const [currentDate, setCurrentDate] = useState(""); //
   const [time, setTime] = useState("");
   const [snackbarVisible, setSnackbarVisible] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
