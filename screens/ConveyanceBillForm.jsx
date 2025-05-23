@@ -163,8 +163,7 @@ const ConveyanceBillForm = ({ navigation, route }) => {
               ]}
             />
           </View>
-
-          {/* <View style={{ flex: 1 }}>
+          <View style={{ flex: 1 }}>
             <View
               style={{
                 flexDirection: "row",
@@ -281,9 +280,9 @@ const ConveyanceBillForm = ({ navigation, route }) => {
                 )}
               </View>
             </View>
-          </View> */}
+          </View>
 
-          <View style={{ flex: 1 }}>
+          {/* <View style={{ flex: 1 }}>
             <View
               style={{
                 flexDirection: "row",
@@ -428,7 +427,7 @@ const ConveyanceBillForm = ({ navigation, route }) => {
                 )}
               </View>
             </View>
-          </View>
+          </View> */}
         </View>
 
         <View>
