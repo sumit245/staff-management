@@ -1,32 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { View, ScrollView, TouchableOpacity } from "react-native";
 import { useRoute } from "@react-navigation/native";
-import { Card } from "react-native-paper";
 import Button from "../components/buttons/Button";
 import ContainerComponent from "../components/ContainerComponent";
 import MyHeader from "../components/header/MyHeader";
 import { styles } from "../styles/components.styles";
 import { itemsData } from "../utils/faker";
-import { H2, H3, P } from "../components/text";
+import { H2, P } from "../components/text";
 import { useNavigation } from "@react-navigation/native";
 import SearchBar from "../components/input/SearchBar";
 import { PRIMARY_COLOR, spacing, typography } from "../styles";
+import ClickableCard1 from "../components/card/clickableCard";
 
 const PurchaseOrderScreen = () => {
-  const [checkedItems, setCheckedItems] = useState({});
   const [items, setItems] = useState([]);
 
   const [filteredItems, setFilteredItems] = useState(itemsData);
   const [searchQuery, setSearchQuery] = useState("");
   const navigation = useNavigation(); // Hook to navigate
-
-  // Function to toggle checkbox
-  const toggleCheck = (itemId) => {
-    setCheckedItems({
-      ...checkedItems,
-      [itemId]: !checkedItems[itemId],
-    });
-  };
 
   // Function to handle search query and filter items
   const handleSearch = (text) => {
@@ -67,22 +58,18 @@ const PurchaseOrderScreen = () => {
         />
 
         {items.map((item, index) => (
-          <Card
+          <ClickableCard1
             key={index}
-            style={{ margin: 10, padding: 10, backgroundColor: "white" }}
+            title={item.materialName}
+            subtitle={`Qty: ${item.quantity} ${item.unit}`}
           >
-            <H3>{item.materialName}</H3>
-            <P>Specifications: {item.specifications}</P>{" "}
-            {/* Added specifications here */}
+            <P>Specifications: {item.specifications}</P>
             <P>Model: {item.model}</P>
-            <P>
-              Quantity: {item.quantity} {item.unit}
-            </P>
             <View style={{ alignItems: "flex-end" }}>
               <P>{new Date(item.targetDate).toDateString()}</P>
             </View>
             {item.remarks ? <P>Remarks: {item.remarks}</P> : null}
-          </Card>
+          </ClickableCard1>
         ))}
       </ScrollView>
 

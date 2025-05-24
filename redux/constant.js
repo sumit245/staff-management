@@ -1,3 +1,5 @@
+export const BASE_URL = "https://rsrobotic.in/index.php";
+
 export const LOGIN_STAFF = "LOGIN_STAFF";
 export const LOGOUT_STAFF = "LOGOUT_STAFF";
 export const CHANGE_PASSWORD_STAFF = "CHANGE_PASSWORD_STAFF";

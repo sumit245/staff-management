@@ -41,6 +41,7 @@ const RequisitionScreen = ({ navigation }) => {
           value={searchText}
           onChangeText={setSearchText}
         />
+
         <ScrollView>
           {requisitionList.map((item, index) => (
             <ListItem

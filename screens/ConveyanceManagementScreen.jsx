@@ -1,44 +1,45 @@
 import { useState } from "react";
-import { View } from "react-native";
 import ContainerComponent from "../components/ContainerComponent";
+import MyHeader from "../components/header/MyHeader";
 import SearchBar from "../components/input/SearchBar";
-
 import Button from "../components/buttons/Button";
 import Icon from "react-native-vector-icons/Ionicons";
-import { spacing, styles } from "../styles";
-
-import {
-  SCREEN_WIDTH,
-  PRIMARY_COLOR,
-  LIGHT,
-  ICON_MEDIUM,
-  ICON_LARGE,
-} from "../styles";
+import { PRIMARY_COLOR, ICON_LARGE } from "../styles";
+import Tabs from "../components/tab/Tabs";
 
 const ConveyanceManagementScreen = ({ navigation }) => {
-  const [index, setIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
 
   return (
     <ContainerComponent style={{ flex: 1 }}>
-      {/* Search bar and filter icon */}
-      <View
-        style={[spacing.mv4, styles.row, spacing.mh1, { alignItems: "center" }]}
-      >
-        <SearchBar placeholder="Search" style={{ width: SCREEN_WIDTH - 80 }} />
-        <Button
-          style={[styles.btn, styles.bgPrimary, spacing.mh1, { width: 50 }]}
-        >
-          <Icon name="options-outline" size={ICON_MEDIUM} color={LIGHT} />
-        </Button>
-      </View>
+      <MyHeader title="Conveyance" isBack={true} hasIcon={true} />
 
-      {/* Floating Add Button with Large Bold Icon */}
+      <SearchBar
+        placeholder="Search Project Code or Name"
+        value={searchQuery}
+        onChangeText={handleSearch}
+        style={[{ marginTop: 12 }]}
+      />
+
+      {/* Horizontal Tabs */}
+
+      <Tabs
+        tabs={["This Week", "This Month", "Pending", "Rejected"]}
+        selectedIndex={tabIndex}
+        onTabPress={(index) => setTabIndex(index)}
+      />
+
+      {/* Floating Add Button */}
       <Button
         style={[
           {
             position: "absolute",
             right: 20,
-            bottom: 30,
+            bottom: 80,
             width: 60,
             height: 60,
             borderRadius: 30,
@@ -54,7 +55,7 @@ const ConveyanceManagementScreen = ({ navigation }) => {
         ]}
         onPress={() => navigation.navigate("conveyancebill")}
       >
-        <Icon name="add" size={ICON_LARGE + 10} color="black" />
+        <Icon name="add" size={35} color="#ffffff" />
       </Button>
     </ContainerComponent>
   );
